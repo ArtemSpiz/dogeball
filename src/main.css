@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+@layer base {
+  body {
+    @apply bg-[#070B1E] text-white font-grotesk relative;
+  }
+
+  img {
+    @apply w-full h-full;
+  }
+}
+
+.title {
+  @apply font-crisis text-[#FFEEE1]
+         text-5xl font-extrabold !leading-[120%]
+         max-lg:text-4xl  max-md:text-[22px];
+}
+
+.description {
+  @apply font-grotesk leading-[142%]
+         text-sm font-medium;
+}
+
+/* === BPdots Unicase === */
+@font-face {
+  font-family: "BPdotsUnicase";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicase.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-Bold";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicaseBold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-Diamond";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicaseDiamond.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-DiamondBold";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicaseDiamondBold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-DiamondLight";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicaseDiamondLight.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-Light";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicaseLight.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-Minus";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicaseMinus.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-MinusBold";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicaseMinusBold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-Plus";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicasePlus.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-PlusBold";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicasePlusBold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-Square";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicaseSquare.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-SquareBold";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicaseSquareBold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-SquareLight";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicaseSquareLight.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-Vertical";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicaseVertical.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "BPdotsUnicase-VerticalBold";
+  src: url("/src/assets/fonts/bpdotsunicase/BPdotsUnicaseVerticalBold.otf")
+    format("opentype");
+}
+
+/* === Clash Grotesk === */
+@font-face {
+  font-family: "ClashGrotesk-Regular";
+  src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Regular.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "ClashGrotesk-Bold";
+  src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Bold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "ClashGrotesk-Extralight";
+  src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Extralight.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "ClashGrotesk-Light";
+  src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Light.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "ClashGrotesk-Medium";
+  src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Medium.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "ClashGrotesk-Semibold";
+  src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Semibold.otf")
+    format("opentype");
+}
