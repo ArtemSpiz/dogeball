@@ -1,11 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{vue,js,ts}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts}",
+    "./presale-widget/**/*.{vue,js,ts}",
+  ],
   theme: {
     extend: {
       fontFamily: {
         crisis: ["Climate Crisis", "sans-serif"],
-        grotesk: ["Clash Grotesk", "sans-serif"],
+        grotesk: ["ClashGrotesk-Regular", "sans-serif"],
         BPdotsUnicase: ["BPdotsUnicase", "sans-serif"],
       },
       keyframes: {

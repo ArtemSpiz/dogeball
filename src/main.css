@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,7 +13,8 @@ body {
 
 @layer base {
   body {
-    @apply bg-[#070B1E] text-white font-grotesk relative;
+    @apply bg-[#070B1E] text-white relative;
+    font-family: "ClashGrotesk-Regular", sans-serif;
   }
 
   img {
@@ -26,8 +29,9 @@ body {
 }
 
 .description {
-  @apply font-grotesk leading-[142%]
+  @apply leading-[142%]
          text-sm font-medium;
+  font-family: "ClashGrotesk-Regular", sans-serif;
 }
 
 /* === BPdots Unicase === */
@@ -137,4 +141,20 @@ body {
   font-family: "ClashGrotesk-Semibold";
   src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Semibold.otf")
     format("opentype");
+}
+
+@layer utilities {
+  /* Font feature settings utility */
+  .font-feature-off {
+    font-feature-settings: "liga" off, "clig" off;
+  }
+
+  /* Line clamp utilities */
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    overflow: hidden;
+  }
 }

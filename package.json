@@ -12,6 +12,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@wagmi/core": "^3.0.0",
+    "@wert-io/widget-initializer": "^7.0.1",
+    "axios": "^1.13.2",
+    "viem": "^2.41.2",
     "vue": "^3.5.25",
     "vue-router": "^4.6.3"
   },
