@@ -16,6 +16,7 @@
     "@wert-io/widget-initializer": "^7.0.1",
     "axios": "^1.13.2",
     "viem": "^2.41.2",
+    "gsap": "^3.14.1",
     "vue": "^3.5.25",
     "vue-router": "^4.6.3"
   },

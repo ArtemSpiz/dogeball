@@ -44,7 +44,7 @@ import Circle from "@/assets/img/Home/CircleText.png";
     </div>
 
     <div
-      class="w-[230px] absolute bottom-[56px] max-lg:bottom-[250px] max-md:top-[370px] max-md:bottom-auto right-[120px] max-md:right-[10px] aspect-square"
+      class="w-[230px] max-md:w-[200px] absolute bottom-[56px] max-lg:bottom-[250px] max-md:top-[370px] max-md:bottom-auto right-[120px] max-md:right-[10px] aspect-square"
     >
       <img :src="Circle" class="object-contain animate-rotateClockwise" />
     </div>

@@ -19,7 +19,7 @@ const Logos = [
 </script>
 
 <template>
-  <div class="overflow-hidden border-t p-6 border-b border-white">
+  <div class="overflow-hidden border-t p-6 max-md:p-5§ border-b border-white">
     <div class="flex animate-scroll whitespace-nowrap">
       <div
         v-for="(logo, idx) in Logos"

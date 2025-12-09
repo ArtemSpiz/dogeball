@@ -11,24 +11,31 @@ import bgHeader from "@/assets/img/bgHeader.png";
 const LinksHeader = [
   {
     title: "About",
+    link: "/about",
   },
   {
     title: "Roadmap",
+    link: "/roadmap",
   },
   {
     title: "How to Buy",
+    link: "/",
   },
   {
     title: "Play $DOGEBALL",
+    link: "/",
   },
   {
     title: "Tokenomics",
+    link: "/",
   },
   {
     title: "ETH L2",
+    link: "/",
   },
   {
     title: "FAQs",
+    link: "/",
   },
 ];
 
@@ -42,23 +49,24 @@ const toggleMenu = () => {
 <template>
   <div
     :class="[
-      'absolute bg-cover bg-no-repeat bg-bottom w-full pt-11 px-7 flex flex-col z-50 items-center right-1/2 translate-x-1/2 max-md:px-[18px] pb-6',
+      'absolute bg-cover bg-no-repeat bg-bottom w-full pt-6 px-7 flex flex-col z-50 items-center right-1/2 translate-x-1/2 max-md:px-[18px] pb-6',
       isOpen ? 'bg-[url(@/assets/img/bgHeader.png)] h-screen ' : '',
     ]"
   >
     <div class="w-full flex justify-between items-center">
-      <router-link to="/" class="h-[60px] w-auto max-2xl:h-[40px]">
+      <router-link to="/" class="h-[60px] w-auto max-xl:h-[40px]">
         <img :src="Logo" class="object-contain" />
       </router-link>
       <div
         class="bg-[rgba(255,238,225,0.10)] max-xl:gap-3 max-lg:hidden rounded-[20px] flex items-center gap-5 p-3"
       >
-        <div
+        <router-link
           v-for="link in LinksHeader"
+          :to="link.link"
           class="text-[#FFEEE1] cursor-pointer text-sm font-medium"
         >
           {{ link.title }}
-        </div>
+        </router-link>
       </div>
 
       <div class="flex items-center max-lg:hidden gap-3">

@@ -24,7 +24,7 @@ body {
 
 .title {
   @apply font-crisis text-[#FFEEE1]
-         text-5xl font-extrabold !leading-[120%]
+         text-5xl font-medium max-md:font-normal !leading-[120%]
          max-lg:text-4xl  max-md:text-[22px];
 }
 
