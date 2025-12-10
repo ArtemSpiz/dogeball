@@ -58,16 +58,16 @@ watch(
 <template>
   <div
     :class="[
-      'absolute bg-cover bg-no-repeat bg-bottom w-full pt-6 px-7 flex flex-col z-50 items-center right-1/2 translate-x-1/2 max-md:px-[18px] pb-6',
+      'absolute max- bg-cover bg-no-repeat bg-bottom w-full pt-6 px-7 flex flex-col z-50 items-center right-1/2 translate-x-1/2 max-md:px-[18px] pb-6',
       isOpen ? 'bg-[url(@/assets/img/bgHeader.png)] h-screen ' : '',
     ]"
   >
     <div class="w-full flex justify-between items-center">
-      <router-link to="/" class="h-[60px] w-auto max-xl:h-[40px]">
+      <router-link to="/" class="2xl:h-[70px] h-[60px] w-auto max-xl:h-[40px]">
         <img :src="Logo" class="object-contain" />
       </router-link>
       <div
-        class="bg-[rgba(255,238,225,0.10)] max-xl:gap-3 max-lg:hidden rounded-[20px] flex items-center gap-5 p-3"
+        class="absolute left-1/2 -translate-x-1/2 bg-[rgba(255,238,225,0.10)] max-xl:gap-3 max-lg:hidden rounded-[20px] flex items-center gap-5 p-3"
       >
         <router-link
           v-for="link in LinksHeader"

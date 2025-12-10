@@ -1,5 +1,6 @@
 <template>
   <section
+    id="presale"
     class="w-full py-[100px] max-md:py-12 flex flex-col items-center gap-4 relative bg-cover bg-center bg-no-repeat min-h-screen"
     :style="{ backgroundImage: `url(${bgImage})` }"
   >

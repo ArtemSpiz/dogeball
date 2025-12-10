@@ -39,7 +39,8 @@ const HowBuyCards = [
 
 <template>
   <div
-    class="bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Home/HowToBuyBg.png')] max-lg:bg-[url('@/assets/img/Home/HowToBuyBgMob.png')]"
+    id="howToBuy"
+    class="bg-[center_bottom] max-2xl:!bg-cover bgFill bg-cover bg-no-repeat bg-[url('@/assets/img/Home/HowToBuyBg.png')] max-lg:bg-[url('@/assets/img/Home/HowToBuyBgMob.png')]"
   >
     <div
       class="flex max-w-[2000px] mx-auto relative overflow-hidden gap-14 max-md:gap-8 max-xl:flex-col max-lg:h-[900px] max-md:h-[650px] py-[150px] max-md:py-12"

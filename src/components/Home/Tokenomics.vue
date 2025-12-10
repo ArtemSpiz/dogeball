@@ -115,7 +115,7 @@ const hoverIndex = ref(null);
 
 <template>
   <div
-    class="flex flex-col relative items-center justify-center gap-10 max-md:gap-8 py-20 max-md:py-12 bg-[url('@/assets/img/Home/TokenomicsBg.png')] max-md:bg-[url('@/assets/img/Home/TokenomicsBgMob.png')] bg-[100%,100%] max-lg:bg-cover bg-[center_bottom] bg-no-repeat"
+    class="flex flex-col max-2xl:!bg-cover bgFill relative items-center justify-center gap-10 max-md:gap-8 py-20 max-md:py-12 bg-[url('@/assets/img/Home/TokenomicsBg.png')] max-md:bg-[url('@/assets/img/Home/TokenomicsBgMob.png')] bg-[100%,100%] max-lg:bg-cover bg-[center_bottom] bg-no-repeat"
   >
     <div class="flex flex-col text-center items-center gap-8">
       <div class="title">TOKENOMICS</div>

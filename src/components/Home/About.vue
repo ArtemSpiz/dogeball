@@ -49,7 +49,7 @@ const AboutCards = [
       </div>
     </div>
     <div
-      class="flex flex-wrap gap-4 max-md:gap-2 items-center justify-center max-md:grid max-md:grid-cols-2 max-md:grid-rows-3 max-md:w-full"
+      class="flex flex-wrap gap-4 max-w-[1400px] max-md:gap-2 items-center justify-center max-md:grid max-md:grid-cols-2 max-md:grid-rows-3 max-md:w-full"
     >
       <div
         v-for="(card, i) in AboutCards"
@@ -62,7 +62,6 @@ const AboutCards = [
             'max-md:order-3': i === 3, // 4
             'max-md:order-4': i === 4, // 5
 
-            // третя картка — на всю ширину
             'max-md:order-5 max-md:col-span-2': i === 2,
           },
         ]"
