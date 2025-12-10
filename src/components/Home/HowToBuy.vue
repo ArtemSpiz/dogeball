@@ -48,7 +48,7 @@ const HowBuyCards = [
     </div>
 
     <div
-      class="grid grid-cols-[repeat(3,1fr)] pr-20 grid-rows-[repeat(2,1fr)] gap-6 max-lg:hidden"
+      class="grid grid-cols-[repeat(3,1fr)] pr-20 max-xl:px-20 grid-rows-[repeat(2,1fr)] gap-6 max-lg:hidden"
     >
       <div
         v-for="(card, i) in HowBuyCards"
@@ -87,7 +87,7 @@ const HowBuyCards = [
     </div>
 
     <div
-      class="max-xl:flex hidden gap-6 max-md:gap-2 px-20 scrollbar-hide overflow-x-auto snap-x snap-mandatory max-md:px-5 pb-3"
+      class="max-lg:flex hidden gap-6 max-md:gap-2 px-20 scrollbar-hide overflow-x-auto snap-x snap-mandatory max-md:px-5 pb-3"
     >
       <div
         v-for="(card, i) in HowBuyCards"

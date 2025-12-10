@@ -7,6 +7,7 @@ import PresaleWidget from "@/components/PresaleWidget/PresaleWidget.vue";
 import Roadmap from "@/components/Home/Roadmap.vue";
 import HowToBuy from "@/components/Home/HowToBuy.vue";
 import FAQ from "@/components/Home/FAQ.vue";
+import Tokenomics from "@/components/Home/Tokenomics.vue";
 </script>
 
 <template>
@@ -17,5 +18,6 @@ import FAQ from "@/components/Home/FAQ.vue";
   <About />
   <Roadmap />
   <HowToBuy />
+  <Tokenomics />
   <FAQ />
 </template>

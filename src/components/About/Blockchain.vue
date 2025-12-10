@@ -96,10 +96,6 @@ onUnmounted(() => {
   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 });
 
-const CopyToClipboard = (text) => {
-  navigator.clipboard.writeText(text).then(() => {});
-};
-
 const copyRefs = reactive({});
 
 const handleCopy = (text, copyComponent) => {

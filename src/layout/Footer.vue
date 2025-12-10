@@ -7,12 +7,15 @@ import Moscot from "@/assets/img/Moscot.png";
 const LinksFooter = [
   {
     title: "Terms & conditions",
+    link: "/TermsandConditions.pdf",
   },
   {
     title: "Cookies policy",
+    link: "/CookiesPolicy.pdf",
   },
   {
     title: "Privacy policy",
+    link: "/PrivacyPolicy.pdf",
   },
 ];
 </script>
@@ -27,17 +30,32 @@ const LinksFooter = [
       </div>
       <div class="flex flex-col max-md:items-center">
         <div class="flex flex-col gap-2 max-md:flex-row">
-          <div
+          <a
             v-for="(link, i) in LinksFooter"
             :key="i"
+            :href="link.link"
+            target="_blank"
+            rel="noopener noreferrer"
             class="text-base whitespace-nowrap font-medium capitalize leading-[120%]"
           >
             {{ link.title }}
-          </div>
+          </a>
         </div>
         <div class="flex items-center gap-4 mt-4">
-          <Telegram />
-          <X />
+          <a
+            href="https://t.me/dogeballtoken"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Telegram />
+          </a>
+          <a
+            href="https://x.com/dogeballtoken"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <X />
+          </a>
         </div>
       </div>
     </div>

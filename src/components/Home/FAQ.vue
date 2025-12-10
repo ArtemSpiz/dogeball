@@ -46,7 +46,7 @@ const isMobile = window.innerWidth < 768;
 
 <template>
   <div
-    class="flex px-5 flex-col relative py-20 max-md:py-12 max-md:pb-0 gap-12 bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Home/FAQBg.png')] overflow-hidden max-md:bg-[url('@/assets/img/Home/FAQBgMob.png')]"
+    class="flex px-5 h-[950px] max-lg:h-[900px] max-md:h-max flex-col relative py-20 max-md:py-12 max-md:pb-0 gap-12 bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Home/FAQBg.png')] overflow-hidden max-md:bg-[url('@/assets/img/Home/FAQBgMob.png')]"
   >
     <div class="title max-w-[800px] text-center mx-auto">
       Frequently Asked Questions

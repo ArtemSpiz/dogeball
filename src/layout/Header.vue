@@ -4,9 +4,10 @@ import Cross from "@/assets/icons/Cross.vue";
 import Telegram from "@/assets/icons/Telegram.vue";
 import X from "@/assets/icons/X.vue";
 import Logo from "@/assets/img/Logo.png";
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 import bgHeader from "@/assets/img/bgHeader.png";
+import { useRoute } from "vue-router";
 
 const LinksHeader = [
   {
@@ -40,10 +41,18 @@ const LinksHeader = [
 ];
 
 const isOpen = ref(false);
+const route = useRoute();
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 };
+
+watch(
+  () => route.fullPath,
+  () => {
+    isOpen.value = false;
+  }
+);
 </script>
 
 <template>
@@ -70,16 +79,22 @@ const toggleMenu = () => {
       </div>
 
       <div class="flex items-center max-lg:hidden gap-3">
-        <div
+        <a
           class="bg-[rgba(255,238,225,0.10)] cursor-pointer p-2 rounded-full"
+          href="https://t.me/dogeballtoken"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           <Telegram />
-        </div>
-        <div
+        </a>
+        <a
+          target="_blank"
+          href="https://x.com/dogeballtoken"
+          rel="noopener noreferrer"
           class="bg-[rgba(255,238,225,0.10)] cursor-pointer p-2 rounded-full"
         >
           <X />
-        </div>
+        </a>
         <button
           class="py-3 px-4 bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
         >
@@ -94,12 +109,14 @@ const toggleMenu = () => {
 
     <div v-if="isOpen" class="mt-12 w-full items-center flex flex-col gap-6">
       <div class="flex flex-col items-center gap-6">
-        <div
+        <router-link
           v-for="link in LinksHeader"
+          :to="link.link"
+          да
           class="text-[#FFEEE1] cursor-pointer text-sm font-medium"
         >
           {{ link.title }}
-        </div>
+        </router-link>
       </div>
       <div class="flex flex-col w-full items-center gap-4">
         <button

@@ -28,7 +28,7 @@ const Logos = [
       >
         <img
           :src="logo.logo"
-          class="object-contain h-full w-auto grayscale transition"
+          class="object-contain cursor-pointer h-full w-auto grayscale transition-all duration-300 hover:grayscale-0"
         />
       </div>
 
@@ -39,7 +39,7 @@ const Logos = [
       >
         <img
           :src="logo.logo"
-          class="object-contain h-full w-auto grayscale transition"
+          class="object-contain cursor-pointer h-full w-auto grayscale transition-all duration-300 hover:grayscale-0"
         />
       </div>
 
@@ -50,7 +50,7 @@ const Logos = [
       >
         <img
           :src="logo.logo"
-          class="object-contain h-full w-auto grayscale transition"
+          class="object-contain cursor-pointer h-full w-auto grayscale transition-all duration-300 hover:grayscale-0"
         />
       </div>
 
@@ -61,7 +61,7 @@ const Logos = [
       >
         <img
           :src="logo.logo"
-          class="object-contain h-full w-auto grayscale transition"
+          class="object-contain cursor-pointer h-full w-auto grayscale transition-all duration-300 hover:grayscale-0"
         />
       </div>
     </div>
