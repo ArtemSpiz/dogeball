@@ -13,6 +13,8 @@ import UsdcIcon from "../icons/UsdcIcon.vue";
 import PepeIcon from "../icons/PepeIcon.vue";
 import ShibIcon from "../icons/ShibIcon.vue";
 import BusdIcon from "../icons/BusdIcon.vue";
+import FlokiIcon from "../icons/FlokiIcon.vue";
+import MaticIcon from "../icons/MaticIcon.vue";
 
 /**
  * Token icon mapping
@@ -33,6 +35,8 @@ export const TOKEN_ICONS = {
   pepe: PepeIcon,
   shib: ShibIcon,
   busd: BusdIcon,
+  floki: FlokiIcon,
+  matic: MaticIcon,
 };
 
 /**
@@ -61,7 +65,9 @@ export const TOKEN_NAMES = {
   USDC: { ETHEREUM: "USD Coin", BSC: "USD Coin", default: "USDC" },
   PEPE: { default: "Pepe" },
   SHIB: { default: "Shiba Inu" },
+  FLOKI: { default: "Floki" },
   BUSD: { default: "Binance USD" },
+  MATIC: { default: "Polygon" },
   BTC: { default: "Bitcoin" },
   SOL: { default: "Solana" },
   XRP: { default: "Ripple" },

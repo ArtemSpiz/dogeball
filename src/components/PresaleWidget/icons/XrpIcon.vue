@@ -38,3 +38,4 @@ defineProps({
 const uid = Math.random().toString(36).slice(2, 9);
 const clipId = computed(() => `xrp-clip-${uid}`);
 </script>
+

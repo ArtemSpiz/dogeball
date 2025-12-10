@@ -28,6 +28,8 @@ export { default as UsdcIcon } from "./UsdcIcon.vue";
 export { default as PepeIcon } from "./PepeIcon.vue";
 export { default as ShibIcon } from "./ShibIcon.vue";
 export { default as BusdIcon } from "./BusdIcon.vue";
+export { default as FlokiIcon } from "./FlokiIcon.vue";
+export { default as MaticIcon } from "./MaticIcon.vue";
 
 // Token icon mapping for dynamic usage
 export const TOKEN_ICONS = {
@@ -46,4 +48,6 @@ export const TOKEN_ICONS = {
   pepe: () => import("./PepeIcon.vue"),
   shib: () => import("./ShibIcon.vue"),
   busd: () => import("./BusdIcon.vue"),
+  floki: () => import("./FlokiIcon.vue"),
+  matic: () => import("./MaticIcon.vue"),
 };

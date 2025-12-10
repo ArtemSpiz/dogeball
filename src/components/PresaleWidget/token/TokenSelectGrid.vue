@@ -72,24 +72,34 @@ const emit = defineEmits(["update:value"]);
 const apiData = useApiState();
 
 // ERC-20 tokens (shown under ETH button)
-const ETH_CHAIN_SYMBOLS = ["ETH", "USDT", "USDC", "PEPE", "SHIB"];
+const ERC20_ORDER = ["ETH", "USDT", "USDC", "PEPE", "SHIB", "FLOKI"];
 // BEP-20 tokens (shown under BNB button)
-const BNB_CHAIN_SYMBOLS = ["BNB", "BUSD", "USDT", "USDC"];
-// Standalone token buttons (shown as separate buttons, grouped by symbol)
-const STANDALONE_SYMBOLS = ["USDT", "SOL", "BTC"];
-// Standalone coins shown in "More" dropdown
+const BEP20_ORDER = ["BNB", "BUSD", "USDT", "USDC"];
+// More dropdown tokens
 const MORE_SYMBOLS = ["XRP", "DOGE", "TON", "TRX", "ADA"];
 
-// Helper to check if chain is Ethereum/ERC-20
-const isEthChain = (chain) => {
+// Helper to check if chain is ERC-20 / Ethereum
+const isErc20Chain = (chain) => {
   const c = (chain || "").toUpperCase();
-  return c.includes("ERC") || c.includes("ETH") || c === "ETHEREUM";
+  return c === "ERC-20" || c === "ETHEREUM" || c.includes("ERC");
 };
 
-// Helper to check if chain is BSC/BEP-20
-const isBnbChain = (chain) => {
+// Helper to check if chain is BEP-20 / BSC
+const isBep20Chain = (chain) => {
   const c = (chain || "").toUpperCase();
-  return c.includes("BEP") || c.includes("BSC");
+  return c === "BEP-20" || c === "BSC" || c.includes("BEP");
+};
+
+// Helper to check if chain is Bitcoin
+const isBitcoinChain = (chain) => {
+  const c = (chain || "").toUpperCase();
+  return c === "BITCOIN" || c === "BTC";
+};
+
+// Helper to check if chain is Solana
+const isSolanaChain = (chain) => {
+  const c = (chain || "").toUpperCase();
+  return c === "SOLANA" || c === "SOL";
 };
 
 const cardToken = computed(() => {
@@ -100,14 +110,11 @@ const cardToken = computed(() => {
 // ETH chain tokens (ERC-20)
 const ethChainTokens = computed(() => {
   const tokens = apiData.paymentTokens.value ?? [];
-  const filtered = tokens.filter(
-    (t) =>
-      ETH_CHAIN_SYMBOLS.includes(t.symbol.toUpperCase()) && isEthChain(t.chain)
-  );
+  const filtered = tokens.filter((t) => isErc20Chain(t.chain));
   // Sort by the defined order
   return filtered.sort((a, b) => {
-    const aIndex = ETH_CHAIN_SYMBOLS.indexOf(a.symbol.toUpperCase());
-    const bIndex = ETH_CHAIN_SYMBOLS.indexOf(b.symbol.toUpperCase());
+    const aIndex = ERC20_ORDER.indexOf(a.symbol.toUpperCase());
+    const bIndex = ERC20_ORDER.indexOf(b.symbol.toUpperCase());
     return (aIndex === -1 ? 999 : aIndex) - (bIndex === -1 ? 999 : bIndex);
   });
 });
@@ -115,55 +122,43 @@ const ethChainTokens = computed(() => {
 // BNB chain tokens (BEP-20)
 const bnbChainTokens = computed(() => {
   const tokens = apiData.paymentTokens.value ?? [];
-  const filtered = tokens.filter(
-    (t) =>
-      BNB_CHAIN_SYMBOLS.includes(t.symbol.toUpperCase()) && isBnbChain(t.chain)
-  );
+  const filtered = tokens.filter((t) => isBep20Chain(t.chain));
   // Sort by the defined order
   return filtered.sort((a, b) => {
-    const aIndex = BNB_CHAIN_SYMBOLS.indexOf(a.symbol.toUpperCase());
-    const bIndex = BNB_CHAIN_SYMBOLS.indexOf(b.symbol.toUpperCase());
+    const aIndex = BEP20_ORDER.indexOf(a.symbol.toUpperCase());
+    const bIndex = BEP20_ORDER.indexOf(b.symbol.toUpperCase());
     return (aIndex === -1 ? 999 : aIndex) - (bIndex === -1 ? 999 : bIndex);
   });
 });
 
-// USDT on other chains (not ERC-20 or BEP-20) - like TRC-20
+// USDT on other chains (not ERC-20 or BEP-20) - like POLYGON, TRC-20
 const usdtOtherChains = computed(() => {
   const tokens = apiData.paymentTokens.value ?? [];
   return tokens.filter(
     (t) =>
       t.symbol.toUpperCase() === "USDT" &&
-      !isEthChain(t.chain) &&
-      !isBnbChain(t.chain)
+      !isErc20Chain(t.chain) &&
+      !isBep20Chain(t.chain)
   );
 });
 
-// Group standalone tokens by symbol (SOL, BTC)
-const standaloneTokenGroups = computed(() => {
+// Bitcoin tokens
+const btcTokens = computed(() => {
   const tokens = apiData.paymentTokens.value ?? [];
-  const groups = {};
-  const standaloneOnly = ["SOL", "BTC"];
-
-  tokens.forEach((token) => {
-    const symbol = token.symbol.toUpperCase();
-    if (standaloneOnly.includes(symbol)) {
-      if (!groups[symbol]) {
-        groups[symbol] = [];
-      }
-      groups[symbol].push(token);
-    }
-  });
-
-  return standaloneOnly
-    .filter((symbol) => groups[symbol])
-    .map((symbol) => ({
-      symbol,
-      tokens: groups[symbol],
-      defaultToken: groups[symbol][0],
-    }));
+  return tokens.filter(
+    (t) => t.symbol.toUpperCase() === "BTC" || isBitcoinChain(t.chain)
+  );
 });
 
-// Main crypto groups - ETH chain, BNB chain, USDT (other chains), then standalone tokens
+// Solana tokens
+const solTokens = computed(() => {
+  const tokens = apiData.paymentTokens.value ?? [];
+  return tokens.filter(
+    (t) => t.symbol.toUpperCase() === "SOL" || isSolanaChain(t.chain)
+  );
+});
+
+// Main crypto groups - ETH, BNB, USDT, BTC, SOL
 const mainCryptoGroups = computed(() => {
   const groups = [];
 
@@ -189,7 +184,7 @@ const mainCryptoGroups = computed(() => {
     });
   }
 
-  // USDT on other chains (TRC-20, etc.)
+  // USDT on other chains (POLYGON, TRC-20, etc.)
   if (usdtOtherChains.value.length > 0) {
     groups.push({
       symbol: "USDT",
@@ -198,13 +193,28 @@ const mainCryptoGroups = computed(() => {
     });
   }
 
-  // Add standalone tokens (SOL, BTC)
-  groups.push(...standaloneTokenGroups.value);
+  // BTC tokens
+  if (btcTokens.value.length > 0) {
+    groups.push({
+      symbol: "BTC",
+      tokens: btcTokens.value,
+      defaultToken: btcTokens.value[0],
+    });
+  }
+
+  // SOL tokens
+  if (solTokens.value.length > 0) {
+    groups.push({
+      symbol: "SOL",
+      tokens: solTokens.value,
+      defaultToken: solTokens.value[0],
+    });
+  }
 
   return groups;
 });
 
-// More tokens - standalone coins (XRP, DOGE, TON, TRX, ADA)
+// More tokens - coins like XRP, DOGE, TON, TRX, ADA
 const moreTokens = computed(() => {
   const tokens = apiData.paymentTokens.value ?? [];
   const moreList = [];
