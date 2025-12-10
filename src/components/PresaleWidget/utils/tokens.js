@@ -4,6 +4,15 @@ import UsdtIcon from "../icons/UsdtIcon.vue";
 import BtcIcon from "../icons/BtcIcon.vue";
 import SolIcon from "../icons/SolIcon.vue";
 import DogeballIcon from "../icons/DogeballIcon.vue";
+import XrpIcon from "../icons/XrpIcon.vue";
+import DogeIcon from "../icons/DogeIcon.vue";
+import TonIcon from "../icons/TonIcon.vue";
+import TrxIcon from "../icons/TrxIcon.vue";
+import AdaIcon from "../icons/AdaIcon.vue";
+import UsdcIcon from "../icons/UsdcIcon.vue";
+import PepeIcon from "../icons/PepeIcon.vue";
+import ShibIcon from "../icons/ShibIcon.vue";
+import BusdIcon from "../icons/BusdIcon.vue";
 
 /**
  * Token icon mapping
@@ -15,6 +24,15 @@ export const TOKEN_ICONS = {
   btc: BtcIcon,
   sol: SolIcon,
   dogeball: DogeballIcon,
+  xrp: XrpIcon,
+  doge: DogeIcon,
+  ton: TonIcon,
+  trx: TrxIcon,
+  ada: AdaIcon,
+  usdc: UsdcIcon,
+  pepe: PepeIcon,
+  shib: ShibIcon,
+  busd: BusdIcon,
 };
 
 /**
@@ -40,14 +58,17 @@ export const TOKEN_NAMES = {
     TRON: "Tether (Tron)",
     default: "USDT",
   },
+  USDC: { ETHEREUM: "USD Coin", BSC: "USD Coin", default: "USDC" },
+  PEPE: { default: "Pepe" },
+  SHIB: { default: "Shiba Inu" },
+  BUSD: { default: "Binance USD" },
   BTC: { default: "Bitcoin" },
   SOL: { default: "Solana" },
-  LTC: { default: "Litecoin" },
   XRP: { default: "Ripple" },
   DOGE: { default: "Dogecoin" },
   TRX: { default: "Tron" },
-  MATIC: { default: "Polygon" },
-  AVAX: { default: "Avalanche" },
+  TON: { default: "TON Chain" },
+  ADA: { default: "Cardano" },
   CARD: { default: "Card" },
 };
 
@@ -66,4 +87,3 @@ export const getTokenDisplayName = (token) => {
 
   return tokenConfig[chain] || tokenConfig.default || symbol;
 };
-

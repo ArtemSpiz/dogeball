@@ -19,6 +19,15 @@ export { default as BnbIcon } from "./BnbIcon.vue";
 export { default as UsdtIcon } from "./UsdtIcon.vue";
 export { default as BtcIcon } from "./BtcIcon.vue";
 export { default as SolIcon } from "./SolIcon.vue";
+export { default as XrpIcon } from "./XrpIcon.vue";
+export { default as DogeIcon } from "./DogeIcon.vue";
+export { default as TonIcon } from "./TonIcon.vue";
+export { default as TrxIcon } from "./TrxIcon.vue";
+export { default as AdaIcon } from "./AdaIcon.vue";
+export { default as UsdcIcon } from "./UsdcIcon.vue";
+export { default as PepeIcon } from "./PepeIcon.vue";
+export { default as ShibIcon } from "./ShibIcon.vue";
+export { default as BusdIcon } from "./BusdIcon.vue";
 
 // Token icon mapping for dynamic usage
 export const TOKEN_ICONS = {
@@ -28,4 +37,13 @@ export const TOKEN_ICONS = {
   btc: () => import("./BtcIcon.vue"),
   sol: () => import("./SolIcon.vue"),
   dogeball: () => import("./DogeballIcon.vue"),
+  xrp: () => import("./XrpIcon.vue"),
+  doge: () => import("./DogeIcon.vue"),
+  ton: () => import("./TonIcon.vue"),
+  trx: () => import("./TrxIcon.vue"),
+  ada: () => import("./AdaIcon.vue"),
+  usdc: () => import("./UsdcIcon.vue"),
+  pepe: () => import("./PepeIcon.vue"),
+  shib: () => import("./ShibIcon.vue"),
+  busd: () => import("./BusdIcon.vue"),
 };
