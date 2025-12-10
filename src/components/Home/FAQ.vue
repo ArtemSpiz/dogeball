@@ -52,8 +52,8 @@ const isMobile = window.innerWidth < 768;
       Frequently Asked Questions
     </div>
 
-    <div class="flex flex-col gap-4 max-w-7xl mx-auto px-4">
-      <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
+    <div class="flex flex-col gap-4 max-w-7xl mx-auto px-4 max-md:h-[640px] ">
+      <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4 ">
         <div class="flex flex-col gap-4">
           <div
             v-for="(card, i) in isMobile
