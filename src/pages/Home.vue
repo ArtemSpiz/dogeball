@@ -5,6 +5,8 @@ import ScrollLogos from "@/components/Home/ScrollLogos.vue";
 import About from "@/components/Home/About.vue";
 import PresaleWidget from "@/components/PresaleWidget/PresaleWidget.vue";
 import Roadmap from "@/components/Home/Roadmap.vue";
+import HowToBuy from "@/components/Home/HowToBuy.vue";
+import FAQ from "@/components/Home/FAQ.vue";
 </script>
 
 <template>
@@ -14,4 +16,6 @@ import Roadmap from "@/components/Home/Roadmap.vue";
   <ScrollLogos />
   <About />
   <Roadmap />
+  <HowToBuy />
+  <FAQ />
 </template>

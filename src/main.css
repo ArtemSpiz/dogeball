@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -32,6 +32,15 @@ body {
   @apply leading-[142%]
          text-sm font-medium;
   font-family: "ClashGrotesk-Regular", sans-serif;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
 }
 
 /* === BPdots Unicase === */

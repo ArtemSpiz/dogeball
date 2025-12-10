@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full flex flex-col items-center gap-4 relative py-2.5 bg-cover bg-center bg-no-repeat min-h-screen"
+    class="w-full py-[100px] max-md:py-12 flex flex-col items-center gap-4 relative bg-cover bg-center bg-no-repeat min-h-screen"
     :style="{ backgroundImage: `url(${bgImage})` }"
   >
     <!-- Background overlay for better widget visibility -->

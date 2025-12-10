@@ -1,8 +1,9 @@
 <script setup>
 import BlockchainCenterLine from "@/assets/img/About/BlockchainCenterLine.png";
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, reactive } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Copy from "@/assets/icons/Copy.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +13,7 @@ const BlockchainCards = [
     text: "Add ETH L2 DOGECHAIN custom network to your chosen wallet (refer to your chosen wallets website for details on how to add a custom network) using the below details:",
     subtitles: [
       { name: "Blockchain Name", data: "DOGECHAIN" },
-      { name: "RPC URL", data: "http://78.141.225.190:10002" },
+      { name: "RPC URL", data: "http://78.141.225.190:10002", copy: true },
       { name: "Chain ID", data: "9010" },
       { name: "Symbol", data: "DOGEBALL" },
     ],
@@ -94,6 +95,20 @@ onMounted(() => {
 onUnmounted(() => {
   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 });
+
+const CopyToClipboard = (text) => {
+  navigator.clipboard.writeText(text).then(() => {});
+};
+
+const copyRefs = reactive({});
+
+const handleCopy = (text, copyComponent) => {
+  navigator.clipboard.writeText(text);
+
+  if (copyComponent && copyComponent.startCopied) {
+    copyComponent.startCopied();
+  }
+};
 </script>
 
 <template>
@@ -156,13 +171,21 @@ onUnmounted(() => {
           v-if="card.subtitles"
           v-for="sub in card.subtitles"
           class="flex flex-col gap-2"
+          @click="
+            sub.copy && handleCopy(sub.data, copyRefs[index + '-' + sub.name])
+          "
         >
           <div class="gap-2 items-start text-start flex">
             <div class="w-[110px] description">{{ sub.name }}</div>
             <div
-              class="w-max description px-2 py-1 text-sm leading-[120%] rounded-2xl border border-[#8B94F5] backdrop-blur-[5px] bg-[rgba(53,19,147,0.52)]"
+              :class="['', sub.copy ? 'cursor-pointer' : '']"
+              class="w-max description flex items-center gap-1 px-2 py-1 text-sm leading-[120%] rounded-2xl border border-[#8B94F5] backdrop-blur-[5px] bg-[rgba(53,19,147,0.52)]"
             >
               {{ sub.data }}
+              <Copy
+                v-if="sub.copy"
+                :ref="(el) => (copyRefs[index + '-' + sub.name] = el)"
+              />
             </div>
           </div>
         </div>
