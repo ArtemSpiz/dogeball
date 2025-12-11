@@ -74,12 +74,12 @@ const scrollToSection = async (hash) => {
 <template>
   <div
     :class="[
-      'absolute max- bg-cover bg-no-repeat bg-bottom w-full pt-6 px-7 flex flex-col z-50 items-center right-1/2 translate-x-1/2 max-md:px-[18px] pb-6',
+      'absolute max- bg-cover bg-no-repeat bg-bottom w-full pt-6 px-7 flex flex-col z-50 items-center mx-auto max-md:px-[18px] pb-6',
       isOpen ? 'bg-[url(@/assets/img/bgHeader.png)] h-screen ' : '',
     ]"
   >
     <div class="w-full flex justify-between items-center">
-      <router-link to="/" class="2xl:h-[70px] h-[60px] w-auto max-xl:h-[40px]">
+      <router-link to="/" class="2xl:h-[70px] items-start h-[60px] w-auto max-xl:h-[40px]">
         <img :src="Logo" class="object-contain" />
       </router-link>
       <div
