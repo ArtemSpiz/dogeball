@@ -78,8 +78,11 @@ const scrollToSection = async (hash) => {
       isOpen ? 'bg-[url(@/assets/img/bgHeader.png)] h-screen ' : '',
     ]"
   >
-    <div class="w-full flex justify-between items-center">
-      <router-link to="/" class="2xl:h-[70px] items-start h-[60px] w-auto max-xl:h-[40px]">
+    <div class="w-[-webkit-fill-available] flex justify-between items-center">
+      <router-link
+        to="/"
+        class="2xl:h-[70px] flex justify-start items-start h-[60px] w-auto max-xl:h-[40px]"
+      >
         <img :src="Logo" class="object-contain" />
       </router-link>
       <div
