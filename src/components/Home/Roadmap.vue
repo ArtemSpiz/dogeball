@@ -55,12 +55,13 @@ const RoadmapCards = [
 
 <template>
   <div
-    class="relative h-[800px] bg-cover bg-center bg-no-repeat bg-[url('@/assets/img/Home/RoadmapBg.png')] max-xl:h-auto"
+    id="roadmap"
+    class="relative h-[800px] max-xl:!bg-cover bgFill bg-center bg-no-repeat bg-[url('@/assets/img/Home/RoadmapBg.png')] max-xl:h-auto"
   >
     <div
       class="max-w-[2000px] mx-auto justify-start pt-[85px] max-xl:py-[85px] max-md:py-12 flex flex-col items-center gap-8 px-20 max-md:px-5"
     >
-      <div class="title">Roadmap</div>
+      <div class="title uppercase">Roadmap</div>
       <div
         class="flex gap-4 max-md:gap-2 justify-center relative items-start max-xl:grid max-xl:grid-cols-2 max-md:grid-cols-1"
       >
@@ -77,7 +78,7 @@ const RoadmapCards = [
             <div class="font-medium text-base leading-[125%]">
               {{ card.phase }}
             </div>
-            <div class="font-medium text-xl leading-[110%]">
+            <div class="font-semibold text-xl leading-[110%]">
               {{ card.title }}
             </div>
           </div>
@@ -86,7 +87,9 @@ const RoadmapCards = [
               v-for="sub in card.subtitles"
               class="flex items-start self-stretch gap-1"
             >
-              <div class="h-1 mt-[6px] w-1 bg-white rounded-full" />
+              <div class="px-1">
+                <div class="h-1 mt-[6px] w-1 bg-white rounded-full" />
+              </div>
               <div class="text-sm font-medium leading-[120%]">
                 {{ sub.subtitle }}
               </div>
@@ -97,11 +100,11 @@ const RoadmapCards = [
             :class="[
               'absolute max-xl:hidden',
               {
-                'translate-y-[55%] w-[530px] h-[350px] left-[-8px]':
+                'translate-y-[50%] w-[535px] h-[365px] left-[-20px]':
                   index === 0,
               },
               {
-                'translate-y-[55%] w-[230px] h-[285px] left-[-25px]':
+                'translate-y-[59%] w-[230px] h-[275px] left-[-25px]':
                   index === 1,
               },
               {
@@ -109,7 +112,7 @@ const RoadmapCards = [
                   index === 2,
               },
               {
-                'translate-y-[38%] w-[680px] h-[400px] left-[-364px]':
+                'translate-y-[38%] w-[690px] h-[400px] left-[-364px]':
                   index === 3,
               },
             ]"

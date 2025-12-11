@@ -8,7 +8,7 @@ const HowBuyCards = [
     type: "orange",
     underTitle: "Step 1",
     title: "Connect Wallet",
-    text: `Locate the presale widget at the top of the webpage (<a target="_blank" href='https://dogeball-silk.vercel.app/en#home' class="underline">Click Here</a>) and click 'Connect Wallet' using your preferred wallet. Multiple wallet options (inc. Metamask and Coinbase) are available for selection.`,
+    text: `Locate the presale widget at the top of the webpage (<a href='#presale' class="underline">Click Here</a>) and click 'Connect Wallet' using your preferred wallet. Multiple wallet options (inc. Metamask and Coinbase) are available for selection.`,
   },
   {
     type: "white",
@@ -40,7 +40,7 @@ const HowBuyCards = [
 <template>
   <div
     id="howToBuy"
-    class="bg-[center_bottom] max-2xl:!bg-cover bgFill bg-cover bg-no-repeat bg-[url('@/assets/img/Home/HowToBuyBg.png')] max-lg:bg-[url('@/assets/img/Home/HowToBuyBgMob.png')]"
+    class="bg-[center_bottom] max-xl:!bg-cover bgFill bg-cover bg-no-repeat bg-[url('@/assets/img/Home/HowToBuyBg.png')] max-lg:bg-[url('@/assets/img/Home/HowToBuyBgMob.png')]"
   >
     <div
       class="flex max-w-[2000px] mx-auto relative overflow-hidden gap-14 max-md:gap-8 max-xl:flex-col max-lg:h-[900px] max-md:h-[650px] py-[150px] max-md:py-12"
@@ -124,7 +124,7 @@ const HowBuyCards = [
       </div>
 
       <div
-        class="absolute bottom-20 left-10 w-[300px] h-auto max-xl:static max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:bottom-2 max-md:bottom-[-90px]"
+        class="absolute bottom-20 left-0 2xl:w-[320px] w-[400px] h-auto max-xl:static max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:bottom-2 max-md:bottom-[-90px]"
       >
         <img :src="HowToBuyDog" class="object-contain" />
       </div>

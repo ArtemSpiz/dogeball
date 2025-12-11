@@ -79,6 +79,63 @@ const TokenomicsCards = [
   },
 ];
 
+const TokenomicsCardsMobile = [
+  {
+    percents: "25%",
+    name: "Presale",
+    price: "20,000,000,000",
+    image: TokenomicsImg2,
+    color: "#BA320A",
+    percent: 25,
+    startAngle: 0,
+  },
+  {
+    percents: "15%",
+    name: "Staking & Games Rewards",
+    price: "12,000,000,000",
+    image: TokenomicsImg4,
+    color: "#E53501",
+    percent: 15,
+    startAngle: 90,
+  },
+  {
+    percents: "15%",
+    name: "Liquidity",
+    price: "12,000,000,000",
+    image: TokenomicsImg6,
+    color: "#F45525",
+    percent: 15,
+    startAngle: 144,
+  },
+  {
+    percents: "25%",
+    name: "Marketing",
+    price: "20,000,000,000",
+    image: TokenomicsImg5,
+    color: "#FA7B55",
+    percent: 25,
+    startAngle: 198,
+  },
+  {
+    percents: "10%",
+    name: "Treasury Reserves",
+    price: "8,000,000,000",
+    image: TokenomicsImg3,
+    color: "#69200A",
+    percent: 10,
+    startAngle: 288,
+  },
+  {
+    percents: "10%",
+    name: "Development",
+    price: "8,000,000,000",
+    image: TokenomicsImg1,
+    color: "#942B0C",
+    percent: 10,
+    startAngle: 324,
+  },
+];
+
 const createSegmentPath = (percent, startAngle) => {
   const angle = (percent / 100) * 360;
   const endAngle = startAngle + angle;
@@ -115,7 +172,8 @@ const hoverIndex = ref(null);
 
 <template>
   <div
-    class="flex flex-col max-2xl:!bg-cover bgFill relative items-center justify-center gap-10 max-md:gap-8 py-20 max-md:py-12 bg-[url('@/assets/img/Home/TokenomicsBg.png')] max-md:bg-[url('@/assets/img/Home/TokenomicsBgMob.png')] bg-[100%,100%] max-lg:bg-cover bg-[center_bottom] bg-no-repeat"
+    id="tokenomics"
+    class="flex flex-col max-xl:!bg-cover bgFill max-lg:bg-cover max-x:bg-[center_bottom] bg-no-repeat relative items-center justify-center gap-10 max-md:gap-8 py-20 max-md:py-12 bg-[url('@/assets/img/Home/TokenomicsBg.png')] max-md:bg-[url('@/assets/img/Home/TokenomicsBgMob.png')]"
   >
     <div class="flex flex-col text-center items-center gap-8">
       <div class="title">TOKENOMICS</div>
@@ -282,7 +340,7 @@ const hoverIndex = ref(null);
       class="hidden max-md:flex flex-col gap-1 w-full px-4 relative min-w-[450px]"
     >
       <div
-        v-for="(card, index) in TokenomicsCards"
+        v-for="(card, index) in TokenomicsCardsMobile"
         :key="index"
         class="flex items-center relative z-10"
         :class="index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'"

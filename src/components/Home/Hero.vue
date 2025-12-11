@@ -6,14 +6,14 @@ import Circle from "@/assets/img/Home/CircleText.png";
 
 <template>
   <div
-    class="h-screen relative min-h-[600px] px-5 pt-[100px] flex flex-col items-center justify-between pb-[56px] bg-[url('@/assets/img/Home/HeroBg.png')] max-2xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat"
+    class="h-screen relative min-h-[600px] px-5 pt-[100px] flex flex-col items-center justify-between pb-[56px] bg-[url('@/assets/img/Home/HeroBg.png')] max-xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat"
   >
     <div class="text-center flex flex-col items-center justify-center w-full">
-      <div class="title max-w-[800px]">
+      <div class="title max-w-[800px] px-3">
         THE WORLD'S FIRST L2 POWERED CRYPTO GAME
       </div>
-      <div class="description max-w-[470px] mt-4">
-        $DOGEBALL, the only crypto-playing DOGE on a customer EVM L2 blockchain.
+      <div class="description max-w-[440px] mt-4 max-md:px-3">
+        $DOGEBALL, the only crypto-playing DOGE on a custom EVM L2 blockchain.
         Fast, cheap, secure. Play for a shot at $1M
       </div>
       <TimerCounter />
@@ -38,11 +38,14 @@ import Circle from "@/assets/img/Home/CircleText.png";
       </div>
 
       <div class="flex gap-4 items-center">
-        <CustomButton title="Audit" class="py-[18px] !text-[22px] !w-[160px]" />
+        <CustomButton
+          title="Audit"
+          class="py-[18px] !font-medium !text-[22px] !w-[160px] max-md:h-[50px]"
+        />
         <CustomButton
           title="Whitepaper"
           white-bg="true"
-          class="py-[18px] !text-[22px] !w-[160px]"
+          class="py-[18px] !text-[22px] !font-medium !w-[160px] max-md:h-[50px]"
         />
       </div>
 
@@ -55,6 +58,4 @@ import Circle from "@/assets/img/Home/CircleText.png";
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

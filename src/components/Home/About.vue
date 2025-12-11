@@ -32,6 +32,7 @@ const AboutCards = [
 
 <template>
   <div
+    id="about"
     class="flex flex-col gap-9 max-md:gap-8 pt-[80px] max-md:py-12 pb-[120px] justify-center items-center px-[100px] max-lg:px-11 max-md:px-5 bg-[url('@/assets/img/Home/AboutBg.png')] bg-cover bg-bottom bg-no-repeat"
   >
     <div class="flex flex-col items-center gap-8">

@@ -79,6 +79,6 @@ const Logos = [
 }
 
 .animate-scroll {
-  animation: scroll 45s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 </style>

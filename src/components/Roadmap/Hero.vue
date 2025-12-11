@@ -6,10 +6,10 @@ import Seats from "@/assets/img/Roadmap/SeatsHero.png";
 
 <template>
   <div
-    class="relative px-5 h-screen items-center pt-[120px] max-[400px]:bg-contain max-md:pt-[100px] text-center min-h-[500px] flex flex-col bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Roadmap/BgHero.png')] max-[400px]:bg-[url('@/assets/img/Roadmap/BgHeroMob.png')]"
+    class="relative px-5 h-screen max-md:h-[500px] items-center pt-[120px] max-[400px]:bg-contain max-md:pt-[100px] text-center min-h-[500px] flex flex-col bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Roadmap/BgHero.png')] max-[400px]:bg-[url('@/assets/img/Roadmap/BgHeroMob.png')]"
   >
     <div
-      class="absolute bottom-[140px] max-[400px]:px-5 max-[400px]:bottom-[200px] right-1/2 translate-x-1/2 w-full 2xl:max-w-[1600px] 2xl:max-h-[800px] max-w-[915px] h-full max-h-[400px] max-md:max-h-[500px] max-[400px]:max-h-[180px] max-md:bottom-0 z-[1] pointer-events-none overflow-hidden rounded-md"
+      class="absolute bottom-[140px] max-[400px]:px-4 max-[400px]:bottom-[130px]  right-1/2 translate-x-1/2 w-full 2xl:max-w-[1820px] 2xl:max-h-[950px] max-w-[1025px] h-full max-h-[470px] max-md:w-screen max-md:max-w-[800px] max-md:max-h-[500px] max-[400px]:max-h-[180px] max-md:bottom-0 z-[1] pointer-events-none overflow-hidden rounded-md"
     >
       <div
         class="absolute inset-0 z-[2] bg-gradient-to-t from-[#00000060] via-[#00000010] to-transparent pointer-events-none"
@@ -29,7 +29,7 @@ import Seats from "@/assets/img/Roadmap/SeatsHero.png";
       ></div>
 
       <video
-        class="w-full h-full object-fill max-md:object-cover"
+        class="w-full h-full object-fill "
         :src="BgVideo"
         :poster="BgPoster"
         autoplay

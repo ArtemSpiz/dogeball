@@ -36,7 +36,7 @@ const LinksFooter = [
             :href="link.link"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-base whitespace-nowrap font-medium capitalize leading-[120%]"
+            class="text-base whitespace-nowrap font-medium max-md:font-bold capitalize leading-[120%]"
           >
             {{ link.title }}
           </a>
@@ -67,9 +67,11 @@ const LinksFooter = [
       />
     </div>
 
-    <div class="flex flex-col justify-between gap-2 pb-8 max-md:pb-0">
+    <div
+      class="flex flex-col justify-between h-[-webkit-fill-available] gap-2 pb-8 max-md:pb-0"
+    >
       <div
-        class="text-base font-normal leading-[120%] max-w-[365px] max-md:max-w-[320px] max-md:mx-auto"
+        class="text-base font-normal leading-[120%] max-w-[365px]  max-md:mx-auto"
       >
         Disclaimer: $DOGEBALL is a utility backed meme coin. Cryptocurrency
         markets are highly volatile, invest with caution. Cryptocurrency may be

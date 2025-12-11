@@ -46,7 +46,7 @@ const splitDigits = (value) => value.split("");
 
 <template>
   <div
-    class="mt-9 max-lg:mt-5 max-md:mt-3 p-6 max-md:p-3 w-max flex items-center justify-center gap-4 backdrop-blur-sm rounded-2xl max-md:rounded-md border-2 border-white/20 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
+    class="mt-9 max-lg:mt-5 xl:h-[125px] max-md:mt-3 p-4 max-md:p-3 w-max flex items-center justify-center gap-4 backdrop-blur-[2px] rounded-2xl max-md:rounded-md border-2 border-white/20 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] max-md:h-[99px]"
   >
     <div class="flex gap-2">
       <div class="flex flex-col items-center">
@@ -60,7 +60,9 @@ const splitDigits = (value) => value.split("");
           />
         </div>
 
-        <div class="font-grotesk text-base max-md:text-sm mt-1 font-medium">
+        <div
+          class="font-grotesk !leading-[120%] text-base max-md:text-sm mt-1 font-medium"
+        >
           Days
         </div>
       </div>
@@ -76,7 +78,9 @@ const splitDigits = (value) => value.split("");
           />
         </div>
 
-        <div class="font-grotesk text-base mt-1 max-md:text-sm font-medium">
+        <div
+          class="font-grotesk !leading-[120%] text-base mt-1 max-md:text-sm font-medium"
+        >
           Hours
         </div>
       </div>
@@ -91,7 +95,9 @@ const splitDigits = (value) => value.split("");
             :right="RightClock"
           />
         </div>
-        <div class="font-grotesk text-base mt-1 max-md:text-sm font-medium">
+        <div
+          class="font-grotesk !leading-[120%] text-base mt-1 max-md:text-sm font-medium"
+        >
           Minutes
         </div>
       </div>
@@ -106,7 +112,9 @@ const splitDigits = (value) => value.split("");
             :right="RightClock"
           />
         </div>
-        <div class="font-grotesk text-base mt-1 max-md:text-sm font-medium">
+        <div
+          class="font-grotesk !leading-[120%] text-base mt-1 max-md:text-sm font-medium"
+        >
           Seconds
         </div>
       </div>

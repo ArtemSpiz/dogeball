@@ -5,7 +5,7 @@
     <template v-if="isDogeball">
       <DogeballIcon class="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0" />
       <p
-        class="text-white font-grotesk text-lg font-medium leading-5 font-feature-off"
+        class="text-white font-grotesk text-lg max-md:text-base font-medium leading-5 font-feature-off"
       >
         $DOGEBALL
       </p>
@@ -25,7 +25,7 @@
         class="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0"
       />
       <p
-        class="text-white font-grotesk text-lg font-medium leading-5 font-feature-off"
+        class="text-white font-grotesk text-lg max-md:text-sm font-medium leading-5 font-feature-off"
       >
         {{ displayName }}
       </p>

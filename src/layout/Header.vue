@@ -7,36 +7,36 @@ import Logo from "@/assets/img/Logo.png";
 import { ref, watch } from "vue";
 
 import bgHeader from "@/assets/img/bgHeader.png";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
 const LinksHeader = [
   {
     title: "About",
-    link: "/about",
+    link: "#about",
   },
   {
     title: "Roadmap",
-    link: "/roadmap",
+    link: "#roadmap",
   },
   {
     title: "How to Buy",
-    link: "/",
+    link: "#howToBuy",
   },
   {
     title: "Play $DOGEBALL",
-    link: "/",
+    link: "/play-$DOGEBALL",
   },
   {
     title: "Tokenomics",
-    link: "/",
+    link: "#tokenomics",
   },
   {
     title: "ETH L2",
-    link: "/",
+    link: "/eth-l2",
   },
   {
     title: "FAQs",
-    link: "/",
+    link: "#faq",
   },
 ];
 
@@ -53,6 +53,22 @@ watch(
     isOpen.value = false;
   }
 );
+
+const router = useRouter();
+
+const scrollToSection = async (hash) => {
+  const id = hash.replace("#", "");
+
+  if (route.path !== "/") {
+    await router.push({ path: "/", query: { scroll: id } });
+    return;
+  }
+
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+};
 </script>
 
 <template>
@@ -69,13 +85,23 @@ watch(
       <div
         class="absolute left-1/2 -translate-x-1/2 bg-[rgba(255,238,225,0.10)] max-xl:gap-3 max-lg:hidden rounded-[20px] flex items-center gap-5 p-3"
       >
-        <router-link
-          v-for="link in LinksHeader"
-          :to="link.link"
-          class="text-[#FFEEE1] cursor-pointer text-sm font-medium"
-        >
-          {{ link.title }}
-        </router-link>
+        <template v-for="link in LinksHeader">
+          <button
+            v-if="link.link.startsWith('#')"
+            @click="scrollToSection(link.link)"
+            class="text-[#FFEEE1] cursor-pointer text-sm font-medium"
+          >
+            {{ link.title }}
+          </button>
+
+          <router-link
+            v-else
+            :to="link.link"
+            class="text-[#FFEEE1] cursor-pointer text-sm font-medium"
+          >
+            {{ link.title }}
+          </router-link>
+        </template>
       </div>
 
       <div class="flex items-center max-lg:hidden gap-3">
@@ -109,14 +135,27 @@ watch(
 
     <div v-if="isOpen" class="mt-12 w-full items-center flex flex-col gap-6">
       <div class="flex flex-col items-center gap-6">
-        <router-link
-          v-for="link in LinksHeader"
-          :to="link.link"
-          да
-          class="text-[#FFEEE1] cursor-pointer text-sm font-medium"
-        >
-          {{ link.title }}
-        </router-link>
+        <template v-for="link in LinksHeader">
+          <button
+            v-if="link.link.startsWith('#')"
+            @click="
+              scrollToSection(link.link);
+              toggleMenu();
+            "
+            class="text-[#FFEEE1] cursor-pointer text-sm font-medium"
+          >
+            {{ link.title }}
+          </button>
+
+          <router-link
+            v-else
+            :to="link.link"
+            @click="toggleMenu()"
+            class="text-[#FFEEE1] cursor-pointer text-sm font-medium"
+          >
+            {{ link.title }}
+          </router-link>
+        </template>
       </div>
       <div class="flex flex-col w-full items-center gap-4">
         <button

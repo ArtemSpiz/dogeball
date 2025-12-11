@@ -14,8 +14,7 @@ body {
 
 @layer base {
   body {
-    @apply bg-[#070B1E] text-white relative;
-    font-family: "ClashGrotesk-Regular", sans-serif;
+    @apply bg-[#070B1E] font-grotesk text-white relative;
   }
 
   img {

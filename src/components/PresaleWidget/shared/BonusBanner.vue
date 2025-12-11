@@ -2,13 +2,11 @@
   <div
     class="flex flex-col justify-center items-center gap-3 rounded-2xl border border-white/20 bg-white/10 shadow-[0_0_14px_0_#5464D8] backdrop-blur-sm px-4 py-4 w-full max-w-[519px]"
   >
-    <p class="text-white text-center text-lg leading-tight m-0 font-grotesk">
+    <p class="text-white text-center font-semibold  text-lg leading-[90%] m-0 font-grotesk">
       Presale Launch Offer
     </p>
 
-    <div
-      class="flex flex-col sm:flex-row items-center justify-center gap-2 w-full"
-    >
+    <div class="flex flex-wrap items-center justify-center gap-2 w-full">
       <p
         class="text-white text-center text-sm leading-tight m-0 whitespace-nowrap font-grotesk"
       >

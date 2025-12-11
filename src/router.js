@@ -5,8 +5,8 @@ import Roadmap from "./pages/Roadmap.vue";
 
 const routes = [
   { path: "/", name: "Home", component: Home },
-  { path: "/about", name: "About", component: About },
-  { path: "/roadmap", name: "Roadmap", component: Roadmap },
+  { path: "/eth-l2", name: "ETH L2", component: About },
+  { path: "/play-$DOGEBALL", name: "Roadmap", component: Roadmap },
 ];
 
 const router = createRouter({

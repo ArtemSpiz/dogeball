@@ -1,5 +1,6 @@
 <script setup>
 import Star from "@/assets/icons/Star.vue";
+import BgSteps from "@/assets/icons/BgSteps.vue";
 
 const StepsContent = [
   {
@@ -19,7 +20,7 @@ const StepsContent = [
     class="flex flex-col gap-8 h-[590px] justify-center items-center px-5 max-md:h-max max-md:py-12 bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Roadmap/StepsBg.png')]"
   >
     <div
-      class="max-w-[730px] text-center text-[32px] max-md:text-xl !leading-[110%] font-medium"
+      class="max-w-[710px] text-center text-[32px] max-md:text-xl !leading-[110%] font-medium"
     >
       Step into the arena and show your aim! Tap or click to throw – time it
       right, and smash every target in your way!
@@ -55,11 +56,15 @@ const StepsContent = [
         </div>
       </div>
 
+      <div class="absolute max-md:hidden">
+        <BgSteps class="w-full pl-5" />
+      </div>
+
       <div
-        class="p-6 relative flex flex-col text-center max-w-[800px] items-center gap-2 rounded-2xl bg-[rgba(255,255,255,0.06)] backdrop-blur-sm"
+        class="p-6 relative flex flex-col text-center max-w-[800px] items-center gap-2 rounded-2xl max-md:bg-[rgba(255,255,255,0.06)] max-md:backdrop-blur-sm"
       >
         <div
-          class="absolute inset-0 rounded-2xl"
+          class="absolute inset-0 md:hidden rounded-2xl"
           style="
             background: linear-gradient(
               145deg,
