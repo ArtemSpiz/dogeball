@@ -6,7 +6,7 @@ import Circle from "@/assets/img/Home/CircleText.png";
 
 <template>
   <div
-    class="h-screen relative min-h-[600px] px-5 pt-[100px] flex flex-col items-center justify-between pb-[56px] bg-[url('@/assets/img/Home/HeroBg.png')] max-xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat"
+    class="h-screen max-md:h-[calc(100vh-130px)] relative min-h-[600px] px-5 pt-[100px] flex flex-col items-center justify-between pb-[56px] bg-[url('@/assets/img/Home/HeroBg.png')] max-xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat"
   >
     <div class="text-center flex flex-col items-center justify-center w-full">
       <div class="title max-w-[800px] px-3">
@@ -50,7 +50,7 @@ import Circle from "@/assets/img/Home/CircleText.png";
       </div>
 
       <div
-        class="w-[230px] max-md:w-[200px] absolute bottom-0 max-lg:bottom-[250px] max-md:top-[370px] max-md:bottom-auto right-[120px] max-md:right-[10px] aspect-square"
+        class="w-[230px] max-md:w-[200px] absolute bottom-0 max-lg:bottom-[250px] max-md:top-[360px] max-md:bottom-auto right-[120px] max-md:right-[10px] aspect-square"
       >
         <img :src="Circle" class="object-contain animate-rotateClockwise" />
       </div>

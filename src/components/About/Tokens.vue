@@ -7,19 +7,11 @@ import { ref } from "vue";
 const Tokens = [
   {
     icon: TokenIcon1,
-    name: "$DOGEBALL",
+    name: "0.01 $DOGEBALL",
   },
   {
     icon: TokenIcon1,
-    name: "$DOGEBALL 1",
-  },
-  {
-    icon: TokenIcon1,
-    name: "$DOGEBALL 2",
-  },
-  {
-    icon: TokenIcon1,
-    name: "$DOGEBALL 3",
+    name: "0.005 $DOGEBALL",
   },
 ];
 

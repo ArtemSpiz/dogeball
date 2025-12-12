@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const BlockchainCards = [
   {
-    number: "01",
+    number: "1",
     text: "Add ETH L2 DOGECHAIN custom network to your chosen wallet (refer to your chosen wallets website for details on how to add a custom network) using the below details:",
     subtitles: [
       { name: "Blockchain Name", data: "DOGECHAIN" },
@@ -19,28 +19,28 @@ const BlockchainCards = [
     ],
   },
   {
-    number: "02",
-    text: `Click <span class="bg-[#EB4102] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px]">Connect Wallet</span> button at the top of the page to connect your wallet. Your wallet address will automatically populate in the faucet below`,
+    number: "2",
+    text: `Click <span class="bg-[#EB4102] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px] inline-flex items-center align-middle">Connect Wallet</span> button at the top of the page to connect your wallet. Your wallet address will automatically populate in the faucet below`,
   },
   {
-    number: "03",
+    number: "3",
     text: "Select the amount of test tokens to use (max 0.01 $DOGEBALL test tokens can be claimed using the same wallet per 24 hour period)",
   },
   {
-    number: "04",
-    text: `Click the  <span class="bg-[#EB4102] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px]">Send</span> button below to claim your free $DOGEBALL test tokens from the faucet`,
+    number: "4",
+    text: `Click the  <span class="bg-[#EB4102] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px] inline-flex items-center align-middle">Send</span> button below to claim your free $DOGEBALL test tokens from the faucet`,
   },
   {
-    number: "05",
+    number: "5",
     text: "Wait for the transaction to complete - the tokens will appear in your wallet on the DOGECHAIN network.",
     text2: `See all transactions and blockchain activity for our DOGECHAIN <span class="text-[#4FBBFF] underline" >Here</span>`,
   },
   {
-    number: "06",
+    number: "6",
     text: "Test the blockchain by sending $DOGEBALL test tokens to other wallet addresses (note the receiving wallet must also have the DOGECHAIN custom network added to their wallet to receive the test tokens)",
   },
   {
-    number: "07",
+    number: "7",
     text: "And there you go, you have experienced the speed, zero-cost and security of the custom created DOGECHAIN ETH L2 Blockchain!",
   },
 ];
@@ -171,7 +171,7 @@ const handleCopy = (text, copyComponent) => {
             sub.copy && handleCopy(sub.data, copyRefs[index + '-' + sub.name])
           "
         >
-          <div class="gap-2 items-start text-start flex">
+          <div class="gap-2 items-center text-start flex">
             <div class="w-[110px] description">{{ sub.name }}</div>
             <div
               :class="['', sub.copy ? 'cursor-pointer' : '']"

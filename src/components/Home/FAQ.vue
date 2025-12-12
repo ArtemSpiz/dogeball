@@ -131,7 +131,7 @@ const isMobile = window.innerWidth < 768;
               </div>
 
               <div
-                class="text-xl max-md:text-base my-auto font-medium leading-[110%]"
+                class="text-xl max-md:text-base my-auto font-bold leading-[110%]"
               >
                 {{ card.title }}
               </div>
@@ -180,7 +180,7 @@ const isMobile = window.innerWidth < 768;
                 <component :is="openIndex === i * 2 + 1 ? Minus : Plus" />
               </div>
 
-              <div class="text-xl my-auto font-medium leading-[110%]">
+              <div class="text-xl my-auto font-bold leading-[110%]">
                 {{ card.title }}
               </div>
             </div>

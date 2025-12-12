@@ -2,7 +2,9 @@
   <div
     class="flex flex-col justify-center items-center gap-3 rounded-2xl border border-white/20 bg-white/10 shadow-[0_0_14px_0_#5464D8] backdrop-blur-sm px-4 py-4 w-full max-w-[519px]"
   >
-    <p class="text-white text-center font-semibold  text-lg leading-[90%] m-0 font-grotesk">
+    <p
+      class="text-white text-center font-semibold text-lg leading-[90%] m-0 font-grotesk"
+    >
       Presale Launch Offer
     </p>
 
@@ -14,7 +16,7 @@
       </p>
       <button
         @click="copyBonusCode"
-        class="inline-flex items-center justify-center gap-1 px-2 py-0.5 rounded-md bg-white text-[#080C23] text-sm leading-tight cursor-pointer transition-opacity hover:opacity-90 whitespace-nowrap font-grotesk"
+        class="inline-flex font-grotesk items-center justify-center gap-1 px-2 font-black rounded-md bg-white text-[#080C23] text-sm leading-tight cursor-pointer transition-opacity hover:opacity-90 whitespace-nowrap font-grotesk"
         title="Copy code"
       >
         {{ copied ? "Copied!" : BONUS_CODE }}

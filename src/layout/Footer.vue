@@ -68,7 +68,7 @@ const LinksFooter = [
     </div>
 
     <div
-      class="flex flex-col justify-between h-[-webkit-fill-available] gap-2 pb-8 max-md:pb-0"
+      class="flex flex-col justify-between h-[-webkit-fill-available] max-md:h-max gap-2 pb-8 max-md:pb-0"
     >
       <div
         class="text-base font-normal leading-[120%] max-w-[365px]  max-md:mx-auto"
