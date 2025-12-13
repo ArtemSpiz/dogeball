@@ -8,7 +8,7 @@ const HowBuyCards = [
     type: "orange",
     underTitle: "Step 1",
     title: "Connect Wallet",
-    text: `Locate the presale widget at the top of the webpage (<a href='#presale' class="underline">Click Here</a>) and click 'Connect Wallet' using your preferred wallet. Multiple wallet options (inc. Metamask and Coinbase) are available for selection.`,
+    text: `Locate the presale widget at the top of the webpage (<a @click.prevent="scrollToPresale" href='#presale' class="underline">Click Here</a>) and click 'Connect Wallet' using your preferred wallet. Multiple wallet options (inc. Metamask and Coinbase) are available for selection.`,
   },
   {
     type: "white",
@@ -35,6 +35,16 @@ const HowBuyCards = [
     text: "Lock your presale purchase tokens in our secure and audited smart-contract staking pool; earn $DOGEBALL rewards with a high 80% APY and maximize your $DOGEBALL token return.",
   },
 ];
+
+const scrollToPresale = () => {
+  const el = document.getElementById("presale");
+  if (!el) return;
+
+  el.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
 </script>
 
 <template>

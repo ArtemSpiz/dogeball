@@ -20,7 +20,7 @@ const FAQcards = [
   },
   {
     title: "Where are my $DOGEBALL tokens?",
-    text: `Users can see their $DOGEBALL balance once their wallet is connected (see top of the page). The 'Dashboard' section in the presale widget will show the user balance and purchase history. <a href="#presale" class="underline">Click Here</a>`,
+    text: `Users can see their $DOGEBALL balance once their wallet is connected (see top of the page). The 'Dashboard' section in the presale widget will show the user balance and purchase history. <a data-scroll="presale" class="underline">Click Here</a>`,
   },
   {
     title: "When do I receive my tokens?",
@@ -43,11 +43,11 @@ const FAQcardsMob = [
   },
   {
     title: "How do I buy $DOGEBALL?",
-    text: `You can join the $DOGEBALL community by simply connecting your chosen wallet to the presale widget at the top of this page <a href="#presale" class="underline">(Click Here)</a>. Select your preferred crypto currency to use or pay by your Credit/Debit Card to secure your $DOGEBALL tokens.`,
+    text: `You can join the $DOGEBALL community by simply connecting your chosen wallet to the presale widget at the top of this page <a data-scroll="presale" class="underline">(Click Here)</a>. Select your preferred crypto currency to use or pay by your Credit/Debit Card to secure your $DOGEBALL tokens.`,
   },
   {
     title: "What is $DOGEBALL staking?",
-    text: `Staking $DOGEBALL involves locking your tokens in a secure smart contract for a set period (during presale only) to earn additional $DOGEBALL tokens at no extra cost. Staking rewards will be released following the 7-day minimum vesting period. Refer to the 'STAKING' section in 'HOW TO BUY ABOVE'. <a href="#howToBuy" class="underline">Click Here</a>`,
+    text: `Staking $DOGEBALL involves locking your tokens in a secure smart contract for a set period (during presale only) to earn additional $DOGEBALL tokens at no extra cost. Staking rewards will be released following the 7-day minimum vesting period. Refer to the 'STAKING' section in 'HOW TO BUY ABOVE'. <a data-scroll="howToBuy" class="underline">Click Here</a>`,
   },
   {
     title: "How do I generate a referral code and use bonus codes?",
@@ -55,7 +55,7 @@ const FAQcardsMob = [
   },
   {
     title: "Where are my $DOGEBALL tokens?",
-    text: `Users can see their $DOGEBALL balance once their wallet is connected (see top of the page). The 'Dashboard' section in the presale widget will show the user balance and purchase history. <a href="#presale" class="underline">Click Here</a>`,
+    text: `Users can see their $DOGEBALL balance once their wallet is connected (see top of the page). The 'Dashboard' section in the presale widget will show the user balance and purchase history. <a data-scroll="presale" class="underline">Click Here</a>`,
   },
   {
     title: "When do I receive my tokens?",
@@ -74,6 +74,20 @@ function toggleOpen(index) {
 }
 
 const isMobile = window.innerWidth < 768;
+
+function handleHtmlClick(e) {
+  const target = e.target.closest("[data-scroll]");
+  if (!target) return;
+
+  const id = target.getAttribute("data-scroll");
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  el.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+}
 </script>
 
 <template>
@@ -141,6 +155,7 @@ const isMobile = window.innerWidth < 768;
               <p
                 v-if="openIndex === (isMobile ? i : i * 2)"
                 v-html="card.text"
+                @click="handleHtmlClick"
                 class="text-base max-md:text-sm leading-[120%] font-grotesk font-normal z-50 pl-12 max-md:pl-0"
               />
             </Transition>
