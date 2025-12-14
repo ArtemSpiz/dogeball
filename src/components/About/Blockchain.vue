@@ -20,7 +20,7 @@ const BlockchainCards = [
   },
   {
     number: "2",
-    text: `Click <span class="bg-[#EB4102] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px]  items-center align-middle">Connect Wallet</span> button at the top of the page to connect your wallet. Your wallet address will automatically populate in the faucet below`,
+    text: `Click <span class="bg-[#EB4102] h-[17px] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px]  items-center align-middle">Connect Wallet</span> button at the top of the page to connect your wallet. Your wallet address will automatically populate in the faucet below`,
   },
   {
     number: "3",
