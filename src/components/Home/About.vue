@@ -47,7 +47,9 @@ const AboutCards = [
         <div class="font-grotesk text-2xl font-medium max-md:text-xl">
           The transition of crypto meme-coins
         </div>
-        <div class="description max-w-[730px]">
+        <div
+          class="font-grotesk leading-[120%] text-base font-normal max-md:text-sm max-w-[800px]"
+        >
           At the centre of DOGECHAIN is the $DOGEBALL game — an addictive online
           dodgeball game where players throw DOGEBALLs, level up, climb the
           leaderboard and compete for a $1M prize pool ($500k to the top
@@ -109,6 +111,9 @@ const AboutCards = [
 
         <div
           class="font-grotesk z-10 leading-[110%] text-lg max-md:leading-[125%] max-md:text-base font-medium max-w-[300px] text-center"
+          :class="[
+            { 'max-w-[100px]': i === 4 },
+          ]"
         >
           {{ card.title }}
         </div>

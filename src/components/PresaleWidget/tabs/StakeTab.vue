@@ -8,8 +8,17 @@
       <p class="text-white/70 text-center font-grotesk">
         Connect your wallet to view and manage your staking
       </p>
-      <Button @click="presale.connect" variant="primary" class="px-8">
-        Connect Wallet
+      <Button
+        @click="handleBuy"
+        :disabled="isBuying || presale.presaleEnded.value"
+        variant="primary"
+        class="h-11 px-6 !bg-[#EB4102] !bg-none text-base font-semibold"
+        style="border-radius: 80px"
+      >
+        <Spinner v-if="isBuying" :size="5" />
+        <template v-else>
+          <span>Connect Wallet</span>
+        </template>
       </Button>
     </div>
 
@@ -255,6 +264,13 @@ const handleUnstake = async () => {
     const message = err?.message || "Failed to unstake tokens";
     toast.showError(message);
     console.error("Unstake error:", err);
+  }
+};
+
+const handleBuy = async () => {
+  if (!presale.isConnected.value) {
+    presale.showConnectWalletModal();
+    return;
   }
 };
 </script>

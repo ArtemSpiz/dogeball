@@ -20,7 +20,7 @@ const FAQcards = [
   },
   {
     title: "Where are my $DOGEBALL tokens?",
-    text: `Users can see their $DOGEBALL balance once their wallet is connected (see top of the page). The 'Dashboard' section in the presale widget will show the user balance and purchase history. <a data-scroll="presale" class="underline">Click Here</a>`,
+    text: `Users can see their $DOGEBALL balance once their wallet is connected (see top of the page). The 'Dashboard' section in the presale widget will show the user balance and purchase history. <a href="#presale" class="underline">Click Here</a>`,
   },
   {
     title: "When do I receive my tokens?",
@@ -95,7 +95,7 @@ function handleHtmlClick(e) {
     id="faq"
     class="flex px-5 h-[1000px] max-2xl:!bg-cover bgFill max-lg:h-[950px] max-md:h-max flex-col relative py-20 max-md:py-12 max-md:pb-0 gap-12 bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Home/FAQBg.png')] overflow-hidden max-md:bg-[url('@/assets/img/Home/FAQBgMob.png')]"
   >
-    <div class="title z-20 uppercase max-w-[600px] text-center mx-auto">
+    <div class="title z-20 uppercase max-w-[700px] text-center mx-auto">
       Frequently Asked Questions
     </div>
 

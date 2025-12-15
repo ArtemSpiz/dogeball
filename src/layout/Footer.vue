@@ -71,9 +71,9 @@ const LinksFooter = [
       class="flex flex-col justify-between h-[-webkit-fill-available] max-md:h-max gap-2 pb-8 max-md:pb-0"
     >
       <div
-        class="text-base font-normal leading-[120%] max-w-[365px]  max-md:mx-auto"
+        class="text-base font-normal leading-[120%] max-w-[365px] max-md:mx-auto"
       >
-        Disclaimer: $DOGEBALL is a utility backed meme coin. Cryptocurrency
+        Disclaimer: $DOGEBALL is a utility-backed meme coin. Cryptocurrency
         markets are highly volatile, invest with caution. Cryptocurrency may be
         unregulated in your jurisdiction. Beware of '$DOGEBALL' copycat websites
         and social media channels (official links on this website only).

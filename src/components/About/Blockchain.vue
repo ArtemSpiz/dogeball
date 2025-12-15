@@ -171,11 +171,11 @@ const handleCopy = (text, copyComponent) => {
             sub.copy && handleCopy(sub.data, copyRefs[index + '-' + sub.name])
           "
         >
-          <div class="gap-2 items-center text-start flex">
+          <div class="gap-2 items-center text-start grid grid-cols-[repeat(2,120px)]">
             <div class="w-[110px] description">{{ sub.name }}</div>
             <div
               :class="['', sub.copy ? 'cursor-pointer' : '']"
-              class="w-max description flex items-center gap-1 px-2 py-1 text-sm leading-[120%] rounded-2xl border border-[#8B94F5] backdrop-blur-[5px] bg-[rgba(53,19,147,0.52)]"
+              class="w-max description max-md:!text-xs flex items-center gap-1 px-2 py-1 text-sm leading-[120%] rounded-2xl border border-[#8B94F5] backdrop-blur-[5px] bg-[rgba(53,19,147,0.52)]"
             >
               {{ sub.data }}
               <Copy

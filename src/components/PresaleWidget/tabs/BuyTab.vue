@@ -88,7 +88,12 @@
 
     <!-- Powered By -->
     <PoweredBy />
-    <NowPaymentsModal v-if="nowPaymentsTransaction" :open="nowPaymentsModalVisible" @close="() => nowPaymentsModalVisible = false" :transaction="nowPaymentsTransaction" />
+    <NowPaymentsModal
+      v-if="nowPaymentsTransaction"
+      :open="nowPaymentsModalVisible"
+      @close="() => (nowPaymentsModalVisible = false)"
+      :transaction="nowPaymentsTransaction"
+    />
     <WalletTransferModal
       v-if="presale.currentPurchase.value"
       :open="walletTransferModalVisible"
@@ -102,7 +107,7 @@
     />
     <ContactModal
       :open="contactModalVisible"
-      @close="() => contactModalVisible = false"
+      @close="() => (contactModalVisible = false)"
     />
   </div>
 </template>
@@ -129,7 +134,7 @@ import ContactModal from "../modals/ContactModal.vue";
 const presale = usePresale();
 const toast = useToast();
 
-watchEffect(() => console.log(presale.isConnected.value))
+watchEffect(() => console.log(presale.isConnected.value));
 
 // Local state
 const selectedToken = ref(null);
@@ -145,11 +150,13 @@ const codeOptions = [
 // Computed
 const isBuying = computed(() => {
   const state = presale.buyState.value.type;
-  return [
-    BuyStateType.SENDING,
-    BuyStateType.CONFIRMING,
-    BuyStateType.FINALIZING,
-  ].includes(state) || presale.buyLoading.value;
+  return (
+    [
+      BuyStateType.SENDING,
+      BuyStateType.CONFIRMING,
+      BuyStateType.FINALIZING,
+    ].includes(state) || presale.buyLoading.value
+  );
 });
 
 const buyButtonText = computed(() => {
@@ -197,7 +204,10 @@ watch(
       paymentAmountStr.value,
       selectedToken.value
     );
-    receiveAmountStr.value = (Math.floor(receiveNum * 10 ** 2) / 10 ** 2).toString();
+    receiveAmountStr.value = (
+      Math.floor(receiveNum * 10 ** 2) /
+      10 ** 2
+    ).toString();
   },
   { immediate: true }
 );
@@ -219,16 +229,16 @@ const toggleCodeOption = (value) => {
 };
 
 /** @type {import("vue").Ref<import("@/api/api.types").API.Transaction | null>} */
-const nowPaymentsTransaction = ref(null)
-const nowPaymentsModalVisible = ref(false)
-const walletTransferModalVisible = ref(false)
+const nowPaymentsTransaction = ref(null);
+const nowPaymentsModalVisible = ref(false);
+const walletTransferModalVisible = ref(false);
 
-const contactModalVisible = ref(false)
+const contactModalVisible = ref(false);
 
 const closeWalletTransfer = () => {
-  walletTransferModalVisible.value = false
-  contactModalVisible.value = true
-}
+  walletTransferModalVisible.value = false;
+  contactModalVisible.value = true;
+};
 
 const handleBuy = async () => {
   // Connect wallet if not connected
@@ -270,7 +280,12 @@ const handleBuy = async () => {
           );
         },
         onError: (err) => {
-          toast.showError(presaleApi.getApiErrorMessage(err, "Card payment failed. Please try again."));
+          toast.showError(
+            presaleApi.getApiErrorMessage(
+              err,
+              "Card payment failed. Please try again."
+            )
+          );
         },
         onClosedEarly: () => {
           toast.showInfo("Payment is being processed. Check your dashboard.");
@@ -288,8 +303,11 @@ const handleBuy = async () => {
       paymentToken: selectedToken.value,
       paymentAmount: paymentAmountStr.value,
       onStateChanged: (state) => {
-        if (state.state === "sending" && isWalletTransferSupported(selectedToken.value)) {
-          setTimeout(() => walletTransferModalVisible.value = true, 50)
+        if (
+          state.state === "sending" &&
+          isWalletTransferSupported(selectedToken.value)
+        ) {
+          setTimeout(() => (walletTransferModalVisible.value = true), 50);
         }
         if (state.state === BuyStateType.FINISHED) {
           const tokensReceived = parseNum(receiveAmountStr.value);
@@ -307,8 +325,8 @@ const handleBuy = async () => {
     // Handle NowPayments flow (shows payment modal)
     if (result?.type === "created" && result.transaction) {
       toast.showInfo("Complete your payment in the popup window");
-      nowPaymentsTransaction.value = result.transaction
-      setTimeout(() => nowPaymentsModalVisible.value = true, 50)
+      nowPaymentsTransaction.value = result.transaction;
+      setTimeout(() => (nowPaymentsModalVisible.value = true), 50);
     }
   } catch (err) {
     const message =

@@ -74,16 +74,15 @@ const scrollToSection = async (hash) => {
 const { address, disconnect, showConnectWalletModal } = useWallet();
 
 const onWalletClick = () => {
-  if (address.value) disconnect()
-  else showConnectWalletModal()
+  if (address.value) disconnect();
+  else showConnectWalletModal();
 };
-
 </script>
 
 <template>
   <div
     :class="[
-      'absolute max- bg-cover bg-no-repeat bg-bottom w-full pt-6 px-7 flex flex-col z-50 items-center mx-auto max-md:px-[18px] pb-6',
+      'absolute max-md:fixed bg-cover bg-no-repeat bg-bottom w-full pt-6 px-7 flex flex-col z-50 items-center mx-auto max-md:px-[18px] pb-6',
       isOpen ? 'bg-[url(@/assets/img/bgHeader.png)] h-screen ' : '',
     ]"
   >
@@ -138,11 +137,9 @@ const onWalletClick = () => {
           @click="onWalletClick"
         >
           <template v-if="address">
-            Disconnect<br />({{truncateString(address, 13)}})
+            Disconnect<br />({{ truncateString(address, 13) }})
           </template>
-          <template v-else>
-            Connect Wallet
-          </template>
+          <template v-else> Connect Wallet </template>
         </button>
       </div>
 
@@ -180,7 +177,11 @@ const onWalletClick = () => {
           class="py-3 px-4 max-w-[360px] w-full bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
           @click="onWalletClick"
         >
-          {{address ? `Disconnect (${truncateString(address, 15)})` : "Connect Wallet"}}
+          {{
+            address
+              ? `Disconnect (${truncateString(address, 15)})`
+              : "Connect Wallet"
+          }}
         </button>
 
         <div class="flex gap-3 items-center">

@@ -8,7 +8,7 @@ const HowBuyCards = [
     type: "orange",
     underTitle: "Step 1",
     title: "Connect Wallet",
-    text: `Locate the presale widget at the top of the webpage (<a @click.prevent="scrollToPresale" href='#presale' class="underline">Click Here</a>) and click 'Connect Wallet' using your preferred wallet. Multiple wallet options (inc. Metamask and Coinbase) are available for selection.`,
+    text: `Locate the presale widget at the top of the webpage (<a data-scroll="presale"  href='#presale' class="underline">Click Here</a>) and click 'Connect Wallet' using your preferred wallet. Multiple wallet options (inc. Metamask and Coinbase) are available for selection.`,
   },
   {
     type: "white",
@@ -45,6 +45,20 @@ const scrollToPresale = () => {
     block: "start",
   });
 };
+
+function handleHtmlClick(e) {
+  const target = e.target.closest("[data-scroll]");
+  if (!target) return;
+
+  const id = target.getAttribute("data-scroll");
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  el.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+}
 </script>
 
 <template>
@@ -89,7 +103,11 @@ const scrollToPresale = () => {
             </div>
           </div>
 
-          <p v-html="card.text" class="description"></p>
+          <p
+            v-html="card.text"
+            @click="handleHtmlClick"
+            class="description"
+          ></p>
 
           <div
             v-if="card.type === 'purple'"

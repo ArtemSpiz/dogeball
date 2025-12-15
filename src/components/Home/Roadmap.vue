@@ -100,19 +100,19 @@ const RoadmapCards = [
             :class="[
               'absolute max-xl:hidden',
               {
-                'translate-y-[50%] w-[535px] h-[365px] left-[-20px]':
+                'translate-y-[59%] w-[585px] h-[345px] left-[-50px]':
                   index === 0,
               },
               {
-                'translate-y-[59%] w-[230px] h-[275px] left-[-25px]':
+                'translate-y-[62%] w-[210px] h-[275px] left-[-28px]':
                   index === 1,
               },
               {
-                'translate-y-[55%] w-[360px] h-[290px] left-[-40px]':
+                'translate-y-[68%] w-[320px] h-[260px] left-[2px]':
                   index === 2,
               },
               {
-                'translate-y-[38%] w-[690px] h-[400px] left-[-364px]':
+                'translate-y-[45%] w-[645px] h-[380px] left-[-322px]':
                   index === 3,
               },
             ]"

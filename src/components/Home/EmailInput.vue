@@ -37,7 +37,7 @@ import { presaleApi } from '@/api';
     class="hidden mx-auto max-lg:flex my-12 w-full max-w-[325px] flex-col p-4 gap-4 border border-[#8B94F5] rounded-2xl bg-[rgba(53,19,147,0.52)] backdrop-blur-[5px] shadow-[0_0_20px_0_#263166]"
   >
     <div>
-      <div class="text-sm leading-[140%] font-grotesk">
+      <div class="text-sm leading-[140%] font-grotesk mb-1">
         Enter email to be added to the Whitelist
       </div>
       <input
