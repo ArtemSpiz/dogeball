@@ -138,7 +138,7 @@ const handleCopy = (text, copyComponent) => {
       ref="cardsContainer"
     >
       <div
-        class="absolute bottom-[-40px] right-1/2 max-md:hidden translate-x-1/2 w-[143px] h-auto"
+        class="absolute bottom-[-40px] right-1/2 max-md:hidden translate-x-1/2 w-[155px] h-auto"
       >
         <img :src="BlockchainCenterLine" class="object-contain" />
       </div>
