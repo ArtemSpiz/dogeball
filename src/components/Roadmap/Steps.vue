@@ -56,12 +56,12 @@ const StepsContent = [
         </div>
       </div>
 
-      <div class="absolute max-md:hidden top-[-15px] max-w-[685px]">
+      <div class="absolute max-md:hidden top-[-10px] w-[720px]">
         <BgSteps class="w-full" />
       </div>
 
       <div
-        class="p-6 relative flex flex-col text-center max-w-[700px] items-center gap-2 rounded-2xl max-md:bg-[rgba(255,255,255,0.06)] max-md:backdrop-blur-sm"
+        class="p-6 relative flex flex-col text-center max-w-[720px] items-center gap-2 rounded-2xl max-md:bg-[rgba(255,255,255,0.06)] max-md:backdrop-blur-sm"
       >
         <div
           class="absolute pointer-events-none inset-0 md:hidden rounded-2xl"
