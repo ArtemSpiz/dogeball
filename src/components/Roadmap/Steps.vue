@@ -26,7 +26,7 @@ const StepsContent = [
       right, and smash every target in your way!
     </div>
 
-    <div class="flex relative flex-col items-end gap-2">
+    <div class="flex relative flex-col items-end gap-0 max-md:gap-2">
       <div
         class="flex items-center self-stretch gap-2 justify-end max-lg:flex-wrap max-lg:items-center max-md:justify-center"
       >
