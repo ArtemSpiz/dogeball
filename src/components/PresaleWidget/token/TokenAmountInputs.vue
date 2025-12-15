@@ -145,7 +145,7 @@ const handlePaymentInput = (e) => {
   // Calculate receive amount
   if (props.selectedToken && presale.stage.value) {
     const receiveNum = presale.calculateReceiveAmount(val, props.selectedToken);
-    emit("update:receiveAmount", formatPrecision(receiveNum, 0, 2));
+    emit("update:receiveAmount", (Math.floor(receiveNum * 10 ** 2) / 10 ** 2).toString());
   }
 };
 
@@ -178,7 +178,7 @@ const handleReceiveInput = (e) => {
   // Calculate payment amount
   if (props.selectedToken && presale.stage.value) {
     const paymentNum = presale.calculatePaymentAmount(val, props.selectedToken);
-    emit("update:paymentAmount", formatPrecision(paymentNum, 0, 6));
+    emit("update:paymentAmount", (Math.floor(paymentNum * 10 ** 6) / 10 ** 6).toString());
   }
 };
 </script>

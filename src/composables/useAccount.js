@@ -1,26 +1,21 @@
-import { ref } from 'vue'
-
-// Mock account state - replace with actual wallet integration (e.g., wagmi, web3modal)
-const address = ref(null)
-const isConnected = ref(false)
+import { computed, ref } from 'vue'
+import { getWagmiConfig } from './blockchain'
+import { useAccount as useOriginalAccount } from '@/presale-gg/web3'
+import { disconnect as disconnectWagmi } from "@wagmi/core"
 
 export function useAccount() {
-  // TODO: Replace with actual wallet connection logic
-  const connect = async () => {
-    // Mock connection
-    address.value = '0x1234567890123456789012345678901234567890'
-    isConnected.value = true
-  }
-
-  const disconnect = () => {
-    address.value = null
-    isConnected.value = false
+  const accountData = useOriginalAccount()
+  
+  const disconnect = async () => {
+    const config = await getWagmiConfig()
+    await disconnectWagmi(config)
+    // Have to disconnect twice sometimes
+    setTimeout(() => disconnectWagmi(config), 100)
   }
 
   return {
-    address,
-    isConnected,
-    connect,
+    address: computed(() => accountData.value?.address ?? null),
+    isConnected: computed(() => accountData.value?.isConnected ?? false),
     disconnect,
   }
 }

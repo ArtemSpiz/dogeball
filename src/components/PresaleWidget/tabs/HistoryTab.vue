@@ -27,7 +27,8 @@
           Your Transactions
         </p>
         <div
-          class="flex flex-col gap-2 flex-1 rounded-xl sm:rounded-2xl border border-white/20 bg-[rgba(8,12,35,0.48)] p-2 sm:p-3 overflow-y-auto w-full"
+          class="flex flex-col gap-2 flex-1 rounded-xl sm:rounded-2xl border border-white/20 bg-[rgba(8,12,35,0.48)] p-2 sm:p-3 overflow-y-auto w-full max-h-[35rem]"
+          :style="{colorScheme: 'dark'}"
         >
           <TransactionHistoryList />
         </div>
