@@ -88,11 +88,27 @@
 
     <!-- Powered By -->
     <PoweredBy />
+    <NowPaymentsModal v-if="nowPaymentsTransaction" :open="nowPaymentsModalVisible" @close="() => nowPaymentsModalVisible = false" :transaction="nowPaymentsTransaction" />
+    <WalletTransferModal
+      v-if="presale.currentPurchase.value"
+      :open="walletTransferModalVisible"
+      @close="closeWalletTransfer"
+      :pay-amount="presale.currentPurchase.value.payAmount"
+      :pay-currency="presale.currentPurchase.value.token"
+      :state="presale.currentPurchase.value.state"
+      :transaction="presale.currentPurchase.value.transaction"
+      :transaction-hash="presale.currentPurchase.value.transactionHash"
+      :transaction-error="presale.currentPurchase.value.error"
+    />
+    <ContactModal
+      :open="contactModalVisible"
+      @close="() => contactModalVisible = false"
+    />
   </div>
 </template>
 
 <script setup>
-import { ref, watch, computed, onMounted } from "vue";
+import { ref, watch, computed, onMounted, watchEffect } from "vue";
 import StageBox from "../stage/StageBox.vue";
 import { TokenSelectGrid, TokenAmountInputs } from "../token";
 import { Button, Spinner, PillButton } from "../ui";
@@ -103,10 +119,17 @@ import { usePresale, BuyStateType } from "@/composables/usePresale";
 import { useToast } from "@/composables/useToast";
 import { formatDollar, parseNum, formatPrecision } from "@/utils/format";
 import { LAUNCH_PRICE, DEFAULT_PAYMENT_AMOUNT } from "@/config/presale";
+import { presaleApi } from "@/api";
+import NowPaymentsModal from "../modals/NowPaymentsModal.vue";
+import WalletTransferModal from "../modals/WalletTransferModal.vue";
+import { isWalletTransferSupported } from "@/utils/web3";
+import ContactModal from "../modals/ContactModal.vue";
 
 // Composables
 const presale = usePresale();
 const toast = useToast();
+
+watchEffect(() => console.log(presale.isConnected.value))
 
 // Local state
 const selectedToken = ref(null);
@@ -126,7 +149,7 @@ const isBuying = computed(() => {
     BuyStateType.SENDING,
     BuyStateType.CONFIRMING,
     BuyStateType.FINALIZING,
-  ].includes(state);
+  ].includes(state) || presale.buyLoading.value;
 });
 
 const buyButtonText = computed(() => {
@@ -167,14 +190,14 @@ watch(
 
 // Calculate receive amount when payment changes
 watch(
-  [selectedToken, paymentAmountStr, () => presale.stage.value?.token_price],
+  [selectedToken, () => presale.stage.value?.token_price],
   () => {
     if (!selectedToken.value || !presale.stage.value) return;
     const receiveNum = presale.calculateReceiveAmount(
       paymentAmountStr.value,
       selectedToken.value
     );
-    receiveAmountStr.value = formatPrecision(receiveNum, 0, 2);
+    receiveAmountStr.value = (Math.floor(receiveNum * 10 ** 2) / 10 ** 2).toString();
   },
   { immediate: true }
 );
@@ -195,10 +218,22 @@ const toggleCodeOption = (value) => {
   visibleOption.value = visibleOption.value === value ? null : value;
 };
 
+/** @type {import("vue").Ref<import("@/api/api.types").API.Transaction | null>} */
+const nowPaymentsTransaction = ref(null)
+const nowPaymentsModalVisible = ref(false)
+const walletTransferModalVisible = ref(false)
+
+const contactModalVisible = ref(false)
+
+const closeWalletTransfer = () => {
+  walletTransferModalVisible.value = false
+  contactModalVisible.value = true
+}
+
 const handleBuy = async () => {
   // Connect wallet if not connected
   if (!presale.isConnected.value) {
-    await presale.connect();
+    presale.showConnectWalletModal();
     return;
   }
 
@@ -234,8 +269,8 @@ const handleBuy = async () => {
             )} $DOGEBALL!`
           );
         },
-        onError: () => {
-          toast.showError("Card payment failed. Please try again.");
+        onError: (err) => {
+          toast.showError(presaleApi.getApiErrorMessage(err, "Card payment failed. Please try again."));
         },
         onClosedEarly: () => {
           toast.showInfo("Payment is being processed. Check your dashboard.");
@@ -253,7 +288,10 @@ const handleBuy = async () => {
       paymentToken: selectedToken.value,
       paymentAmount: paymentAmountStr.value,
       onStateChanged: (state) => {
-        if (state.type === BuyStateType.FINISHED) {
+        if (state.state === "sending" && isWalletTransferSupported(selectedToken.value)) {
+          setTimeout(() => walletTransferModalVisible.value = true, 50)
+        }
+        if (state.state === BuyStateType.FINISHED) {
           const tokensReceived = parseNum(receiveAmountStr.value);
           toast.showSuccess(
             `Successfully purchased ${formatPrecision(
@@ -269,7 +307,8 @@ const handleBuy = async () => {
     // Handle NowPayments flow (shows payment modal)
     if (result?.type === "created" && result.transaction) {
       toast.showInfo("Complete your payment in the popup window");
-      // NowPayments modal will handle the rest
+      nowPaymentsTransaction.value = result.transaction
+      setTimeout(() => nowPaymentsModalVisible.value = true, 50)
     }
   } catch (err) {
     const message =

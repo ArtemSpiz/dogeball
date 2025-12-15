@@ -11,7 +11,8 @@ import { mainnet, bsc, base } from "@reown/appkit/networks";
 import { createAppKit } from "@reown/appkit";
 import { rpcMap } from "./util";
 import { WALLET_CONNECT_PROJECT_ID } from "../constants";
-import logo from "@/assets/navabar/logo.webp";
+
+const logo = "/logo.png"
 
 const metadata = {
   name: "DOGEBALL",

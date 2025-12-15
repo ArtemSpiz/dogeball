@@ -1,6 +1,6 @@
 import { map } from "nanostores";
-import { api } from "../api";
-import { useStore } from "@nanostores/react";
+import api from "@/api/presale";
+import { useStore } from "@nanostores/vue";
 
 /**
  * @typedef {import("../api/api.types").API} API

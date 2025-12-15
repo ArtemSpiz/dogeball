@@ -1,7 +1,37 @@
 <script setup>
-import CustomButton from "@/ui/CustomButton.vue";
-import TimerCounter from "./TimerCounter.vue";
-import Circle from "@/assets/img/Home/CircleText.png";
+  import CustomButton from "@/ui/CustomButton.vue";
+  import TimerCounter from "./TimerCounter.vue";
+  import Circle from "@/assets/img/Home/CircleText.png";
+  import { useAccount, useToast } from '@/composables';
+  import { ref } from 'vue';
+  import Spinner from '../PresaleWidget/ui/Spinner.vue';
+  import { presaleApi } from '@/api';
+
+  const accountData = useAccount();
+  const loading = ref(false)
+  const email = ref("");
+  const { showSuccess, showInfo, showError } = useToast()
+
+  const submit = async () => {
+    if (loading.value) return
+    loading.value = true
+     try {
+      await presaleApi.postLeads({
+        email: email.value,
+        wallet_address: accountData.address.value ?? undefined,
+      });
+      showSuccess("Successfully submitted details");
+    } catch (err) {
+      const msg = presaleApi.getApiErrorMessage(err, "Error submitting details");
+      if (msg.toLowerCase() === "user details already exist") {
+        showInfo(msg);
+        loading.value = false;
+        return
+      }
+      showError(msg);
+    }
+    loading.value = false
+  };
 </script>
 
 <template>
@@ -32,9 +62,12 @@ import Circle from "@/assets/img/Home/CircleText.png";
           <input
             class="py-1 w-full px-2 h-10 border border-[#DCDCDC] rounded-lg bg-[rgba(255,255,255,0.06)] text-base font-medium text-[rgba(255,255,255,0.30)]"
             placeholder="your email"
+            @input="(e) => email = e.currentTarget.value"
           />
         </div>
-        <CustomButton title="Get early access!" class="w-full" />
+        <CustomButton :title="loading ? '' : 'Get early access!'" class="w-full" @click="submit">
+          <Spinner v-if="loading" :size="6" />
+        </CustomButton>
       </div>
 
       <div class="flex gap-4 items-center">

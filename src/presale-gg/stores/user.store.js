@@ -1,9 +1,9 @@
 import { map } from "nanostores";
-import { api } from "../api";
-import toast from "react-hot-toast";
+import api from "@/api/presale";
 import { getAccount, signMessage, watchAccount } from "@wagmi/core";
 import { getConfig } from "../web3";
-import { useStore } from "@nanostores/react";
+import { useStore } from "@nanostores/vue";
+import { addToast, ToastType } from "@/composables";
 
 /**
  * @typedef {import("../api/api.types").API.User} User
@@ -48,29 +48,6 @@ document.addEventListener("wagmi-loaded", async () => {
     onChange: (account) => {
       const address = account.address;
       if (!address) return $userState.set({ ...defaultUserState });
-      // Send the connected event
-      if (account.isConnected) {
-        try {
-          let connectedWallets = JSON.parse(
-            window.localStorage.getItem("userConnectedWallets") ?? "[]"
-          );
-          if (!Array.isArray(connectedWallets)) connectedWallets = [];
-          const hasAlreadySent = connectedWallets.find(
-            (wallet) => wallet.toLowerCase() === account.address.toLowerCase()
-          );
-          if (!hasAlreadySent) {
-            window.dataLayer.push({ event: "wallet_connect" });
-            connectedWallets.push(account.address.toLowerCase());
-            window.localStorage.setItem(
-              "userConnectedWallets",
-              JSON.stringify(connectedWallets)
-            );
-          }
-        } catch (err) {
-          console.warn(err);
-        }
-      }
-
       api.getUser(address).then((res) => $userState.setKey("user", res.data));
       api
         .getUserStakeData(address)
@@ -95,22 +72,17 @@ export const getUserToken = async (options) => {
   const { address, isConnected } = getAccount(config);
   if (!address || !isConnected) throw new Error("Please connect your wallet");
   const messageRes = await api.getSiweMessage(address);
-  const promise = signMessage(config, {
+  if (!options?.noToast) {
+    addToast("Confirm the message signature in your wallet", ToastType.INFO)
+  }
+  let signedMessage = await signMessage(config, {
     message: messageRes.data.message,
+  }).catch((err) => {
+    addToast(api.getApiErrorMessage(err, "Error signing message"), ToastType.ERROR) 
+    throw new Error("Error confirming user");
   });
-  let signedMessage;
-  if (options?.noToast) {
-    signedMessage = await promise;
-  } else {
-    signedMessage = await toast
-      .promise(promise, {
-        loading: "Confirm the message signature in your wallet",
-        success: "Successfully signed wallet message",
-        error: (err) => api.getApiErrorMessage(err, "Error signing message"),
-      })
-      .catch(() => {
-        throw new Error("Error confirming user");
-      });
+  if (!options?.noToast) {
+    addToast("Successfully signed wallet message", ToastType.INFO)
   }
   const validRes = await api.verifySiweMessage(
     address,

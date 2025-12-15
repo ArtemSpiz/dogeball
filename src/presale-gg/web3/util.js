@@ -1,5 +1,5 @@
-import erc20Abi from "../abi/erc20.json";
-import bep20Abi from "../abi/bep20.json";
+import erc20Abi from "@/abi/erc20.json";
+import bep20Abi from "@/abi/bep20.json";
 import {
   sendTransaction,
   writeContract,

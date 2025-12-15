@@ -2,17 +2,13 @@
 export { useApiState } from "./useApiState";
 export { useUserState } from "./useUserState";
 export { useAccount } from "./useAccount";
+export { useModalState } from "./useModalState"
 
 // Blockchain composables (re-export from subfolder)
 export {
   useWallet,
-  setWagmiAdapter,
-  setAppkitModal,
   getWagmiConfig,
-  isWagmiConfigured,
-  useAuth,
   useBuy,
-  useStaking,
   useCodes,
 } from "./blockchain";
 
@@ -20,7 +16,7 @@ export {
 export { usePresale } from "./usePresale";
 
 // UI composables
-export { useToast, ToastType } from "./useToast";
+export { useToast, ToastType, addToast } from "./useToast";
 export { useNumericInput } from "./useNumericInput";
 
 // Re-export constants

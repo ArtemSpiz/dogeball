@@ -80,14 +80,14 @@ export const RPC_URLS = {
 };
 
 // Buy state types
-export const BuyStateType = {
+export const BuyStateType = /** @type {const} */ ({
   IDLE: "idle",
   SENDING: "sending",
   CONFIRMING: "confirming",
   FINALIZING: "finalizing",
   FINISHED: "finished",
   ERRORED: "errored",
-};
+});
 
 // Transaction polling config
 export const TRANSACTION_POLL_INTERVAL = 5000;

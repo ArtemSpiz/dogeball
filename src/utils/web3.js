@@ -63,9 +63,10 @@ export const getDecimals = (chainId, symbol) => {
 
 /**
  * Check if token supports direct wallet transfer
+ * @param {import("@/api/api.types").API.PaymentToken} paymentToken
  */
 export const isWalletTransferSupported = (paymentToken) => {
-  if (!paymentToken?.symbol || !paymentToken?.chain) return false;
+  if (!paymentToken?.symbol || !paymentToken?.chain || paymentToken.nowpayments_id !== null) return false;
   const key = `${paymentToken.symbol.toUpperCase()}-${paymentToken.chain.toUpperCase()}`;
   return WALLET_BUY_TOKENS.has(key);
 };

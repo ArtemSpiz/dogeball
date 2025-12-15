@@ -7,22 +7,22 @@
       :tokens="[cardToken]"
       :default-label="cardToken.symbol"
       :default-token="cardToken"
-      :selected="cardToken.id === value?.id"
+      :selected="cardToken.id === value?.id && selectedGroup === 0"
       class="w-full"
-      @update:value="handleTokenChange"
+      @update:value="(token) => handleTokenChange(token, 0)"
     />
 
     <!-- Crypto Grid -->
     <div class="grid grid-cols-3 gap-2">
       <TokenSelect
-        v-for="tokenGroup in mainCryptoGroups"
+        v-for="(tokenGroup, index) in mainCryptoGroups"
         :key="tokenGroup.symbol"
         :value="tokenGroup.tokens.find((t) => t.id === value?.id) || null"
         :tokens="tokenGroup.tokens"
         :default-label="tokenGroup.symbol"
         :default-token="tokenGroup.defaultToken"
-        :selected="tokenGroup.tokens.some((t) => t.id === value?.id)"
-        @update:value="handleTokenChange"
+        :selected="tokenGroup.tokens.some((t) => t.id === value?.id) && selectedGroup === index + 1"
+        @update:value="(token) => handleTokenChange(token, index + 1)"
       />
       <!-- More Button -->
       <TokenSelect
@@ -31,8 +31,8 @@
         :tokens="moreTokens"
         :default-label="'More'"
         :placeholder="'More'"
-        :selected="moreTokens.some((t) => t.id === value?.id)"
-        @update:value="handleTokenChange"
+        :selected="moreTokens.some((t) => t.id === value?.id)  && selectedGroup === mainCryptoGroups.length + 1"
+        @update:value="(token) => handleTokenChange(token, mainCryptoGroups.length + 1)"
       />
     </div>
 
@@ -55,10 +55,10 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import TokenSelect from "./TokenSelect.vue";
-import { useApiState } from "@/composables/useApiState";
 import coinLogosImage from "@/assets/img/logos/coin-logos.webp";
+import { useApiState } from "@/composables";
 
 const props = defineProps({
   value: {
@@ -66,6 +66,7 @@ const props = defineProps({
     default: null,
   },
 });
+const selectedGroup = ref(1)
 
 const emit = defineEmits(["update:value"]);
 
@@ -229,7 +230,8 @@ const moreTokens = computed(() => {
   return moreList;
 });
 
-const handleTokenChange = (token) => {
+const handleTokenChange = (token, i) => {
   emit("update:value", token);
+  selectedGroup.value = i
 };
 </script>

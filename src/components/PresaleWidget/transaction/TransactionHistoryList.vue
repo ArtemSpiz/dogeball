@@ -58,7 +58,7 @@
                 for ${{ formatLargeNumber(parseNum(trx.payment_usd_amount)) }}
               </p>
               <p v-else class="text-[10px] sm:text-xs text-white/60">
-                {{ trx.status === "pending" ? "Awaiting payment" : "Processing..." }}
+                {{ trx.status === "pending" ? "Awaiting payment" : capitalize(trx.status) }}
               </p>
             </template>
 

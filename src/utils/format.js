@@ -45,11 +45,16 @@ export function formatPrecision(num, minFrac = 0, maxFrac = 2) {
   }).format(n)
 }
 
-export const partialNumRegexp = /^(\d+\.?\d*|\.\d*)$/
+export const partialNumRegexp = /^(\d*\.?\d*|\.?\d*)$/
 
-export function capitalize(str) {
-  if (!str) return ''
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
+export const capitalize = (str) => {
+  return str
+    .split(/_+|\s+/g)
+    .map(
+      (str) =>
+        str.substring(0, 1).toUpperCase() + str.substring(1).toLowerCase()
+    )
+    .join(" ");
 }
 
 export function copyText(text) {
@@ -64,7 +69,13 @@ export function copyText(text) {
   })
 }
 
-
-
-
-
+export const truncateString = (str, numChars) => {
+  if (str.startsWith("0x"))
+    return `0x${truncateString(str.substring(2), numChars - 2)}`;
+  if (str.length <= numChars) return str;
+  const charsLeft = Math.ceil((numChars - 3) / 2);
+  const charsRight = Math.floor((numChars - 3) / 2);
+  return (
+    str.substring(0, charsLeft) + "..." + str.substring(str.length - charsRight)
+  );
+};

@@ -1,8 +1,8 @@
-import walletConnectImg from "../assets/img/wallet-connect.svg";
-import metamaskImg from "../assets/img/metamask.svg";
-import coinbaseImg from "../assets/img/coinbase.svg";
-import phantomWalletImg from "../assets/img/phantom.svg";
-import { getIsMobile } from "../util";
+import walletConnectImg from "../assets/img/wallet-connect.svg?url";
+import metamaskImg from "../assets/img/metamask.svg?url";
+import coinbaseImg from "../assets/img/coinbase.svg?url";
+import phantomWalletImg from "../assets/img/phantom.svg?url";
+import { getIsMobile } from "@/utils/media";
 
 /**
  * @typedef {"metamask" | "walletconnect" | "coinbase"} SupportedConnection
