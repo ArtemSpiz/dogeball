@@ -70,7 +70,7 @@ const RoadmapCards = [
           :key="index"
           :class="[
             'p-8 gap-4 max-md:px-6 max-md:py-4 h-auto max-xl:h-full w-[307px] max-xl:w-auto flex flex-col items-start border border-[#8B94F5] backdrop-blur-[5px] rounded-2xl bg-[rgba(53,19,147,0.52)] max-xl:mt-0',
-            { 'mt-24': index === 1 },
+            { 'mt-[101px]': index === 1 },
             { 'mt-24': index === 2 },
           ]"
         >
@@ -100,16 +100,15 @@ const RoadmapCards = [
             :class="[
               'absolute max-xl:hidden',
               {
-                'translate-y-[59%] w-[585px] h-[345px] left-[-50px]':
+                'translate-y-[58%] w-[588px] h-[348px] left-[-46px]':
                   index === 0,
               },
               {
-                'translate-y-[62%] w-[210px] h-[275px] left-[-28px]':
+                'translate-y-[60%] w-[210px] h-[275px] left-[-23px]':
                   index === 1,
               },
               {
-                'translate-y-[68%] w-[320px] h-[260px] left-[2px]':
-                  index === 2,
+                'translate-y-[68%] w-[320px] h-[260px] left-[2px]': index === 2,
               },
               {
                 'translate-y-[45%] w-[645px] h-[380px] left-[-322px]':
