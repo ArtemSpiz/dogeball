@@ -1,26 +1,90 @@
 <script setup>
+import { ref, computed, watch } from "vue";
 import ArrowDropDown from "@/assets/icons/ArrowDropDown.vue";
 import TokenIcon1 from "@/assets/img/About/TokenIcon1.png";
 import CustomButton from "@/ui/CustomButton.vue";
-import { ref } from "vue";
+import { useWallet } from "@/composables/blockchain/useWallet";
+import { useToast } from "@/composables/useToast";
+import { claimFaucetTokens } from "@/api/faucet";
+
+const wallet = useWallet();
+const toast = useToast();
 
 const Tokens = [
   {
     icon: TokenIcon1,
     name: "0.01 $DOGEBALL",
+    amount: 0.01,
   },
   {
     icon: TokenIcon1,
     name: "0.005 $DOGEBALL",
+    amount: 0.005,
   },
 ];
 
 const selectedToken = ref(Tokens[0]);
 const isOpen = ref(false);
+const walletAddress = ref("");
+const isClaiming = ref(false);
+
+// Auto-fill wallet address when connected
+watch(
+  () => wallet.address.value,
+  (newAddress) => {
+    if (newAddress) {
+      walletAddress.value = newAddress;
+    }
+  },
+  { immediate: true }
+);
 
 const selectToken = (token) => {
   selectedToken.value = token;
   isOpen.value = false;
+};
+
+const handleClaim = async () => {
+  if (!walletAddress.value) {
+    toast.showError("Please connect your wallet or enter a wallet address");
+    return;
+  }
+
+  // Validate wallet address format
+  if (!/^0x[a-fA-F0-9]{40}$/.test(walletAddress.value)) {
+    toast.showError("Please enter a valid wallet address");
+    return;
+  }
+
+  if (isClaiming.value) return;
+
+  isClaiming.value = true;
+
+  try {
+    const result = await claimFaucetTokens({
+      receiver: walletAddress.value,
+      amount: selectedToken.value.amount,
+    });
+
+    if (result.success) {
+      toast.showSuccess(
+        `Successfully claimed ${
+          selectedToken.value.name
+        }! Transaction: ${result.transactionHash.slice(0, 10)}...`
+      );
+      // Reset form or show success state
+    } else {
+      toast.showError(result.message || "Failed to claim tokens");
+    }
+  } catch (error) {
+    const errorMessage =
+      error.response?.data?.error ||
+      error.message ||
+      "Failed to claim tokens. Please try again.";
+    toast.showError(errorMessage);
+  } finally {
+    isClaiming.value = false;
+  }
 };
 </script>
 
@@ -79,13 +143,19 @@ const selectToken = (token) => {
         <div class="flex items-start flex-col">
           <div class="text-sm leading-[140%]">Wallet Address</div>
           <input
+            v-model="walletAddress"
             placeholder="Connect your wallet to auto-fill your address."
             class="p-2 w-full max-h-[40px] border rounded-lg gap-2 flex items-center border-[#DCDCDC] bg-[rgba(255,255,255,0.06)] placeholder:text-lg max-md:placeholder:text-xs text-lg max-md:text-base placeholder:text-[rgba(255,255,255,0.30)] text-[rgba(255,255,255,0.30)]"
           />
         </div>
       </div>
 
-      <CustomButton title="Coming Soon" class="w-full" />
+      <CustomButton
+        :title="isClaiming ? 'Claiming...' : 'Send'"
+        :disabled="isClaiming || !walletAddress"
+        @click="handleClaim"
+        class="w-full"
+      />
     </div>
   </div>
 </template>
