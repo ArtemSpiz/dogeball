@@ -33,7 +33,7 @@ const BlockchainCards = [
   {
     number: "5",
     text: "Wait for the transaction to complete - the tokens will appear in your wallet on the DOGECHAIN network.",
-    text2: `See all transactions and blockchain activity for our DOGECHAIN <a href='http://78.141.225.190:3001/' class="text-[#4FBBFF] underline" >Here</a>`,
+    text2: `See all transactions and blockchain activity for our DOGECHAIN <a target="_blank" rel="noopener noreferrer" href='http://78.141.225.190:3001/' class="text-[#4FBBFF] underline" >Here</a>`,
   },
   {
     number: "6",
