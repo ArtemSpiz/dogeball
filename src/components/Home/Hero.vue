@@ -40,12 +40,12 @@ import Circle from "@/assets/img/Home/CircleText.png";
       <div class="flex gap-4 items-center">
         <CustomButton
           title="Audit"
-          class="py-[18px] !font-medium !text-[22px] !w-[160px] max-md:h-[50px]"
+          class="py-[18px] !text-[22px] !w-[160px] max-md:h-[50px]"
         />
         <CustomButton
           title="Whitepaper"
           white-bg="true"
-          class="py-[18px] !text-[22px] !font-medium !w-[160px] max-md:h-[50px]"
+          class="py-[18px] !text-[22px] !w-[160px] max-md:h-[50px]"
         />
       </div>
 

@@ -20,7 +20,7 @@ import CustomButton from "@/ui/CustomButton.vue";
     </div>
 
     <div
-      class="rounded-2xl relative max-w-[800px] decoration-from-font bg-[rgba(0,0,0,0.36)] p-6 text-base font-medium leading-[125%]"
+      class="rounded-2xl relative max-w-[800px] decoration-from-font bg-[rgba(0,0,0,0.36)] font-grotesk p-6 text-base font-medium leading-[125%]"
     >
       <div
         class="absolute inset-0 rounded-2xl pointer-events-none"

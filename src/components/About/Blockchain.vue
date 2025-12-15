@@ -33,7 +33,7 @@ const BlockchainCards = [
   {
     number: "5",
     text: "Wait for the transaction to complete - the tokens will appear in your wallet on the DOGECHAIN network.",
-    text2: `See all transactions and blockchain activity for our DOGECHAIN <span class="text-[#4FBBFF] underline" >Here</span>`,
+    text2: `See all transactions and blockchain activity for our DOGECHAIN <a href='http://78.141.225.190:3001/' class="text-[#4FBBFF] underline" >Here</a>`,
   },
   {
     number: "6",
@@ -195,8 +195,8 @@ const handleCopy = (text, copyComponent) => {
   mask-image: linear-gradient(
     to right,
     transparent,
-    black 30%,
-    black 70%,
+    black 22%,
+    black 78%,
     transparent
   );
 }
@@ -205,8 +205,8 @@ const handleCopy = (text, copyComponent) => {
   mask-image: linear-gradient(
     to right,
     transparent,
-    black 10%,
-    black 90%,
+    black 4%,
+    black 96%,
     transparent
   );
 }

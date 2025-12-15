@@ -26,7 +26,7 @@ const StepsContent = [
       right, and smash every target in your way!
     </div>
 
-    <div class="flex flex-col items-end gap-2">
+    <div class="flex relative flex-col items-end gap-2">
       <div
         class="flex items-center self-stretch gap-2 justify-end max-lg:flex-wrap max-lg:items-center max-md:justify-center"
       >
@@ -36,13 +36,13 @@ const StepsContent = [
           class="relative p-2 font-medium text-sm flex items-center gap-1 rounded-2xl bg-[rgba(255,255,255,0.06)] backdrop-blur-sm overflow-hidden"
         >
           <div
-            class="absolute inset-0 rounded-2xl"
+            class="absolute pointer-events-none inset-0 rounded-2xl"
             style="
               background: linear-gradient(
-                145deg,
+                180deg,
                 rgba(255, 255, 255, 0.6) 0%,
-                rgba(255, 255, 255, 0.1) 40%,
-                rgba(255, 255, 255, 0.6) 100%
+                rgba(255, 255, 255, 0.1) 90%,
+                rgba(255, 255, 255, 0) 100%
               );
               -webkit-mask: linear-gradient(#fff 0 0) content-box,
                 linear-gradient(#fff 0 0);
@@ -56,21 +56,21 @@ const StepsContent = [
         </div>
       </div>
 
-      <div class="absolute max-md:hidden">
-        <BgSteps class="w-full pl-5" />
+      <div class="absolute max-md:hidden top-[-15px] max-w-[685px]">
+        <BgSteps class="w-full" />
       </div>
 
       <div
-        class="p-6 relative flex flex-col text-center max-w-[800px] items-center gap-2 rounded-2xl max-md:bg-[rgba(255,255,255,0.06)] max-md:backdrop-blur-sm"
+        class="p-6 relative flex flex-col text-center max-w-[700px] items-center gap-2 rounded-2xl max-md:bg-[rgba(255,255,255,0.06)] max-md:backdrop-blur-sm"
       >
         <div
-          class="absolute inset-0 md:hidden rounded-2xl"
+          class="absolute pointer-events-none inset-0 md:hidden rounded-2xl"
           style="
             background: linear-gradient(
-              145deg,
+              180deg,
               rgba(255, 255, 255, 0.6) 0%,
-              rgba(255, 255, 255, 0.1) 40%,
-              rgba(255, 255, 255, 0.6) 100%
+              rgba(255, 255, 255, 0.1) 70%,
+              rgba(255, 255, 255, 0) 100%
             );
             -webkit-mask: linear-gradient(#fff 0 0) content-box,
               linear-gradient(#fff 0 0);
