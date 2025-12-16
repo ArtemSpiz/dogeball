@@ -11,32 +11,22 @@ import Seats from "@/assets/img/Roadmap/SeatsHero.png";
     <div
       class="absolute 2xl:h-[62%] bottom-[140px] max-[400px]:px-4 max-[400px]:bottom-[130px] right-1/2 translate-x-1/2 w-full 2xl:max-w-[1820px] 2xl:max-h-[950px] max-w-[1025px] h-full max-xl:h-[370px] max-h-[470px] max-md:w-screen max-md:max-w-[800px] max-md:max-h-[350px] max-[400px]:max-h-[180px] max-md:bottom-0 z-[1] pointer-events-none overflow-hidden rounded-md"
     >
+      <!-- Gradient overlay -->
       <div
         class="absolute inset-0 z-[2] bg-gradient-to-t from-[#00000060] via-[#00000010] to-transparent pointer-events-none"
       ></div>
+    </div>
 
-      <div
-        class="absolute inset-0 z-[3] pointer-events-none"
-        style="
-          mask-image: linear-gradient(
-            to bottom,
-            transparent 0%,
-            black 20%,
-            black 80%,
-            transparent 100%
-          );
-        "
-      ></div>
-
-      <video
-        class="w-full h-full object-fill"
-        :src="BgVideo"
-        :poster="BgPoster"
-        autoplay
-        playsinline
-        loop
-        preload="auto"
-      />
+    <!-- Video container with padding hack -->
+    <div
+      class="absolute w-full h-full max-w-[1025px] bottom-[120px] max-h-[520px] 2xl:max-h-[1050px] 2xl:max-w-[1820px] 2xl:h-[62%] max-xl:h-[370px] max-[400px]:px-4 max-[400px]:bottom-[130px] max-md:w-screen max-md:max-w-[800px] max-md:max-h-[350px] max-[400px]:max-h-[180px] max-md:bottom-0 z-[1] pointer-events-none overflow-hidden rounded-md"
+    >
+      <iframe
+        src="https://player.vimeo.com/video/1147054834?h=e62c5467b8&autoplay=1&loop=1&muted=1&autopause=0&background=1&controls=0"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        class="absolute top-0 left-0 w-full h-full pointer-events-auto object-cover"
+      ></iframe>
     </div>
 
     <div
