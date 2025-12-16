@@ -1,7 +1,7 @@
 <!-- components/DigitCard.vue -->
 <template>
   <div
-    class="relative w-[35px] max-md:w-[25px] h-[58px] max-md:h-[42px] shadow-[0_0_5px_0_#103185_inset] bg-[#020E3D] rounded-lg border-2 border-[#030B2C] flex items-center justify-center overflow-hidden"
+    class="relative w-[35px] max-md:w-[30px] h-[58px] max-md:h-[42px] shadow-[0_0_5px_0_#103185_inset] bg-[#020E3D] rounded-lg border-2 border-[#030B2C] flex items-center justify-center overflow-hidden"
   >
     <div
       class="top-1/2 z-30 absolute right-0 w-full h-[2px] max-md:h-px bg-[#020A2B] shadow-[0_0_3px_0_rgba(25,30,209,0.43)]"

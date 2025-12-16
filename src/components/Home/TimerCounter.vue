@@ -46,7 +46,7 @@ const splitDigits = (value) => value.split("");
 
 <template>
   <div
-    class="mt-9 max-lg:mt-5  max-md:mt-3 p-4 max-md:p-3 w-max flex items-center justify-center gap-4 backdrop-blur-[2px] rounded-2xl max-md:rounded-md border-2 border-white/20 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] "
+    class="mt-9 max-lg:mt-5 max-md:mt-3 p-4 max-md:p-3 w-max flex items-center justify-center gap-4 backdrop-blur-[2px] rounded-2xl max-md:rounded-md border-2 border-white/20 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
   >
     <div class="flex gap-2">
       <div class="flex flex-col items-center">
