@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-3 sm:gap-4 min-w-0 overflow-hidden min-h-0 w-full">
+  <div class="flex flex-1 flex-col gap-3 sm:gap-4 min-w-0 overflow-hidden min-h-0 w-full">
     <!-- Connect Wallet Prompt -->
     <div
       v-if="!presale.isConnected.value"
@@ -20,14 +20,14 @@
       </div>
 
       <!-- Transactions Section -->
-      <div class="flex flex-col gap-2 sm:gap-2 overflow-hidden w-full min-h-[300px]">
+      <div class="flex flex-1 flex-col gap-2 sm:gap-2 overflow-hidden w-full min-h-[300px]">
         <p
           class="m-0 text-white font-grotesk text-sm sm:text-base md:text-lg font-semibold leading-none flex-shrink-0"
         >
           Your Transactions
         </p>
         <div
-          class="flex flex-col gap-2 flex-1 rounded-xl sm:rounded-2xl border border-white/20 bg-[rgba(8,12,35,0.48)] p-2 sm:p-3 overflow-y-auto w-full max-h-[35rem]"
+          class="flex flex-col gap-2 flex-1 rounded-xl sm:rounded-2xl border border-white/20 bg-[rgba(8,12,35,0.48)] p-2 sm:p-3 overflow-y-auto w-full"
           :style="{colorScheme: 'dark'}"
         >
           <TransactionHistoryList />
