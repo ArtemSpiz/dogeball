@@ -89,7 +89,7 @@ const onWalletClick = () => {
     <div class="w-[-webkit-fill-available] flex justify-between items-center">
       <router-link
         to="/"
-        class="2xl:h-[70px] max-md:max-w-[200px] flex justify-start items-start h-[60px] w-auto max-xl:h-[40px]"
+        class="2xl:h-[70px] max-w-[300px] max-md:max-w-[200px] flex justify-start items-start h-[60px] w-auto max-xl:h-[40px] max-xl:max-w-[200px]"
       >
         <img :src="Logo" class="object-contain" />
       </router-link>
