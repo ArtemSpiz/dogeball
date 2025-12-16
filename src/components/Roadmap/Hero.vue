@@ -36,8 +36,6 @@ import Seats from "@/assets/img/Roadmap/SeatsHero.png";
         playsinline
         loop
         preload="auto"
-        controlslist="nodownload nofullscreen noremoteplayback"
-        disablepictureinpicture
       />
     </div>
 
