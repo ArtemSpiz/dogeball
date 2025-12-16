@@ -29,8 +29,8 @@
         v-if="moreTokens.length > 0"
         :value="moreTokens.find((t) => t.id === value?.id) || null"
         :tokens="moreTokens"
-        :default-label="'More'"
-        :placeholder="'More'"
+        :default-label="t('presale.tokenSelect.more')"
+        :placeholder="t('presale.tokenSelect.more')"
         :selected="moreTokens.some((t) => t.id === value?.id)"
         @update:value="handleTokenChange"
       />
@@ -47,7 +47,7 @@
         <span
           class="text-white font-grotesk text-lg font-medium leading-5 font-feature-off"
         >
-          + Other Cryptos
+          {{ t("presale.tokenSelect.otherCryptos") }}
         </span>
       </div>
     </div>
@@ -56,9 +56,12 @@
 
 <script setup>
 import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import TokenSelect from "./TokenSelect.vue";
 import { useApiState } from "@/composables/useApiState";
 import coinLogosImage from "@/assets/img/logos/coin-logos.webp";
+
+const { t } = useI18n();
 
 const props = defineProps({
   value: {

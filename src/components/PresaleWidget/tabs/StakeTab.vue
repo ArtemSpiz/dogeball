@@ -6,10 +6,10 @@
       class="flex flex-col items-center gap-4 py-8"
     >
       <p class="text-white/70 text-center font-grotesk">
-        Connect your wallet to view and manage your staking
+        {{ t("presale.stakeTab.connectWalletMessage") }}
       </p>
       <Button @click="presale.connect" variant="primary" class="px-8">
-        Connect Wallet
+        {{ t("presale.buyTab.connectWallet") }}
       </Button>
     </div>
 
@@ -33,7 +33,7 @@
           <p
             class="text-sm leading-5 m-0 text-white/80 font-grotesk font-medium font-feature-off"
           >
-            Available to Stake
+            {{ t("presale.stakeTab.availableToStake") }}
           </p>
           <p
             class="text-sm leading-5 m-0 text-white/80 font-grotesk font-medium font-feature-off"
@@ -59,13 +59,17 @@
             class="bg-[#007BF9] text-white leading-none text-xs py-1.5 px-2.5 rounded-md flex items-center justify-center hover:bg-[#007BF9]/80 transition-colors font-medium"
             @click="setMaxStake"
           >
-            Max Stake ({{ formatLargeNumber(availableToStake) }})
+            {{ t("presale.stakeTab.maxStake") }} ({{
+              formatLargeNumber(availableToStake)
+            }})
           </button>
           <button
             class="bg-[#007BF9] text-white leading-none text-xs py-1.5 px-2.5 rounded-md flex items-center justify-center hover:bg-[#007BF9]/80 transition-colors font-medium"
             @click="setMaxUnstake"
           >
-            Max Unstake ({{ formatLargeNumber(currentlyStaked) }})
+            {{ t("presale.stakeTab.maxUnstake") }} ({{
+              formatLargeNumber(currentlyStaked)
+            }})
           </button>
         </div>
       </div>
@@ -79,7 +83,7 @@
           class="flex-1 h-11 rounded-full"
         >
           <Spinner v-if="presale.stakeLoading.value" :size="5" />
-          <span v-else>Stake</span>
+          <span v-else>{{ t("presale.stakeTab.stake") }}</span>
         </Button>
         <Button
           @click="handleUnstake"
@@ -88,7 +92,7 @@
           class="flex-1 h-11 rounded-full border-white bg-white/15 hover:bg-white/25"
         >
           <Spinner v-if="presale.unstakeLoading.value" :size="5" />
-          <span v-else>Unstake</span>
+          <span v-else>{{ t("presale.stakeTab.unstake") }}</span>
         </Button>
       </div>
 
@@ -109,7 +113,9 @@
             d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
-        <span>Earn {{ STAKING_APY * 100 }}% APY by staking your tokens</span>
+        <span>{{
+          t("presale.stakeTab.earnApy", { apy: STAKING_APY * 100 })
+        }}</span>
       </div>
     </template>
   </div>
@@ -117,6 +123,7 @@
 
 <script setup>
 import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import { Button, Spinner, InfoCard } from "../ui";
 import { usePresale } from "@/composables/usePresale";
 import { useToast } from "@/composables/useToast";
@@ -127,6 +134,8 @@ import {
   MIN_STAKE_AMOUNT,
   MIN_UNSTAKE_AMOUNT,
 } from "@/config/presale";
+
+const { t } = useI18n();
 
 // Composables
 const presale = usePresale();
@@ -164,7 +173,7 @@ const canUnstake = computed(() => {
 
 const stakeInfo = computed(() => [
   {
-    label: "Owned Tokens",
+    label: t("presale.stakeTab.ownedTokens"),
     value: `${formatLargeNumber(
       parseNum(presale.user.value?.total_tokens ?? 0)
     )} $DOGEBALL ($${formatLargeNumber(
@@ -173,17 +182,17 @@ const stakeInfo = computed(() => [
     )})`,
   },
   {
-    label: "Currently Staked",
+    label: t("presale.stakeTab.currentlyStaked"),
     value: `${formatLargeNumber(currentlyStaked.value)} $DOGEBALL`,
   },
   {
-    label: "Daily Interest",
+    label: t("presale.stakeTab.dailyInterest"),
     value: `${formatLargeNumber(
       parseNum(presale.userStakeData.value?.daily_interest ?? 0)
     )} $DOGEBALL`,
   },
   {
-    label: "Total Earnings",
+    label: t("presale.stakeTab.totalEarnings"),
     value: `${formatLargeNumber(
       parseNum(presale.userStakeData.value?.total_earnings ?? 0)
     )} $DOGEBALL ($${formatLargeNumber(
@@ -213,7 +222,7 @@ const handleStake = async () => {
   }
 
   if (amount > availableToStake.value) {
-    toast.showError("Insufficient tokens available to stake");
+    toast.showError(t("presale.errors.insufficientTokens"));
     return;
   }
 
@@ -224,7 +233,7 @@ const handleStake = async () => {
     );
     tokensInput.setValue("0");
   } catch (err) {
-    const message = err?.message || "Failed to stake tokens";
+    const message = err?.message || t("presale.errors.failedToStake");
     toast.showError(message);
     console.error("Stake error:", err);
   }
@@ -241,7 +250,7 @@ const handleUnstake = async () => {
   }
 
   if (amount > currentlyStaked.value) {
-    toast.showError("Cannot unstake more than currently staked");
+    toast.showError(t("presale.errors.cannotUnstakeMore"));
     return;
   }
 
@@ -252,7 +261,7 @@ const handleUnstake = async () => {
     );
     tokensInput.setValue("0");
   } catch (err) {
-    const message = err?.message || "Failed to unstake tokens";
+    const message = err?.message || t("presale.errors.failedToUnstake");
     toast.showError(message);
     console.error("Unstake error:", err);
   }

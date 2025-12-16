@@ -1,0 +1,285 @@
+{
+  "header": {
+    "about": "概要",
+    "roadmap": "ロードマップ",
+    "howToBuy": "購入方法",
+    "playDogeball": "$DOGEBALLをプレイ",
+    "tokenomics": "トークノミクス",
+    "ethL2": "ETH L2",
+    "faqs": "よくある質問",
+    "connectWallet": "ウォレットを接続"
+  },
+  "footer": {
+    "termsConditions": "利用規約",
+    "cookiesPolicy": "Cookieポリシー",
+    "privacyPolicy": "プライバシーポリシー",
+    "disclaimer": "免責事項: $DOGEBALLはユーティリティバックのミームコインです。暗号通貨市場は非常に変動が激しいため、注意して投資してください。暗号通貨はお住まいの管轄区域で規制されていない場合があります。'$DOGEBALL'の模倣ウェブサイトやソーシャルメディアチャンネルにご注意ください（このウェブサイトの公式リンクのみ）。",
+    "copyright": "Copyright © 2025 DOGEBALL. All rights reserved."
+  },
+  "hero": {
+    "title": "世界初のL2パワード暗号ゲーム",
+    "subtitle": "$DOGEBALL、カスタムEVM L2ブロックチェーン上で唯一の暗号プレイDOGE。高速、低コスト、安全。$1Mを獲得するチャンスをプレイ",
+    "whitelistEmail": "ホワイトリストに追加するメールアドレスを入力",
+    "emailPlaceholder": "メールアドレス",
+    "getEarlyAccess": "早期アクセスを取得！",
+    "audit": "監査",
+    "whitepaper": "ホワイトペーパー"
+  },
+  "roadmap": {
+    "welcome": "DOGEBALLゲームへようこそ！",
+    "title": "ロードマップ",
+    "phase1": "フェーズ1",
+    "phase2": "フェーズ2",
+    "phase3": "フェーズ3",
+    "phase4": "フェーズ4",
+    "evolution": "進化",
+    "development": "開発",
+    "expansion": "拡張",
+    "gameV2Expansion": "ゲームとV2拡張",
+    "phase1Sub1": "DOGEから$DOGEBALLへの進化",
+    "phase1Sub2": "$DOGEBALLゲームプラン作成",
+    "phase1Sub3": "ソーシャルチャンネルとウェブサイト開発",
+    "phase1Sub4": "契約作成と監査",
+    "phase2Sub1": "$DOGEBALLゲーム開発",
+    "phase2Sub2": "DOGECHAIN EVM L2展開",
+    "phase2Sub3": "コミュニティ拡大",
+    "phase2Sub4": "プレセール開始",
+    "phase3Sub1": "グローバルマーケティングキャンペーン",
+    "phase3Sub2": "企業ゲーミングパートナーシップ",
+    "phase3Sub3": "$DOGEBALLがグローバル取引所に上場",
+    "phase3Sub4": "$DOGEBALLがバイラル化",
+    "phase4Sub1": "$DOGEBALL V2ゲーム開発",
+    "phase4Sub2": "CEX上場継続",
+    "phase4Sub3": "L2ブロックチェーングローバルリリース",
+    "phase4Sub4": "将来の進化トークン作成"
+  },
+  "about": {
+    "title": "概要",
+    "subtitle": "暗号ミームコインの移行",
+    "description": "DOGECHAINの中心にあるのは$DOGEBALLゲームです — プレイヤーがDOGEBALLを投げ、レベルアップし、リーダーボードを登り、$1Mの賞金プール（トッププレイヤーに$500k）を競う中毒性のあるオンラインドッジボールゲームです！",
+    "card1": "$DOGEBALLオンラインゲーム、$1mの一部を獲得するためにプレイ！",
+    "card2": "超低ユーザー手数料のカスタム構築ETH L2ブロックチェーン",
+    "card3": "超高速トランザクション、オンラインゲーミングの未来を推進",
+    "card4": "80%の高利回りステーキング",
+    "card5": "純粋な楽しみが保証されます！",
+    "testDescription": "他のミームコインL2とは異なり、カスタム構築されたDOGECHAINをテストし、すべてのL2の王を自分で体験できます！",
+    "clickHere": "ここをクリック",
+    "partnerships": "世界最大のゲーミング組織とのパートナーシップが進行中です"
+  },
+  "howToBuy": {
+    "title": "購入方法",
+    "step1": "ステップ1",
+    "step2": "ステップ2",
+    "step3": "ステップ3",
+    "step4": "ステップ4",
+    "earnRewards": "報酬を獲得",
+    "connectWallet": "ウォレットを接続",
+    "connectWalletDesc": "ウェブページの上部にあるプレセールウィジェット（{link}）を見つけ、お好みのウォレットを使用して「ウォレットを接続」をクリックしてください。複数のウォレットオプション（MetamaskやCoinbaseを含む）が選択可能です。",
+    "selectToken": "トークンと数量を選択",
+    "selectTokenDesc": "お好みの通貨（ETH、USDT、USDC、SOL、BNBなど多数）を選択するか、銀行カードで支払い、購入したい$DOGEBALLトークンの数量を選択して「$DOGEBALLを購入」をクリックしてください。紹介コードとボーナスコードを入力してください（お持ちの場合）— コードの使用に関する詳細はよくある質問を参照してください。",
+    "buyToken": "トークンを購入してトランザクションを承認",
+    "buyTokenDesc": "接続されたウォレットでトランザクションを承認して購入を完了してください。確認後、購入とトークン数量が安全にチェーンに記録され、上記のプレセールウィジェットの「ダッシュボード」の下に表示されます。",
+    "claimToken": "$DOGEBALLトークンを請求",
+    "claimTokenDesc": "プレセール終了後、購入に使用したのと同じウォレットで$DOGEBALLトークンを請求できます。請求に関する詳細は、プレセール終了後にソーシャルメディアチャンネルで公開されます。",
+    "staking": "ステーキング",
+    "stakingDesc": "プレセール購入トークンを安全で監査済みのスマートコントラクトステーキングプールにロックします。80%の高いAPYで$DOGEBALL報酬を獲得し、$DOGEBALLトークンのリターンを最大化します。",
+    "clickHere": "ここをクリック"
+  },
+  "faq": {
+    "title": "よくある質問",
+    "q1": "$DOGEBALLとは何ですか？",
+    "a1": "$DOGEBALLは、ほぼゼロ手数料のトランザクション、高速、トップクラスのセキュリティのために設計されたカスタムレイヤー2ブロックチェーンを動かすデュアルユーティリティコインで、$DOGEBALLオンラインゲームとシームレスに統合されています。ネイティブトークンとして、$DOGEBALLはエコシステム全体を動かし、ユーザーとゲーマーの両方に堅牢な基盤を提供します。トークンには実生活でのユーティリティがあり、将来的にゲーミング業界でのトランザクション完了に使用されます。",
+    "q2": "$DOGEBALLステーキングとは何ですか？",
+    "a2": "$DOGEBALLのステーキングは、一定期間（プレセール中のみ）安全なスマートコントラクトにトークンをロックして、追加費用なしで追加の$DOGEBALLトークンを獲得することを含みます。ステーキング報酬は、7日間の最小ベスティング期間後にリリースされます。「購入方法」の「ステーキング」セクションを参照してください。{link}",
+    "q3": "$DOGEBALLを購入するにはどうすればよいですか？",
+    "a3": "このページの上部にあるプレセールウィジェットにお好みのウォレットを接続するだけで、$DOGEBALLコミュニティに参加できます{link}。使用する暗号通貨を選択するか、クレジット/デビットカードで支払って$DOGEBALLトークンを確保してください。",
+    "q4": "私の$DOGEBALLトークンはどこにありますか？",
+    "a4": "ユーザーはウォレットが接続されると$DOGEBALL残高を確認できます（ページ上部を参照）。プレセールウィジェットの「ダッシュボード」セクションにユーザー残高と購入履歴が表示されます。{link}",
+    "q5": "トークンはいつ受け取れますか？",
+    "a5": "プレセールで$DOGEBALLを購入した後、最初の取引所上場前に同じウォレットを使用してトークンを請求できます。請求と上場日の発表については、ソーシャルメディアをご覧ください。",
+    "q6": "$DOGEBALLトークンは安全に購入できますか？",
+    "a6": "はい、$DOGEBALL契約は、最大規模で信頼できるブロックチェーンプロジェクト監査人の1つであるCoinsultによって監査され、総合監査スコアで100%を達成しました。{link}で完全な監査レポートをご覧ください。",
+    "q7": "紹介コードを生成し、ボーナスコードを使用するにはどうすればよいですか？",
+    "a7": "「ウォレットを接続」をクリックし、「ダッシュボード」をクリックすることで、独自の紹介コードを生成できます。各ユーザーには、他のユーザーに提供する独自の紹介コードとURLリンクが提供されます。紹介されるユーザーは、「購入」画面の「$DOGEBALLを購入」ボタンの下でこれを入力し、「適用」をクリックする必要があります。紹介ボーナス額は購入額に追加され、「ダッシュボード」に表示されます（紹介者と紹介されるユーザーの両方）。期間限定のボーナスコードは、「ボーナスコード」（ウォレット接続後の「$DOGEBALLを購入」ボタンの下）をクリックして「適用」をクリックして入力する必要があります。"
+  },
+  "tokenomics": {
+    "title": "トークノミクス",
+    "contractAddress": "契約アドレス",
+    "totalSupply": "総供給量",
+    "tokens": "トークン",
+    "development": "開発",
+    "presale": "プレセール",
+    "treasuryReserves": "財務準備金",
+    "stakingGamesRewards": "ステーキング＆ゲーム報酬",
+    "marketing": "マーケティング",
+    "liquidity": "流動性"
+  },
+  "roadmapSteps": {
+    "mainDescription": "アリーナに足を踏み入れ、あなたの狙いを見せてください！タップまたはクリックして投げる — タイミングを合わせて、道中のすべてのターゲットを粉砕してください！",
+    "step1": "大得点！",
+    "step2": "ランクを登る！",
+    "step3": "究極のDOGEBALLチャンピオンになる！",
+    "description1": "各ヒットがポイントを与え、コンボがスコアを天まで上げます！しかし注意してください — 投げを多くミスすると、ゲームオーバーです。レベルアップして、さまざまな背景とアリーナをアンロックし、すべてがゲーム体験に追加されます。",
+    "description2": "敵はより速く、より強くなり、レベルアップするにつれて距離が離れます。最も鋭く、最も正確なプレイヤーのみがTOP 10リーダーボードに到達でき、勝者は$DOGEBALLトークンの$500kジャックポットを受け取り、残りの9人のプレイヤー間で分割された別の$500k賞金プールを受け取ります。$DOGEBALLプレセールでトークンを購入したユーザーのみが$1M賞金プールの一部になる資格があることに注意してください。"
+  },
+  "roadmapGame": {
+    "title": "ゲームがまもなく開始されます！",
+    "description": "プレセール開始直後にプレイ可能 - ローンチニュースについては公式TelegramとXソーシャルメディアチャンネルにご注目ください",
+    "comingSoon": "まもなく公開",
+    "privacyNote": "ユーザーは、ゲーム完了時にプレセール購入に使用したのと同じウォレットアドレスを入力する必要があります（ゲームスコアがリーダーボードに載るのに十分高い場合、ウォレットアドレスを入力するオプションが表示されます）。ユーザーのプライバシーとセキュリティを保護するため、ウォレットアドレスはウェブサイトに表示されず、ソーシャルメディアチャンネルでも言及されません。ゲーム自体で入力された選択されたユーザー名のみが言及されます。"
+  },
+  "ethL2": {
+    "heroTitle": "DOGECHAINファウセット",
+    "heroSubtitle": "カスタム構築ETH L2ブロックチェーンを無料でお試しください！",
+    "blockchainTitle": "$DOGEBALLブロックチェーンテストトークンを取得",
+    "blockchainSubtitle": "$DOGEBALLブロックチェーンテストトークンは無料で、ユーザーに暗号/現金の費用はかかりません",
+    "blockchainDescription": "24時間ごとに、$DOGEBALLブロックチェーンテストトークンは同じウォレットで請求できます（これらのトークンはプレセール中にユーザーが購入するトークンではないことに注意してください。これらのトークンは、ユーザーがプレセール中のみ試すために作成され、トークン価値はありません）",
+    "card1Text": "選択したウォレットにカスタムネットワークETH L2 DOGECHAINを追加してください（カスタムネットワークの追加方法の詳細については、選択したウォレットのウェブサイトを参照してください）:",
+    "blockchainName": "ブロックチェーン名",
+    "rpcUrl": "RPC URL",
+    "chainId": "チェーンID",
+    "symbol": "シンボル",
+    "card2Text": "ページ上部の{connectWallet}ボタンをクリックしてウォレットを接続してください。ウォレットアドレスが下のファウセットに自動的に入力されます",
+    "card3Text": "使用するテストトークンの数量を選択してください（同じウォレットで24時間ごとに最大0.01 $DOGEBALLテストトークンを請求できます）",
+    "card4Text": "下の{send}ボタンをクリックして、ファウセットから無料の$DOGEBALLテストトークンを請求してください",
+    "card5Text": "トランザクションが完了するまで待ってください — トークンはDOGECHAINネットワーク上のウォレットに表示されます。",
+    "card5Text2": "DOGECHAINのすべてのトランザクションとブロックチェーン活動を{here}で確認",
+    "card6Text": "$DOGEBALLテストトークンを他のウォレットアドレスに送信してブロックチェーンをテストしてください（受信ウォレットもテストトークンを受信するためにDOGECHAINカスタムネットワークをウォレットに追加する必要があることに注意してください）",
+    "card7Text": "これで、カスタム作成されたDOGECHAIN ETH L2ブロックチェーンの速度、ゼロコスト、セキュリティを体験しました！",
+    "selectToken": "トークンを選択",
+    "walletAddress": "ウォレットアドレス",
+    "walletAddressPlaceholder": "ウォレットを接続してアドレスを自動入力してください。",
+    "comingSoon": "まもなく公開",
+    "connectWallet": "ウォレットを接続",
+    "send": "送信",
+    "here": "ここ"
+  },
+  "common": {
+    "clickHere": "ここをクリック"
+  },
+  "timer": {
+    "days": "日",
+    "hours": "時間",
+    "minutes": "分",
+    "seconds": "秒"
+  },
+  "presale": {
+    "tabs": {
+      "buy": "購入",
+      "stake": "ステーク",
+      "dashboard": "ダッシュボード"
+    },
+    "stage": {
+      "stage": "ステージ"
+    },
+    "buyTab": {
+      "presalePrice": "プレセール価格 =",
+      "launchPrice": "ローンチ価格 =",
+      "connectWallet": "ウォレットを接続",
+      "presaleEnded": "プレセール終了",
+      "selectToken": "トークンを選択",
+      "enterAmount": "数量を入力",
+      "buyWithCard": "カードで購入",
+      "comingSoon": "まもなく公開",
+      "bonusCode": "ボーナスコード",
+      "referralCode": "紹介コード",
+      "confirmTransaction": "ウォレットでトランザクションを確認...",
+      "waitingConfirmation": "ブロックチェーンの確認を待機中...",
+      "processingPurchase": "購入を処理中..."
+    },
+    "stakeTab": {
+      "connectWalletMessage": "ウォレットを接続してステーキングを表示および管理",
+      "availableToStake": "ステーク可能",
+      "maxStake": "最大ステーク",
+      "maxUnstake": "最大アンステーク",
+      "stake": "ステーク",
+      "unstake": "アンステーク",
+      "ownedTokens": "所有トークン",
+      "currentlyStaked": "現在ステーク中",
+      "dailyInterest": "日次利息",
+      "totalEarnings": "総収益",
+      "earnApy": "トークンをステーキングして{{apy}}% APYを獲得"
+    },
+    "historyTab": {
+      "connectWalletMessage": "ウォレットを接続してダッシュボードを表示",
+      "yourTransactions": "あなたのトランザクション",
+      "noTransactions": "まだトランザクションがありません",
+      "purchasesWillAppear": "購入履歴はここに表示されます"
+    },
+    "referralCode": {
+      "label": "紹介コード",
+      "placeholder": "紹介コードを入力",
+      "applied": "紹介コードが適用されました！",
+      "connectWalletFirst": "まずウォレットを接続してください",
+      "enterCode": "紹介コードを入力してください",
+      "cannotUseOwn": "自分の紹介コードは使用できません",
+      "appliedSuccess": "紹介コードが正常に適用されました！",
+      "invalidCode": "無効な紹介コード"
+    },
+    "bonusCode": {
+      "label": "ボーナスコード",
+      "placeholder": "ボーナスコードを入力",
+      "applied": "ボーナスが適用されました！",
+      "connectWalletFirst": "まずウォレットを接続してください",
+      "enterCode": "ボーナスコードを入力してください",
+      "appliedSuccess": "ボーナスコードが正常に適用されました！",
+      "invalidCode": "無効なボーナスコード"
+    },
+    "referralData": {
+      "yourReferralLink": "あなたの紹介リンク",
+      "yourReferralCode": "あなたの紹介コード",
+      "totalReferrals": "総紹介数",
+      "tokensEarned": "獲得トークン",
+      "copy": "コピー"
+    },
+    "codeInputs": {
+      "change": "変更",
+      "apply": "適用"
+    },
+    "stageBox": {
+      "untilPriceRise": "価格上昇まで",
+      "of": "の",
+      "participants": "参加者"
+    },
+    "bonusBanner": {
+      "presaleLaunchOffer": "プレセールローンチオファー",
+      "useBonusCode": "ボーナスコードを使用",
+      "toGetMore": "10%多くの$DOGEBALLトークンを獲得するには！",
+      "copied": "コピーしました！",
+      "copyCode": "コードをコピー"
+    },
+    "transactions": {
+      "awaitingPayment": "支払い待機中",
+      "processing": "処理中...",
+      "manual": "手動",
+      "purchase": "購入"
+    },
+    "errors": {
+      "presaleEnded": "プレセールが終了しました",
+      "selectPaymentMethod": "支払い方法を選択してください",
+      "enterAmount": "数量を入力してください",
+      "cardPaymentFailed": "カード支払いが失敗しました。もう一度お試しください。",
+      "paymentProcessing": "支払いが処理中です。ダッシュボードを確認してください。",
+      "completePayment": "ポップアップウィンドウで支払いを完了してください",
+      "transactionFailed": "トランザクションが失敗しました。もう一度お試しください。",
+      "insufficientTokens": "ステーク可能なトークンが不足しています",
+      "failedToStake": "トークンのステーキングに失敗しました",
+      "cannotUnstakeMore": "現在ステークされている以上のアンステークはできません",
+      "failedToUnstake": "トークンのアンステーキングに失敗しました"
+    },
+    "copy": "コピー",
+    "tokenAmountInputs": {
+      "youPay": "支払い額",
+      "youReceive": "受取額"
+    },
+    "transactionDetails": {
+      "for": "$に対して",
+      "reason": "理由："
+    },
+    "poweredBy": "提供元",
+    "tokenSelect": {
+      "more": "その他",
+      "otherCryptos": "+ その他の暗号通貨"
+    }
+  }
+}

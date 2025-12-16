@@ -1,4 +1,6 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 import BlockchainCenterLine from "@/assets/img/About/BlockchainCenterLine.png";
 import { ref, onMounted, onUnmounted, reactive } from "vue";
 import { gsap } from "gsap";
@@ -7,43 +9,75 @@ import Copy from "@/assets/icons/Copy.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BlockchainCards = [
+const { t } = useI18n();
+
+const getTextWithButton = (key, buttonKey, buttonClass) => {
+  const text = t(key);
+  const buttonText = t(buttonKey);
+  const buttonHtml = `<span class="${buttonClass}">${buttonText}</span>`;
+  // Extract just the key name from "ethL2.connectWallet" -> "connectWallet"
+  const keyName = buttonKey.split(".").pop();
+  return text.replace(`{${keyName}}`, buttonHtml);
+};
+
+const getTextWithLink = (key, linkKey) => {
+  const text = t(key);
+  const linkText = t(linkKey);
+  const linkHtml = `<span class="text-[#4FBBFF] underline">${linkText}</span>`;
+  // Extract just the key name from "ethL2.here" -> "here"
+  const keyName = linkKey.split(".").pop();
+  return text.replace(`{${keyName}}`, linkHtml);
+};
+
+const BlockchainCards = computed(() => [
   {
     number: "1",
-    text: "Add ETH L2 DOGECHAIN custom network to your chosen wallet (refer to your chosen wallets website for details on how to add a custom network) using the below details:",
+    text: t("ethL2.card1Text"),
     subtitles: [
-      { name: "Blockchain Name", data: "DOGECHAIN" },
-      { name: "RPC URL", data: "http://78.141.225.190:10002", copy: true },
-      { name: "Chain ID", data: "9010" },
-      { name: "Symbol", data: "DOGEBALL" },
+      { name: t("ethL2.blockchainName"), data: "DOGECHAIN" },
+      {
+        name: t("ethL2.rpcUrl"),
+        data: "http://78.141.225.190:10002",
+        copy: true,
+      },
+      { name: t("ethL2.chainId"), data: "9010" },
+      { name: t("ethL2.symbol"), data: "DOGEBALL" },
     ],
   },
   {
     number: "2",
-    text: `Click <span class="bg-[#EB4102] h-[17px] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px]  items-center align-middle">Connect Wallet</span> button at the top of the page to connect your wallet. Your wallet address will automatically populate in the faucet below`,
+    text: getTextWithButton(
+      "ethL2.card2Text",
+      "ethL2.connectWallet",
+      "bg-[#EB4102] h-[17px] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px] items-center align-middle"
+    ),
   },
   {
     number: "3",
-    text: "Select the amount of test tokens to use (max 0.01 $DOGEBALL test tokens can be claimed using the same wallet per 24 hour period)",
+    text: t("ethL2.card3Text"),
   },
   {
     number: "4",
-    text: `Click the  <span class="bg-[#EB4102] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px]  items-center align-middle">Send</span> button below to claim your free $DOGEBALL test tokens from the faucet`,
+    text: getTextWithButton(
+      "ethL2.card4Text",
+      "ethL2.send",
+      "bg-[#EB4102] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px] items-center align-middle"
+    ),
   },
   {
     number: "5",
-    text: "Wait for the transaction to complete - the tokens will appear in your wallet on the DOGECHAIN network.",
-    text2: `See all transactions and blockchain activity for our DOGECHAIN <span class="text-[#4FBBFF] underline" >Here</span>`,
+    text: t("ethL2.card5Text"),
+    text2: getTextWithLink("ethL2.card5Text2", "ethL2.here"),
   },
   {
     number: "6",
-    text: "Test the blockchain by sending $DOGEBALL test tokens to other wallet addresses (note the receiving wallet must also have the DOGECHAIN custom network added to their wallet to receive the test tokens)",
+    text: t("ethL2.card6Text"),
   },
   {
     number: "7",
-    text: "And there you go, you have experienced the speed, zero-cost and security of the custom created DOGECHAIN ETH L2 Blockchain!",
+    text: t("ethL2.card7Text"),
   },
-];
+]);
 
 const sectionRef = ref(null);
 const cardsContainer = ref(null);
@@ -105,6 +139,11 @@ const handleCopy = (text, copyComponent) => {
     copyComponent.startCopied();
   }
 };
+
+const blockchainDescription = computed(() => {
+  const text = t("ethL2.blockchainDescription");
+  return text.replace("ARE NOT", '<span class="underline">ARE NOT</span>');
+});
 </script>
 
 <template>
@@ -114,22 +153,18 @@ const handleCopy = (text, copyComponent) => {
   >
     <div class="flex flex-col items-center gap-8 max-md:gap-6">
       <div class="title fade-sides max-w-[900px]">
-        Get $DOGEBALL Blockchain Test Tokens
+        {{ t("ethL2.blockchainTitle") }}
       </div>
       <div class="flex flex-col gap-4 items-center">
         <div
           class="font-medium fade-sides-subtitle text-2xl leading-[80%] max-md:text-xl max-md:leading-[100%]"
         >
-          $DOGEBALL Blockchain Test Tokens are free and do not cost the user any
-          crypto/cash
+          {{ t("ethL2.blockchainSubtitle") }}
         </div>
-        <div class="description max-w-[730px]">
-          Every 24 hours, $DOGEBALL Blockchain Test tokens can be claimed by the
-          same wallet (note these tokens
-          <span class="underline">ARE NOT</span> the tokens users purchase
-          during the presale; these tokens have been created for users to try
-          during the presale only and have no token value)
-        </div>
+        <div
+          class="description max-w-[730px]"
+          v-html="blockchainDescription"
+        ></div>
       </div>
     </div>
 

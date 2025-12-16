@@ -10,7 +10,12 @@
       v-else-if="formattedTransactions.length === 0"
       class="flex flex-col items-center justify-center gap-3 py-8 text-white/60"
     >
-      <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg
+        class="w-12 h-12"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -18,8 +23,12 @@
           d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
         />
       </svg>
-      <p class="text-sm font-grotesk">No transactions yet</p>
-      <p class="text-xs text-white/40">Your purchases will appear here</p>
+      <p class="text-sm font-grotesk">
+        {{ t("presale.historyTab.noTransactions") }}
+      </p>
+      <p class="text-xs text-white/40">
+        {{ t("presale.historyTab.purchasesWillAppear") }}
+      </p>
     </div>
 
     <!-- Transaction List -->
@@ -55,10 +64,15 @@
                 class="text-[10px] sm:text-xs text-white/60 break-words"
               >
                 {{ formatLargeNumber(parseNum(trx.tokens_bought)) }} $DOGEBALL
-                for ${{ formatLargeNumber(parseNum(trx.payment_usd_amount)) }}
+                {{ t("presale.transactionDetails.for")
+                }}{{ formatLargeNumber(parseNum(trx.payment_usd_amount)) }}
               </p>
               <p v-else class="text-[10px] sm:text-xs text-white/60">
-                {{ trx.status === "pending" ? "Awaiting payment" : "Processing..." }}
+                {{
+                  trx.status === "pending"
+                    ? t("presale.transactions.awaitingPayment")
+                    : t("presale.transactions.processing")
+                }}
               </p>
             </template>
 
@@ -70,7 +84,8 @@
 
             <template v-else-if="trx.record_type === 'bonus_transaction'">
               <p class="text-xs sm:text-sm font-medium break-words text-white">
-                +{{ formatLargeNumber(parseNum(trx.bonus_token_amount)) }} $DOGEBALL
+                +{{ formatLargeNumber(parseNum(trx.bonus_token_amount)) }}
+                $DOGEBALL
               </p>
             </template>
           </div>
@@ -86,7 +101,10 @@
           v-if="trx.record_type === 'manual_transaction' && trx.reason"
           class="text-[10px] sm:text-xs break-words text-white/80"
         >
-          <span class="font-semibold">Reason:</span> {{ trx.reason }}
+          <span class="font-semibold">{{
+            t("presale.transactionDetails.reason")
+          }}</span>
+          {{ trx.reason }}
         </p>
 
         <!-- Extras (bonuses associated with this transaction) -->
@@ -99,7 +117,9 @@
             :key="idx"
             class="text-[10px] text-white/60 bg-white/5 px-2 py-0.5 rounded"
           >
-            {{ extra.label }}: +{{ formatLargeNumber(parseNum(extra.tokens_received)) }}
+            {{ extra.label }}: +{{
+              formatLargeNumber(parseNum(extra.tokens_received))
+            }}
           </div>
         </div>
       </div>
@@ -109,11 +129,13 @@
 
 <script setup>
 import { ref, computed, watch, onMounted } from "vue";
+import { useI18n } from "vue-i18n";
 import { Spinner, Skeleton } from "../ui";
 import TransactionChip from "./TransactionChip.vue";
 import { usePresale } from "@/composables/usePresale";
 import { formatLargeNumber, parseNum, capitalize } from "@/utils/format";
 
+const { t } = useI18n();
 const presale = usePresale();
 
 const loading = ref(true);
@@ -186,9 +208,9 @@ const formattedTransactions = computed(() => {
           trx.record_type === "bonus_transaction"
             ? capitalize(trx.bonus_type)
             : trx.record_type === "manual_transaction"
-            ? "Manual"
+            ? t("presale.transactions.manual")
             : trx.record_type === "transaction"
-            ? "Purchase"
+            ? t("presale.transactions.purchase")
             : "",
         tokens_received:
           trx.record_type === "bonus_transaction"
@@ -209,7 +231,7 @@ const getChips = (trx) => {
         trx.record_type === "bonus_transaction"
           ? trx.bonus_type
           : trx.record_type === "transaction"
-          ? "purchase"
+          ? t("presale.transactions.purchase").toLowerCase()
           : trx.record_type?.replace("_", " ") || "transaction"
       ),
       bg: "#444",

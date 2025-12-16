@@ -1,44 +1,54 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 import Burger from "@/assets/icons/Burger.vue";
 import Cross from "@/assets/icons/Cross.vue";
 import Telegram from "@/assets/icons/Telegram.vue";
 import X from "@/assets/icons/X.vue";
 import Logo from "@/assets/img/Logo.png";
-import { ref, watch } from "vue";
+import { ref, watch, onMounted, onUnmounted } from "vue";
+import LanguageSelector from "@/components/LanguageSelector.vue";
 
 import bgHeader from "@/assets/img/bgHeader.png";
 import { useRoute, useRouter } from "vue-router";
 
-const LinksHeader = [
+const { t, locale } = useI18n();
+
+const changeLanguage = (lang) => {
+  locale.value = lang;
+  localStorage.setItem("locale", lang);
+};
+
+const LinksHeader = computed(() => [
   {
-    title: "About",
+    title: t("header.about"),
     link: "#about",
   },
   {
-    title: "Roadmap",
+    title: t("header.roadmap"),
     link: "#roadmap",
   },
   {
-    title: "How to Buy",
+    title: t("header.howToBuy"),
     link: "#howToBuy",
   },
   {
-    title: "Play $DOGEBALL",
+    title: t("header.playDogeball"),
     link: "/play-$DOGEBALL",
   },
   {
-    title: "Tokenomics",
+    title: t("header.tokenomics"),
     link: "#tokenomics",
   },
   {
-    title: "ETH L2",
+    title: t("header.ethL2"),
     link: "/eth-l2",
   },
   {
-    title: "FAQs",
+    title: t("header.faqs"),
     link: "#faq",
   },
-];
+]);
 
 const isOpen = ref(false);
 const route = useRoute();
@@ -88,7 +98,7 @@ const scrollToSection = async (hash) => {
       <div
         class="absolute left-1/2 -translate-x-1/2 bg-[rgba(255,238,225,0.10)] max-xl:gap-3 max-lg:hidden rounded-[20px] flex items-center gap-5 p-3"
       >
-        <template v-for="link in LinksHeader">
+        <template v-for="link in LinksHeader" :key="link.link">
           <button
             v-if="link.link.startsWith('#')"
             @click="scrollToSection(link.link)"
@@ -108,6 +118,7 @@ const scrollToSection = async (hash) => {
       </div>
 
       <div class="flex items-center max-lg:hidden gap-3">
+        <LanguageSelector @change="changeLanguage" />
         <a
           class="bg-[rgba(255,238,225,0.10)] cursor-pointer p-2 rounded-full"
           href="https://t.me/dogeballtoken"
@@ -127,7 +138,7 @@ const scrollToSection = async (hash) => {
         <button
           class="py-3 px-4 bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
         >
-          Connect Wallet
+          {{ t("header.connectWallet") }}
         </button>
       </div>
 
@@ -138,7 +149,7 @@ const scrollToSection = async (hash) => {
 
     <div v-if="isOpen" class="mt-12 w-full items-center flex flex-col gap-6">
       <div class="flex flex-col items-center gap-6">
-        <template v-for="link in LinksHeader">
+        <template v-for="link in LinksHeader" :key="link.link">
           <button
             v-if="link.link.startsWith('#')"
             @click="
@@ -161,10 +172,11 @@ const scrollToSection = async (hash) => {
         </template>
       </div>
       <div class="flex flex-col w-full items-center gap-4">
+        <LanguageSelector @change="changeLanguage" />
         <button
           class="py-3 px-4 max-w-[360px] w-full bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
         >
-          Connect Wallet
+          {{ t("header.connectWallet") }}
         </button>
 
         <div class="flex gap-3 items-center">

@@ -1,0 +1,285 @@
+{
+  "header": {
+    "about": "关于",
+    "roadmap": "路线图",
+    "howToBuy": "如何购买",
+    "playDogeball": "玩 $DOGEBALL",
+    "tokenomics": "代币经济学",
+    "ethL2": "ETH L2",
+    "faqs": "常见问题",
+    "connectWallet": "连接钱包"
+  },
+  "footer": {
+    "termsConditions": "条款和条件",
+    "cookiesPolicy": "Cookie政策",
+    "privacyPolicy": "隐私政策",
+    "disclaimer": "免责声明：$DOGEBALL是一种实用型支持的模因币。加密货币市场高度波动，请谨慎投资。加密货币可能在您的司法管辖区不受监管。请注意'$DOGEBALL'的仿冒网站和社交媒体渠道（仅限本网站上的官方链接）。",
+    "copyright": "版权所有 © 2025 DOGEBALL。保留所有权利。"
+  },
+  "hero": {
+    "title": "世界上第一个L2驱动的加密游戏",
+    "subtitle": "$DOGEBALL，在自定义EVM L2区块链上唯一玩加密的DOGE。快速、便宜、安全。玩游戏有机会赢得$1M",
+    "whitelistEmail": "输入电子邮件以添加到白名单",
+    "emailPlaceholder": "您的电子邮件",
+    "getEarlyAccess": "获得早期访问！",
+    "audit": "审计",
+    "whitepaper": "白皮书"
+  },
+  "roadmap": {
+    "welcome": "欢迎来到DOGEBALL游戏！",
+    "title": "路线图",
+    "phase1": "第一阶段",
+    "phase2": "第二阶段",
+    "phase3": "第三阶段",
+    "phase4": "第四阶段",
+    "evolution": "进化",
+    "development": "开发",
+    "expansion": "扩展",
+    "gameV2Expansion": "游戏和V2扩展",
+    "phase1Sub1": "从DOGE到$DOGEBALL的进化",
+    "phase1Sub2": "创建$DOGEBALL游戏计划",
+    "phase1Sub3": "开发社交渠道和网站",
+    "phase1Sub4": "创建和审计合约",
+    "phase2Sub1": "开发$DOGEBALL游戏",
+    "phase2Sub2": "部署DOGECHAIN EVM L2",
+    "phase2Sub3": "社区扩展",
+    "phase2Sub4": "预售开始",
+    "phase3Sub1": "全球营销活动",
+    "phase3Sub2": "企业游戏合作伙伴关系",
+    "phase3Sub3": "$DOGEBALL在全球交易所上市",
+    "phase3Sub4": "$DOGEBALL变得病毒式传播",
+    "phase4Sub1": "$DOGEBALL V2游戏开发",
+    "phase4Sub2": "继续CEX上市",
+    "phase4Sub3": "L2区块链全球发布",
+    "phase4Sub4": "创建未来进化代币"
+  },
+  "about": {
+    "title": "关于",
+    "subtitle": "加密模因币的转变",
+    "description": "DOGECHAIN的核心是$DOGEBALL游戏——一个令人上瘾的在线躲避球游戏，玩家投掷DOGEBALLs，升级，攀登排行榜，争夺$1M奖金池（顶级玩家$500k）！",
+    "card1": "$DOGEBALL在线游戏，玩游戏赢得$1m的一部分！",
+    "card2": "定制构建的ETH L2区块链，用户费用极低",
+    "card3": "闪电般快速的交易，推动在线游戏的未来",
+    "card4": "高收益质押，收益率80%",
+    "card5": "保证纯乐趣！",
+    "testDescription": "与其他模因币L2不同，您可以测试我们定制构建的DOGECHAIN，亲自体验所有L2之王！",
+    "clickHere": "点击这里",
+    "partnerships": "与世界最大游戏组织的合作伙伴关系正在进行中"
+  },
+  "howToBuy": {
+    "title": "如何购买",
+    "step1": "步骤1",
+    "step2": "步骤2",
+    "step3": "步骤3",
+    "step4": "步骤4",
+    "earnRewards": "赚取奖励",
+    "connectWallet": "连接钱包",
+    "connectWalletDesc": "找到网页顶部的预售小部件（{link}），使用您喜欢的钱包点击'连接钱包'。多个钱包选项（包括Metamask和Coinbase）可供选择。",
+    "selectToken": "选择代币和数量",
+    "selectTokenDesc": "选择您喜欢的货币（ETH、USDT、USDC、SOL、BNB以及更多）或使用银行卡支付，选择您想购买的$DOGEBALL代币数量，然后点击'购买$DOGEBALL'。输入推荐和奖金代码（如果您有）——有关使用代码的更多详细信息，请参阅常见问题。",
+    "buyToken": "购买代币并批准交易",
+    "buyTokenDesc": "通过在连接的钱包中批准交易来完成购买。确认后，您的购买和代币数量将安全地记录在链上，并在上方预售小部件的'仪表板'下可见。",
+    "claimToken": "领取$DOGEBALL代币",
+    "claimTokenDesc": "预售结束后，您可以使用用于购买的同一钱包领取您的$DOGEBALL代币。领取详情将在预售结束后在社交媒体渠道上发布。",
+    "staking": "质押",
+    "stakingDesc": "将您的预售购买代币锁定在我们安全且经过审计的智能合约质押池中；以高80% APY赚取$DOGEBALL奖励，最大化您的$DOGEBALL代币回报。",
+    "clickHere": "点击这里"
+  },
+  "faq": {
+    "title": "常见问题",
+    "q1": "什么是$DOGEBALL？",
+    "a1": "$DOGEBALL是一种双实用代币，为专为近乎零费用交易、高速和顶级安全性而设计的自定义Layer 2区块链提供动力，与$DOGEBALL在线游戏无缝集成。作为原生代币，$DOGEBALL为整个生态系统提供动力，为用户和游戏玩家提供强大的基础。代币具有现实生活中的实用性，将来将用于完成游戏行业的交易。",
+    "q2": "什么是$DOGEBALL质押？",
+    "a2": "质押$DOGEBALL涉及将您的代币在安全智能合约中锁定一段时间（仅在预售期间），以无额外成本赚取额外的$DOGEBALL代币。质押奖励将在7天最短归属期后释放。请参阅'如何购买上方'中的'质押'部分。{link}",
+    "q3": "如何购买$DOGEBALL？",
+    "a3": "您只需将所选钱包连接到此页面顶部的预售小部件即可加入$DOGEBALL社区{link}。选择您喜欢的加密货币使用或使用信用卡/借记卡支付以保护您的$DOGEBALL代币。",
+    "q4": "我的$DOGEBALL代币在哪里？",
+    "a4": "用户连接钱包后可以看到他们的$DOGEBALL余额（请参阅页面顶部）。预售小部件中的'仪表板'部分将显示用户余额和购买历史。{link}",
+    "q5": "我什么时候收到我的代币？",
+    "a5": "在预售中购买$DOGEBALL后，您可以使用同一钱包在首次交易所上市之前领取您的代币。请关注我们的社交媒体以获取领取和上市日期公告。",
+    "q6": "$DOGEBALL代币购买安全吗？",
+    "a6": "是的，$DOGEBALL合约已由Coinsult（最大和最受信任的区块链项目审计师之一）审计，在整体审计得分中达到100%。{link}查看完整审计报告。",
+    "q7": "如何生成推荐代码并使用奖金代码？",
+    "a7": "您的唯一推荐代码可以通过点击'连接钱包'并点击'仪表板'来生成；每个用户将获得自己的唯一推荐代码和URL链接，以提供给其他用户。被推荐的用户应在'购买'屏幕上的'购买$DOGEBALL'按钮下输入此代码，然后点击'应用'。推荐奖金金额将添加到购买金额中，并在'仪表板'中可见（推荐人和被推荐用户均可看到）。限时奖金代码应通过点击'奖金代码'（钱包连接后'购买$DOGEBALL'按钮下）并点击'应用'来输入。"
+  },
+  "tokenomics": {
+    "title": "代币经济学",
+    "contractAddress": "合约地址",
+    "totalSupply": "总供应量",
+    "tokens": "代币",
+    "development": "开发",
+    "presale": "预售",
+    "treasuryReserves": "国库储备",
+    "stakingGamesRewards": "质押和游戏奖励",
+    "marketing": "营销",
+    "liquidity": "流动性"
+  },
+  "roadmapSteps": {
+    "mainDescription": "进入竞技场，展示您的目标！点击或点击投掷——把握好时机，粉碎路上的每一个目标！",
+    "step1": "得分高！",
+    "step2": "攀登排名！",
+    "step3": "成为终极DOGEBALL冠军！",
+    "description1": "每次命中都会给您分数，连击将您的分数提升到天空！但要小心——错过太多投掷，游戏就结束了。升级以解锁不同的背景和竞技场，所有这些都增加了游戏体验。",
+    "description2": "敌人变得更快更强，随着您升级而距离更远。只有最敏锐和最准确的玩家才能到达TOP 10排行榜，获胜者将获得$DOGEBALL代币的$500k大奖，另外$500k奖金池将在其余9名玩家之间分配。请注意，只有在$DOGEBALL预售中购买代币的用户才有资格成为$1M奖金池的一部分。"
+  },
+  "roadmapGame": {
+    "title": "游戏即将开始！",
+    "description": "预售开始后不久即可游玩——请关注官方Telegram和X社交媒体渠道以获取发布新闻",
+    "comingSoon": "即将推出",
+    "privacyNote": "用户必须在完成游戏时输入与用于进行预售购买的相同钱包地址（如果游戏分数足够高以进入排行榜，将显示输入钱包地址的选项）。请注意，为了保护用户隐私和安全，钱包地址不会在网站上可见，也不会在任何社交媒体渠道中提及；只会提及游戏本身内输入的选择用户名。"
+  },
+  "ethL2": {
+    "heroTitle": "DOGECHAIN水龙头",
+    "heroSubtitle": "免费试用我们定制构建的ETH L2区块链！",
+    "blockchainTitle": "获取$DOGEBALL区块链测试代币",
+    "blockchainSubtitle": "$DOGEBALL区块链测试代币是免费的，不花费用户任何加密/现金",
+    "blockchainDescription": "每24小时，同一钱包可以领取$DOGEBALL区块链测试代币（请注意，这些代币不是用户在预售期间购买的代币；这些代币是为用户在预售期间试用而创建的，没有代币价值）",
+    "card1Text": "将ETH L2 DOGECHAIN自定义网络添加到您选择的钱包（有关如何添加自定义网络的详细信息，请参阅您选择的钱包网站）使用以下详细信息：",
+    "blockchainName": "区块链名称",
+    "rpcUrl": "RPC URL",
+    "chainId": "链ID",
+    "symbol": "符号",
+    "card2Text": "点击页面顶部的{connectWallet}按钮以连接您的钱包。您的钱包地址将自动填充到下面的水龙头中",
+    "card3Text": "选择要使用的测试代币数量（同一钱包每24小时最多可领取0.01 $DOGEBALL测试代币）",
+    "card4Text": "点击下面的{send}按钮从水龙头领取您的免费$DOGEBALL测试代币",
+    "card5Text": "等待交易完成——代币将出现在DOGECHAIN网络上的钱包中。",
+    "card5Text2": "查看我们DOGECHAIN的所有交易和区块链活动{here}",
+    "card6Text": "通过将$DOGEBALL测试代币发送到其他钱包地址来测试区块链（请注意，接收钱包还必须将DOGECHAIN自定义网络添加到其钱包以接收测试代币）",
+    "card7Text": "就这样，您已经体验了定制创建的DOGECHAIN ETH L2区块链的速度、零成本和安全性！",
+    "selectToken": "选择代币",
+    "walletAddress": "钱包地址",
+    "walletAddressPlaceholder": "连接您的钱包以自动填充您的地址。",
+    "comingSoon": "即将推出",
+    "connectWallet": "连接钱包",
+    "send": "发送",
+    "here": "这里"
+  },
+  "common": {
+    "clickHere": "点击这里"
+  },
+  "timer": {
+    "days": "天",
+    "hours": "小时",
+    "minutes": "分钟",
+    "seconds": "秒"
+  },
+  "presale": {
+    "tabs": {
+      "buy": "购买",
+      "stake": "质押",
+      "dashboard": "仪表板"
+    },
+    "stage": {
+      "stage": "阶段"
+    },
+    "buyTab": {
+      "presalePrice": "预售价格 =",
+      "launchPrice": "启动价格 =",
+      "connectWallet": "连接钱包",
+      "presaleEnded": "预售已结束",
+      "selectToken": "选择代币",
+      "enterAmount": "输入数量",
+      "buyWithCard": "用卡购买",
+      "comingSoon": "即将推出",
+      "bonusCode": "奖金代码",
+      "referralCode": "推荐代码",
+      "confirmTransaction": "在您的钱包中确认交易...",
+      "waitingConfirmation": "等待区块链确认...",
+      "processingPurchase": "正在处理您的购买..."
+    },
+    "stakeTab": {
+      "connectWalletMessage": "连接您的钱包以查看和管理您的质押",
+      "availableToStake": "可用于质押",
+      "maxStake": "最大质押",
+      "maxUnstake": "最大取消质押",
+      "stake": "质押",
+      "unstake": "取消质押",
+      "ownedTokens": "拥有的代币",
+      "currentlyStaked": "当前质押",
+      "dailyInterest": "每日利息",
+      "totalEarnings": "总收入",
+      "earnApy": "通过质押您的代币赚取{{apy}}% APY"
+    },
+    "historyTab": {
+      "connectWalletMessage": "连接您的钱包以查看您的仪表板",
+      "yourTransactions": "您的交易",
+      "noTransactions": "还没有交易",
+      "purchasesWillAppear": "您的购买将显示在这里"
+    },
+    "referralCode": {
+      "label": "推荐代码",
+      "placeholder": "输入推荐代码",
+      "applied": "推荐代码已应用！",
+      "connectWalletFirst": "请先连接您的钱包",
+      "enterCode": "请输入推荐代码",
+      "cannotUseOwn": "您不能使用自己的推荐代码",
+      "appliedSuccess": "推荐代码应用成功！",
+      "invalidCode": "无效的推荐代码"
+    },
+    "bonusCode": {
+      "label": "奖金代码",
+      "placeholder": "输入奖金代码",
+      "applied": "奖金已应用！",
+      "connectWalletFirst": "请先连接您的钱包",
+      "enterCode": "请输入奖金代码",
+      "appliedSuccess": "奖金代码应用成功！",
+      "invalidCode": "无效的奖金代码"
+    },
+    "referralData": {
+      "yourReferralLink": "您的推荐链接",
+      "yourReferralCode": "您的推荐代码",
+      "totalReferrals": "总推荐数",
+      "tokensEarned": "赚取的代币",
+      "copy": "复制"
+    },
+    "codeInputs": {
+      "change": "更改",
+      "apply": "应用"
+    },
+    "stageBox": {
+      "untilPriceRise": "直到价格上涨",
+      "of": "的",
+      "participants": "参与者"
+    },
+    "bonusBanner": {
+      "presaleLaunchOffer": "预售启动优惠",
+      "useBonusCode": "使用奖金代码",
+      "toGetMore": "获得10%更多的$DOGEBALL代币！",
+      "copied": "已复制！",
+      "copyCode": "复制代码"
+    },
+    "transactions": {
+      "awaitingPayment": "等待付款",
+      "processing": "处理中...",
+      "manual": "手动",
+      "purchase": "购买"
+    },
+    "errors": {
+      "presaleEnded": "预售已结束",
+      "selectPaymentMethod": "请选择付款方式",
+      "enterAmount": "请输入数量",
+      "cardPaymentFailed": "卡付款失败。请重试。",
+      "paymentProcessing": "付款正在处理中。请检查您的仪表板。",
+      "completePayment": "在弹出窗口中完成付款",
+      "transactionFailed": "交易失败。请重试。",
+      "insufficientTokens": "可用于质押的代币不足",
+      "failedToStake": "质押代币失败",
+      "cannotUnstakeMore": "无法取消质押超过当前质押的数量",
+      "failedToUnstake": "取消质押代币失败"
+    },
+    "copy": "复制",
+    "tokenAmountInputs": {
+      "youPay": "您支付",
+      "youReceive": "您收到"
+    },
+    "transactionDetails": {
+      "for": "为 $",
+      "reason": "原因："
+    },
+    "poweredBy": "由...提供支持",
+    "tokenSelect": {
+      "more": "更多",
+      "otherCryptos": "+ 其他加密货币"
+    }
+  }
+}

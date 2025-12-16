@@ -23,14 +23,14 @@
       <span
         class="gap-1 text-white text-sm font-semibold leading-5 font-grotesk whitespace-nowrap overflow-hidden text-ellipsis h-full flex items-center font-feature-off"
       >
-        Presale Price =
+        {{ t("presale.buyTab.presalePrice") }}
         <span class="text-[#59A6FD]">
           {{
             formatDollar(parseNum(presale.stage.value?.token_price), true, 0, 4)
           }}
         </span>
         <span> | </span>
-        <span>Launch Price =</span>
+        <span>{{ t("presale.buyTab.launchPrice") }}</span>
         <span class="text-[#59A6FD]">
           {{ formatDollar(LAUNCH_PRICE, true, 0, 4) }}
         </span>
@@ -54,8 +54,12 @@
     >
       <Spinner v-if="isBuying" :size="5" />
       <template v-else>
-        <span v-if="presale.presaleEnded.value">Presale Ended</span>
-        <span v-else-if="!presale.isConnected.value">Connect Wallet</span>
+        <span v-if="presale.presaleEnded.value">{{
+          t("presale.buyTab.presaleEnded")
+        }}</span>
+        <span v-else-if="!presale.isConnected.value">{{
+          t("presale.buyTab.connectWallet")
+        }}</span>
         <span v-else>{{ buyButtonText }}</span>
       </template>
     </Button>
@@ -93,6 +97,7 @@
 
 <script setup>
 import { ref, watch, computed, onMounted } from "vue";
+import { useI18n } from "vue-i18n";
 import StageBox from "../stage/StageBox.vue";
 import { TokenSelectGrid, TokenAmountInputs } from "../token";
 import { Button, Spinner, PillButton } from "../ui";
@@ -104,6 +109,8 @@ import { useToast } from "@/composables/useToast";
 import { formatDollar, parseNum, formatPrecision } from "@/utils/format";
 import { LAUNCH_PRICE, DEFAULT_PAYMENT_AMOUNT } from "@/config/presale";
 
+const { t } = useI18n();
+
 // Composables
 const presale = usePresale();
 const toast = useToast();
@@ -114,10 +121,10 @@ const paymentAmountStr = ref(DEFAULT_PAYMENT_AMOUNT);
 const receiveAmountStr = ref("0");
 const visibleOption = ref(null);
 
-const codeOptions = [
-  { label: "Bonus Code", value: "bonus" },
-  { label: "Referral Code", value: "referral" },
-];
+const codeOptions = computed(() => [
+  { label: t("presale.buyTab.bonusCode"), value: "bonus" },
+  { label: t("presale.buyTab.referralCode"), value: "referral" },
+]);
 
 // Computed
 const isBuying = computed(() => {
@@ -130,23 +137,24 @@ const isBuying = computed(() => {
 });
 
 const buyButtonText = computed(() => {
-  if (!selectedToken.value) return "Select Token";
-  if (parseNum(paymentAmountStr.value) <= 0) return "Enter Amount";
+  if (!selectedToken.value) return t("presale.buyTab.selectToken");
+  if (parseNum(paymentAmountStr.value) <= 0)
+    return t("presale.buyTab.enterAmount");
   if (selectedToken.value.symbol.toUpperCase() === "CARD") {
-    return "Buy with Card";
+    return t("presale.buyTab.buyWithCard");
   }
-  return "Coming Soon";
+  return t("presale.buyTab.comingSoon");
 });
 
 const buyStateMessage = computed(() => {
   const state = presale.buyState.value;
   switch (state.type) {
     case BuyStateType.SENDING:
-      return "Confirm the transaction in your wallet...";
+      return t("presale.buyTab.confirmTransaction");
     case BuyStateType.CONFIRMING:
-      return "Waiting for blockchain confirmation...";
+      return t("presale.buyTab.waitingConfirmation");
     case BuyStateType.FINALIZING:
-      return "Processing your purchase...";
+      return t("presale.buyTab.processingPurchase");
     default:
       return null;
   }
@@ -204,18 +212,18 @@ const handleBuy = async () => {
 
   // Validation
   if (presale.presaleEnded.value) {
-    toast.showError("Presale has ended");
+    toast.showError(t("presale.errors.presaleEnded"));
     return;
   }
 
   if (!selectedToken.value) {
-    toast.showError("Please select a payment method");
+    toast.showError(t("presale.errors.selectPaymentMethod"));
     return;
   }
 
   const paymentAmount = parseNum(paymentAmountStr.value);
   if (paymentAmount <= 0) {
-    toast.showError("Please enter an amount");
+    toast.showError(t("presale.errors.enterAmount"));
     return;
   }
 
@@ -235,10 +243,10 @@ const handleBuy = async () => {
           );
         },
         onError: () => {
-          toast.showError("Card payment failed. Please try again.");
+          toast.showError(t("presale.errors.cardPaymentFailed"));
         },
         onClosedEarly: () => {
-          toast.showInfo("Payment is being processed. Check your dashboard.");
+          toast.showInfo(t("presale.errors.paymentProcessing"));
         },
       });
     } catch (err) {
@@ -268,14 +276,14 @@ const handleBuy = async () => {
 
     // Handle NowPayments flow (shows payment modal)
     if (result?.type === "created" && result.transaction) {
-      toast.showInfo("Complete your payment in the popup window");
+      toast.showInfo(t("presale.errors.completePayment"));
       // NowPayments modal will handle the rest
     }
   } catch (err) {
     const message =
       err?.shortMessage ||
       err?.message ||
-      "Transaction failed. Please try again.";
+      t("presale.errors.transactionFailed");
     toast.showError(message);
     console.error("Buy error:", err);
   }

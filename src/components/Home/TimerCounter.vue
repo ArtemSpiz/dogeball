@@ -1,8 +1,11 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import { useI18n } from "vue-i18n";
 import LeftClock from "@/assets/img/Home/LeftClock.png";
 import RightClock from "@/assets/img/Home/RightClock.png";
 import DigitCard from "./DigitCard.vue";
+
+const { t } = useI18n();
 
 const days = ref("14");
 const hours = ref("04");
@@ -63,7 +66,7 @@ const splitDigits = (value) => value.split("");
         <div
           class="font-grotesk !leading-[120%] text-base max-md:text-sm mt-1 font-medium"
         >
-          Days
+          {{ t("timer.days") }}
         </div>
       </div>
 
@@ -81,7 +84,7 @@ const splitDigits = (value) => value.split("");
         <div
           class="font-grotesk !leading-[120%] text-base mt-1 max-md:text-sm font-medium"
         >
-          Hours
+          {{ t("timer.hours") }}
         </div>
       </div>
 
@@ -98,7 +101,7 @@ const splitDigits = (value) => value.split("");
         <div
           class="font-grotesk !leading-[120%] text-base mt-1 max-md:text-sm font-medium"
         >
-          Minutes
+          {{ t("timer.minutes") }}
         </div>
       </div>
 
@@ -115,7 +118,7 @@ const splitDigits = (value) => value.split("");
         <div
           class="font-grotesk !leading-[120%] text-base mt-1 max-md:text-sm font-medium"
         >
-          Seconds
+          {{ t("timer.seconds") }}
         </div>
       </div>
     </div>

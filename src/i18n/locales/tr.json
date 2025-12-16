@@ -1,0 +1,285 @@
+{
+  "header": {
+    "about": "Hakkında",
+    "roadmap": "Yol Haritası",
+    "howToBuy": "Nasıl Satın Alınır",
+    "playDogeball": "$DOGEBALL Oyna",
+    "tokenomics": "Tokenomics",
+    "ethL2": "ETH L2",
+    "faqs": "SSS",
+    "connectWallet": "Cüzdanı Bağla"
+  },
+  "footer": {
+    "termsConditions": "Şartlar ve koşullar",
+    "cookiesPolicy": "Çerez politikası",
+    "privacyPolicy": "Gizlilik politikası",
+    "disclaimer": "Sorumluluk Reddi: $DOGEBALL, fayda destekli bir meme coin'dir. Kripto para piyasaları oldukça volatildir, dikkatli yatırım yapın. Kripto para, yargı yetkinizde düzenlenmemiş olabilir. '$DOGEBALL' taklit web sitelerine ve sosyal medya kanallarına dikkat edin (yalnızca bu web sitesindeki resmi bağlantılar).",
+    "copyright": "Telif Hakkı © 2025 DOGEBALL. Tüm hakları saklıdır."
+  },
+  "hero": {
+    "title": "DÜNYANIN İLK L2 GÜÇLÜ KRİPTO OYUNU",
+    "subtitle": "$DOGEBALL, özel bir EVM L2 blockchain üzerinde kripto oynayan tek DOGE. Hızlı, ucuz, güvenli. $1M şansı için oyna",
+    "whitelistEmail": "Whitelist'e eklenmek için e-posta girin",
+    "emailPlaceholder": "e-posta adresiniz",
+    "getEarlyAccess": "Erken erişim alın!",
+    "audit": "Denetim",
+    "whitepaper": "Beyaz Kitap"
+  },
+  "roadmap": {
+    "welcome": "DOGEBALL OYUNUNA HOŞ GELDİNİZ!",
+    "title": "Yol Haritası",
+    "phase1": "Faz 1",
+    "phase2": "Faz 2",
+    "phase3": "Faz 3",
+    "phase4": "Faz 4",
+    "evolution": "Evrim",
+    "development": "Geliştirme",
+    "expansion": "Genişleme",
+    "gameV2Expansion": "Oyun ve V2 genişlemesi",
+    "phase1Sub1": "DOGE'dan $DOGEBALL'a evrim",
+    "phase1Sub2": "$DOGEBALL oyun planı oluşturuldu",
+    "phase1Sub3": "Sosyal kanallar ve web sitesi geliştirildi",
+    "phase1Sub4": "Sözleşme oluşturuldu ve denetlendi",
+    "phase2Sub1": "$DOGEBALL oyunu geliştirildi",
+    "phase2Sub2": "DOGECHAIN EVM L2 dağıtıldı",
+    "phase2Sub3": "Topluluk Genişlemesi",
+    "phase2Sub4": "Ön satış başlıyor",
+    "phase3Sub1": "Küresel pazarlama kampanyası",
+    "phase3Sub2": "Kurumsal oyun ortaklıkları",
+    "phase3Sub3": "$DOGEBALL küresel borsalarda listelendi",
+    "phase3Sub4": "$DOGEBALL viral oluyor",
+    "phase4Sub1": "$DOGEBALL V2 oyun geliştirmesi",
+    "phase4Sub2": "CEX listeleri devam ediyor",
+    "phase4Sub3": "L2 Blockchain küresel yayın",
+    "phase4Sub4": "Gelecek evrim tokenları oluşturuldu"
+  },
+  "about": {
+    "title": "HAKKINDA",
+    "subtitle": "Kripto meme coin'lerin geçişi",
+    "description": "DOGECHAIN'in merkezinde $DOGEBALL oyunu var — oyuncuların DOGEBALL'ları attığı, seviye atladığı, liderlik tablosuna tırmandığı ve $1M ödül havuzu için yarıştığı (en iyi oyuncuya $500k) bağımlılık yapan bir online dodgeball oyunu!",
+    "card1": "$DOGEBALL online oyunu, $1m'nin bir kısmını kazanmak için oyna!",
+    "card2": "Ultra düşük kullanıcı ücretleriyle özel yapılmış ETH L2 Blockchain",
+    "card3": "Şimşek hızında işlemler, online oyunculuğun geleceğini güçlendiriyor",
+    "card4": "%80 yüksek getirili staking",
+    "card5": "Saf eğlence garanti!",
+    "testDescription": "Diğer meme coin L2'lerden farklı olarak, özel yapılmış DOGECHAIN'imizi test edebilir ve tüm L2'lerin kralını kendiniz deneyimleyebilirsiniz!",
+    "clickHere": "Buraya Tıklayın",
+    "partnerships": "Dünyanın en büyük oyun organizasyonlarıyla ortaklıklar devam ediyor"
+  },
+  "howToBuy": {
+    "title": "NASIL SATIN ALINIR",
+    "step1": "Adım 1",
+    "step2": "Adım 2",
+    "step3": "Adım 3",
+    "step4": "Adım 4",
+    "earnRewards": "Ödül Kazan",
+    "connectWallet": "Cüzdanı Bağla",
+    "connectWalletDesc": "Web sayfasının üstündeki ön satış widget'ını bulun ({link}) ve tercih ettiğiniz cüzdanı kullanarak 'Cüzdanı Bağla'ya tıklayın. Birden fazla cüzdan seçeneği (Metamask ve Coinbase dahil) seçim için mevcuttur.",
+    "selectToken": "Token ve Miktar Seç",
+    "selectTokenDesc": "Tercih ettiğiniz para birimini (ETH, USDT, USDC, SOL, BNB ve daha fazlası) seçin veya banka kartıyla ödeme yapın, satın almak istediğiniz $DOGEBALL token miktarını seçin ve 'SATIN AL $DOGEBALL'a tıklayın. Referans ve Bonus kodlarını girin (varsa) – kod kullanımı hakkında daha fazla ayrıntı için SSS'ye bakın.",
+    "buyToken": "Token Satın Al ve İşlemi Onayla",
+    "buyTokenDesc": "Bağlı cüzdanınızda işlemi onaylayarak satın alımınızı tamamlayın. Onaylandıktan sonra, satın alımınız ve token miktarınız güvenli bir şekilde zincirde kaydedilecek ve yukarıdaki ön satış widget'ında 'Dashboard' altında görünecektir.",
+    "claimToken": "$DOGEBALL Token'ı Talep Et",
+    "claimTokenDesc": "Ön satış bittikten sonra, satın alımınız için kullandığınız aynı cüzdanla $DOGEBALL token'larınızı talep edebilirsiniz. Talep etme detayları, ön satış sona erdiğinde sosyal medya kanallarında yayınlanacaktır.",
+    "staking": "STAKING",
+    "stakingDesc": "Ön satış satın alma token'larınızı güvenli ve denetlenmiş akıllı sözleşme staking havuzumuza kilitleyin; yüksek %80 APY ile $DOGEBALL ödülleri kazanın ve $DOGEBALL token getirinizi maksimize edin.",
+    "clickHere": "Buraya Tıklayın"
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "q1": "$DOGEBALL nedir?",
+    "a1": "$DOGEBALL, neredeyse sıfır ücretli işlemler, yüksek hız ve birinci sınıf güvenlik için tasarlanmış özel bir Katman 2 blockchain'i güçlendiren, $DOGEBALL online oyunuyla sorunsuz bir şekilde entegre edilmiş çift faydalı bir coin'dir. Yerel token olarak, $DOGEBALL tüm ekosistemi besler ve hem kullanıcılar hem de oyuncular için sağlam bir temel sunar. Token'ların gerçek hayatta bir faydası vardır ve gelecekte oyun endüstrisinde işlemleri tamamlamak için kullanılacaktır.",
+    "q2": "$DOGEBALL staking nedir?",
+    "a2": "$DOGEBALL staking, ekstra maliyet olmadan ek $DOGEBALL token'ları kazanmak için token'larınızı belirli bir süre (yalnızca ön satış sırasında) güvenli bir akıllı sözleşmede kilitlemeyi içerir. Staking ödülleri, 7 günlük minimum vesting döneminden sonra serbest bırakılacaktır. 'YUKARIDAKİ NASIL SATIN ALINIR' bölümündeki 'STAKING' bölümüne bakın. {link}",
+    "q3": "$DOGEBALL'ı nasıl satın alırım?",
+    "a3": "Bu sayfanın üstündeki ön satış widget'ına seçtiğiniz cüzdanı bağlayarak $DOGEBALL topluluğuna katılabilirsiniz {link}. Kullanmak için tercih ettiğiniz kripto para birimini seçin veya Kredi/Banka Kartınızla ödeme yaparak $DOGEBALL token'larınızı güvence altına alın.",
+    "q4": "$DOGEBALL token'larım nerede?",
+    "a4": "Kullanıcılar cüzdanları bağlandığında $DOGEBALL bakiyelerini görebilirler (sayfanın üstüne bakın). Ön satış widget'ındaki 'Dashboard' bölümü kullanıcı bakiyesini ve satın alma geçmişini gösterecektir. {link}",
+    "q5": "Token'larımı ne zaman alacağım?",
+    "a5": "Ön satışta $DOGEBALL satın aldıktan sonra, ilk borsa listesinden önce token'larınızı talep etmek için aynı cüzdanı kullanabilirsiniz. Talep ve liste tarihi duyuruları için sosyal medyamızı takip edin.",
+    "q6": "$DOGEBALL token'ı satın almak güvenli mi?",
+    "a6": "Evet, $DOGEBALL sözleşmesi, en büyük ve güvenilir blockchain proje denetçilerinden biri olan Coinsult tarafından denetlenmiş ve genel denetim puanında %100 başarı elde etmiştir. {link} tam denetim raporu için.",
+    "q7": "Referans kodunu nasıl oluştururum ve bonus kodlarını nasıl kullanırım?",
+    "a7": "Benzersiz referans kodunuz 'Cüzdanı Bağla'ya tıklayıp 'Dashboard'a tıklayarak oluşturulabilir; her kullanıcıya diğer kullanıcılara vermek için kendi benzersiz referans kodu ve URL bağlantısı sağlanacaktır. Referans edilen kullanıcı bunu 'Satın Al' ekranında '$DOGEBALL Satın Al' düğmesinin altına girmeli ve 'Uygula'ya tıklamalıdır. Referans bonus tutarları satın alma tutarına eklenecek ve 'Dashboard'da görünecektir (hem referans eden hem de referans edilen kullanıcı için). Sınırlı süreli bonus kodları 'Bonus Kodu'na (cüzdan bağlantısından sonra '$DOGEBALL Satın Al' düğmesinin altında) tıklayıp 'Uygula'ya tıklayarak girilmelidir."
+  },
+  "tokenomics": {
+    "title": "TOKENOMICS",
+    "contractAddress": "Sözleşme Adresi",
+    "totalSupply": "Toplam Arz",
+    "tokens": "Token'lar",
+    "development": "Geliştirme",
+    "presale": "Ön Satış",
+    "treasuryReserves": "Hazine Rezervleri",
+    "stakingGamesRewards": "Staking & Oyun Ödülleri",
+    "marketing": "Pazarlama",
+    "liquidity": "Likidite"
+  },
+  "roadmapSteps": {
+    "mainDescription": "Arenaya adım atın ve hedefinizi gösterin! Atmak için dokunun veya tıklayın – zamanlamayı doğru yapın ve yolunuzdaki her hedefi parçalayın!",
+    "step1": "Büyük puan!",
+    "step2": "Sıralamada yüksel!",
+    "step3": "Nihai DOGEBALL şampiyonu ol!",
+    "description1": "Her vuruş size puan verir ve kombo'lar skorunuzu göklere çıkarır! Ama dikkatli olun – çok fazla atış kaçırırsanız, OYUN BİTTİ. Farklı arka planları ve arenaları açmak için seviye atlayın, hepsi oyun deneyimine eklenir.",
+    "description2": "Düşmanlar daha hızlı ve daha sert hale gelir ve seviye atladıkça mesafe alır. Sadece en keskin ve en doğru oyuncular TOP 10 Liderlik Tablosuna ulaşabilir, burada kazanan $DOGEBALL token'larının $500k jackpot'unu alacak, kalan 9 oyuncu arasında bölünen başka bir $500k ödül havuzu ile. $DOGEBALL ön satışında token satın alan kullanıcıların yalnızca $1M ÖDÜL HAVUZUNUN bir parçası olmaya hak kazandığını unutmayın."
+  },
+  "roadmapGame": {
+    "title": "Oyun Yakında Başlıyor!",
+    "description": "Ön satış başladıktan kısa süre sonra oynanabilir - lansman haberleri için resmi Telegram ve X sosyal medya kanallarını takip edin",
+    "comingSoon": "Yakında",
+    "privacyNote": "Kullanıcılar, oyunu tamamladıklarında ön satış satın alımları için kullandıkları aynı cüzdan adresini girmelidir (oyun skoru liderlik tablosuna çıkmak için yeterince yüksekse cüzdan adresi girme seçeneği gösterilecektir). Kullanıcı gizliliğini ve güvenliğini korumak için, cüzdan adresleri web sitesinde görünmeyecek veya sosyal medya kanallarında bahsedilmeyecektir; yalnızca oyunun kendisi içinde girilen seçilen kullanıcı adı bahsedilecektir."
+  },
+  "ethL2": {
+    "heroTitle": "DOGECHAIN FAUCET",
+    "heroSubtitle": "Özel Yapılmış ETH L2 Blockchain'imizi Ücretsiz Deneyin!",
+    "blockchainTitle": "$DOGEBALL Blockchain Test Token'larını Alın",
+    "blockchainSubtitle": "$DOGEBALL Blockchain Test Token'ları ücretsizdir ve kullanıcıya herhangi bir kripto/nakit maliyeti yoktur",
+    "blockchainDescription": "Her 24 saatte bir, $DOGEBALL Blockchain Test token'ları aynı cüzdan tarafından talep edilebilir (bu token'ların ön satış sırasında kullanıcıların satın aldığı token'lar OLMADIĞINI unutmayın; bu token'lar kullanıcıların yalnızca ön satış sırasında denemesi için oluşturulmuştur ve token değeri yoktur)",
+    "card1Text": "Seçtiğiniz cüzdana özel ETH L2 DOGECHAIN ağını ekleyin (özel ağ ekleme detayları için seçtiğiniz cüzdanın web sitesine bakın):",
+    "blockchainName": "Blockchain Adı",
+    "rpcUrl": "RPC URL",
+    "chainId": "Zincir ID",
+    "symbol": "Sembol",
+    "card2Text": "Cüzdanınızı bağlamak için sayfanın üstündeki {connectWallet} düğmesine tıklayın. Cüzdan adresiniz aşağıdaki faucet'e otomatik olarak doldurulacaktır",
+    "card3Text": "Kullanılacak test token miktarını seçin (aynı cüzdanla 24 saatlik dönem başına maksimum 0,01 $DOGEBALL test token'ı talep edilebilir)",
+    "card4Text": "Faucet'ten ücretsiz $DOGEBALL test token'larınızı talep etmek için aşağıdaki {send} düğmesine tıklayın",
+    "card5Text": "İşlemin tamamlanmasını bekleyin - token'lar DOGECHAIN ağındaki cüzdanınızda görünecektir.",
+    "card5Text2": "DOGECHAIN'imiz için tüm işlemleri ve blockchain aktivitesini {here} görün",
+    "card6Text": "$DOGEBALL test token'larını diğer cüzdan adreslerine göndererek blockchain'i test edin (alıcı cüzdanın da test token'larını almak için DOGECHAIN özel ağını cüzdanına eklemesi gerektiğini unutmayın)",
+    "card7Text": "İşte bu kadar, özel oluşturulmuş DOGECHAIN ETH L2 Blockchain'in hızını, sıfır maliyetini ve güvenliğini deneyimlediniz!",
+    "selectToken": "Token seç",
+    "walletAddress": "Cüzdan Adresi",
+    "walletAddressPlaceholder": "Adresinizi otomatik doldurmak için cüzdanınızı bağlayın.",
+    "comingSoon": "Yakında",
+    "connectWallet": "Cüzdanı Bağla",
+    "send": "Gönder",
+    "here": "Burada"
+  },
+  "common": {
+    "clickHere": "Buraya Tıklayın"
+  },
+  "timer": {
+    "days": "Gün",
+    "hours": "Saat",
+    "minutes": "Dakika",
+    "seconds": "Saniye"
+  },
+  "presale": {
+    "tabs": {
+      "buy": "Satın Al",
+      "stake": "Stake",
+      "dashboard": "Dashboard"
+    },
+    "stage": {
+      "stage": "Aşama"
+    },
+    "buyTab": {
+      "presalePrice": "Ön Satış Fiyatı =",
+      "launchPrice": "Lansman Fiyatı =",
+      "connectWallet": "Cüzdanı Bağla",
+      "presaleEnded": "Ön Satış Bitti",
+      "selectToken": "Token Seç",
+      "enterAmount": "Miktar Gir",
+      "buyWithCard": "Kartla Satın Al",
+      "comingSoon": "Yakında",
+      "bonusCode": "Bonus Kodu",
+      "referralCode": "Referans Kodu",
+      "confirmTransaction": "Cüzdanınızda işlemi onaylayın...",
+      "waitingConfirmation": "Blockchain onayı bekleniyor...",
+      "processingPurchase": "Satın alımınız işleniyor..."
+    },
+    "stakeTab": {
+      "connectWalletMessage": "Staking'inizi görüntülemek ve yönetmek için cüzdanınızı bağlayın",
+      "availableToStake": "Stake Edilebilir",
+      "maxStake": "Maksimum Stake",
+      "maxUnstake": "Maksimum Unstake",
+      "stake": "Stake",
+      "unstake": "Unstake",
+      "ownedTokens": "Sahip Olunan Token'lar",
+      "currentlyStaked": "Şu Anda Stake Edilmiş",
+      "dailyInterest": "Günlük Faiz",
+      "totalEarnings": "Toplam Kazanç",
+      "earnApy": "Token'larınızı stake ederek {{apy}}% APY kazanın"
+    },
+    "historyTab": {
+      "connectWalletMessage": "Dashboard'unuzu görüntülemek için cüzdanınızı bağlayın",
+      "yourTransactions": "İşlemleriniz",
+      "noTransactions": "Henüz işlem yok",
+      "purchasesWillAppear": "Satın alımlarınız burada görünecek"
+    },
+    "referralCode": {
+      "label": "Referans Kodu",
+      "placeholder": "Referans kodu girin",
+      "applied": "Referans kodu uygulandı!",
+      "connectWalletFirst": "Lütfen önce cüzdanınızı bağlayın",
+      "enterCode": "Lütfen bir referans kodu girin",
+      "cannotUseOwn": "Kendi referans kodunuzu kullanamazsınız",
+      "appliedSuccess": "Referans kodu başarıyla uygulandı!",
+      "invalidCode": "Geçersiz referans kodu"
+    },
+    "bonusCode": {
+      "label": "Bonus Kodu",
+      "placeholder": "Bonus kodu girin",
+      "applied": "Bonus uygulandı!",
+      "connectWalletFirst": "Lütfen önce cüzdanınızı bağlayın",
+      "enterCode": "Lütfen bir bonus kodu girin",
+      "appliedSuccess": "Bonus kodu başarıyla uygulandı!",
+      "invalidCode": "Geçersiz bonus kodu"
+    },
+    "referralData": {
+      "yourReferralLink": "Referans Linkiniz",
+      "yourReferralCode": "Referans Kodunuz",
+      "totalReferrals": "Toplam Referans",
+      "tokensEarned": "Kazanılan Token'lar",
+      "copy": "Kopyala"
+    },
+    "codeInputs": {
+      "change": "Değiştir",
+      "apply": "Uygula"
+    },
+    "stageBox": {
+      "untilPriceRise": "FİYAT ARTIŞINA KADAR",
+      "of": "veya",
+      "participants": "Katılımcılar"
+    },
+    "bonusBanner": {
+      "presaleLaunchOffer": "Ön Satış Lansman Teklifi",
+      "useBonusCode": "Bonus Kodu Kullan",
+      "toGetMore": "%10 Daha Fazla $DOGEBALL Token Almak İçin!",
+      "copied": "Kopyalandı!",
+      "copyCode": "Kodu kopyala"
+    },
+    "transactions": {
+      "awaitingPayment": "Ödeme bekleniyor",
+      "processing": "İşleniyor...",
+      "manual": "Manuel",
+      "purchase": "Satın Alım"
+    },
+    "errors": {
+      "presaleEnded": "Ön satış sona erdi",
+      "selectPaymentMethod": "Lütfen bir ödeme yöntemi seçin",
+      "enterAmount": "Lütfen bir miktar girin",
+      "cardPaymentFailed": "Kart ödemesi başarısız oldu. Lütfen tekrar deneyin.",
+      "paymentProcessing": "Ödeme işleniyor. Dashboard'unuzu kontrol edin.",
+      "completePayment": "Popup penceresinde ödemenizi tamamlayın",
+      "transactionFailed": "İşlem başarısız oldu. Lütfen tekrar deneyin.",
+      "insufficientTokens": "Stake edilecek yeterli token yok",
+      "failedToStake": "Token'ları stake etme başarısız oldu",
+      "cannotUnstakeMore": "Şu anda stake edilenden daha fazla unstake edilemez",
+      "failedToUnstake": "Token'ları unstake etme başarısız oldu"
+    },
+    "copy": "Kopyala",
+    "tokenAmountInputs": {
+      "youPay": "Ödersiniz",
+      "youReceive": "Alırsınız"
+    },
+    "transactionDetails": {
+      "for": "$ için",
+      "reason": "Sebep:"
+    },
+    "poweredBy": "Güçlendiren",
+    "tokenSelect": {
+      "more": "Daha Fazla",
+      "otherCryptos": "+ Diğer Kriptolar"
+    }
+  }
+}

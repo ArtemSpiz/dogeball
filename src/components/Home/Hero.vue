@@ -1,7 +1,10 @@
 <script setup>
+import { useI18n } from "vue-i18n";
 import CustomButton from "@/ui/CustomButton.vue";
 import TimerCounter from "./TimerCounter.vue";
 import Circle from "@/assets/img/Home/CircleText.png";
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -10,11 +13,10 @@ import Circle from "@/assets/img/Home/CircleText.png";
   >
     <div class="text-center flex flex-col items-center justify-center w-full">
       <div class="title max-w-[800px] px-3">
-        THE WORLD'S FIRST L2 POWERED CRYPTO GAME
+        {{ t("hero.title") }}
       </div>
       <div class="description max-w-[440px] mt-4 max-md:px-3">
-        $DOGEBALL, the only crypto-playing DOGE on a custom EVM L2 blockchain.
-        Fast, cheap, secure. Play for a shot at $1M
+        {{ t("hero.subtitle") }}
       </div>
       <TimerCounter />
     </div>
@@ -27,23 +29,23 @@ import Circle from "@/assets/img/Home/CircleText.png";
       >
         <div>
           <div class="text-sm leading-[140%] font-grotesk">
-            Enter email to be added to the Whitelist
+            {{ t("hero.whitelistEmail") }}
           </div>
           <input
             class="py-1 w-full px-2 h-10 border border-[#DCDCDC] rounded-lg bg-[rgba(255,255,255,0.06)] text-base font-medium text-[rgba(255,255,255,0.30)]"
-            placeholder="your email"
+            :placeholder="t('hero.emailPlaceholder')"
           />
         </div>
-        <CustomButton title="Get early access!" class="w-full" />
+        <CustomButton :title="t('hero.getEarlyAccess')" class="w-full" />
       </div>
 
       <div class="flex gap-4 items-center">
         <CustomButton
-          title="Audit"
+          :title="t('hero.audit')"
           class="py-[18px] !font-medium !text-[22px] !w-[160px] max-md:h-[50px]"
         />
         <CustomButton
-          title="Whitepaper"
+          :title="t('hero.whitepaper')"
           white-bg="true"
           class="py-[18px] !text-[22px] !font-medium !w-[160px] max-md:h-[50px]"
         />

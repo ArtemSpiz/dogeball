@@ -1,4 +1,6 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 import AboutIcon1 from "@/assets/img/Home/AboutIcon1.png";
 import AboutIcon2 from "@/assets/img/Home/AboutIcon2.png";
 import AboutIcon3 from "@/assets/img/Home/AboutIcon3.png";
@@ -6,28 +8,30 @@ import AboutIcon4 from "@/assets/img/Home/AboutIcon4.png";
 import AboutIcon5 from "@/assets/img/Home/AboutIcon5.png";
 import CustomButton from "@/ui/CustomButton.vue";
 
-const AboutCards = [
+const { t } = useI18n();
+
+const AboutCards = computed(() => [
   {
     icon: AboutIcon1,
-    title: "$DOGEBALL online-game, play to win part of $1m!",
+    title: t("about.card1"),
   },
   {
     icon: AboutIcon2,
-    title: "Custom built ETH L2 Blockchain with ultra-low user fees",
+    title: t("about.card2"),
   },
   {
     icon: AboutIcon3,
-    title: "Lightning-fast transactions, powering the future of online gaming",
+    title: t("about.card3"),
   },
   {
     icon: AboutIcon4,
-    title: "High-yield staking at 80%",
+    title: t("about.card4"),
   },
   {
     icon: AboutIcon5,
-    title: "Pure fun guaranteed!",
+    title: t("about.card5"),
   },
-];
+]);
 </script>
 
 <template>
@@ -36,16 +40,13 @@ const AboutCards = [
     class="flex flex-col gap-9 max-md:gap-8 pt-[80px] max-md:py-12 pb-[120px] justify-center items-center px-[100px] max-lg:px-11 max-md:px-5 bg-[url('@/assets/img/Home/AboutBg.png')] bg-cover bg-bottom bg-no-repeat"
   >
     <div class="flex flex-col items-center gap-8">
-      <div class="title">ABOUT</div>
+      <div class="title">{{ t("about.title") }}</div>
       <div class="flex items-center text-center flex-col gap-4">
         <div class="font-grotesk text-2xl font-medium max-md:text-xl">
-          The transition of crypto meme-coins
+          {{ t("about.subtitle") }}
         </div>
         <div class="description max-w-[730px]">
-          At the centre of DOGECHAIN is the $DOGEBALL game — an addictive online
-          dodgeball game where players throw DOGEBALLs, level up, climb the
-          leaderboard and compete for a $1M prize pool ($500k to the top
-          player)!
+          {{ t("about.description") }}
         </div>
       </div>
     </div>
@@ -81,16 +82,17 @@ const AboutCards = [
 
     <div class="flex flex-col gap-3 items-center text-center justify-center">
       <div class="description max-w-[420px] max-md:px-4">
-        Unlike other meme-coins L2s, you can test our custom built DOGECHAIN and
-        experience yourself the king of all L2s!
+        {{ t("about.testDescription") }}
       </div>
-      <CustomButton title="Click Here" class="w-full max-w-[200px]" />
+      <CustomButton
+        :title="t('about.clickHere')"
+        class="w-full max-w-[200px]"
+      />
 
       <div
         class="font-grotesk text-xs font-medium max-w-[730px] max-md:max-w-[300px] leading-[160%]"
       >
-        Partnerships with the world's largest gaming organisations are in
-        progress
+        {{ t("about.partnerships") }}
       </div>
     </div>
   </div>

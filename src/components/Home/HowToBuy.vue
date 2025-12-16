@@ -1,40 +1,11 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 import HowToBuyDog from "@/assets/img/Home/HowToBuyDog.png";
 import HowToBuyCoin from "@/assets/img/Home/HowToBuyCoin.png";
 import HowToBuyMoney from "@/assets/img/Home/HowToBuyMoney.png";
 
-const HowBuyCards = [
-  {
-    type: "orange",
-    underTitle: "Step 1",
-    title: "Connect Wallet",
-    text: `Locate the presale widget at the top of the webpage (<a @click.prevent="scrollToPresale" href='#presale' class="underline">Click Here</a>) and click 'Connect Wallet' using your preferred wallet. Multiple wallet options (inc. Metamask and Coinbase) are available for selection.`,
-  },
-  {
-    type: "white",
-    underTitle: "Step 2",
-    title: "Select Token and Amount",
-    text: "Select your preferred currency (ETH, USDT, USDC, SOL, BNB plus many more) or pay by bank card, select the amount of $DOGEBALL tokens you want to purchase and click 'BUY $DOGEBALL'. Enter Referral and Bonus codes (if you have these) – see FAQs for more details over using codes.",
-  },
-  {
-    type: "purple",
-    underTitle: "Step 3",
-    title: "Buy Token and Approve Transaction",
-    text: "Complete your purchase by approving the transaction in your connected wallet. Once confirmed, your purchase and token amount will be securely recorded on-chain and visible under 'Dashboard' in the presale widget above.",
-  },
-  {
-    type: "white",
-    underTitle: "Step 4",
-    title: "Claim $DOGEBALL Token",
-    text: "After the presale ends, you can claim your $DOGEBALL tokens with the same wallet used for your purchase. Details on claiming will be released on social media channels once the presale concludes.",
-  },
-  {
-    type: "orange",
-    underTitle: "Earn Rewards",
-    title: "STAKING",
-    text: "Lock your presale purchase tokens in our secure and audited smart-contract staking pool; earn $DOGEBALL rewards with a high 80% APY and maximize your $DOGEBALL token return.",
-  },
-];
+const { t } = useI18n();
 
 const scrollToPresale = () => {
   const el = document.getElementById("presale");
@@ -45,6 +16,47 @@ const scrollToPresale = () => {
     block: "start",
   });
 };
+
+const getTextWithLink = (key) => {
+  const text = t(key);
+  const linkHtml = `<a @click.prevent="scrollToPresale" href='#presale' class="underline">${t(
+    "common.clickHere"
+  )}</a>`;
+  return text.replace("{link}", linkHtml);
+};
+
+const HowBuyCards = computed(() => [
+  {
+    type: "orange",
+    underTitle: t("howToBuy.step1"),
+    title: t("howToBuy.connectWallet"),
+    text: getTextWithLink("howToBuy.connectWalletDesc"),
+  },
+  {
+    type: "white",
+    underTitle: t("howToBuy.step2"),
+    title: t("howToBuy.selectToken"),
+    text: t("howToBuy.selectTokenDesc"),
+  },
+  {
+    type: "purple",
+    underTitle: t("howToBuy.step3"),
+    title: t("howToBuy.buyToken"),
+    text: t("howToBuy.buyTokenDesc"),
+  },
+  {
+    type: "white",
+    underTitle: t("howToBuy.step4"),
+    title: t("howToBuy.claimToken"),
+    text: t("howToBuy.claimTokenDesc"),
+  },
+  {
+    type: "orange",
+    underTitle: t("howToBuy.earnRewards"),
+    title: t("howToBuy.staking"),
+    text: t("howToBuy.stakingDesc"),
+  },
+]);
 </script>
 
 <template>
@@ -58,7 +70,7 @@ const scrollToPresale = () => {
       <div
         class="title min-w-[340px] pl-20 max-lg:px-20 max-md:px-5 max-md:mx-auto max-md:text-center max-md:min-w-0 max-md:max-w-[165px]"
       >
-        HOW TO BUY
+        {{ t("howToBuy.title") }}
       </div>
 
       <div

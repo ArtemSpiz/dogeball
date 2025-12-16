@@ -1,18 +1,22 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 import Star from "@/assets/icons/Star.vue";
 import BgSteps from "@/assets/icons/BgSteps.vue";
 
-const StepsContent = [
+const { t } = useI18n();
+
+const StepsContent = computed(() => [
   {
-    title: "Score big!",
+    title: t("roadmapSteps.step1"),
   },
   {
-    title: "Climb the ranks!",
+    title: t("roadmapSteps.step2"),
   },
   {
-    title: "Become the ultimate DOGEBALL champion!",
+    title: t("roadmapSteps.step3"),
   },
-];
+]);
 </script>
 
 <template>
@@ -22,8 +26,7 @@ const StepsContent = [
     <div
       class="max-w-[710px] text-center text-[32px] max-md:text-xl !leading-[110%] font-medium"
     >
-      Step into the arena and show your aim! Tap or click to throw – time it
-      right, and smash every target in your way!
+      {{ t("roadmapSteps.mainDescription") }}
     </div>
 
     <div class="flex flex-col items-end gap-2">
@@ -80,18 +83,10 @@ const StepsContent = [
           "
         ></div>
         <div class="font-medium text-sm">
-          Each hit gives you points, and combos raise your score sky-high! But
-          be careful – miss too many throws, and it's GAME OVER. Level up to
-          unlock different backgrounds and arenas, all adding to the game
-          experience.
+          {{ t("roadmapSteps.description1") }}
         </div>
         <div class="font-medium text-sm">
-          Enemies get faster and tougher, and get distanced as you level up.
-          Only the sharpest and most accurate players can reach the TOP 10
-          Leaderboard, where the winner will receive the $500k jackpot of
-          $DOGEBALL tokens, with another $500k prize pot split between the
-          remaining 9 players. Note that only users who have purchased tokens in
-          the $DOGEBALL presale are eligible to be part of the $1M PRIZE POT.
+          {{ t("roadmapSteps.description2") }}
         </div>
       </div>
     </div>

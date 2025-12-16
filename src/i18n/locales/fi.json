@@ -1,0 +1,285 @@
+{
+  "header": {
+    "about": "Tietoja",
+    "roadmap": "Tiekartta",
+    "howToBuy": "Miten ostaa",
+    "playDogeball": "Pelaa $DOGEBALL",
+    "tokenomics": "Tokenomics",
+    "ethL2": "ETH L2",
+    "faqs": "UKK",
+    "connectWallet": "Yhdistä lompakko"
+  },
+  "footer": {
+    "termsConditions": "Ehdot ja säännöt",
+    "cookiesPolicy": "Evästeiden käyttöpolitiikka",
+    "privacyPolicy": "Tietosuojakäytäntö",
+    "disclaimer": "Vastuuvapauslauseke: $DOGEBALL on hyödyllisyydellä tuettu meme-kolikko. Kryptovaluuttamarkkinat ovat erittäin epävakaita, sijoita varovaisesti. Kryptovaluutta ei välttämättä ole säänneltyä toimialueellasi. Varo '$DOGEBALL' kopio-verkkosivustoja ja sosiaalisen median kanavia (vain tämän verkkosivuston viralliset linkit).",
+    "copyright": "Tekijänoikeus © 2025 DOGEBALL. Kaikki oikeudet pidätetään."
+  },
+  "hero": {
+    "title": "MAAILMAN ENSIMMÄINEN L2-VOIMAAN PERUSTUVA KRYPTOPELI",
+    "subtitle": "$DOGEBALL, ainoa krypto-pelaava DOGE mukautetulla EVM L2 -lohkoketjulla. Nopea, halpa, turvallinen. Pelaa mahdollisuudesta voittaa $1M",
+    "whitelistEmail": "Syötä sähköposti lisättäväksi valkoiseen listaan",
+    "emailPlaceholder": "sähköpostisi",
+    "getEarlyAccess": "Hanki varhainen pääsy!",
+    "audit": "Tarkastus",
+    "whitepaper": "Valkoinen paperi"
+  },
+  "roadmap": {
+    "welcome": "TERVETULOA DOGEBALL-PELIIN!",
+    "title": "Tiekartta",
+    "phase1": "Vaihe 1",
+    "phase2": "Vaihe 2",
+    "phase3": "Vaihe 3",
+    "phase4": "Vaihe 4",
+    "evolution": "Evoluutio",
+    "development": "Kehitys",
+    "expansion": "Laajennus",
+    "gameV2Expansion": "Pelin ja V2:n laajennus",
+    "phase1Sub1": "DOGE:n evoluutio $DOGEBALL:ksi",
+    "phase1Sub2": "$DOGEBALL-pelisuunnitelma luotu",
+    "phase1Sub3": "Sosiaaliset kanavat ja verkkosivusto kehitetty",
+    "phase1Sub4": "Sopimus luotu ja tarkastettu",
+    "phase2Sub1": "$DOGEBALL-peli kehitetty",
+    "phase2Sub2": "DOGECHAIN EVM L2 otettu käyttöön",
+    "phase2Sub3": "Yhteisön laajennus",
+    "phase2Sub4": "Esimyynti alkaa",
+    "phase3Sub1": "Globaali markkinointikampanja",
+    "phase3Sub2": "Yrityspelikumppanuudet",
+    "phase3Sub3": "$DOGEBALL listattu globaaleihin pörsseihin",
+    "phase3Sub4": "$DOGEBALL muuttuu viraaliksi",
+    "phase4Sub1": "$DOGEBALL V2 -pelin kehitys",
+    "phase4Sub2": "CEX-listaukset jatkuvat",
+    "phase4Sub3": "L2 Lohkoketjun globaali julkaisu",
+    "phase4Sub4": "Tulevaisuuden evoluutiotokenit luotu"
+  },
+  "about": {
+    "title": "TIETOJA",
+    "subtitle": "Kryptomeme-kolikoiden siirtyminen",
+    "description": "DOGECHAINin keskellä on $DOGEBALL-peli — koukuttava online-dodgeball-peli, jossa pelaajat heittävät DOGEBALLeja, nousevat tasoja, kiipeävät pistetaulukossa ja kilpailevat $1M palkintopotista ($500k parhaalle pelaajalle)!",
+    "card1": "$DOGEBALL online-peli, pelaa voittaaksesi osan $1m:sta!",
+    "card2": "Mukautettu rakennettu ETH L2 Lohkoketju erittäin alhaisilla käyttäjämaksuilla",
+    "card3": "Salamannopeat tapahtumat, vauhdittavat online-pelaamisen tulevaisuutta",
+    "card4": "Korkean tuoton staking 80%:lla",
+    "card5": "Puhdasta hauskuutta taattu!",
+    "testDescription": "Toisin kuin muut meme-kolikoiden L2:t, voit testata mukautettua DOGECHAINiamme ja kokea itse kaikkien L2:iden kuninkaan!",
+    "clickHere": "Klikkaa tässä",
+    "partnerships": "Kumppanuudet maailman suurimpien peliorganisaatioiden kanssa ovat käynnissä"
+  },
+  "howToBuy": {
+    "title": "MITEN OSTAA",
+    "step1": "Vaihe 1",
+    "step2": "Vaihe 2",
+    "step3": "Vaihe 3",
+    "step4": "Vaihe 4",
+    "earnRewards": "Ansaitse palkintoja",
+    "connectWallet": "Yhdistä lompakko",
+    "connectWalletDesc": "Löydä esimyynti-widgetin verkkosivun yläosasta ({link}) ja klikkaa 'Yhdistä lompakko' käyttämällä haluamaasi lompakkoa. Useita lompakkovaihtoehtoja (mukaan lukien Metamask ja Coinbase) ovat saatavilla valintaan.",
+    "selectToken": "Valitse token ja määrä",
+    "selectTokenDesc": "Valitse haluamasi valuutta (ETH, USDT, USDC, SOL, BNB ja monet muut) tai maksa pankkikortilla, valitse haluamasi $DOGEBALL-tokenien määrä ja klikkaa 'OSTA $DOGEBALL'. Syötä suositus- ja bonuskoodit (jos sinulla on) — katso UKK lisätietoja koodien käytöstä.",
+    "buyToken": "Osta token ja hyväksy tapahtuma",
+    "buyTokenDesc": "Viimeistele ostoksesi hyväksymällä tapahtuma yhdistetyssä lompakossasi. Kun se on vahvistettu, ostoksesi ja tokenin määrä tallennetaan turvallisesti ketjuun ja näkyvät 'Hallintapaneelissa' yllä olevassa esimyynti-widgetissä.",
+    "claimToken": "Vaadi $DOGEBALL Token",
+    "claimTokenDesc": "Esimyynnin päättymisen jälkeen voit vaatia $DOGEBALL-tokenisi samalla lompakolla, jota käytit ostokseesi. Tiedot vaatimisesta julkaistaan sosiaalisen median kanavissa, kun esimyynti päättyy.",
+    "staking": "STAKING",
+    "stakingDesc": "Lukitse esimyynti-ostotokenisi turvalliseen ja tarkastettuun älykkään sopimuksen staking-pooliin; ansaitse $DOGEBALL-palkintoja korkealla 80% APY:llä ja maksimoi $DOGEBALL-tokenin tuotto.",
+    "clickHere": "Klikkaa tässä"
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "q1": "Mikä on $DOGEBALL?",
+    "a1": "$DOGEBALL on kaksikäyttöinen kolikko, joka käyttää mukautettua Layer 2 -lohkoketjua, joka on suunniteltu lähes nollamaksuisiin tapahtumiin, korkeaan nopeuteen ja huippuluokan turvallisuuteen, saumattomasti integroituna $DOGEBALL online-peliin. Alkuperäisenä tokenina $DOGEBALL käyttää koko ekosysteemiä, tarjoten vankan perustan sekä käyttäjille että pelaajille. Tokeneilla on käytännön hyötyä ja niitä käytetään tulevaisuudessa tapahtumien viimeistelemiseen peliteollisuudessa.",
+    "q2": "Mikä on $DOGEBALL-staking?",
+    "a2": "$DOGEBALL-staking sisältää tokeniesi lukitsemisen turvalliseen älykkääseen sopimukseen tietyn ajan (vain esimyynnin aikana) ansaitaksesi lisä-$DOGEBALL-tokeneita ilman lisäkustannuksia. Staking-palkinnot vapautetaan 7 päivän vähimmäisvesting-ajanjakson jälkeen. Katso 'STAKING'-osio 'MITEN OSTAA YLLÄ'. {link}",
+    "q3": "Miten voin ostaa $DOGEBALL?",
+    "a3": "Voit liittyä $DOGEBALL-yhteisöön yksinkertaisesti yhdistämällä valitsemasi lompakon esimyynti-widgetiin tämän sivun yläosassa {link}. Valitse haluamasi kryptovaluutta käyttöön tai maksa luotto-/pankkikortillasi varmistaaksesi $DOGEBALL-tokenisi.",
+    "q4": "Missä $DOGEBALL-tokenini ovat?",
+    "a4": "Käyttäjät voivat nähdä $DOGEBALL-saldonsa, kun lompakkonsa on yhdistetty (katso sivun yläosa). 'Hallintapaneeli'-osio esimyynti-widgetissä näyttää käyttäjän saldon ja ostohistorian. {link}",
+    "q5": "Milloin saan tokenini?",
+    "a5": "Ostettuasi $DOGEBALL:n esimyynnissä voit käyttää samaa lompakkoa vaatimaan tokenisi ennen alkuperäistä pörssilistautumista. Pysy kuulolla sosiaalisessa mediassamme vaatimis- ja listautumispäiväilmoituksia varten.",
+    "q6": "Onko $DOGEBALL-token turvallinen ostaa?",
+    "a6": "Kyllä, $DOGEBALL-sopimus on tarkastettu Coinsultin toimesta, joka on yksi suurimmista ja luotettavimmista lohkoketjuhankkeiden tarkastajista, saavuttaen 100% kokonaistarkastuspisteissä. {link} täydelliseen tarkastusraporttiin.",
+    "q7": "Miten luon suosituskoodin ja käytän bonuskoodeja?",
+    "a7": "Yksilöllinen suosituskoodisi voidaan luoda klikkaamalla 'Yhdistä lompakko' ja klikkaamalla 'Hallintapaneeli'; jokaiselle käyttäjälle annetaan oma yksilöllinen suosituskoodi ja URL-linkki annettavaksi muille käyttäjille. Suositeltavan käyttäjän tulee syöttää tämä 'Osta'-näytössä 'Osta $DOGEBALL'-painikkeen alla ja klikata 'Käytä'. Suositusbonusmäärät lisätään ostosummaan ja näkyvät 'Hallintapaneelissa' (sekä suosittelijalle että suositellulle käyttäjälle). Rajoitetut bonuskoodit tulee syöttää klikkaamalla 'Bonuskoodi' ('Osta $DOGEBALL'-painikkeen alla lompakon yhdistämisen jälkeen) ja klikkaamalla 'Käytä'."
+  },
+  "tokenomics": {
+    "title": "TOKENOMICS",
+    "contractAddress": "Sopimuksen osoite",
+    "totalSupply": "Kokonaistarjonta",
+    "tokens": "Tokenit",
+    "development": "Kehitys",
+    "presale": "Esimyynti",
+    "treasuryReserves": "Valtion kassan varannot",
+    "stakingGamesRewards": "Staking- ja pelipalkinnot",
+    "marketing": "Markkinointi",
+    "liquidity": "Likviditeetti"
+  },
+  "roadmapSteps": {
+    "mainDescription": "Astu areenalle ja näytä tavoitteesi! Napauta tai klikkaa heittääksesi — ajoita oikein ja murskaa jokainen kohde tielläsi!",
+    "step1": "Tee isoja pisteitä!",
+    "step2": "Kiipeä sijoituksissa!",
+    "step3": "Tule lopulliseksi DOGEBALL-mestariksi!",
+    "description1": "Jokainen osuma antaa sinulle pisteitä, ja kombot nostavat pisteesi taivaisiin! Mutta ole varovainen — missaa liikaa heittoja, ja se on PELI OHI. Nouse tasoja avataksesi erilaisia taustoja ja areenoita, kaikki lisäävät pelikokemusta.",
+    "description2": "Viholliset nopeutuvat ja kovenevat, ja etääntyvät kun nousevat tasoja. Vain terävimmät ja tarkimmat pelaajat voivat saavuttaa TOP 10 -pistetaulukon, jossa voittaja saa $500k jättipotin $DOGEBALL-tokeneista, toisen $500k palkintopotin jaettuna jäljellä olevien 9 pelaajan kesken. Huomaa, että vain käyttäjät, jotka ovat ostaneet tokeneita $DOGEBALL-esimyynnissä, ovat oikeutettuja olemaan osa $1M PALKINTOPOTISTA."
+  },
+  "roadmapGame": {
+    "title": "Peli alkaa pian!",
+    "description": "Pelattavissa pian esimyynnin alkamisen jälkeen — pysy kuulolla virallisissa Telegram- ja X-sosiaalisen median kanavissa julkaisutiedoista",
+    "comingSoon": "Tulossa pian",
+    "privacyNote": "Käyttäjien on syötettävä sama lompakko-osoite, jota he käyttivät esimyynti-ostoihin pelin valmistumisen yhteydessä (vaihtoehto lompakko-osoitteen syöttämiseen näytetään, jos pelin pistemäärä on tarpeeksi korkea päästäksesi pistetaulukkoon). Huomautus käyttäjän yksityisyyden ja turvallisuuden suojaamiseksi, lompakko-osoitteet EIVÄT näy verkkosivustolla tai mainita missään sosiaalisen median kanavissa; vain pelin sisällä syötetty valittu käyttäjänimi mainitaan."
+  },
+  "ethL2": {
+    "heroTitle": "DOGECHAIN HANAT",
+    "heroSubtitle": "Kokeile mukautettua ETH L2 Lohkoketjuamme ilmaiseksi!",
+    "blockchainTitle": "Hanki $DOGEBALL Lohkoketjun testitokenit",
+    "blockchainSubtitle": "$DOGEBALL Lohkoketjun testitokenit ovat ilmaisia eikä ne maksa käyttäjälle mitään krypto/rahaa",
+    "blockchainDescription": "Joka 24. tunti $DOGEBALL Lohkoketjun testitokeneita voidaan vaatia samalla lompakolla (huomaa, että nämä tokenit EIVÄT ole tokeneita, joita käyttäjät ostavat esimyynnin aikana; nämä tokenit on luotu käyttäjille kokeiltavaksi vain esimyynnin aikana eikä niillä ole tokenin arvoa)",
+    "card1Text": "Lisää ETH L2 DOGECHAIN mukautettu verkko valitsemaasi lompakkoon (katso valitsemasi lompakon verkkosivusto lisätietoja mukautetun verkon lisäämisestä) käyttämällä alla olevia tietoja:",
+    "blockchainName": "Lohkoketjun nimi",
+    "rpcUrl": "RPC URL",
+    "chainId": "Ketjun tunnus",
+    "symbol": "Symboli",
+    "card2Text": "Klikkaa {connectWallet}-painiketta sivun yläosassa yhdistääksesi lompakkosi. Lompakko-osoitteesi täytetään automaattisesti alla olevaan hanaan",
+    "card3Text": "Valitse käytettävien testitokenien määrä (maks. 0,01 $DOGEBALL testitokeneita voidaan vaatia käyttämällä samaa lompakkoa 24 tunnin ajanjaksoa kohti)",
+    "card4Text": "Klikkaa alla olevaa {send}-painiketta vaatimaan ilmaiset $DOGEBALL testitokenisi hanasta",
+    "card5Text": "Odota tapahtuman valmistumista — tokenit näkyvät lompakossasi DOGECHAIN-verkossa.",
+    "card5Text2": "Katso kaikki tapahtumat ja lohkoketjun toiminta DOGECHAINillemme {here}",
+    "card6Text": "Testaa lohkoketjua lähettämällä $DOGEBALL testitokeneita muihin lompakko-osoitteisiin (huomaa, että vastaanottavan lompakon on myös oltava DOGECHAIN mukautettu verkko lisättynä lompakkoonsa vastaanottaakseen testitokenit)",
+    "card7Text": "Ja siinä se, olet kokeillut mukautetun DOGECHAIN ETH L2 Lohkoketjun nopeutta, nollakustannuksia ja turvallisuutta!",
+    "selectToken": "Valitse token",
+    "walletAddress": "Lompakko-osoite",
+    "walletAddressPlaceholder": "Yhdistä lompakkosi täyttääksesi osoitteesi automaattisesti.",
+    "comingSoon": "Tulossa pian",
+    "connectWallet": "Yhdistä lompakko",
+    "send": "Lähetä",
+    "here": "Täällä"
+  },
+  "common": {
+    "clickHere": "Klikkaa tässä"
+  },
+  "timer": {
+    "days": "Päivää",
+    "hours": "Tuntia",
+    "minutes": "Minuuttia",
+    "seconds": "Sekuntia"
+  },
+  "presale": {
+    "tabs": {
+      "buy": "Osta",
+      "stake": "Stake",
+      "dashboard": "Hallintapaneeli"
+    },
+    "stage": {
+      "stage": "Vaihe"
+    },
+    "buyTab": {
+      "presalePrice": "Esimyyntihinta =",
+      "launchPrice": "Käynnistyshinta =",
+      "connectWallet": "Yhdistä lompakko",
+      "presaleEnded": "Esimyynti päättynyt",
+      "selectToken": "Valitse token",
+      "enterAmount": "Syötä määrä",
+      "buyWithCard": "Osta kortilla",
+      "comingSoon": "Tulossa pian",
+      "bonusCode": "Bonuskoodi",
+      "referralCode": "Suosituskoodi",
+      "confirmTransaction": "Vahvista tapahtuma lompakossasi...",
+      "waitingConfirmation": "Odotetaan lohkoketjun vahvistusta...",
+      "processingPurchase": "Käsitellään ostostasi..."
+    },
+    "stakeTab": {
+      "connectWalletMessage": "Yhdistä lompakkosi nähdäksesi ja hallitaksesi stakingiasi",
+      "availableToStake": "Saatavilla stakingiin",
+      "maxStake": "Maksimi stake",
+      "maxUnstake": "Maksimi unstake",
+      "stake": "Stake",
+      "unstake": "Unstake",
+      "ownedTokens": "Omistetut tokenit",
+      "currentlyStaked": "Tällä hetkellä staketettu",
+      "dailyInterest": "Päivittäinen korko",
+      "totalEarnings": "Kokonaistulot",
+      "earnApy": "Ansaitse {{apy}}% APY stakkaamalla tokenisi"
+    },
+    "historyTab": {
+      "connectWalletMessage": "Yhdistä lompakkosi nähdäksesi hallintapaneelisi",
+      "yourTransactions": "Tapahtumasi",
+      "noTransactions": "Ei vielä tapahtumia",
+      "purchasesWillAppear": "Ostoksesi näkyvät täällä"
+    },
+    "referralCode": {
+      "label": "Suosituskoodi",
+      "placeholder": "Syötä suosituskoodi",
+      "applied": "Suosituskoodi käytetty!",
+      "connectWalletFirst": "Yhdistä ensin lompakkosi",
+      "enterCode": "Syötä suosituskoodi",
+      "cannotUseOwn": "Et voi käyttää omaa suosituskoodiasi",
+      "appliedSuccess": "Suosituskoodi käytetty onnistuneesti!",
+      "invalidCode": "Virheellinen suosituskoodi"
+    },
+    "bonusCode": {
+      "label": "Bonuskoodi",
+      "placeholder": "Syötä bonuskoodi",
+      "applied": "Bonus käytetty!",
+      "connectWalletFirst": "Yhdistä ensin lompakkosi",
+      "enterCode": "Syötä bonuskoodi",
+      "appliedSuccess": "Bonuskoodi käytetty onnistuneesti!",
+      "invalidCode": "Virheellinen bonuskoodi"
+    },
+    "referralData": {
+      "yourReferralLink": "Suosituslinkkisi",
+      "yourReferralCode": "Suosituskoodisi",
+      "totalReferrals": "Suositukset yhteensä",
+      "tokensEarned": "Ansaitut tokenit",
+      "copy": "Kopioi"
+    },
+    "codeInputs": {
+      "change": "Muuta",
+      "apply": "Käytä"
+    },
+    "stageBox": {
+      "untilPriceRise": "KUNNES HINTA NOUSEE",
+      "of": "ja",
+      "participants": "Osallistujat"
+    },
+    "bonusBanner": {
+      "presaleLaunchOffer": "Esimyynnin käynnistystarjous",
+      "useBonusCode": "Käytä bonuskoodia",
+      "toGetMore": "Saadaksesi 10% enemmän $DOGEBALL-tokeneita!",
+      "copied": "Kopioitu!",
+      "copyCode": "Kopioi koodi"
+    },
+    "transactions": {
+      "awaitingPayment": "Odotetaan maksua",
+      "processing": "Käsitellään...",
+      "manual": "Manuaalinen",
+      "purchase": "Osto"
+    },
+    "errors": {
+      "presaleEnded": "Esimyynti on päättynyt",
+      "selectPaymentMethod": "Valitse maksutapa",
+      "enterAmount": "Syötä määrä",
+      "cardPaymentFailed": "Korttimaksu epäonnistui. Yritä uudelleen.",
+      "paymentProcessing": "Maksua käsitellään. Tarkista hallintapaneelisi.",
+      "completePayment": "Viimeistele maksusi ponnahdusikkunassa",
+      "transactionFailed": "Tapahtuma epäonnistui. Yritä uudelleen.",
+      "insufficientTokens": "Riittämättömät tokenit saatavilla stakingiin",
+      "failedToStake": "Tokenien staking epäonnistui",
+      "cannotUnstakeMore": "Ei voi unstake enempää kuin tällä hetkellä staketettu",
+      "failedToUnstake": "Tokenien unstaking epäonnistui"
+    },
+    "copy": "Kopioi",
+    "tokenAmountInputs": {
+      "youPay": "Maksat",
+      "youReceive": "Saat"
+    },
+    "transactionDetails": {
+      "for": "hintaan $",
+      "reason": "Syy:"
+    },
+    "poweredBy": "Powered By",
+    "tokenSelect": {
+      "more": "Lisää",
+      "otherCryptos": "+ Muut kryptot"
+    }
+  }
+}
