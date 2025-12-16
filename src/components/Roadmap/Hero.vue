@@ -15,7 +15,7 @@ import Seats from "@/assets/img/Roadmap/SeatsHero.png";
       <!-- Wrapper for object-fill behavior -->
       <div class="absolute inset-0 w-full h-full">
         <iframe
-          src="https://player.vimeo.com/video/1147054834?h=e62c5467b8&autoplay=1&loop=1&muted=0&autopause=1&background=1&controls=0&playsinline=1"
+          src="https://player.vimeo.com/video/1147054834?h=e62c5467b8&autoplay=1&loop=1&muted=0&autopause=1&background=0&controls=0&playsinline=1"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           class="w-full h-full"
