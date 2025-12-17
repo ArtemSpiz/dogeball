@@ -82,8 +82,10 @@ const onWalletClick = () => {
 <template>
   <div
     :class="[
-      'fixed bg-cover bg-no-repeat bg-bottom w-full pt-6 px-7 flex flex-col z-50 items-center mx-auto max-md:px-[18px] pb-6',
-      isOpen ? 'bg-[url(@/assets/img/bgHeader.png)] h-screen ' : '',
+      'fixed bg-cover bg-no-repeat  bg-bottom w-full  px-7 flex flex-col z-50 items-center mx-auto max-md:px-[18px] ',
+      isOpen
+        ? 'bg-[url(@/assets/img/bgHeader.png)] h-screen pt-6'
+        : ' bg-[linear-gradient(180deg,rgba(2,10,43,0.95)_0%,rgba(2,10,43,0.85)_100%)] rounded-full mt-6',
     ]"
   >
     <div class="w-[-webkit-fill-available] flex justify-between items-center">
