@@ -154,7 +154,11 @@ const handleClaim = async () => {
         </div>
       </div>
 
-      <CustomButton :title="t('ethL2.comingSoon')" class="w-full"  @click="handleClaim" class="w-full"/>
+      <CustomButton
+        :title="t('ethL2.comingSoon')"
+        class="w-full"
+        @click="handleClaim"
+      />
     </div>
   </div>
 </template>
