@@ -82,7 +82,7 @@ const onWalletClick = () => {
 <template>
   <div
     :class="[
-      'absolute max-md:fixed bg-cover bg-no-repeat bg-bottom w-full pt-6 px-7 flex flex-col z-50 items-center mx-auto max-md:px-[18px] pb-6',
+      'fixed bg-cover bg-no-repeat bg-bottom w-full pt-6 px-7 flex flex-col z-50 items-center mx-auto max-md:px-[18px] pb-6',
       isOpen ? 'bg-[url(@/assets/img/bgHeader.png)] h-screen ' : '',
     ]"
   >
