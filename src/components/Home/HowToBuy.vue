@@ -7,13 +7,17 @@ import HowToBuyMoney from "@/assets/img/Home/HowToBuyMoney.png";
 
 const { t } = useI18n();
 
+const HEADER_HEIGHT = 40;
+
 const scrollToPresale = () => {
   const el = document.getElementById("presale");
   if (!el) return;
 
-  el.scrollIntoView({
+  const y = el.getBoundingClientRect().top + window.pageYOffset - HEADER_HEIGHT;
+
+  window.scrollTo({
+    top: y,
     behavior: "smooth",
-    block: "start",
   });
 };
 
@@ -58,22 +62,11 @@ const HowBuyCards = computed(() => [
   },
 ]);
 
-
-const scrollToPresale = () => {
-  const el = document.getElementById("presale");
-  if (!el) return;
-
-  el.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
-};
-
 function handleHtmlClick(e) {
   const target = e.target.closest("[data-scroll]");
   if (!target) return;
 
-  e.preventDefault(); 
+  e.preventDefault();
 
   const id = target.getAttribute("data-scroll");
   const el = document.getElementById(id);
@@ -126,6 +119,7 @@ function handleHtmlClick(e) {
             <div class="text-2xl font-medium leading-[110%]">
               {{ card.title }}
             </div>
+            <a @click.prevent="scrollToPresale" href="#presale">gkfkfkfkfk</a>
           </div>
 
           <p

@@ -25,7 +25,7 @@
     "viem": "^2.41.2",
     "vue": "^3.5.25",
     "vue-i18n": "^9.14.5",
-    "vue-router": "^4.6.3"
+    "vue-router": "^4.6.3",
     "clsx": "^2.1.1",
     "decimal.js": "^10.6.0",
     "nanostores": "^1.1.0",
