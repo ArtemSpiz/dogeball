@@ -119,7 +119,6 @@ function handleHtmlClick(e) {
             <div class="text-2xl font-medium leading-[110%]">
               {{ card.title }}
             </div>
-            <a @click.prevent="scrollToPresale" href="#presale">gkfkfkfkfk</a>
           </div>
 
           <p
