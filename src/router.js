@@ -13,7 +13,6 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    // Якщо є збережена позиція (браузерна навігація назад/вперед)
     if (savedPosition) {
       return new Promise((resolve) => {
         setTimeout(() => {
@@ -22,32 +21,28 @@ const router = createRouter({
       });
     }
 
-    // Для нових переходів - завжди скролимо вгору
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve({ top: 0, left: 0, behavior: "instant" });
+        resolve({ top: 0, left: 0, behavior: "smooth" });
       }, 0);
     });
   },
 });
 
 router.beforeEach((to, from, next) => {
-  // Примусово скролимо вгору перед переходом
   if (typeof window !== "undefined") {
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }
   next();
 });
 
 router.afterEach(() => {
-  // Додатковий скрол після завершення переходу
   setTimeout(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, 10);
 
-  // І ще один для мобільних браузерів
   setTimeout(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, 100);
 });
 

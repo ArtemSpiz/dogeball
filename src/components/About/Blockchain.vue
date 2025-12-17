@@ -126,16 +126,13 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => {
-  // Очищаємо ScrollTrigger перед розмонтуванням
   if (scrollTriggerInstance) {
     scrollTriggerInstance.kill();
     scrollTriggerInstance = null;
   }
 
-  // Очищаємо всі інші ScrollTriggers
   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 
-  // Скидаємо стилі для карток
   if (window.innerWidth < 768) {
     const cards = gsap.utils.toArray(".process-card");
     gsap.set(cards, { clearProps: "all" });
