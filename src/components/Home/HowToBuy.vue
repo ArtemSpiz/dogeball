@@ -50,6 +50,8 @@ function handleHtmlClick(e) {
   const target = e.target.closest("[data-scroll]");
   if (!target) return;
 
+  e.preventDefault(); // Додано preventDefault щоб запобігти дефолтній поведінці посилання
+
   const id = target.getAttribute("data-scroll");
   const el = document.getElementById(id);
   if (!el) return;
@@ -140,7 +142,11 @@ function handleHtmlClick(e) {
             </div>
           </div>
 
-          <p v-html="card.text" class="description"></p>
+          <p
+            v-html="card.text"
+            @click="handleHtmlClick"
+            class="description !font-medium"
+          ></p>
 
           <div
             v-if="card.type === 'purple'"

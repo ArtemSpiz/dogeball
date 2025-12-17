@@ -112,7 +112,8 @@ const AboutCards = [
         <div
           class="font-grotesk z-10 leading-[110%] text-lg max-md:leading-[125%] max-md:text-base font-medium max-w-[300px] text-center"
           :class="[
-            { 'max-w-[100px]': i === 4 },
+            { 'max-md:max-w-[80px]': i === 4 },
+            { 'max-md:max-w-[120px]': i === 3 },
           ]"
         >
           {{ card.title }}
@@ -125,7 +126,12 @@ const AboutCards = [
         Unlike other meme-coins L2s, you can test our custom built DOGECHAIN and
         experience yourself the king of all L2s!
       </div>
-      <CustomButton title="Click Here" class="w-full max-w-[200px]" />
+      <router-link
+        to="/eth-l2"
+        class="w-full max-w-[200px] justify-center flex"
+      >
+        <CustomButton title="Click Here" class="w-full max-w-[200px]" />
+      </router-link>
 
       <div
         class="font-grotesk text-xs font-medium max-w-[730px] max-md:max-w-[300px] leading-[160%]"
