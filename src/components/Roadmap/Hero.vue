@@ -1,7 +1,77 @@
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
 import BgVideo from "@/assets/img/Roadmap/videoDog.mp4";
 import BgPoster from "@/assets/img/Roadmap/BgHero.png";
 import Seats from "@/assets/img/Roadmap/SeatsHero.png";
+import { getIsMobile } from "@/utils/media.js";
+
+const videoIframe = ref(null);
+let player = null;
+let hasUnmuted = false;
+const isMobile = getIsMobile();
+
+// Function to unmute video
+const unmuteVideo = async () => {
+  if (!player || hasUnmuted) return;
+
+  try {
+    await player.setVolume(1);
+    await player.setMuted(false);
+    hasUnmuted = true;
+  } catch (error) {
+    console.error("Error unmuting video:", error);
+  }
+};
+
+// Handle first user interaction on mobile
+const handleFirstInteraction = () => {
+  if (isMobile && !hasUnmuted) {
+    unmuteVideo();
+    // Remove listeners after first interaction
+    document.removeEventListener("touchstart", handleFirstInteraction);
+    document.removeEventListener("click", handleFirstInteraction);
+    window.removeEventListener("scroll", handleFirstInteraction);
+  }
+};
+
+onMounted(() => {
+  // Wait for Vimeo Player API to load
+  const initPlayer = () => {
+    if (typeof window.Vimeo?.Player !== "undefined" && videoIframe.value) {
+      player = new window.Vimeo.Player(videoIframe.value);
+
+      // On mobile, listen for first user interaction to unmute
+      if (isMobile) {
+        document.addEventListener("touchstart", handleFirstInteraction, {
+          once: true,
+        });
+        document.addEventListener("click", handleFirstInteraction, {
+          once: true,
+        });
+        window.addEventListener("scroll", handleFirstInteraction, {
+          once: true,
+        });
+      }
+    } else {
+      // Retry if Vimeo API not loaded yet
+      setTimeout(initPlayer, 100);
+    }
+  };
+
+  initPlayer();
+});
+
+onUnmounted(() => {
+  // Clean up event listeners
+  document.removeEventListener("touchstart", handleFirstInteraction);
+  document.removeEventListener("click", handleFirstInteraction);
+  window.removeEventListener("scroll", handleFirstInteraction);
+
+  // Clean up player
+  if (player) {
+    player.destroy();
+  }
+});
 </script>
 
 <template>
@@ -15,7 +85,8 @@ import Seats from "@/assets/img/Roadmap/SeatsHero.png";
       <!-- Wrapper for object-fill behavior -->
       <div class="absolute inset-0 w-full h-full">
         <iframe
-          src="https://player.vimeo.com/video/1147054834?h=e62c5467b8&autoplay=1&loop=1&muted=0&autopause=0&controls=0&playsinline=0"
+          ref="videoIframe"
+          src="https://player.vimeo.com/video/1147054834?h=e62c5467b8&autoplay=1&loop=1&muted=0&autopause=0&controls=0&playsinline=1"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           class="w-full h-full"
