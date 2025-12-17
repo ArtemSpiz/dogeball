@@ -54,7 +54,7 @@ onMounted(() => {
       }
     } else {
       // Retry if Vimeo API not loaded yet
-      setTimeout(initPlayer, 50);
+      setTimeout(initPlayer, 100);
     }
   };
 
