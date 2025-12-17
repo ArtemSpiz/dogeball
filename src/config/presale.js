@@ -46,7 +46,7 @@ export const TOKEN_DISPLAY_NAMES = {
 };
 
 // Staking configuration
-export const STAKING_APY = 0.15; // 15% APY
+export const STAKING_APY = 0.8; // 80% APY
 export const MIN_STAKE_AMOUNT = 100;
 export const MIN_UNSTAKE_AMOUNT = 100;
 
