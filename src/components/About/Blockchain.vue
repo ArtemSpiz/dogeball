@@ -182,7 +182,7 @@ const blockchainDescription = computed(() => {
     </div>
 
     <div
-      class="relative flex flex-col gap-0 max-md:gap-4 justify-center items-center max-w-[900px] w-full max-md:justify-start max-md:h-[800px] max-md:overflow-hidden"
+      class="relative flex flex-col gap-0 max-md:gap-4 justify-center items-center max-w-[900px] w-full max-md:justify-start max-md:h-[850px] max-md:overflow-hidden"
       ref="cardsContainer"
     >
       <div
