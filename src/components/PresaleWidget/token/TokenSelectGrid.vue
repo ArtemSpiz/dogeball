@@ -45,7 +45,7 @@
           class="h-8 w-auto max-w-[160px] object-contain"
         />
         <span
-          class="text-white font-grotesk text-lg font-medium leading-5 font-feature-off"
+          class="text-white font-grotesk text-lg max-md:text-base font-medium leading-5 font-feature-off"
         >
           {{ t("presale.tokenSelect.otherCryptos") }}
         </span>
