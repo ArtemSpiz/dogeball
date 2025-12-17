@@ -1,7 +1,10 @@
 <script setup>
+import { useI18n } from "vue-i18n";
 import CustomButton from "@/ui/CustomButton.vue";
 import TimerCounter from "./TimerCounter.vue";
 import Circle from "@/assets/img/Home/CircleText.png";
+
+const { t } = useI18n();
 import { useAccount, useToast } from "@/composables";
 import { ref } from "vue";
 import Spinner from "../PresaleWidget/ui/Spinner.vue";
@@ -40,13 +43,10 @@ const submit = async () => {
   >
     <div class="text-center flex flex-col items-center justify-center w-full">
       <div class="title max-w-[800px] px-3">
-        THE WORLD'S FIRST L2 POWERED CRYPTO GAME
+        {{ t("hero.title") }}
       </div>
-      <div
-        class="font-grotesk leading-[120%] text-base font-normal max-md:text-sm max-w-[470px] mt-4 max-md:px-3"
-      >
-        $DOGEBALL, the only crypto-playing DOGE on a custom EVM L2 blockchain.
-        Fast, cheap, secure. Play for a shot at $1M
+      <div class="font-grotesk leading-[120%] text-base font-normal max-md:text-sm max-w-[470px] mt-4 max-md:px-3">
+        {{ t("hero.subtitle") }}
       </div>
       <TimerCounter />
     </div>
@@ -58,31 +58,26 @@ const submit = async () => {
         class="flex absolute bottom-0 left-[120px] max-xl:left-[20px] max-lg:hidden w-full max-w-[325px] max-xl:max-w-[300px] flex-col p-4 gap-4 border border-[#8B94F5] rounded-2xl bg-[rgba(53,19,147,0.52)] backdrop-blur-[5px] shadow-[0_0_154px_0_#263166]"
       >
         <div>
-          <div class="text-sm leading-[140%] font-grotesk mb-1">
-            Enter email to be added to the Whitelist
+          <div class="text-sm leading-[140%] font-grotesk">
+            {{ t("hero.whitelistEmail") }}
           </div>
           <input
             class="py-1 w-full px-2 h-10 border border-[#DCDCDC] rounded-lg bg-[rgba(255,255,255,0.06)] text-base font-medium text-[rgba(255,255,255,0.30)]"
-            placeholder="your email"
-            @input="(e) => (email = e.currentTarget.value)"
+            :placeholder="t('hero.emailPlaceholder')"
           />
         </div>
-        <CustomButton
-          :title="loading ? '' : 'Get early access!'"
-          class="w-full"
-          @click="submit"
-        >
-          <Spinner v-if="loading" :size="6" />
+        <CustomButton :title="t('hero.getEarlyAccess')" class="w-full" >
+           <Spinner v-if="loading" :size="6" />
         </CustomButton>
       </div>
 
       <div class="flex gap-4 items-center">
         <CustomButton
-          title="Audit"
+          :title="t('hero.audit')"
           class="py-[18px] !text-[22px] !w-[160px] max-md:h-[50px]"
         />
         <CustomButton
-          title="Whitepaper"
+          :title="t('hero.whitepaper')"
           white-bg="true"
           class="py-[18px] !text-[22px] !w-[160px] max-md:h-[50px]"
         />

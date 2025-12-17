@@ -1,4 +1,7 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 import { ref, onMounted, onUnmounted } from "vue";
 import BgVideo from "@/assets/img/Roadmap/videoDog.mp4";
 import BgPoster from "@/assets/img/Roadmap/BgHero.png";
@@ -190,7 +193,7 @@ onUnmounted(() => {
     <div
       class="title max-w-[700px] max-sm:max-w-[300px] text-[32px] max-sm:text-[22px] z-30"
     >
-      WELCOME TO THE DOGEBALL GAME!
+      {{ t("roadmap.welcome") }}
     </div>
   </div>
 </template>

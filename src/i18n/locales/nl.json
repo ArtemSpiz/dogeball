@@ -1,0 +1,285 @@
+{
+  "header": {
+    "about": "Over ons",
+    "roadmap": "Roadmap",
+    "howToBuy": "Hoe te kopen",
+    "playDogeball": "Speel $DOGEBALL",
+    "tokenomics": "Tokenomics",
+    "ethL2": "ETH L2",
+    "faqs": "Veelgestelde vragen",
+    "connectWallet": "Portemonnee verbinden"
+  },
+  "footer": {
+    "termsConditions": "Algemene voorwaarden",
+    "cookiesPolicy": "Cookiebeleid",
+    "privacyPolicy": "Privacybeleid",
+    "disclaimer": "Disclaimer: $DOGEBALL is een nuttigheid-ondersteunde meme-munt. Cryptocurrency-markten zijn zeer volatiel, investeer met voorzichtigheid. Cryptocurrency kan ongereguleerd zijn in uw rechtsgebied. Pas op voor '$DOGEBALL' kopieerwebsites en sociale media-kanalen (alleen officiële links op deze website).",
+    "copyright": "Copyright © 2025 DOGEBALL. Alle rechten voorbehouden."
+  },
+  "hero": {
+    "title": "HET EERSTE L2-AANGEDREVEN CRYPTO-SPEL TER WERELD",
+    "subtitle": "$DOGEBALL, de enige crypto-spelende DOGE op een aangepaste EVM L2 blockchain. Snel, goedkoop, veilig. Speel voor een kans op $1M",
+    "whitelistEmail": "Voer e-mailadres in om toegevoegd te worden aan de Whitelist",
+    "emailPlaceholder": "uw e-mailadres",
+    "getEarlyAccess": "Krijg vroege toegang!",
+    "audit": "Audit",
+    "whitepaper": "Whitepaper"
+  },
+  "roadmap": {
+    "welcome": "WELKOM BIJ HET DOGEBALL-SPEL!",
+    "title": "Roadmap",
+    "phase1": "Fase 1",
+    "phase2": "Fase 2",
+    "phase3": "Fase 3",
+    "phase4": "Fase 4",
+    "evolution": "Evolutie",
+    "development": "Ontwikkeling",
+    "expansion": "Uitbreiding",
+    "gameV2Expansion": "Spel- en V2-uitbreiding",
+    "phase1Sub1": "De evolutie van DOGE naar $DOGEBALL",
+    "phase1Sub2": "$DOGEBALL spelplan gemaakt",
+    "phase1Sub3": "Sociale kanalen en website ontwikkeld",
+    "phase1Sub4": "Contract gemaakt en geauditeerd",
+    "phase2Sub1": "$DOGEBALL spel ontwikkeld",
+    "phase2Sub2": "DOGECHAIN EVM L2 geïmplementeerd",
+    "phase2Sub3": "Gemeenschapsuitbreiding",
+    "phase2Sub4": "Voorverkoop begint",
+    "phase3Sub1": "Wereldwijde marketingcampagne",
+    "phase3Sub2": "Bedrijfsgamingpartnerschappen",
+    "phase3Sub3": "$DOGEBALL genoteerd op wereldwijde beurzen",
+    "phase3Sub4": "$DOGEBALL wordt viraal",
+    "phase4Sub1": "$DOGEBALL V2 spelontwikkeling",
+    "phase4Sub2": "Voortgezette CEX-noteringen",
+    "phase4Sub3": "L2 Blockchain wereldwijde release",
+    "phase4Sub4": "Toekomstige evolutie-tokens gemaakt"
+  },
+  "about": {
+    "title": "OVER ONS",
+    "subtitle": "De overgang van crypto meme-munten",
+    "description": "In het centrum van DOGECHAIN staat het $DOGEBALL-spel — een verslavend online trefbal-spel waarbij spelers DOGEBALLs gooien, level up gaan, de ranglijst beklimmen en strijden om een $1M prijzenpot ($500k voor de beste speler)!",
+    "card1": "$DOGEBALL online-spel, speel om een deel van $1m te winnen!",
+    "card2": "Aangepast gebouwde ETH L2 Blockchain met ultra-lage gebruikerskosten",
+    "card3": "Bliksemsnelle transacties, die de toekomst van online gaming aandrijven",
+    "card4": "Hoogrenderend staking met 80%",
+    "card5": "Pure fun gegarandeerd!",
+    "testDescription": "In tegenstelling tot andere meme-munten L2s, kunt u onze aangepast gebouwde DOGECHAIN testen en zelf de koning van alle L2s ervaren!",
+    "clickHere": "Klik hier",
+    "partnerships": "Partnerschappen met 's werelds grootste gamingorganisaties zijn in uitvoering"
+  },
+  "howToBuy": {
+    "title": "HOE TE KOPEN",
+    "step1": "Stap 1",
+    "step2": "Stap 2",
+    "step3": "Stap 3",
+    "step4": "Stap 4",
+    "earnRewards": "Verdien beloningen",
+    "connectWallet": "Portemonnee verbinden",
+    "connectWalletDesc": "Zoek de voorverkoop-widget bovenaan de webpagina ({link}) en klik 'Portemonnee verbinden' met uw voorkeursportemonnee. Meerdere portemonnee-opties (incl. Metamask en Coinbase) zijn beschikbaar voor selectie.",
+    "selectToken": "Selecteer Token en Bedrag",
+    "selectTokenDesc": "Selecteer uw voorkeursvaluta (ETH, USDT, USDC, SOL, BNB en nog veel meer) of betaal met bankpas, selecteer het aantal $DOGEBALL-tokens dat u wilt kopen en klik 'KOOP $DOGEBALL'. Voer verwijzings- en bonuscodes in (als u deze heeft) – zie Veelgestelde vragen voor meer details over het gebruik van codes.",
+    "buyToken": "Koop Token en keur transactie goed",
+    "buyTokenDesc": "Voltooi uw aankoop door de transactie in uw verbonden portemonnee goed te keuren. Na bevestiging worden uw aankoop en tokenbedrag veilig op de chain geregistreerd en zichtbaar onder 'Dashboard' in de voorverkoop-widget hierboven.",
+    "claimToken": "Claim $DOGEBALL Token",
+    "claimTokenDesc": "Na het einde van de voorverkoop kunt u uw $DOGEBALL-tokens claimen met dezelfde portemonnee die u voor uw aankoop heeft gebruikt. Details over claimen worden vrijgegeven op sociale media-kanalen zodra de voorverkoop is afgelopen.",
+    "staking": "STAKING",
+    "stakingDesc": "Vergrendel uw voorverkoop-aankooptokens in onze veilige en geauditeerde smart-contract staking pool; verdien $DOGEBALL-beloningen met een hoge 80% APY en maximaliseer uw $DOGEBALL-tokenrendement.",
+    "clickHere": "Klik hier"
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "q1": "Wat is $DOGEBALL?",
+    "a1": "$DOGEBALL is een dual-utility munt die een aangepaste Layer 2 blockchain aandrijft, ontworpen voor bijna nul-kosten transacties, hoge snelheid en eersteklas beveiliging, naadloos geïntegreerd met het $DOGEBALL online-spel. Als de native token voedt $DOGEBALL het hele ecosysteem en biedt een robuuste basis voor zowel gebruikers als gamers. Tokens hebben een real-life nuttigheid en zullen in de toekomst worden gebruikt voor het voltooien van transacties in de gamingindustrie.",
+    "q2": "Wat is $DOGEBALL staking?",
+    "a2": "Staking $DOGEBALL houdt in dat u uw tokens voor een bepaalde periode (alleen tijdens de voorverkoop) in een veilig smart contract vergrendelt om extra $DOGEBALL-tokens te verdienen zonder extra kosten. Staking-beloningen worden vrijgegeven na de 7-daagse minimale vestingperiode. Verwijs naar de 'STAKING'-sectie in 'HOE TE KOPEN HIERBOVEN'. {link}",
+    "q3": "Hoe koop ik $DOGEBALL?",
+    "a3": "U kunt lid worden van de $DOGEBALL-gemeenschap door simpelweg uw gekozen portemonnee te verbinden met de voorverkoop-widget bovenaan deze pagina {link}. Selecteer uw voorkeurscryptovaluta om te gebruiken of betaal met uw credit-/debetkaart om uw $DOGEBALL-tokens veilig te stellen.",
+    "q4": "Waar zijn mijn $DOGEBALL-tokens?",
+    "a4": "Gebruikers kunnen hun $DOGEBALL-saldo zien zodra hun portemonnee is verbonden (zie bovenkant van de pagina). De 'Dashboard'-sectie in de voorverkoop-widget toont het gebruikerssaldo en de aankoopgeschiedenis. {link}",
+    "q5": "Wanneer ontvang ik mijn tokens?",
+    "a5": "Na het kopen van $DOGEBALL in de voorverkoop kunt u dezelfde portemonnee gebruiken om uw tokens te claimen vóór de eerste beursnotering. Blijf op de hoogte via onze sociale media voor aankondigingen van claim- en noteringsdata.",
+    "q6": "Is $DOGEBALL-token veilig om te kopen?",
+    "a6": "Ja, het $DOGEBALL-contract is geauditeerd door Coinsult, een van de grootste en meest vertrouwde blockchain-projectauditeurs, met een score van 100% in de algehele auditscore. {link} voor het volledige auditrapport.",
+    "q7": "Hoe genereer ik een verwijzingscode en gebruik ik bonuscodes?",
+    "a7": "Uw unieke verwijzingscode kan worden gegenereerd door te klikken op 'Portemonnee verbinden' en te klikken op 'Dashboard'; elke gebruiker krijgt zijn eigen unieke verwijzingscode en URL-link om aan andere gebruikers te geven. De doorverwezen gebruiker moet dit invoeren op het 'Kopen'-scherm onder de knop 'Koop $DOGEBALL' en klikken op 'Toepassen'. Verwijzingsbonusbedragen worden toegevoegd aan het aankoopbedrag en zijn zichtbaar in het 'Dashboard' (voor zowel de verwijzer als de doorverwezen gebruiker). Tijdelijk beperkte bonuscodes moeten worden ingevoerd door te klikken op 'Bonuscode' (onder de knop 'Koop $DOGEBALL' na portemonnee-verbinding) en te klikken op 'Toepassen'."
+  },
+  "tokenomics": {
+    "title": "TOKENOMICS",
+    "contractAddress": "Contractadres",
+    "totalSupply": "Totale voorraad",
+    "tokens": "Tokens",
+    "development": "Ontwikkeling",
+    "presale": "Voorverkoop",
+    "treasuryReserves": "Schatkistreserves",
+    "stakingGamesRewards": "Staking & Spelbeloningen",
+    "marketing": "Marketing",
+    "liquidity": "Liquiditeit"
+  },
+  "roadmapSteps": {
+    "mainDescription": "Stap de arena binnen en toon uw doel! Tik of klik om te gooien – timing is alles, en verpletter elk doel op uw pad!",
+    "step1": "Scoor groot!",
+    "step2": "Klim de rangen!",
+    "step3": "Word de ultieme DOGEBALL-kampioen!",
+    "description1": "Elke treffer geeft je punten, en combo's verhogen je score tot in de hemel! Maar wees voorzichtig – mis te veel worpen, en het is GAME OVER. Level up om verschillende achtergronden en arena's vrij te spelen, die allemaal bijdragen aan de spelervaring.",
+    "description2": "Vijanden worden sneller en sterker, en raken op afstand naarmate je level up gaat. Alleen de scherpste en meest accurate spelers kunnen de TOP 10-ranglijst bereiken, waar de winnaar de $500k jackpot van $DOGEBALL-tokens ontvangt, met nog een $500k prijzenpot verdeeld over de overige 9 spelers. Let op dat alleen gebruikers die tokens hebben gekocht in de $DOGEBALL-voorverkoop in aanmerking komen om deel uit te maken van de $1M PRIJZENPOT."
+  },
+  "roadmapGame": {
+    "title": "Spel start binnenkort!",
+    "description": "Beschikbaar om te spelen kort na het begin van de voorverkoop - houd de officiële Telegram- en X-sociale media-kanalen in de gaten voor lancering nieuws",
+    "comingSoon": "Binnenkort beschikbaar",
+    "privacyNote": "Gebruikers moeten hetzelfde portemonnee-adres invoeren dat ze hebben gebruikt om voorverkoop-aankopen te doen bij voltooiing van het spel (de optie om portemonnee-adres in te voeren wordt weergegeven als de spelscore hoog genoeg is om op de ranglijst te komen). Let op ter bescherming van gebruikersprivacy en -beveiliging, portemonnee-adressen ZULLEN NIET zichtbaar zijn op de website of genoemd worden in sociale media-kanalen; alleen de gekozen gebruikersnaam die binnen het spel zelf wordt ingevoerd, wordt genoemd."
+  },
+  "ethL2": {
+    "heroTitle": "DOGECHAIN FAUCET",
+    "heroSubtitle": "Probeer onze aangepast gebouwde ETH L2 Blockchain gratis!",
+    "blockchainTitle": "Krijg $DOGEBALL Blockchain Test Tokens",
+    "blockchainSubtitle": "$DOGEBALL Blockchain Test Tokens zijn gratis en kosten de gebruiker geen crypto/geld",
+    "blockchainDescription": "Elke 24 uur kunnen $DOGEBALL Blockchain Test-tokens worden geclaimd door dezelfde portemonnee (let op: deze tokens zijn NIET de tokens die gebruikers tijdens de voorverkoop kopen; deze tokens zijn gemaakt voor gebruikers om alleen tijdens de voorverkoop te proberen en hebben geen tokenwaarde)",
+    "card1Text": "Voeg het aangepaste ETH L2 DOGECHAIN-netwerk toe aan uw gekozen portemonnee (raadpleeg de website van uw gekozen portemonnee voor details over het toevoegen van een aangepast netwerk) met de onderstaande details:",
+    "blockchainName": "Blockchain Naam",
+    "rpcUrl": "RPC URL",
+    "chainId": "Chain ID",
+    "symbol": "Symbool",
+    "card2Text": "Klik op de knop {connectWallet} bovenaan de pagina om uw portemonnee te verbinden. Uw portemonnee-adres wordt automatisch ingevuld in de faucet hieronder",
+    "card3Text": "Selecteer het aantal test-tokens om te gebruiken (maximaal 0,01 $DOGEBALL test-tokens kunnen worden geclaimd met dezelfde portemonnee per 24-uursperiode)",
+    "card4Text": "Klik op de knop {send} hieronder om uw gratis $DOGEBALL test-tokens van de faucet te claimen",
+    "card5Text": "Wacht tot de transactie is voltooid - de tokens verschijnen in uw portemonnee op het DOGECHAIN-netwerk.",
+    "card5Text2": "Bekijk alle transacties en blockchain-activiteit voor onze DOGECHAIN {here}",
+    "card6Text": "Test de blockchain door $DOGEBALL test-tokens naar andere portemonnee-adressen te sturen (let op: de ontvangende portemonnee moet ook het aangepaste DOGECHAIN-netwerk aan hun portemonnee hebben toegevoegd om de test-tokens te ontvangen)",
+    "card7Text": "En daar ga je, je hebt de snelheid, nul-kosten en beveiliging van de aangepast gecreëerde DOGECHAIN ETH L2 Blockchain ervaren!",
+    "selectToken": "Selecteer token",
+    "walletAddress": "Portemonnee-adres",
+    "walletAddressPlaceholder": "Verbind uw portemonnee om uw adres automatisch in te vullen.",
+    "comingSoon": "Binnenkort beschikbaar",
+    "connectWallet": "Portemonnee verbinden",
+    "send": "Verzenden",
+    "here": "Hier"
+  },
+  "common": {
+    "clickHere": "Klik hier"
+  },
+  "timer": {
+    "days": "Dagen",
+    "hours": "Uren",
+    "minutes": "Minuten",
+    "seconds": "Seconden"
+  },
+  "presale": {
+    "tabs": {
+      "buy": "Kopen",
+      "stake": "Staken",
+      "dashboard": "Dashboard"
+    },
+    "stage": {
+      "stage": "Fase"
+    },
+    "buyTab": {
+      "presalePrice": "Voorverkoopprijs =",
+      "launchPrice": "Lanceringsprijs =",
+      "connectWallet": "Portemonnee verbinden",
+      "presaleEnded": "Voorverkoop beëindigd",
+      "selectToken": "Selecteer Token",
+      "enterAmount": "Voer bedrag in",
+      "buyWithCard": "Kopen met kaart",
+      "comingSoon": "Binnenkort beschikbaar",
+      "bonusCode": "Bonuscode",
+      "referralCode": "Verwijzingscode",
+      "confirmTransaction": "Bevestig de transactie in uw portemonnee...",
+      "waitingConfirmation": "Wachten op blockchain-bevestiging...",
+      "processingPurchase": "Uw aankoop wordt verwerkt..."
+    },
+    "stakeTab": {
+      "connectWalletMessage": "Verbind uw portemonnee om uw staking te bekijken en te beheren",
+      "availableToStake": "Beschikbaar om te staken",
+      "maxStake": "Maximaal staken",
+      "maxUnstake": "Maximaal unstaken",
+      "stake": "Staken",
+      "unstake": "Unstaken",
+      "ownedTokens": "Eigendom Tokens",
+      "currentlyStaked": "Momenteel gestaked",
+      "dailyInterest": "Dagelijkse rente",
+      "totalEarnings": "Totale verdiensten",
+      "earnApy": "Verdien {{apy}}% APY door uw tokens te staken"
+    },
+    "historyTab": {
+      "connectWalletMessage": "Verbind uw portemonnee om uw dashboard te bekijken",
+      "yourTransactions": "Uw transacties",
+      "noTransactions": "Nog geen transacties",
+      "purchasesWillAppear": "Uw aankopen verschijnen hier"
+    },
+    "referralCode": {
+      "label": "Verwijzingscode",
+      "placeholder": "Voer verwijzingscode in",
+      "applied": "Verwijzingscode toegepast!",
+      "connectWalletFirst": "Verbind eerst uw portemonnee",
+      "enterCode": "Voer een verwijzingscode in",
+      "cannotUseOwn": "U kunt uw eigen verwijzingscode niet gebruiken",
+      "appliedSuccess": "Verwijzingscode succesvol toegepast!",
+      "invalidCode": "Ongeldige verwijzingscode"
+    },
+    "bonusCode": {
+      "label": "Bonuscode",
+      "placeholder": "Voer bonuscode in",
+      "applied": "Bonus toegepast!",
+      "connectWalletFirst": "Verbind eerst uw portemonnee",
+      "enterCode": "Voer een bonuscode in",
+      "appliedSuccess": "Bonuscode succesvol toegepast!",
+      "invalidCode": "Ongeldige bonuscode"
+    },
+    "referralData": {
+      "yourReferralLink": "Uw verwijzingslink",
+      "yourReferralCode": "Uw verwijzingscode",
+      "totalReferrals": "Totaal verwijzingen",
+      "tokensEarned": "Verdiende tokens",
+      "copy": "Kopiëren"
+    },
+    "codeInputs": {
+      "change": "Wijzigen",
+      "apply": "Toepassen"
+    },
+    "stageBox": {
+      "untilPriceRise": "TOT PRIJSSTIJGING",
+      "of": "van",
+      "participants": "Deelnemers"
+    },
+    "bonusBanner": {
+      "presaleLaunchOffer": "Voorverkoop Lancering Aanbieding",
+      "useBonusCode": "Gebruik Bonuscode",
+      "toGetMore": "Om 10% meer $DOGEBALL-tokens te krijgen!",
+      "copied": "Gekopieerd!",
+      "copyCode": "Kopieer code"
+    },
+    "transactions": {
+      "awaitingPayment": "Wachten op betaling",
+      "processing": "Verwerken...",
+      "manual": "Handmatig",
+      "purchase": "Aankoop"
+    },
+    "errors": {
+      "presaleEnded": "Voorverkoop is beëindigd",
+      "selectPaymentMethod": "Selecteer een betaalmethode",
+      "enterAmount": "Voer een bedrag in",
+      "cardPaymentFailed": "Kaartbetaling mislukt. Probeer het opnieuw.",
+      "paymentProcessing": "Betaling wordt verwerkt. Controleer uw dashboard.",
+      "completePayment": "Voltooi uw betaling in het pop-upvenster",
+      "transactionFailed": "Transactie mislukt. Probeer het opnieuw.",
+      "insufficientTokens": "Onvoldoende tokens beschikbaar om te staken",
+      "failedToStake": "Staken van tokens mislukt",
+      "cannotUnstakeMore": "Kan niet meer unstaken dan momenteel gestaked",
+      "failedToUnstake": "Unstaken van tokens mislukt"
+    },
+    "copy": "Kopiëren",
+    "tokenAmountInputs": {
+      "youPay": "U betaalt",
+      "youReceive": "U ontvangt"
+    },
+    "transactionDetails": {
+      "for": "voor $",
+      "reason": "Reden:"
+    },
+    "poweredBy": "Aangedreven door",
+    "tokenSelect": {
+      "more": "Meer",
+      "otherCryptos": "+ Andere crypto's"
+    }
+  }
+}

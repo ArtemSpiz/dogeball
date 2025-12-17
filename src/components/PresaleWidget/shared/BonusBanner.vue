@@ -5,28 +5,28 @@
     <p
       class="text-white text-center font-semibold text-lg leading-[90%] m-0 font-grotesk"
     >
-      Presale Launch Offer
+      {{ t("presale.bonusBanner.presaleLaunchOffer") }}
     </p>
 
     <div class="flex flex-wrap items-center justify-center gap-2 w-full">
       <p
         class="text-white text-center text-sm leading-tight m-0 whitespace-nowrap font-grotesk"
       >
-        Use Bonus Code
+        {{ t("presale.bonusBanner.useBonusCode") }}
       </p>
       <button
         @click="copyBonusCode"
         class="inline-flex font-grotesk items-center justify-center gap-1 px-2 font-black rounded-md bg-white text-[#080C23] text-sm leading-tight cursor-pointer transition-opacity hover:opacity-90 whitespace-nowrap font-grotesk"
-        title="Copy code"
+        :title="t('presale.bonusBanner.copyCode')"
       >
-        {{ copied ? "Copied!" : BONUS_CODE }}
+        {{ copied ? t("presale.bonusBanner.copied") : BONUS_CODE }}
         <CopyIcon v-if="!copied" :size="16" color="#EB4102" />
         <CheckIcon v-else :size="16" />
       </button>
       <p
         class="text-white text-center text-sm leading-tight m-0 whitespace-nowrap font-grotesk"
       >
-        To Get 10% More $DOGEBALL tokens!
+        {{ t("presale.bonusBanner.toGetMore") }}
       </p>
     </div>
   </div>
@@ -34,7 +34,10 @@
 
 <script setup>
 import { ref } from "vue";
+import { useI18n } from "vue-i18n";
 import { CopyIcon, CheckIcon } from "../icons";
+
+const { t } = useI18n();
 
 const BONUS_CODE = "DOGEBALL10";
 const copied = ref(false);
