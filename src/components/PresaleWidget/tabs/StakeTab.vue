@@ -8,8 +8,17 @@
       <p class="text-white/70 text-center font-grotesk">
         {{ t("presale.stakeTab.connectWalletMessage") }}
       </p>
-      <Button @click="presale.connect" variant="primary" class="px-8">
+      <Button 
+        @click="presale.connect"  
+        :disabled="isBuying || presale.presaleEnded.value"
+        variant="primary"
+        class="h-11 px-6 !bg-[#EB4102] !bg-none text-base font-semibold"
+        style="border-radius: 80px">
         {{ t("presale.buyTab.connectWallet") }}
+       <Spinner v-if="isBuying" :size="5" />
+        <template v-else>
+          <span>Connect Wallet</span>
+        </template>
       </Button>
     </div>
 
@@ -264,6 +273,13 @@ const handleUnstake = async () => {
     const message = err?.message || t("presale.errors.failedToUnstake");
     toast.showError(message);
     console.error("Unstake error:", err);
+  }
+};
+
+const handleBuy = async () => {
+  if (!presale.isConnected.value) {
+    presale.showConnectWalletModal();
+    return;
   }
 };
 </script>

@@ -26,7 +26,7 @@ let toastId = 0;
 /**
  * Add a toast notification
  */
-const addToast = (message, type = ToastType.INFO, duration = 4000) => {
+export const addToast = (message, type = ToastType.INFO, duration = 4000) => {
   const id = ++toastId;
   const toast = {
     id,

@@ -81,4 +81,10 @@ const Logos = [
 .animate-scroll {
   animation: scroll 30s linear infinite;
 }
+
+@media (max-width: 768px) {
+  .animate-scroll {
+    animation: scroll 15s linear infinite;
+  }
+}
 </style>

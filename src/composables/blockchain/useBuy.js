@@ -23,23 +23,39 @@ import {
 } from "@/utils/web3";
 import erc20Abi from "@/abi/erc20.json";
 
+const buyLoading = ref(false)
+/**
+ * @typedef {import("@/api/api.types").API.PaymentToken} PaymentToken
+ * @typedef {import("@/api/api.types").API.PurchaseTransactionHistoryItemV2} PurchaseTransaction
+ * @typedef {"sending" | "confirming" | "finalizing" | "finished" | "errored"} State
+ * 
+ * @typedef {{token: PaymentToken, payAmount: string, state: State, error: string | null, transactionHash: string | null, transaction: PurchaseTransaction | null}} CurrentPurchase
+ * 
+ * @type {import("vue").Ref<CurrentPurchase | null>}
+*/
+const currentPurchase = ref(null)
+
 /**
  * Buy composable
  */
 export function useBuy() {
-  const buyState = ref({ type: BuyStateType.IDLE });
+  const buyState = ref({ state: BuyStateType.IDLE });
 
   /**
    * Reset buy state
    */
   const resetBuyState = () => {
-    buyState.value = { type: BuyStateType.IDLE };
+    buyState.value = { state: BuyStateType.IDLE };
   };
 
   /**
    * Wait for transaction to be processed by backend
+   * 
+   * @param {string} walletAddress
+   * @param {number} createdAt
+   * @param {{signal?: AbortSignal}} [args]
    */
-  const waitForNextTransaction = async (walletAddress, createdAt) => {
+  const waitForNextTransaction = async (walletAddress, createdAt, args) => {
     return new Promise((resolve) => {
       let attempts = 0;
       const checkInterval = setInterval(async () => {
@@ -70,6 +86,7 @@ export function useBuy() {
           // Continue polling
         }
       }, TRANSACTION_POLL_INTERVAL);
+      args?.signal?.addEventListener("abort", () => clearInterval(checkInterval))
     });
   };
 
@@ -102,12 +119,21 @@ export function useBuy() {
     }
 
     const updateState = (state) => {
+      if (currentPurchase.value) currentPurchase.value = {...currentPurchase.value, ...state}
       buyState.value = state;
       onStateChanged?.(state);
     };
 
     // Check if wallet transfer is supported
     if (isWalletTransferSupported(paymentToken)) {
+      currentPurchase.value = {
+        payAmount: paymentAmount,
+        state: "sending",
+        token: paymentToken,
+        transaction: null,
+        transactionHash: null,
+        error: null,
+      }
       return buyWithWalletTransfer({
         paymentToken,
         paymentAmount: payNum,
@@ -136,9 +162,10 @@ export function useBuy() {
     updateState,
   }) => {
     try {
-      updateState({ type: BuyStateType.SENDING });
+      buyLoading.value = true
+      updateState({ state: BuyStateType.SENDING });
 
-      const config = getWagmiConfig();
+      const config = await getWagmiConfig();
       const chainId = getChainIdFromLabel(paymentToken.chain);
 
       if (!chainId) {
@@ -180,6 +207,7 @@ export function useBuy() {
 
       const createdAt = Date.now();
       let transactionHash;
+      buyLoading.value = false
 
       if (native) {
         transactionHash = await sendTransaction(config, {
@@ -198,11 +226,11 @@ export function useBuy() {
         });
       }
 
-      updateState({ type: BuyStateType.CONFIRMING, transactionHash });
+      updateState({ state: BuyStateType.CONFIRMING, transactionHash });
 
       await waitForTransactionReceipt(config, { hash: transactionHash });
 
-      updateState({ type: BuyStateType.FINALIZING });
+      updateState({ state: BuyStateType.FINALIZING });
 
       // Notify backend
       try {
@@ -215,14 +243,15 @@ export function useBuy() {
       const transaction = await waitForNextTransaction(walletAddress, createdAt);
 
       updateState({
-        type: BuyStateType.FINISHED,
+        state: BuyStateType.FINISHED,
         transaction,
         transactionHash,
       });
 
       return { type: "sent", transactionHash, transaction };
     } catch (err) {
-      updateState({ type: BuyStateType.ERRORED, error: err });
+      updateState({ state: BuyStateType.ERRORED, error: err });
+      buyLoading.value = false
       throw err;
     }
   };
@@ -237,7 +266,8 @@ export function useBuy() {
     updateState,
   }) => {
     try {
-      updateState({ type: BuyStateType.SENDING });
+      buyLoading.value = true
+      updateState({ state: BuyStateType.SENDING });
 
       if (!walletAddress) {
         throw new Error("Please connect your wallet");
@@ -250,11 +280,13 @@ export function useBuy() {
         token_amount: paymentAmount.toString(),
       });
 
-      updateState({ type: BuyStateType.FINISHED, transaction: res.data });
+      updateState({ state: BuyStateType.FINISHED, transaction: res.data });
+      buyLoading.value = false
 
       return { type: "created", transaction: res.data };
     } catch (err) {
-      updateState({ type: BuyStateType.ERRORED, error: err });
+      buyLoading.value = false
+      updateState({ state: BuyStateType.ERRORED, error: err });
       throw err;
     }
   };
@@ -274,6 +306,7 @@ export function useBuy() {
     if (!walletAddress) {
       throw new Error("Please connect your wallet");
     }
+    buyLoading.value = true
 
     try {
       const { default: WertWidget } = await import("@wert-io/widget-initializer");
@@ -345,6 +378,7 @@ export function useBuy() {
       });
 
       widget.open();
+      buyLoading.value = false
 
       const overlay = document.createElement("div");
       overlay.style.cssText =
@@ -365,14 +399,17 @@ export function useBuy() {
         loaded: () => onStart?.(),
       });
     } catch (err) {
+      buyLoading.value = false
       console.error(err);
-      onError?.();
+      onError?.(err);
       throw err;
     }
   };
 
   return {
     buyState,
+    currentPurchase,
+    buyLoading,
     resetBuyState,
     buyWithCrypto,
     buyWithCard,

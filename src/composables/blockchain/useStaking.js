@@ -6,6 +6,7 @@
 import { ref } from "vue";
 import * as presaleApi from "@/api/presale";
 import { parseNum } from "@/utils/web3";
+import { getUserToken } from "@/presale-gg/stores/user.store";
 
 /**
  * Staking composable
@@ -17,7 +18,7 @@ export function useStaking() {
   /**
    * Stake tokens
    */
-  const stake = async ({ address, amount, getToken, onSuccess }) => {
+  const stake = async ({ address, amount, onSuccess }) => {
     const numTokens = parseNum(amount);
     if (numTokens <= 0) {
       throw new Error("Must stake more than 0 tokens");
@@ -25,7 +26,7 @@ export function useStaking() {
 
     stakeLoading.value = true;
     try {
-      const token = await getToken(address);
+      const token = await getUserToken(address);
       await presaleApi.stakeTokens(address, numTokens.toString(), token.token);
       onSuccess?.();
     } finally {
@@ -36,7 +37,7 @@ export function useStaking() {
   /**
    * Unstake tokens
    */
-  const unstake = async ({ address, amount, getToken, onSuccess }) => {
+  const unstake = async ({ address, amount, onSuccess }) => {
     const numTokens = parseNum(amount);
     if (numTokens <= 0) {
       throw new Error("Must unstake more than 0 tokens");
@@ -44,7 +45,7 @@ export function useStaking() {
 
     unstakeLoading.value = true;
     try {
-      const token = await getToken(address);
+      const token = await getUserToken(address);
       await presaleApi.unstakeTokens(address, numTokens.toString(), token.token);
       onSuccess?.();
     } finally {

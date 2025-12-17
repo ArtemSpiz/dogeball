@@ -57,6 +57,33 @@ const HowBuyCards = computed(() => [
     text: t("howToBuy.stakingDesc"),
   },
 ]);
+
+
+const scrollToPresale = () => {
+  const el = document.getElementById("presale");
+  if (!el) return;
+
+  el.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
+
+function handleHtmlClick(e) {
+  const target = e.target.closest("[data-scroll]");
+  if (!target) return;
+
+  e.preventDefault(); 
+
+  const id = target.getAttribute("data-scroll");
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  el.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+}
 </script>
 
 <template>
@@ -101,7 +128,11 @@ const HowBuyCards = computed(() => [
             </div>
           </div>
 
-          <p v-html="card.text" class="description"></p>
+          <p
+            v-html="card.text"
+            @click="handleHtmlClick"
+            class="description"
+          ></p>
 
           <div
             v-if="card.type === 'purple'"
@@ -134,7 +165,11 @@ const HowBuyCards = computed(() => [
             </div>
           </div>
 
-          <p v-html="card.text" class="description"></p>
+          <p
+            v-html="card.text"
+            @click="handleHtmlClick"
+            class="description !font-medium"
+          ></p>
 
           <div
             v-if="card.type === 'purple'"

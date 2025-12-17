@@ -19,5 +19,6 @@ defineProps({
     ]"
   >
     {{ title }}
+    <slot></slot>
   </button>
 </template>

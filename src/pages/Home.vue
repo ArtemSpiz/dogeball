@@ -12,6 +12,7 @@ import EmailInput from "@/components/Home/EmailInput.vue";
 
 import { onMounted } from "vue";
 import { useRoute } from "vue-router";
+import WalletTransferModal from "@/components/PresaleWidget/modals/WalletTransferModal.vue";
 
 const route = useRoute();
 

@@ -9,3 +9,5 @@ export { default as Input } from "./Input.vue";
 export { default as Loadable } from "./Loadable.vue";
 export { default as Toast } from "./Toast.vue";
 export { default as Skeleton } from "./Skeleton.vue";
+export { default as Modal } from "./Modal.vue"
+export { default as NumberValue } from "./NumberValue.vue"

@@ -11,6 +11,8 @@ import LanguageSelector from "@/components/LanguageSelector.vue";
 
 import bgHeader from "@/assets/img/bgHeader.png";
 import { useRoute, useRouter } from "vue-router";
+import { useWallet } from "@/composables";
+import { truncateString } from "@/utils/format";
 
 const { t, locale } = useI18n();
 
@@ -79,19 +81,27 @@ const scrollToSection = async (hash) => {
     el.scrollIntoView({ behavior: "smooth" });
   }
 };
+const { address, disconnect, showConnectWalletModal } = useWallet();
+
+const onWalletClick = () => {
+  if (address.value) disconnect();
+  else showConnectWalletModal();
+};
 </script>
 
 <template>
   <div
     :class="[
-      'absolute max- bg-cover bg-no-repeat bg-bottom w-full pt-6 px-7 flex flex-col z-50 items-center mx-auto max-md:px-[18px] pb-6',
-      isOpen ? 'bg-[url(@/assets/img/bgHeader.png)] h-screen ' : '',
+      'fixed bg-cover bg-no-repeat  bg-bottom w-full  px-7 flex flex-col z-50 items-center mx-auto max-md:px-[18px] ',
+      isOpen
+        ? 'bg-[url(@/assets/img/bgHeader.png)] h-screen pt-0'
+        : ' bg-[linear-gradient(180deg,rgba(2,10,43,0.95)_0%,rgba(2,10,43,0.85)_100%)] rounded-full mt-0',
     ]"
   >
     <div class="w-[-webkit-fill-available] flex justify-between items-center">
       <router-link
         to="/"
-        class="2xl:h-[70px] max-md:max-w-[200px] flex justify-start items-start h-[60px] w-auto max-xl:h-[40px]"
+        class="2xl:h-[70px] max-w-[300px] max-md:max-w-[200px] flex justify-start items-start h-[60px] w-auto max-xl:h-[40px] max-xl:max-w-[200px]"
       >
         <img :src="Logo" class="object-contain" />
       </router-link>
@@ -136,7 +146,8 @@ const scrollToSection = async (hash) => {
           <X />
         </a>
         <button
-          class="py-3 px-4 bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
+          class="h-[2.75rem] leading-[1.3] px-4 bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
+          @click="onWalletClick"
         >
           {{ t("header.connectWallet") }}
         </button>
@@ -175,6 +186,7 @@ const scrollToSection = async (hash) => {
         <LanguageSelector @change="changeLanguage" />
         <button
           class="py-3 px-4 max-w-[360px] w-full bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
+          @click="onWalletClick"
         >
           {{ t("header.connectWallet") }}
         </button>
