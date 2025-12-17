@@ -4,7 +4,7 @@
  */
 
 import { ref } from "vue";
-import * as presaleApi from "@/api/presale";
+import { userApplyBonusCode } from "@/presale-gg/stores/user.store";
 
 /**
  * Codes composable
@@ -16,12 +16,10 @@ export function useCodes() {
   /**
    * Apply bonus code
    */
-  const applyBonusCode = async ({ address, code, getToken }) => {
+  const applyBonusCode = async (code) => {
     bonusCodeLoading.value = true;
     try {
-      const token = await getToken(address);
-      const res = await presaleApi.applyBonusCode(address, code, token.token);
-      return res.data;
+      await userApplyBonusCode(code)
     } finally {
       bonusCodeLoading.value = false;
     }
@@ -30,11 +28,10 @@ export function useCodes() {
   /**
    * Apply referral code
    */
-  const applyReferralCode = async ({ address, code, getToken }) => {
+  const applyReferralCode = async (code) => {
     referralCodeLoading.value = true;
     try {
-      const token = await getToken(address);
-      await presaleApi.updateReferralCode(token.token, address, code);
+      await userApplyBonusCode(code)
     } finally {
       referralCodeLoading.value = false;
     }

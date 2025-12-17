@@ -1,18 +1,22 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 import Star from "@/assets/icons/Star.vue";
 import BgSteps from "@/assets/icons/BgSteps.vue";
 
-const StepsContent = [
+const { t } = useI18n();
+
+const StepsContent = computed(() => [
   {
-    title: "Score big!",
+    title: t("roadmapSteps.step1"),
   },
   {
-    title: "Climb the ranks!",
+    title: t("roadmapSteps.step2"),
   },
   {
-    title: "Become the ultimate DOGEBALL champion!",
+    title: t("roadmapSteps.step3"),
   },
-];
+]);
 </script>
 
 <template>
@@ -22,11 +26,10 @@ const StepsContent = [
     <div
       class="max-w-[710px] text-center text-[32px] max-md:text-xl !leading-[110%] font-medium"
     >
-      Step into the arena and show your aim! Tap or click to throw – time it
-      right, and smash every target in your way!
+      {{ t("roadmapSteps.mainDescription") }}
     </div>
 
-    <div class="flex flex-col items-end gap-2">
+    <div class="flex relative flex-col items-end gap-0 max-md:gap-2">
       <div
         class="flex items-center self-stretch gap-2 justify-end max-lg:flex-wrap max-lg:items-center max-md:justify-center"
       >
@@ -36,13 +39,13 @@ const StepsContent = [
           class="relative p-2 font-medium text-sm flex items-center gap-1 rounded-2xl bg-[rgba(255,255,255,0.06)] backdrop-blur-sm overflow-hidden"
         >
           <div
-            class="absolute inset-0 rounded-2xl"
+            class="absolute pointer-events-none inset-0 rounded-2xl"
             style="
               background: linear-gradient(
-                145deg,
+                180deg,
                 rgba(255, 255, 255, 0.6) 0%,
-                rgba(255, 255, 255, 0.1) 40%,
-                rgba(255, 255, 255, 0.6) 100%
+                rgba(255, 255, 255, 0.1) 90%,
+                rgba(255, 255, 255, 0) 100%
               );
               -webkit-mask: linear-gradient(#fff 0 0) content-box,
                 linear-gradient(#fff 0 0);
@@ -56,21 +59,21 @@ const StepsContent = [
         </div>
       </div>
 
-      <div class="absolute max-md:hidden">
-        <BgSteps class="w-full pl-5" />
+      <div class="absolute max-md:hidden top-[-10px] w-[720px]">
+        <BgSteps class="w-full" />
       </div>
 
       <div
-        class="p-6 relative flex flex-col text-center max-w-[800px] items-center gap-2 rounded-2xl max-md:bg-[rgba(255,255,255,0.06)] max-md:backdrop-blur-sm"
+        class="p-6 relative flex flex-col text-center max-w-[720px] items-center gap-2 rounded-2xl max-md:bg-[rgba(255,255,255,0.06)] max-md:backdrop-blur-sm"
       >
         <div
-          class="absolute inset-0 md:hidden rounded-2xl"
+          class="absolute pointer-events-none inset-0 md:hidden rounded-2xl"
           style="
             background: linear-gradient(
-              145deg,
+              180deg,
               rgba(255, 255, 255, 0.6) 0%,
-              rgba(255, 255, 255, 0.1) 40%,
-              rgba(255, 255, 255, 0.6) 100%
+              rgba(255, 255, 255, 0.1) 70%,
+              rgba(255, 255, 255, 0) 100%
             );
             -webkit-mask: linear-gradient(#fff 0 0) content-box,
               linear-gradient(#fff 0 0);
@@ -80,18 +83,10 @@ const StepsContent = [
           "
         ></div>
         <div class="font-medium text-sm">
-          Each hit gives you points, and combos raise your score sky-high! But
-          be careful – miss too many throws, and it's GAME OVER. Level up to
-          unlock different backgrounds and arenas, all adding to the game
-          experience.
+          {{ t("roadmapSteps.description1") }}
         </div>
         <div class="font-medium text-sm">
-          Enemies get faster and tougher, and get distanced as you level up.
-          Only the sharpest and most accurate players can reach the TOP 10
-          Leaderboard, where the winner will receive the $500k jackpot of
-          $DOGEBALL tokens, with another $500k prize pot split between the
-          remaining 9 players. Note that only users who have purchased tokens in
-          the $DOGEBALL presale are eligible to be part of the $1M PRIZE POT.
+          {{ t("roadmapSteps.description2") }}
         </div>
       </div>
     </div>

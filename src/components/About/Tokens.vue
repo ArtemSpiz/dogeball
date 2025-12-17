@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, watch } from "vue";
+import { useI18n } from "vue-i18n";
 import ArrowDropDown from "@/assets/icons/ArrowDropDown.vue";
 import TokenIcon1 from "@/assets/img/About/TokenIcon1.png";
 import CustomButton from "@/ui/CustomButton.vue";
@@ -9,6 +10,8 @@ import { claimFaucetTokens } from "@/api/faucet";
 
 const wallet = useWallet();
 const toast = useToast();
+
+const { t } = useI18n();
 
 const Tokens = [
   {
@@ -97,7 +100,7 @@ const handleClaim = async () => {
     >
       <div class="flex flex-col w-full gap-4">
         <div class="flex items-start flex-col relative">
-          <div class="text-sm leading-[140%]">Select token</div>
+          <div class="text-sm leading-[140%]">{{ t("ethL2.selectToken") }}</div>
 
           <div
             @click="isOpen = !isOpen"
@@ -141,21 +144,17 @@ const handleClaim = async () => {
         </div>
 
         <div class="flex items-start flex-col">
-          <div class="text-sm leading-[140%]">Wallet Address</div>
+          <div class="text-sm leading-[140%]">
+            {{ t("ethL2.walletAddress") }}
+          </div>
           <input
-            v-model="walletAddress"
-            placeholder="Connect your wallet to auto-fill your address."
+            :placeholder="t('ethL2.walletAddressPlaceholder')"
             class="p-2 w-full max-h-[40px] border rounded-lg gap-2 flex items-center border-[#DCDCDC] bg-[rgba(255,255,255,0.06)] placeholder:text-lg max-md:placeholder:text-xs text-lg max-md:text-base placeholder:text-[rgba(255,255,255,0.30)] text-[rgba(255,255,255,0.30)]"
           />
         </div>
       </div>
 
-      <CustomButton
-        :title="isClaiming ? 'Claiming...' : 'Send'"
-        :disabled="isClaiming || !walletAddress"
-        @click="handleClaim"
-        class="w-full"
-      />
+      <CustomButton :title="t('ethL2.comingSoon')" class="w-full"  @click="handleClaim" class="w-full"/>
     </div>
   </div>
 </template>

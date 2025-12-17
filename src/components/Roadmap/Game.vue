@@ -1,5 +1,16 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 import CustomButton from "@/ui/CustomButton.vue";
+
+const { t } = useI18n();
+
+const privacyNote = computed(() => {
+  const text = t("roadmapGame.privacyNote");
+  // Handle both English and Spanish versions
+  const willNotPattern = /(WILL NOT|NO SERÁN)/i;
+  return text.replace(willNotPattern, '<span class="textUnderline">$&</span>');
+});
 </script>
 
 <template>
@@ -8,19 +19,23 @@ import CustomButton from "@/ui/CustomButton.vue";
   >
     <div class="flex flex-col items-center gap-9 max-md:gap-7">
       <div class="flex flex-col items-center gap-8 max-md:gap-6">
-        <div class="title uppercase whitespace-nowrap">Game Starts Soon !</div>
+        <div class="title uppercase whitespace-nowrap">
+          {{ t("roadmapGame.title") }}
+        </div>
         <div
           class="text-2xl max-md:text-xl font-medium leading-[80%] max-md:leading-[100%] max-w-[900px]"
         >
-          Available to play shortly after presale starts - keep an eye on the
-          official Telegram and X social media channels for launch news
+          {{ t("roadmapGame.description") }}
         </div>
       </div>
-      <CustomButton title="Coming Soon" class="w-full max-w-[200px]" />
+      <CustomButton
+        :title="t('roadmapGame.comingSoon')"
+        class="w-full max-w-[200px]"
+      />
     </div>
 
     <div
-      class="rounded-2xl relative max-w-[800px] decoration-from-font bg-[rgba(0,0,0,0.36)] p-6 text-base font-medium leading-[125%]"
+      class="rounded-2xl relative max-w-[800px] decoration-from-font bg-[rgba(0,0,0,0.36)] font-grotesk p-6 text-base font-medium leading-[125%]"
     >
       <div
         class="absolute inset-0 rounded-2xl pointer-events-none"
@@ -40,15 +55,7 @@ import CustomButton from "@/ui/CustomButton.vue";
         "
       ></div>
 
-      <span class="z-30">
-        Users must enter the same wallet address as they have used to make
-        presale purchases on completion of the game (the option to enter wallet
-        address will be displayed if the game score is high enough to land on
-        the leaderboard). Note to protect user privacy and security, wallet
-        addresses <span class="textUnderline">WILL NOT</span> be visible on the
-        website or mentioned in any social media channels; only the chosen
-        username entered within the game itself will be mentioned.
-      </span>
+      <span class="z-30" v-html="privacyNote"></span>
     </div>
   </div>
 </template>

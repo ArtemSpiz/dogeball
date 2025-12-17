@@ -1,0 +1,285 @@
+{
+  "header": {
+    "about": "Giới thiệu",
+    "roadmap": "Lộ trình",
+    "howToBuy": "Cách mua",
+    "playDogeball": "Chơi $DOGEBALL",
+    "tokenomics": "Tokenomics",
+    "ethL2": "ETH L2",
+    "faqs": "Câu hỏi thường gặp",
+    "connectWallet": "Kết nối ví"
+  },
+  "footer": {
+    "termsConditions": "Điều khoản & điều kiện",
+    "cookiesPolicy": "Chính sách cookie",
+    "privacyPolicy": "Chính sách bảo mật",
+    "disclaimer": "Tuyên bố miễn trừ trách nhiệm: $DOGEBALL là một đồng meme được hỗ trợ bởi tiện ích. Thị trường tiền điện tử có tính biến động cao, đầu tư cẩn thận. Tiền điện tử có thể không được quy định trong khu vực pháp lý của bạn. Cẩn thận với các trang web và kênh truyền thông xã hội giả mạo '$DOGEBALL' (chỉ các liên kết chính thức trên trang web này).",
+    "copyright": "Bản quyền © 2025 DOGEBALL. Tất cả các quyền được bảo lưu."
+  },
+  "hero": {
+    "title": "TRÒ CHƠI CRYPTO ĐẦU TIÊN TRÊN THẾ GIỚI ĐƯỢC CUNG CẤP BỞI L2",
+    "subtitle": "$DOGEBALL, DOGE duy nhất chơi crypto trên blockchain L2 EVM tùy chỉnh. Nhanh, rẻ, an toàn. Chơi để có cơ hội giành $1M",
+    "whitelistEmail": "Nhập email để được thêm vào Danh sách trắng",
+    "emailPlaceholder": "email của bạn",
+    "getEarlyAccess": "Nhận quyền truy cập sớm!",
+    "audit": "Kiểm toán",
+    "whitepaper": "Sách trắng"
+  },
+  "roadmap": {
+    "welcome": "CHÀO MỪNG ĐẾN VỚI TRÒ CHƠI DOGEBALL!",
+    "title": "Lộ trình",
+    "phase1": "Giai đoạn 1",
+    "phase2": "Giai đoạn 2",
+    "phase3": "Giai đoạn 3",
+    "phase4": "Giai đoạn 4",
+    "evolution": "Tiến hóa",
+    "development": "Phát triển",
+    "expansion": "Mở rộng",
+    "gameV2Expansion": "Mở rộng trò chơi và V2",
+    "phase1Sub1": "Sự tiến hóa của DOGE thành $DOGEBALL",
+    "phase1Sub2": "Kế hoạch trò chơi $DOGEBALL được tạo",
+    "phase1Sub3": "Kênh truyền thông xã hội và trang web được phát triển",
+    "phase1Sub4": "Hợp đồng được tạo và kiểm toán",
+    "phase2Sub1": "Trò chơi $DOGEBALL được phát triển",
+    "phase2Sub2": "DOGECHAIN EVM L2 được triển khai",
+    "phase2Sub3": "Mở rộng cộng đồng",
+    "phase2Sub4": "Bắt đầu bán trước",
+    "phase3Sub1": "Chiến dịch tiếp thị toàn cầu",
+    "phase3Sub2": "Đối tác trò chơi doanh nghiệp",
+    "phase3Sub3": "$DOGEBALL được niêm yết trên các sàn giao dịch toàn cầu",
+    "phase3Sub4": "$DOGEBALL trở nên lan truyền",
+    "phase4Sub1": "Phát triển trò chơi $DOGEBALL V2",
+    "phase4Sub2": "Tiếp tục niêm yết CEX",
+    "phase4Sub3": "Phát hành blockchain L2 toàn cầu",
+    "phase4Sub4": "Token tiến hóa tương lai được tạo"
+  },
+  "about": {
+    "title": "GIỚI THIỆU",
+    "subtitle": "Sự chuyển đổi của các đồng meme crypto",
+    "description": "Ở trung tâm của DOGECHAIN là trò chơi $DOGEBALL — một trò chơi né bóng trực tuyến gây nghiện nơi người chơi ném DOGEBALLs, lên cấp, leo bảng xếp hạng và cạnh tranh cho giải thưởng $1M ($500k cho người chơi hàng đầu)!",
+    "card1": "Trò chơi trực tuyến $DOGEBALL, chơi để giành một phần $1m!",
+    "card2": "Blockchain ETH L2 được xây dựng tùy chỉnh với phí người dùng cực thấp",
+    "card3": "Giao dịch siêu nhanh, cung cấp năng lượng cho tương lai của trò chơi trực tuyến",
+    "card4": "Staking lợi suất cao ở mức 80%",
+    "card5": "Niềm vui thuần túy được đảm bảo!",
+    "testDescription": "Không giống như các L2 meme-coins khác, bạn có thể thử nghiệm DOGECHAIN được xây dựng tùy chỉnh của chúng tôi và tự mình trải nghiệm vua của tất cả các L2!",
+    "clickHere": "Nhấp vào đây",
+    "partnerships": "Quan hệ đối tác với các tổ chức trò chơi lớn nhất thế giới đang được tiến hành"
+  },
+  "howToBuy": {
+    "title": "CÁCH MUA",
+    "step1": "Bước 1",
+    "step2": "Bước 2",
+    "step3": "Bước 3",
+    "step4": "Bước 4",
+    "earnRewards": "Kiếm phần thưởng",
+    "connectWallet": "Kết nối ví",
+    "connectWalletDesc": "Tìm widget bán trước ở đầu trang web ({link}) và nhấp 'Kết nối ví' bằng ví bạn chọn. Nhiều tùy chọn ví (bao gồm Metamask và Coinbase) có sẵn để lựa chọn.",
+    "selectToken": "Chọn Token và Số lượng",
+    "selectTokenDesc": "Chọn loại tiền tệ bạn muốn (ETH, USDT, USDC, SOL, BNB và nhiều loại khác) hoặc thanh toán bằng thẻ ngân hàng, chọn số lượng token $DOGEBALL bạn muốn mua và nhấp 'MUA $DOGEBALL'. Nhập mã Giới thiệu và Mã thưởng (nếu bạn có) – xem Câu hỏi thường gặp để biết thêm chi tiết về việc sử dụng mã.",
+    "buyToken": "Mua Token và Phê duyệt Giao dịch",
+    "buyTokenDesc": "Hoàn tất việc mua của bạn bằng cách phê duyệt giao dịch trong ví đã kết nối. Sau khi xác nhận, việc mua và số lượng token của bạn sẽ được ghi lại an toàn trên chuỗi và hiển thị dưới 'Bảng điều khiển' trong widget bán trước ở trên.",
+    "claimToken": "Nhận Token $DOGEBALL",
+    "claimTokenDesc": "Sau khi bán trước kết thúc, bạn có thể nhận token $DOGEBALL của mình bằng cùng một ví đã sử dụng để mua. Chi tiết về việc nhận sẽ được phát hành trên các kênh truyền thông xã hội sau khi bán trước kết thúc.",
+    "staking": "STAKING",
+    "stakingDesc": "Khóa token mua bán trước của bạn trong nhóm staking hợp đồng thông minh an toàn và được kiểm toán của chúng tôi; kiếm phần thưởng $DOGEBALL với APY cao 80% và tối đa hóa lợi nhuận token $DOGEBALL của bạn.",
+    "clickHere": "Nhấp vào đây"
+  },
+  "faq": {
+    "title": "Câu hỏi thường gặp",
+    "q1": "$DOGEBALL là gì?",
+    "a1": "$DOGEBALL là một đồng tiện ích kép cung cấp năng lượng cho blockchain Lớp 2 tùy chỉnh được thiết kế cho các giao dịch gần như không phí, tốc độ cao và bảo mật hàng đầu, được tích hợp liền mạch với trò chơi trực tuyến $DOGEBALL. Là token gốc, $DOGEBALL cung cấp năng lượng cho toàn bộ hệ sinh thái, mang lại nền tảng vững chắc cho cả người dùng và game thủ. Token có tiện ích trong cuộc sống thực và sẽ được sử dụng để hoàn thành các giao dịch trong ngành công nghiệp trò chơi trong tương lai.",
+    "q2": "Staking $DOGEBALL là gì?",
+    "a2": "Staking $DOGEBALL liên quan đến việc khóa token của bạn trong một hợp đồng thông minh an toàn trong một khoảng thời gian nhất định (chỉ trong thời gian bán trước) để kiếm thêm token $DOGEBALL mà không mất thêm chi phí. Phần thưởng staking sẽ được phát hành sau thời gian vesting tối thiểu 7 ngày. Tham khảo phần 'STAKING' trong 'CÁCH MUA Ở TRÊN'. {link}",
+    "q3": "Làm thế nào để mua $DOGEBALL?",
+    "a3": "Bạn có thể tham gia cộng đồng $DOGEBALL bằng cách đơn giản kết nối ví bạn chọn với widget bán trước ở đầu trang này {link}. Chọn loại tiền điện tử bạn muốn sử dụng hoặc thanh toán bằng Thẻ Tín dụng/Ghi nợ của bạn để bảo đảm token $DOGEBALL của bạn.",
+    "q4": "Token $DOGEBALL của tôi ở đâu?",
+    "a4": "Người dùng có thể xem số dư $DOGEBALL của họ sau khi ví được kết nối (xem đầu trang). Phần 'Bảng điều khiển' trong widget bán trước sẽ hiển thị số dư người dùng và lịch sử mua hàng. {link}",
+    "q5": "Khi nào tôi nhận được token của mình?",
+    "a5": "Sau khi mua $DOGEBALL trong bán trước, bạn có thể sử dụng cùng một ví để nhận token của mình trước khi niêm yết sàn giao dịch ban đầu. Theo dõi truyền thông xã hội của chúng tôi để biết thông báo về ngày nhận và niêm yết.",
+    "q6": "Token $DOGEBALL có an toàn để mua không?",
+    "a6": "Có, hợp đồng $DOGEBALL đã được kiểm toán bởi Coinsult, một trong những kiểm toán viên dự án blockchain lớn nhất và đáng tin cậy, đạt 100% điểm kiểm toán tổng thể. {link} để xem báo cáo kiểm toán đầy đủ.",
+    "q7": "Làm thế nào để tạo mã giới thiệu và sử dụng mã thưởng?",
+    "a7": "Mã giới thiệu duy nhất của bạn có thể được tạo bằng cách nhấp 'Kết nối ví' và nhấp 'Bảng điều khiển'; mỗi người dùng sẽ được cung cấp mã giới thiệu duy nhất và liên kết URL của riêng họ để cung cấp cho người dùng khác. Người dùng được giới thiệu nên nhập điều này trên màn hình 'Mua' dưới nút 'Mua $DOGEBALL' và nhấp 'Áp dụng'. Số tiền thưởng giới thiệu sẽ được thêm vào số tiền mua và hiển thị trong 'Bảng điều khiển' (cho cả người giới thiệu và người dùng được giới thiệu). Mã thưởng thời gian giới hạn nên được nhập bằng cách nhấp 'Mã thưởng' (dưới nút 'Mua $DOGEBALL' sau khi kết nối ví) và nhấp 'Áp dụng'."
+  },
+  "tokenomics": {
+    "title": "TOKENOMICS",
+    "contractAddress": "Địa chỉ hợp đồng",
+    "totalSupply": "Tổng cung",
+    "tokens": "Token",
+    "development": "Phát triển",
+    "presale": "Bán trước",
+    "treasuryReserves": "Dự trữ kho bạc",
+    "stakingGamesRewards": "Phần thưởng Staking & Trò chơi",
+    "marketing": "Tiếp thị",
+    "liquidity": "Thanh khoản"
+  },
+  "roadmapSteps": {
+    "mainDescription": "Bước vào đấu trường và thể hiện mục tiêu của bạn! Chạm hoặc nhấp để ném – tính đúng thời điểm và đập vỡ mọi mục tiêu trên đường đi của bạn!",
+    "step1": "Ghi điểm lớn!",
+    "step2": "Leo thứ hạng!",
+    "step3": "Trở thành nhà vô địch DOGEBALL cuối cùng!",
+    "description1": "Mỗi cú đánh cho bạn điểm, và combo nâng điểm của bạn lên trời cao! Nhưng hãy cẩn thận – bỏ lỡ quá nhiều cú ném, và đó là GAME OVER. Lên cấp để mở khóa các nền và đấu trường khác nhau, tất cả đều thêm vào trải nghiệm trò chơi.",
+    "description2": "Kẻ thù trở nên nhanh hơn và khó khăn hơn, và bị đẩy xa khi bạn lên cấp. Chỉ những người chơi sắc bén và chính xác nhất mới có thể đạt được Bảng xếp hạng TOP 10, nơi người chiến thắng sẽ nhận được giải độc đắc $500k token $DOGEBALL, với $500k giải thưởng khác được chia cho 9 người chơi còn lại. Lưu ý rằng chỉ những người dùng đã mua token trong bán trước $DOGEBALL mới đủ điều kiện để tham gia GIẢI THƯỞNG $1M."
+  },
+  "roadmapGame": {
+    "title": "Trò chơi sắp bắt đầu!",
+    "description": "Có sẵn để chơi ngay sau khi bán trước bắt đầu - theo dõi các kênh truyền thông xã hội Telegram và X chính thức để biết tin tức ra mắt",
+    "comingSoon": "Sắp ra mắt",
+    "privacyNote": "Người dùng phải nhập cùng địa chỉ ví mà họ đã sử dụng để mua bán trước khi hoàn thành trò chơi (tùy chọn nhập địa chỉ ví sẽ được hiển thị nếu điểm trò chơi đủ cao để lên bảng xếp hạng). Lưu ý để bảo vệ quyền riêng tư và bảo mật của người dùng, địa chỉ ví SẼ KHÔNG hiển thị trên trang web hoặc được đề cập trong bất kỳ kênh truyền thông xã hội nào; chỉ tên người dùng được chọn nhập trong chính trò chơi mới được đề cập."
+  },
+  "ethL2": {
+    "heroTitle": "VÒI DOGECHAIN",
+    "heroSubtitle": "Thử Blockchain ETH L2 Tùy chỉnh Của Chúng Tôi Miễn Phí!",
+    "blockchainTitle": "Nhận Token Test Blockchain $DOGEBALL",
+    "blockchainSubtitle": "Token Test Blockchain $DOGEBALL miễn phí và không tốn bất kỳ crypto/tiền mặt nào cho người dùng",
+    "blockchainDescription": "Mỗi 24 giờ, token Test Blockchain $DOGEBALL có thể được nhận bởi cùng một ví (lưu ý các token này KHÔNG PHẢI là token người dùng mua trong thời gian bán trước; các token này đã được tạo để người dùng thử trong thời gian bán trước chỉ và không có giá trị token)",
+    "card1Text": "Thêm mạng tùy chỉnh ETH L2 DOGECHAIN vào ví bạn chọn (tham khảo trang web ví bạn chọn để biết chi tiết về cách thêm mạng tùy chỉnh) bằng các chi tiết bên dưới:",
+    "blockchainName": "Tên Blockchain",
+    "rpcUrl": "URL RPC",
+    "chainId": "ID Chuỗi",
+    "symbol": "Biểu tượng",
+    "card2Text": "Nhấp nút {connectWallet} ở đầu trang để kết nối ví của bạn. Địa chỉ ví của bạn sẽ tự động điền vào vòi bên dưới",
+    "card3Text": "Chọn số lượng token test để sử dụng (tối đa 0,01 token test $DOGEBALL có thể được nhận bằng cùng một ví mỗi 24 giờ)",
+    "card4Text": "Nhấp nút {send} bên dưới để nhận token test $DOGEBALL miễn phí từ vòi",
+    "card5Text": "Đợi giao dịch hoàn tất - token sẽ xuất hiện trong ví của bạn trên mạng DOGECHAIN.",
+    "card5Text2": "Xem tất cả giao dịch và hoạt động blockchain cho DOGECHAIN của chúng tôi {here}",
+    "card6Text": "Thử nghiệm blockchain bằng cách gửi token test $DOGEBALL đến các địa chỉ ví khác (lưu ý ví nhận cũng phải có mạng tùy chỉnh DOGECHAIN được thêm vào ví của họ để nhận token test)",
+    "card7Text": "Và đó là bạn đã trải nghiệm tốc độ, chi phí bằng không và bảo mật của Blockchain ETH L2 DOGECHAIN được tạo tùy chỉnh!",
+    "selectToken": "Chọn token",
+    "walletAddress": "Địa chỉ ví",
+    "walletAddressPlaceholder": "Kết nối ví của bạn để tự động điền địa chỉ của bạn.",
+    "comingSoon": "Sắp ra mắt",
+    "connectWallet": "Kết nối ví",
+    "send": "Gửi",
+    "here": "Ở đây"
+  },
+  "common": {
+    "clickHere": "Nhấp vào đây"
+  },
+  "timer": {
+    "days": "Ngày",
+    "hours": "Giờ",
+    "minutes": "Phút",
+    "seconds": "Giây"
+  },
+  "presale": {
+    "tabs": {
+      "buy": "Mua",
+      "stake": "Stake",
+      "dashboard": "Bảng điều khiển"
+    },
+    "stage": {
+      "stage": "Giai đoạn"
+    },
+    "buyTab": {
+      "presalePrice": "Giá bán trước =",
+      "launchPrice": "Giá ra mắt =",
+      "connectWallet": "Kết nối ví",
+      "presaleEnded": "Bán trước đã kết thúc",
+      "selectToken": "Chọn Token",
+      "enterAmount": "Nhập số lượng",
+      "buyWithCard": "Mua bằng thẻ",
+      "comingSoon": "Sắp ra mắt",
+      "bonusCode": "Mã thưởng",
+      "referralCode": "Mã giới thiệu",
+      "confirmTransaction": "Xác nhận giao dịch trong ví của bạn...",
+      "waitingConfirmation": "Đợi xác nhận blockchain...",
+      "processingPurchase": "Đang xử lý việc mua của bạn..."
+    },
+    "stakeTab": {
+      "connectWalletMessage": "Kết nối ví của bạn để xem và quản lý staking của bạn",
+      "availableToStake": "Có sẵn để Stake",
+      "maxStake": "Stake tối đa",
+      "maxUnstake": "Unstake tối đa",
+      "stake": "Stake",
+      "unstake": "Unstake",
+      "ownedTokens": "Token sở hữu",
+      "currentlyStaked": "Đang Stake",
+      "dailyInterest": "Lãi suất hàng ngày",
+      "totalEarnings": "Tổng thu nhập",
+      "earnApy": "Kiếm {{apy}}% APY bằng cách stake token của bạn"
+    },
+    "historyTab": {
+      "connectWalletMessage": "Kết nối ví của bạn để xem bảng điều khiển của bạn",
+      "yourTransactions": "Giao dịch của bạn",
+      "noTransactions": "Chưa có giao dịch",
+      "purchasesWillAppear": "Các giao dịch mua của bạn sẽ xuất hiện ở đây"
+    },
+    "referralCode": {
+      "label": "Mã giới thiệu",
+      "placeholder": "Nhập mã giới thiệu",
+      "applied": "Mã giới thiệu đã áp dụng!",
+      "connectWalletFirst": "Vui lòng kết nối ví của bạn trước",
+      "enterCode": "Vui lòng nhập mã giới thiệu",
+      "cannotUseOwn": "Bạn không thể sử dụng mã giới thiệu của chính mình",
+      "appliedSuccess": "Mã giới thiệu đã được áp dụng thành công!",
+      "invalidCode": "Mã giới thiệu không hợp lệ"
+    },
+    "bonusCode": {
+      "label": "Mã thưởng",
+      "placeholder": "Nhập mã thưởng",
+      "applied": "Thưởng đã áp dụng!",
+      "connectWalletFirst": "Vui lòng kết nối ví của bạn trước",
+      "enterCode": "Vui lòng nhập mã thưởng",
+      "appliedSuccess": "Mã thưởng đã được áp dụng thành công!",
+      "invalidCode": "Mã thưởng không hợp lệ"
+    },
+    "referralData": {
+      "yourReferralLink": "Liên kết giới thiệu của bạn",
+      "yourReferralCode": "Mã giới thiệu của bạn",
+      "totalReferrals": "Tổng số giới thiệu",
+      "tokensEarned": "Token kiếm được",
+      "copy": "Sao chép"
+    },
+    "codeInputs": {
+      "change": "Thay đổi",
+      "apply": "Áp dụng"
+    },
+    "stageBox": {
+      "untilPriceRise": "CHO ĐẾN KHI GIÁ TĂNG",
+      "of": "của",
+      "participants": "Người tham gia"
+    },
+    "bonusBanner": {
+      "presaleLaunchOffer": "Ưu đãi ra mắt bán trước",
+      "useBonusCode": "Sử dụng mã thưởng",
+      "toGetMore": "Để nhận thêm 10% token $DOGEBALL!",
+      "copied": "Đã sao chép!",
+      "copyCode": "Sao chép mã"
+    },
+    "transactions": {
+      "awaitingPayment": "Đang chờ thanh toán",
+      "processing": "Đang xử lý...",
+      "manual": "Thủ công",
+      "purchase": "Mua hàng"
+    },
+    "errors": {
+      "presaleEnded": "Bán trước đã kết thúc",
+      "selectPaymentMethod": "Vui lòng chọn phương thức thanh toán",
+      "enterAmount": "Vui lòng nhập số lượng",
+      "cardPaymentFailed": "Thanh toán bằng thẻ thất bại. Vui lòng thử lại.",
+      "paymentProcessing": "Thanh toán đang được xử lý. Kiểm tra bảng điều khiển của bạn.",
+      "completePayment": "Hoàn tất thanh toán của bạn trong cửa sổ popup",
+      "transactionFailed": "Giao dịch thất bại. Vui lòng thử lại.",
+      "insufficientTokens": "Không đủ token có sẵn để stake",
+      "failedToStake": "Stake token thất bại",
+      "cannotUnstakeMore": "Không thể unstake nhiều hơn số lượng hiện đang stake",
+      "failedToUnstake": "Unstake token thất bại"
+    },
+    "copy": "Sao chép",
+    "tokenAmountInputs": {
+      "youPay": "Bạn trả",
+      "youReceive": "Bạn nhận"
+    },
+    "transactionDetails": {
+      "for": "cho $",
+      "reason": "Lý do:"
+    },
+    "poweredBy": "Được cung cấp bởi",
+    "tokenSelect": {
+      "more": "Thêm",
+      "otherCryptos": "+ Các loại crypto khác"
+    }
+  }
+}

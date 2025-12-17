@@ -1,0 +1,285 @@
+{
+  "header": {
+    "about": "Om",
+    "roadmap": "Veikart",
+    "howToBuy": "Hvordan kjøpe",
+    "playDogeball": "Spill $DOGEBALL",
+    "tokenomics": "Tokenomics",
+    "ethL2": "ETH L2",
+    "faqs": "FAQ",
+    "connectWallet": "Koble til lommebok"
+  },
+  "footer": {
+    "termsConditions": "Vilkår og betingelser",
+    "cookiesPolicy": "Informasjonskapselpolitikk",
+    "privacyPolicy": "Personvernpolicy",
+    "disclaimer": "Ansvarsfraskrivelse: $DOGEBALL er en meme-mynt støttet av nytteverdi. Kryptovalutamarkeder er svært volatile, invester med forsiktighet. Kryptovaluta kan være uregulert i din jurisdiksjon. Vær oppmerksom på '$DOGEBALL' kopi-nettsteder og sosiale mediekanaler (kun offisielle lenker på denne nettsiden).",
+    "copyright": "Copyright © 2025 DOGEBALL. Alle rettigheter reservert."
+  },
+  "hero": {
+    "title": "VERDENS FØRSTE L2-DREVNE KRYPTO-SPILL",
+    "subtitle": "$DOGEBALL, den eneste krypto-spillende DOGE på en tilpasset EVM L2 blockchain. Rask, billig, sikker. Spill for en sjanse på $1M",
+    "whitelistEmail": "Skriv inn e-post for å bli lagt til på whitelisten",
+    "emailPlaceholder": "din e-post",
+    "getEarlyAccess": "Få tidlig tilgang!",
+    "audit": "Revisjon",
+    "whitepaper": "Whitepaper"
+  },
+  "roadmap": {
+    "welcome": "VELKOMMEN TIL DOGEBALL-SPILLET!",
+    "title": "Veikart",
+    "phase1": "Fase 1",
+    "phase2": "Fase 2",
+    "phase3": "Fase 3",
+    "phase4": "Fase 4",
+    "evolution": "Evolusjon",
+    "development": "Utvikling",
+    "expansion": "Ekspansjon",
+    "gameV2Expansion": "Spill og V2-ekspansjon",
+    "phase1Sub1": "Evolusjonen fra DOGE til $DOGEBALL",
+    "phase1Sub2": "$DOGEBALL spillplan opprettet",
+    "phase1Sub3": "Sosiale kanaler og nettsted utviklet",
+    "phase1Sub4": "Kontrakt opprettet og revidert",
+    "phase2Sub1": "$DOGEBALL spill utviklet",
+    "phase2Sub2": "DOGECHAIN EVM L2 distribuert",
+    "phase2Sub3": "Samfunnsekspansjon",
+    "phase2Sub4": "Forsalg begynner",
+    "phase3Sub1": "Global markedsføringskampanje",
+    "phase3Sub2": "Bedriftsgamingpartnerskap",
+    "phase3Sub3": "$DOGEBALL notert på globale børser",
+    "phase3Sub4": "$DOGEBALL blir viralt",
+    "phase4Sub1": "$DOGEBALL V2 spillutvikling",
+    "phase4Sub2": "Fortsette CEX-noteringer",
+    "phase4Sub3": "L2 Blockchain global utgivelse",
+    "phase4Sub4": "Fremtidige evolusjonstokens opprettet"
+  },
+  "about": {
+    "title": "OM",
+    "subtitle": "Overgangen av krypto meme-mynter",
+    "description": "I sentrum av DOGECHAIN er $DOGEBALL-spillet — et avhengighetsskapende online dodgeball-spill der spillere kaster DOGEBALLs, går opp i nivå, klatrer på ledertavlen og konkurrerer om en $1M premiepott ($500k til toppspilleren)!",
+    "card1": "$DOGEBALL online-spill, spill for å vinne del av $1m!",
+    "card2": "Tilpasset bygget ETH L2 Blockchain med ultra-lave brukergebyrer",
+    "card3": "Lynraske transaksjoner, driver fremtiden til online gaming",
+    "card4": "Høyavkastende staking på 80%",
+    "card5": "Ren moro garantert!",
+    "testDescription": "I motsetning til andre meme-mynt L2s, kan du teste vår tilpassede bygde DOGECHAIN og oppleve selv kongen av alle L2s!",
+    "clickHere": "Klikk her",
+    "partnerships": "Partnerskap med verdens største spillorganisasjoner er i gang"
+  },
+  "howToBuy": {
+    "title": "HVORDAN KJØPE",
+    "step1": "Steg 1",
+    "step2": "Steg 2",
+    "step3": "Steg 3",
+    "step4": "Steg 4",
+    "earnRewards": "Tjen belønninger",
+    "connectWallet": "Koble til lommebok",
+    "connectWalletDesc": "Finn forsalgs-widgeten øverst på nettsiden ({link}) og klikk 'Koble til lommebok' ved å bruke din foretrukne lommebok. Flere lommebokalternativer (inkl. Metamask og Coinbase) er tilgjengelige for valg.",
+    "selectToken": "Velg token og beløp",
+    "selectTokenDesc": "Velg din foretrukne valuta (ETH, USDT, USDC, SOL, BNB pluss mange flere) eller betal med bankkort, velg mengden $DOGEBALL-tokens du vil kjøpe og klikk 'KJØP $DOGEBALL'. Skriv inn henvisnings- og bonuskoder (hvis du har disse) — se FAQ for mer informasjon om bruk av koder.",
+    "buyToken": "Kjøp token og godkjenn transaksjon",
+    "buyTokenDesc": "Fullfør kjøpet ditt ved å godkjenne transaksjonen i din tilkoblede lommebok. Når den er bekreftet, vil kjøpet ditt og tokenbeløpet bli sikkert registrert on-chain og synlig under 'Dashboard' i forsalgs-widgeten ovenfor.",
+    "claimToken": "Krev $DOGEBALL Token",
+    "claimTokenDesc": "Etter at forsalget slutter, kan du kreve dine $DOGEBALL-tokens med samme lommebok som brukt til kjøpet ditt. Detaljer om krav vil bli utgitt på sosiale mediekanaler når forsalget avsluttes.",
+    "staking": "STAKING",
+    "stakingDesc": "Lås dine forsalgs-kjøpstokens i vår sikre og reviderte smart-kontrakt staking-pool; tjen $DOGEBALL-belønninger med høy 80% APY og maksimer din $DOGEBALL token-avkastning.",
+    "clickHere": "Klikk her"
+  },
+  "faq": {
+    "title": "Ofte stilte spørsmål",
+    "q1": "Hva er $DOGEBALL?",
+    "a1": "$DOGEBALL er en dual-utility mynt som driver en tilpasset Layer 2 blockchain designet for nesten null-gebyr transaksjoner, høy hastighet og toppklasse sikkerhet, sømløst integrert med $DOGEBALL online-spillet. Som innfødt token driver $DOGEBALL hele økosystemet, og tilbyr et robust fundament for både brukere og spillere. Tokens har en nytteverdi i det virkelige liv og vil bli brukt til å fullføre transaksjoner i spillindustrien i fremtiden.",
+    "q2": "Hva er $DOGEBALL staking?",
+    "a2": "Staking av $DOGEBALL innebærer å låse tokensene dine i en sikker smart kontrakt for en fastsatt periode (kun under forsalget) for å tjene ekstra $DOGEBALL-tokens uten ekstra kostnad. Staking-belønninger vil bli frigitt etter den 7-dagers minimums-vestingperioden. Se 'STAKING'-seksjonen i 'HVORDAN KJØPE OVER'. {link}",
+    "q3": "Hvordan kjøper jeg $DOGEBALL?",
+    "a3": "Du kan bli med i $DOGEBALL-samfunnet ved å ganske enkelt koble din valgte lommebok til forsalgs-widgeten øverst på denne siden {link}. Velg din foretrukne kryptovaluta å bruke eller betal med ditt kreditt-/debettkort for å sikre dine $DOGEBALL-tokens.",
+    "q4": "Hvor er mine $DOGEBALL-tokens?",
+    "a4": "Brukere kan se sin $DOGEBALL-saldo når lommeboken deres er koblet til (se toppen av siden). 'Dashboard'-seksjonen i forsalgs-widgeten vil vise brukersaldo og kjøpshistorikk. {link}",
+    "q5": "Når mottar jeg tokensene mine?",
+    "a5": "Etter å ha kjøpt $DOGEBALL i forsalget, kan du bruke samme lommebok til å kreve tokensene dine før den første børsnoteringen. Hold deg oppdatert på våre sosiale medier for krav- og noteringsdatoannonseringer.",
+    "q6": "Er $DOGEBALL-token trygt å kjøpe?",
+    "a6": "Ja, $DOGEBALL-kontrakten har blitt revidert av Coinsult, en av de største og mest pålitelige blockchain-prosjektrevisorene, og oppnådde 100% i den samlede revisjonspoengsummen. {link} for den fullstendige revisjonsrapporten.",
+    "q7": "Hvordan genererer jeg en henvisningskode og bruker bonuskoder?",
+    "a7": "Din unike henvisningskode kan genereres ved å klikke 'Koble til lommebok' og klikke 'Dashboard'; hver bruker vil få sin egen unike henvisningskode og URL-lenke å gi til andre brukere. Den henviste brukeren bør skrive inn dette på 'Kjøp'-skjermen under knappen 'Kjøp $DOGEBALL' og klikke 'Bruk'. Henvisningsbonusbeløp vil bli lagt til kjøpsbeløpet og synlig i 'Dashboard' (for både henviser og henvist bruker). Begrensede bonuskoder bør skrives inn ved å klikke 'Bonuskode' (under knappen 'Kjøp $DOGEBALL' etter lommeboktilkobling) og klikke 'Bruk'."
+  },
+  "tokenomics": {
+    "title": "TOKENOMICS",
+    "contractAddress": "Kontraktadresse",
+    "totalSupply": "Totalt tilbud",
+    "tokens": "Tokens",
+    "development": "Utvikling",
+    "presale": "Forsalg",
+    "treasuryReserves": "Statsskattreserver",
+    "stakingGamesRewards": "Staking & spillbelønninger",
+    "marketing": "Markedsføring",
+    "liquidity": "Likviditet"
+  },
+  "roadmapSteps": {
+    "mainDescription": "Gå inn i arenaen og vis målet ditt! Trykk eller klikk for å kaste — tidsbestem det riktig, og knus hvert mål i veien!",
+    "step1": "Score stort!",
+    "step2": "Klatr rangene!",
+    "step3": "Bli den ultimate DOGEBALL-mesteren!",
+    "description1": "Hvert treff gir deg poeng, og kombinasjoner løfter poengsummen din høyt opp! Men vær forsiktig — bommer på for mange kast, og det er GAME OVER. Gå opp i nivå for å låse opp forskjellige bakgrunner og arenaer, alt legger til spillopplevelsen.",
+    "description2": "Fiender blir raskere og tøffere, og blir distansert når du går opp i nivå. Bare de skarpeste og mest nøyaktige spillerne kan nå TOP 10-ledertavlen, hvor vinneren vil motta $500k jackpotten av $DOGEBALL-tokens, med en annen $500k premiepott delt mellom de resterende 9 spillerne. Merk at bare brukere som har kjøpt tokens i $DOGEBALL-forsalget er kvalifisert til å være del av $1M PREMIEPOTTEN."
+  },
+  "roadmapGame": {
+    "title": "Spillet starter snart!",
+    "description": "Tilgjengelig å spille kort tid etter at forsalget starter — hold øye med de offisielle Telegram- og X-sosiale mediekanalene for lanseringsnyheter",
+    "comingSoon": "Kommer snart",
+    "privacyNote": "Brukere må skrive inn samme lommebokadresse som de har brukt til å gjøre forsalgs-kjøp ved fullføring av spillet (alternativet for å skrive inn lommebokadresse vil bli vist hvis spillpoengsummen er høy nok til å lande på ledertavlen). Merk for å beskytte brukerens personvern og sikkerhet, vil lommebokadresser IKKE være synlige på nettstedet eller nevnt i noen sosiale mediekanaler; bare det valgte brukernavnet skrevet inn i selve spillet vil bli nevnt."
+  },
+  "ethL2": {
+    "heroTitle": "DOGECHAIN FAUCET",
+    "heroSubtitle": "Prøv vår tilpassede bygde ETH L2 Blockchain uten kostnad!",
+    "blockchainTitle": "Få $DOGEBALL Blockchain test-tokens",
+    "blockchainSubtitle": "$DOGEBALL Blockchain test-tokens er gratis og koster ikke brukeren noen krypto/kontanter",
+    "blockchainDescription": "Hver 24. time kan $DOGEBALL Blockchain test-tokens kreves av samme lommebok (merk at disse tokens IKKE er tokensene brukere kjøper under forsalget; disse tokensene har blitt opprettet for brukere å prøve under forsalget kun og har ingen tokenverdi)",
+    "card1Text": "Legg til ETH L2 DOGECHAIN tilpasset nettverk til din valgte lommebok (se din valgte lommeboks nettsted for detaljer om hvordan du legger til et tilpasset nettverk) ved å bruke detaljene nedenfor:",
+    "blockchainName": "Blockchain-navn",
+    "rpcUrl": "RPC URL",
+    "chainId": "Kjede-ID",
+    "symbol": "Symbol",
+    "card2Text": "Klikk {connectWallet}-knappen øverst på siden for å koble til lommeboken din. Din lommebokadresse vil automatisk fylles ut i fauceten nedenfor",
+    "card3Text": "Velg mengden test-tokens å bruke (maks 0,01 $DOGEBALL test-tokens kan kreves ved å bruke samme lommebok per 24 timers periode)",
+    "card4Text": "Klikk {send}-knappen nedenfor for å kreve dine gratis $DOGEBALL test-tokens fra fauceten",
+    "card5Text": "Vent på at transaksjonen skal fullføres — tokensene vil vises i lommeboken din på DOGECHAIN-nettverket.",
+    "card5Text2": "Se alle transaksjoner og blockchain-aktivitet for vår DOGECHAIN {here}",
+    "card6Text": "Test blockchainen ved å sende $DOGEBALL test-tokens til andre lommebokadresser (merk at mottakerlommeboken også må ha DOGECHAIN tilpasset nettverk lagt til lommeboken sin for å motta test-tokensene)",
+    "card7Text": "Og der har du det, du har opplevd hastigheten, nullkostnaden og sikkerheten til den tilpassede opprettede DOGECHAIN ETH L2 Blockchain!",
+    "selectToken": "Velg token",
+    "walletAddress": "Lommebokadresse",
+    "walletAddressPlaceholder": "Koble til lommeboken din for å automatisk fylle ut adressen din.",
+    "comingSoon": "Kommer snart",
+    "connectWallet": "Koble til lommebok",
+    "send": "Send",
+    "here": "Her"
+  },
+  "common": {
+    "clickHere": "Klikk her"
+  },
+  "timer": {
+    "days": "Dager",
+    "hours": "Timer",
+    "minutes": "Minutter",
+    "seconds": "Sekunder"
+  },
+  "presale": {
+    "tabs": {
+      "buy": "Kjøp",
+      "stake": "Stake",
+      "dashboard": "Dashboard"
+    },
+    "stage": {
+      "stage": "Fase"
+    },
+    "buyTab": {
+      "presalePrice": "Forsalgspris =",
+      "launchPrice": "Lanseringspris =",
+      "connectWallet": "Koble til lommebok",
+      "presaleEnded": "Forsalg avsluttet",
+      "selectToken": "Velg token",
+      "enterAmount": "Skriv inn beløp",
+      "buyWithCard": "Kjøp med kort",
+      "comingSoon": "Kommer snart",
+      "bonusCode": "Bonuskode",
+      "referralCode": "Henvisningskode",
+      "confirmTransaction": "Bekreft transaksjonen i lommeboken din...",
+      "waitingConfirmation": "Venter på blockchain-bekreftelse...",
+      "processingPurchase": "Behandler kjøpet ditt..."
+    },
+    "stakeTab": {
+      "connectWalletMessage": "Koble til lommeboken din for å vise og administrere stakingen din",
+      "availableToStake": "Tilgjengelig for stake",
+      "maxStake": "Maks stake",
+      "maxUnstake": "Maks unstake",
+      "stake": "Stake",
+      "unstake": "Unstake",
+      "ownedTokens": "Eide tokens",
+      "currentlyStaked": "For tiden staket",
+      "dailyInterest": "Daglig rente",
+      "totalEarnings": "Totale inntekter",
+      "earnApy": "Tjen {{apy}}% APY ved å stake tokensene dine"
+    },
+    "historyTab": {
+      "connectWalletMessage": "Koble til lommeboken din for å vise dashboarden din",
+      "yourTransactions": "Dine transaksjoner",
+      "noTransactions": "Ingen transaksjoner ennå",
+      "purchasesWillAppear": "Kjøpene dine vil vises her"
+    },
+    "referralCode": {
+      "label": "Henvisningskode",
+      "placeholder": "Skriv inn henvisningskode",
+      "applied": "Henvisningskode brukt!",
+      "connectWalletFirst": "Vennligst koble til lommeboken din først",
+      "enterCode": "Vennligst skriv inn en henvisningskode",
+      "cannotUseOwn": "Du kan ikke bruke din egen henvisningskode",
+      "appliedSuccess": "Henvisningskode brukt vellykket!",
+      "invalidCode": "Ugyldig henvisningskode"
+    },
+    "bonusCode": {
+      "label": "Bonuskode",
+      "placeholder": "Skriv inn bonuskode",
+      "applied": "Bonus brukt!",
+      "connectWalletFirst": "Vennligst koble til lommeboken din først",
+      "enterCode": "Vennligst skriv inn en bonuskode",
+      "appliedSuccess": "Bonuskode brukt vellykket!",
+      "invalidCode": "Ugyldig bonuskode"
+    },
+    "referralData": {
+      "yourReferralLink": "Din henvisningslenke",
+      "yourReferralCode": "Din henvisningskode",
+      "totalReferrals": "Totale henvisninger",
+      "tokensEarned": "Tjente tokens",
+      "copy": "Kopier"
+    },
+    "codeInputs": {
+      "change": "Endre",
+      "apply": "Bruk"
+    },
+    "stageBox": {
+      "untilPriceRise": "INNTIL PRISØKNING",
+      "of": "av",
+      "participants": "Deltakere"
+    },
+    "bonusBanner": {
+      "presaleLaunchOffer": "Forsalgs lanserings tilbud",
+      "useBonusCode": "Bruk bonuskode",
+      "toGetMore": "For å få 10% flere $DOGEBALL-tokens!",
+      "copied": "Kopiert!",
+      "copyCode": "Kopier kode"
+    },
+    "transactions": {
+      "awaitingPayment": "Venter på betaling",
+      "processing": "Behandler...",
+      "manual": "Manuell",
+      "purchase": "Kjøp"
+    },
+    "errors": {
+      "presaleEnded": "Forsalget har avsluttet",
+      "selectPaymentMethod": "Vennligst velg en betalingsmetode",
+      "enterAmount": "Vennligst skriv inn et beløp",
+      "cardPaymentFailed": "Kortbetaling mislyktes. Vennligst prøv igjen.",
+      "paymentProcessing": "Betalingen behandles. Sjekk dashboarden din.",
+      "completePayment": "Fullfør betalingen din i popup-vinduet",
+      "transactionFailed": "Transaksjon mislyktes. Vennligst prøv igjen.",
+      "insufficientTokens": "Utilstrekkelige tokens tilgjengelig for stake",
+      "failedToStake": "Kunne ikke stake tokens",
+      "cannotUnstakeMore": "Kan ikke unstake mer enn for tiden staket",
+      "failedToUnstake": "Kunne ikke unstake tokens"
+    },
+    "copy": "Kopier",
+    "tokenAmountInputs": {
+      "youPay": "Du betaler",
+      "youReceive": "Du mottar"
+    },
+    "transactionDetails": {
+      "for": "for $",
+      "reason": "Årsak:"
+    },
+    "poweredBy": "Drevet av",
+    "tokenSelect": {
+      "more": "Mer",
+      "otherCryptos": "+ Andre kryptoer"
+    }
+  }
+}

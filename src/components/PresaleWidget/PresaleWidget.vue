@@ -21,6 +21,7 @@
 
 <script setup>
 import Widget from "./Widget.vue";
+import WalletTransferModal from "./modals/WalletTransferModal.vue";
 import BonusBanner from "./shared/BonusBanner.vue";
 import { Toast } from "./ui";
 import bgImage from "@/assets/img/bg-presale.png";

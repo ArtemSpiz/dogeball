@@ -26,7 +26,7 @@
 import { computed, watch } from "vue";
 import { useApiState } from "./useApiState";
 import { useUserState } from "./useUserState";
-import { useWallet, useAuth, useBuy, useStaking, useCodes } from "./blockchain";
+import { useWallet, useBuy, useCodes } from "./blockchain";
 import * as presaleApi from "@/api/presale";
 import {
   calculateReceiveAmount as calcReceive,
@@ -37,9 +37,10 @@ import {
   getContractAddress,
   getDecimals,
 } from "@/utils/web3";
+import { refetchUserData, refetchUserStakeData } from "@/presale-gg/stores/user.store";
+import { useStaking } from "./blockchain/useStaking";
 
 // Re-export for convenience
-export { setWagmiAdapter, setAppkitModal } from "./blockchain";
 export { BuyStateType } from "@/config/web3";
 
 /**
@@ -50,7 +51,6 @@ export function usePresale() {
   const apiData = useApiState();
   const userData = useUserState();
   const wallet = useWallet();
-  const auth = useAuth();
   const buy = useBuy();
   const staking = useStaking();
   const codes = useCodes();
@@ -122,7 +122,6 @@ export function usePresale() {
     await staking.stake({
       address: address.value,
       amount,
-      getToken: () => auth.getUserToken(address.value),
       onSuccess: refetchUserStakeData,
     });
   };
@@ -135,7 +134,6 @@ export function usePresale() {
     await staking.unstake({
       address: address.value,
       amount,
-      getToken: () => auth.getUserToken(address.value),
       onSuccess: refetchUserStakeData,
     });
   };
@@ -152,7 +150,6 @@ export function usePresale() {
     const result = await codes.applyBonusCode({
       address: address.value,
       code,
-      getToken: () => auth.getUserToken(address.value),
     });
 
     userData.appliedBonusCode.value = result;
@@ -171,54 +168,9 @@ export function usePresale() {
     await codes.applyReferralCode({
       address: address.value,
       code,
-      getToken: () => auth.getUserToken(address.value),
     });
 
     await refetchUserData();
-  };
-
-  // --------------------------------------------------------------------------
-  // USER DATA
-  // --------------------------------------------------------------------------
-
-  const refetchUserData = async () => {
-    if (!address.value) return;
-    try {
-      const res = await presaleApi.getUser(address.value);
-      userData.user.value = res.data;
-    } catch (e) {
-      console.warn("Failed to fetch user data:", e);
-    }
-  };
-
-  const refetchUserStakeData = async () => {
-    if (!address.value) return;
-    try {
-      const res = await presaleApi.getUserStakeData(address.value);
-      userData.userStakeData.value = res.data;
-    } catch (e) {
-      console.warn("Failed to fetch stake data:", e);
-    }
-  };
-
-  const updateClaimAddress = async (newClaimAddress) => {
-    if (!isConnected.value) {
-      throw new Error("Please connect your wallet");
-    }
-
-    const token = await auth.getUserToken(address.value);
-    await presaleApi.updateClaimAddress(
-      address.value,
-      newClaimAddress,
-      token.token
-    );
-
-    if (userData.user.value) {
-      userData.user.value = {
-        ...userData.user.value,
-        claim_wallet_address: newClaimAddress,
-      };
-    }
   };
 
   // --------------------------------------------------------------------------
@@ -256,24 +208,14 @@ export function usePresale() {
   };
 
   // --------------------------------------------------------------------------
-  // LIFECYCLE
-  // --------------------------------------------------------------------------
-
-  // Watch for address changes
-  watch(address, async (newAddress, oldAddress) => {
-    if (newAddress && newAddress !== oldAddress) {
-      auth.clearToken();
-      await Promise.all([refetchUserData(), refetchUserStakeData()]);
-    }
-  });
-
-  // --------------------------------------------------------------------------
   // RETURN
   // --------------------------------------------------------------------------
 
   return {
     // State from sub-composables
     buyState: buy.buyState,
+    currentPurchase: buy.currentPurchase,
+    buyLoading: buy.buyLoading,
     stakeLoading: staking.stakeLoading,
     unstakeLoading: staking.unstakeLoading,
     bonusCodeLoading: codes.bonusCodeLoading,
@@ -294,7 +236,7 @@ export function usePresale() {
     accountData: wallet.accountData,
 
     // Connection (from useWallet)
-    connect: wallet.connect,
+    showConnectWalletModal: wallet.showConnectWalletModal,
     disconnect: wallet.disconnect,
 
     // Buying
@@ -316,7 +258,6 @@ export function usePresale() {
     // User Data
     refetchUserData,
     refetchUserStakeData,
-    updateClaimAddress,
 
     // Transaction History
     getTransactionHistory,

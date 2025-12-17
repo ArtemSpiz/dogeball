@@ -30,10 +30,10 @@
       <!-- Labels -->
       <div class="flex items-center justify-between w-full">
         <span class="text-white font-grotesk text-xs font-normal leading-none">
-          {{ progressPercent }}% UNTIL PRICE RISE
+          {{ progressPercent }}% {{ t("presale.stageBox.untilPriceRise") }}
         </span>
         <span class="text-white font-grotesk text-xs font-normal leading-none">
-          of {{ formattedTarget }}
+          {{ t("presale.stageBox.of") }} {{ formattedTarget }}
         </span>
       </div>
 
@@ -44,7 +44,7 @@
       <p
         class="text-white text-center w-full font-grotesk text-xs font-normal leading-none"
       >
-        {{ formattedParticipants }} Participants
+        {{ formattedParticipants }} {{ t("presale.stageBox.participants") }}
       </p>
     </div>
   </div>
@@ -52,11 +52,13 @@
 
 <script setup>
 import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import { ProgressBar, Skeleton } from "../ui";
 import { usePresale } from "@/composables/usePresale";
 import { formatDollar, formatNumber, parseNum } from "@/utils/format";
 import { DEFAULT_STAGE_NAME } from "@/config/presale";
 
+const { t } = useI18n();
 const presale = usePresale();
 
 const isLoading = computed(() => presale.apiData.stageLoading.value);

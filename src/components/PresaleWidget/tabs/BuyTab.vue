@@ -18,19 +18,19 @@
 
     <!-- Presale/Launch Price Bar -->
     <div
-      class="flex px-3 sm:px-4 py-2 justify-between sm:justify-center items-center gap-1 self-stretch rounded-2xl border border-white/20 bg-[rgba(8,12,35,0.48)]"
+      class="flex px-3 sm:px-4 py-2 max-md:justify-center justify-between sm:justify-center items-center gap-1  self-stretch rounded-2xl border border-white/20 bg-[rgba(8,12,35,0.48)]"
     >
       <span
-        class="gap-1 text-white text-sm font-semibold leading-5 font-grotesk whitespace-nowrap overflow-hidden text-ellipsis h-full flex items-center font-feature-off"
+        class="gap-1 max-md:gap-0.5  text-white text-sm max-md:text-xs font-semibold leading-5 font-grotesk whitespace-nowrap overflow-hidden text-ellipsis h-full flex items-center font-feature-off"
       >
-        Presale Price =
+        {{ t("presale.buyTab.presalePrice") }}
         <span class="text-[#59A6FD]">
           {{
             formatDollar(parseNum(presale.stage.value?.token_price), true, 0, 4)
           }}
         </span>
         <span> | </span>
-        <span>Launch Price =</span>
+        <span>{{ t("presale.buyTab.launchPrice") }}</span>
         <span class="text-[#59A6FD]">
           {{ formatDollar(LAUNCH_PRICE, true, 0, 4) }}
         </span>
@@ -54,8 +54,12 @@
     >
       <Spinner v-if="isBuying" :size="5" />
       <template v-else>
-        <span v-if="presale.presaleEnded.value">Presale Ended</span>
-        <span v-else-if="!presale.isConnected.value">Connect Wallet</span>
+        <span v-if="presale.presaleEnded.value">{{
+          t("presale.buyTab.presaleEnded")
+        }}</span>
+        <span v-else-if="!presale.isConnected.value">{{
+          t("presale.buyTab.connectWallet")
+        }}</span>
         <span v-else>{{ buyButtonText }}</span>
       </template>
     </Button>
@@ -88,11 +92,33 @@
 
     <!-- Powered By -->
     <PoweredBy />
+    <NowPaymentsModal
+      v-if="nowPaymentsTransaction"
+      :open="nowPaymentsModalVisible"
+      @close="() => (nowPaymentsModalVisible = false)"
+      :transaction="nowPaymentsTransaction"
+    />
+    <WalletTransferModal
+      v-if="presale.currentPurchase.value"
+      :open="walletTransferModalVisible"
+      @close="closeWalletTransfer"
+      :pay-amount="presale.currentPurchase.value.payAmount"
+      :pay-currency="presale.currentPurchase.value.token"
+      :state="presale.currentPurchase.value.state"
+      :transaction="presale.currentPurchase.value.transaction"
+      :transaction-hash="presale.currentPurchase.value.transactionHash"
+      :transaction-error="presale.currentPurchase.value.error"
+    />
+    <ContactModal
+      :open="contactModalVisible"
+      @close="() => (contactModalVisible = false)"
+    />
   </div>
 </template>
 
 <script setup>
-import { ref, watch, computed, onMounted } from "vue";
+import { useI18n } from "vue-i18n";
+import { ref, watch, computed, onMounted, watchEffect } from "vue";
 import StageBox from "../stage/StageBox.vue";
 import { TokenSelectGrid, TokenAmountInputs } from "../token";
 import { Button, Spinner, PillButton } from "../ui";
@@ -103,10 +129,18 @@ import { usePresale, BuyStateType } from "@/composables/usePresale";
 import { useToast } from "@/composables/useToast";
 import { formatDollar, parseNum, formatPrecision } from "@/utils/format";
 import { LAUNCH_PRICE, DEFAULT_PAYMENT_AMOUNT } from "@/config/presale";
+import { presaleApi } from "@/api";
+import NowPaymentsModal from "../modals/NowPaymentsModal.vue";
+import WalletTransferModal from "../modals/WalletTransferModal.vue";
+import { isWalletTransferSupported } from "@/utils/web3";
+import ContactModal from "../modals/ContactModal.vue";
 
-// Composables
+const { t } = useI18n();
+
 const presale = usePresale();
 const toast = useToast();
+
+watchEffect(() => console.log(presale.isConnected.value));
 
 // Local state
 const selectedToken = ref(null);
@@ -114,39 +148,42 @@ const paymentAmountStr = ref(DEFAULT_PAYMENT_AMOUNT);
 const receiveAmountStr = ref("0");
 const visibleOption = ref(null);
 
-const codeOptions = [
-  { label: "Bonus Code", value: "bonus" },
-  { label: "Referral Code", value: "referral" },
-];
+const codeOptions = computed(() => [
+  { label: t("presale.buyTab.bonusCode"), value: "bonus" },
+  { label: t("presale.buyTab.referralCode"), value: "referral" },
+]);
 
 // Computed
 const isBuying = computed(() => {
   const state = presale.buyState.value.type;
-  return [
-    BuyStateType.SENDING,
-    BuyStateType.CONFIRMING,
-    BuyStateType.FINALIZING,
-  ].includes(state);
+  return (
+    [
+      BuyStateType.SENDING,
+      BuyStateType.CONFIRMING,
+      BuyStateType.FINALIZING,
+    ].includes(state) || presale.buyLoading.value
+  );
 });
 
 const buyButtonText = computed(() => {
-  if (!selectedToken.value) return "Select Token";
-  if (parseNum(paymentAmountStr.value) <= 0) return "Enter Amount";
+  if (!selectedToken.value) return t("presale.buyTab.selectToken");
+  if (parseNum(paymentAmountStr.value) <= 0)
+    return t("presale.buyTab.enterAmount");
   if (selectedToken.value.symbol.toUpperCase() === "CARD") {
-    return "Buy with Card";
+    return t("presale.buyTab.buyWithCard");
   }
-  return "Coming Soon";
+  return t("presale.buyTab.comingSoon");
 });
 
 const buyStateMessage = computed(() => {
   const state = presale.buyState.value;
   switch (state.type) {
     case BuyStateType.SENDING:
-      return "Confirm the transaction in your wallet...";
+      return t("presale.buyTab.confirmTransaction");
     case BuyStateType.CONFIRMING:
-      return "Waiting for blockchain confirmation...";
+      return t("presale.buyTab.waitingConfirmation");
     case BuyStateType.FINALIZING:
-      return "Processing your purchase...";
+      return t("presale.buyTab.processingPurchase");
     default:
       return null;
   }
@@ -167,14 +204,17 @@ watch(
 
 // Calculate receive amount when payment changes
 watch(
-  [selectedToken, paymentAmountStr, () => presale.stage.value?.token_price],
+  [selectedToken, () => presale.stage.value?.token_price],
   () => {
     if (!selectedToken.value || !presale.stage.value) return;
     const receiveNum = presale.calculateReceiveAmount(
       paymentAmountStr.value,
       selectedToken.value
     );
-    receiveAmountStr.value = formatPrecision(receiveNum, 0, 2);
+    receiveAmountStr.value = (
+      Math.floor(receiveNum * 10 ** 2) /
+      10 ** 2
+    ).toString();
   },
   { immediate: true }
 );
@@ -195,27 +235,39 @@ const toggleCodeOption = (value) => {
   visibleOption.value = visibleOption.value === value ? null : value;
 };
 
+/** @type {import("vue").Ref<import("@/api/api.types").API.Transaction | null>} */
+const nowPaymentsTransaction = ref(null);
+const nowPaymentsModalVisible = ref(false);
+const walletTransferModalVisible = ref(false);
+
+const contactModalVisible = ref(false);
+
+const closeWalletTransfer = () => {
+  walletTransferModalVisible.value = false;
+  contactModalVisible.value = true;
+};
+
 const handleBuy = async () => {
   // Connect wallet if not connected
   if (!presale.isConnected.value) {
-    await presale.connect();
+    presale.showConnectWalletModal();
     return;
   }
 
   // Validation
   if (presale.presaleEnded.value) {
-    toast.showError("Presale has ended");
+    toast.showError(t("presale.errors.presaleEnded"));
     return;
   }
 
   if (!selectedToken.value) {
-    toast.showError("Please select a payment method");
+    toast.showError(t("presale.errors.selectPaymentMethod"));
     return;
   }
 
   const paymentAmount = parseNum(paymentAmountStr.value);
   if (paymentAmount <= 0) {
-    toast.showError("Please enter an amount");
+    toast.showError(t("presale.errors.enterAmount"));
     return;
   }
 
@@ -235,10 +287,10 @@ const handleBuy = async () => {
           );
         },
         onError: () => {
-          toast.showError("Card payment failed. Please try again.");
+          toast.showError(t("presale.errors.cardPaymentFailed"));
         },
         onClosedEarly: () => {
-          toast.showInfo("Payment is being processed. Check your dashboard.");
+          toast.showInfo(t("presale.errors.paymentProcessing"));
         },
       });
     } catch (err) {
@@ -253,7 +305,13 @@ const handleBuy = async () => {
       paymentToken: selectedToken.value,
       paymentAmount: paymentAmountStr.value,
       onStateChanged: (state) => {
-        if (state.type === BuyStateType.FINISHED) {
+        if (
+          state.state === "sending" &&
+          isWalletTransferSupported(selectedToken.value)
+        ) {
+          setTimeout(() => (walletTransferModalVisible.value = true), 50);
+        }
+        if (state.state === BuyStateType.FINISHED) {
           const tokensReceived = parseNum(receiveAmountStr.value);
           toast.showSuccess(
             `Successfully purchased ${formatPrecision(
@@ -269,13 +327,14 @@ const handleBuy = async () => {
     // Handle NowPayments flow (shows payment modal)
     if (result?.type === "created" && result.transaction) {
       toast.showInfo("Complete your payment in the popup window");
-      // NowPayments modal will handle the rest
+      nowPaymentsTransaction.value = result.transaction;
+      setTimeout(() => (nowPaymentsModalVisible.value = true), 50);
     }
   } catch (err) {
     const message =
       err?.shortMessage ||
       err?.message ||
-      "Transaction failed. Please try again.";
+      t("presale.errors.transactionFailed");
     toast.showError(message);
     console.error("Buy error:", err);
   }

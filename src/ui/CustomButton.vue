@@ -30,5 +30,6 @@ defineEmits(["click"]);
     ]"
   >
     {{ title }}
+    <slot></slot>
   </button>
 </template>

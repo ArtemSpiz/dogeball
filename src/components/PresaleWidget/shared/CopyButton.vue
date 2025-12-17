@@ -9,7 +9,12 @@
     :title="title"
     @click="handleCopy"
   >
-    <CopyIcon v-if="!copied" :size="iconSize" :color="color" :class="iconSizeClasses" />
+    <CopyIcon
+      v-if="!copied"
+      :size="iconSize"
+      :color="color"
+      :class="iconSizeClasses"
+    />
     <CheckIcon v-else :size="iconSize" :class="iconSizeClasses" />
   </button>
 </template>
@@ -89,4 +94,3 @@ const handleCopy = async () => {
   }
 };
 </script>
-

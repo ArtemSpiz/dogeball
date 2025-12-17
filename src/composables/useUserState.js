@@ -1,17 +1,13 @@
-import { ref } from "vue";
-
-// Mock user state - replace with actual user data from API
-const user = ref({
-  referral_code: "5ufR0RB2zJdZ",
-});
-const userStakeData = ref(null);
-const appliedBonusCode = ref(null);
+import { $userState } from "@/presale-gg/stores/user.store";
+import { useStore } from "@nanostores/vue";
+import { computed, ref } from "vue";
 
 export function useUserState() {
-  // TODO: Replace with actual user data fetching
+  const userData = useStore($userState)
+
   return {
-    user,
-    userStakeData,
-    appliedBonusCode,
+    user: computed(() => userData.value.user),
+    userStakeData: computed(() => userData.value.userStakeData),
+    appliedBonusCode: computed(() => userData.value.appliedBonusCode),
   };
 }

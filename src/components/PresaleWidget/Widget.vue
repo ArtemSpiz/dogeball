@@ -47,6 +47,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
+import { useI18n } from "vue-i18n";
 import BuyTab from "./tabs/BuyTab.vue";
 import StakeTab from "./tabs/StakeTab.vue";
 import HistoryTab from "./tabs/HistoryTab.vue";
@@ -54,32 +55,33 @@ import { Loader } from "./ui";
 import { BuyIcon, StakeIcon, DashboardIcon } from "./icons";
 import { usePresale } from "@/composables/usePresale";
 
+const { t } = useI18n();
 const presale = usePresale();
 
-const tabs = [
+const tabs = computed(() => [
   {
-    label: "Buy",
+    label: t("presale.tabs.buy"),
     key: "buy",
     icon: BuyIcon,
     component: BuyTab,
   },
   {
-    label: "Stake",
+    label: t("presale.tabs.stake"),
     key: "stake",
     icon: StakeIcon,
     component: StakeTab,
   },
   {
-    label: "Dashboard",
+    label: t("presale.tabs.dashboard"),
     key: "history",
     icon: DashboardIcon,
     component: HistoryTab,
   },
-];
+]);
 
 const selectedTabKey = ref("buy");
 const selectedTab = computed(() =>
-  tabs.find((tab) => tab.key === selectedTabKey.value)
+  tabs.value.find((tab) => tab.key === selectedTabKey.value)
 );
 const innerRef = ref(null);
 

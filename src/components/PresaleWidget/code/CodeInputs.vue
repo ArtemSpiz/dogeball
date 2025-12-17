@@ -17,7 +17,9 @@
           d="M5 13l4 4L19 7"
         />
       </svg>
-      <p class="text-emerald-400 flex-1 leading-tight text-sm font-medium truncate">
+      <p
+        class="text-emerald-400 flex-1 leading-tight text-sm font-medium truncate"
+      >
         {{ appliedText }}
       </p>
     </div>
@@ -43,14 +45,21 @@
       class="!px-3"
       @click="handleClick"
     >
-      {{ appliedText ? "Change" : "Apply" }}
+      {{
+        appliedText
+          ? t("presale.codeInputs.change")
+          : t("presale.codeInputs.apply")
+      }}
     </PillButton>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
+import { useI18n } from "vue-i18n";
 import { PillButton } from "../ui";
+
+const { t } = useI18n();
 
 const props = defineProps({
   appliedText: {
@@ -82,7 +91,9 @@ const hasUrlDefault = ref(false);
 const inputRef = ref(null);
 
 onMounted(() => {
-  const urlValue = new URLSearchParams(window.location.search).get(props.urlKey);
+  const urlValue = new URLSearchParams(window.location.search).get(
+    props.urlKey
+  );
   if (urlValue) {
     hasUrlDefault.value = true;
     code.value = urlValue;

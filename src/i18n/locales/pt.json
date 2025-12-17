@@ -1,0 +1,285 @@
+{
+  "header": {
+    "about": "Sobre",
+    "roadmap": "Roteiro",
+    "howToBuy": "Como comprar",
+    "playDogeball": "Jogar $DOGEBALL",
+    "tokenomics": "Tokenomics",
+    "ethL2": "ETH L2",
+    "faqs": "Perguntas frequentes",
+    "connectWallet": "Conectar carteira"
+  },
+  "footer": {
+    "termsConditions": "Termos e condições",
+    "cookiesPolicy": "Política de cookies",
+    "privacyPolicy": "Política de privacidade",
+    "disclaimer": "Aviso: $DOGEBALL é uma moeda meme apoiada por utilidade. Os mercados de criptomoedas são altamente voláteis, invista com cautela. As criptomoedas podem não ser regulamentadas na sua jurisdição. Cuidado com sites e canais de mídia social imitadores de '$DOGEBALL' (apenas links oficiais neste site).",
+    "copyright": "Copyright © 2025 DOGEBALL. Todos os direitos reservados."
+  },
+  "hero": {
+    "title": "O PRIMEIRO JOGO CRIPTO ALIMENTADO POR L2 DO MUNDO",
+    "subtitle": "$DOGEBALL, o único DOGE que joga cripto em uma blockchain EVM L2 personalizada. Rápido, barato, seguro. Jogue por uma chance de ganhar $1M",
+    "whitelistEmail": "Digite o email para ser adicionado à Lista Branca",
+    "emailPlaceholder": "seu email",
+    "getEarlyAccess": "Obtenha acesso antecipado!",
+    "audit": "Auditoria",
+    "whitepaper": "Whitepaper"
+  },
+  "roadmap": {
+    "welcome": "BEM-VINDO AO JOGO DOGEBALL!",
+    "title": "Roteiro",
+    "phase1": "Fase 1",
+    "phase2": "Fase 2",
+    "phase3": "Fase 3",
+    "phase4": "Fase 4",
+    "evolution": "Evolução",
+    "development": "Desenvolvimento",
+    "expansion": "Expansão",
+    "gameV2Expansion": "Expansão do jogo e V2",
+    "phase1Sub1": "A evolução de DOGE para $DOGEBALL",
+    "phase1Sub2": "Plano de jogo $DOGEBALL criado",
+    "phase1Sub3": "Canais sociais e site desenvolvidos",
+    "phase1Sub4": "Contrato criado e auditado",
+    "phase2Sub1": "Jogo $DOGEBALL desenvolvido",
+    "phase2Sub2": "DOGECHAIN EVM L2 implantado",
+    "phase2Sub3": "Expansão da comunidade",
+    "phase2Sub4": "Pré-venda começa",
+    "phase3Sub1": "Campanha de marketing global",
+    "phase3Sub2": "Parcerias de jogos corporativos",
+    "phase3Sub3": "$DOGEBALL listado em exchanges globais",
+    "phase3Sub4": "$DOGEBALL se torna viral",
+    "phase4Sub1": "Desenvolvimento do jogo $DOGEBALL V2",
+    "phase4Sub2": "Listagens CEX continuadas",
+    "phase4Sub3": "Lançamento global da blockchain L2",
+    "phase4Sub4": "Tokens de evolução futura criados"
+  },
+  "about": {
+    "title": "SOBRE",
+    "subtitle": "A transição das moedas meme cripto",
+    "description": "No centro do DOGECHAIN está o jogo $DOGEBALL — um jogo online viciante de queimada onde os jogadores lançam DOGEBALLs, sobem de nível, escalam a tabela de classificação e competem por um prêmio de $1M ($500k para o melhor jogador)!",
+    "card1": "Jogo online $DOGEBALL, jogue para ganhar parte de $1m!",
+    "card2": "Blockchain ETH L2 personalizada com taxas de usuário ultrabaixas",
+    "card3": "Transações ultrarrápidas, alimentando o futuro dos jogos online",
+    "card4": "Staking de alto rendimento a 80%",
+    "card5": "Diversão pura garantida!",
+    "testDescription": "Ao contrário de outras L2s de moedas meme, você pode testar nosso DOGECHAIN personalizado e experimentar você mesmo o rei de todas as L2s!",
+    "clickHere": "Clique aqui",
+    "partnerships": "Parcerias com as maiores organizações de jogos do mundo estão em andamento"
+  },
+  "howToBuy": {
+    "title": "COMO COMPRAR",
+    "step1": "Passo 1",
+    "step2": "Passo 2",
+    "step3": "Passo 3",
+    "step4": "Passo 4",
+    "earnRewards": "Ganhar recompensas",
+    "connectWallet": "Conectar carteira",
+    "connectWalletDesc": "Localize o widget de pré-venda no topo da página ({link}) e clique em 'Conectar carteira' usando sua carteira preferida. Múltiplas opções de carteira (incl. Metamask e Coinbase) estão disponíveis para seleção.",
+    "selectToken": "Selecionar token e valor",
+    "selectTokenDesc": "Selecione sua moeda preferida (ETH, USDT, USDC, SOL, BNB e muitas outras) ou pague com cartão bancário, selecione a quantidade de tokens $DOGEBALL que deseja comprar e clique em 'COMPRAR $DOGEBALL'. Digite códigos de indicação e bônus (se você tiver) — veja as Perguntas frequentes para mais detalhes sobre o uso de códigos.",
+    "buyToken": "Comprar token e aprovar transação",
+    "buyTokenDesc": "Complete sua compra aprovando a transação em sua carteira conectada. Uma vez confirmado, sua compra e valor do token serão registrados com segurança na blockchain e visíveis em 'Painel' no widget de pré-venda acima.",
+    "claimToken": "Reivindicar token $DOGEBALL",
+    "claimTokenDesc": "Após o término da pré-venda, você pode reivindicar seus tokens $DOGEBALL com a mesma carteira usada para sua compra. Detalhes sobre reivindicação serão divulgados nos canais de mídia social assim que a pré-venda terminar.",
+    "staking": "STAKING",
+    "stakingDesc": "Bloqueie seus tokens de compra de pré-venda em nosso pool de staking de contrato inteligente seguro e auditado; ganhe recompensas $DOGEBALL com um APY alto de 80% e maximize seu retorno de tokens $DOGEBALL.",
+    "clickHere": "Clique aqui"
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "q1": "O que é $DOGEBALL?",
+    "a1": "$DOGEBALL é uma moeda de dupla utilidade que alimenta uma blockchain Layer 2 personalizada projetada para transações com taxas quase zero, alta velocidade e segurança de primeira linha, perfeitamente integrada com o jogo online $DOGEBALL. Como token nativo, $DOGEBALL alimenta todo o ecossistema, oferecendo uma base robusta para usuários e jogadores. Os tokens têm uma utilidade na vida real e serão usados para completar transações na indústria de jogos no futuro.",
+    "q2": "O que é staking $DOGEBALL?",
+    "a2": "Fazer staking de $DOGEBALL envolve bloquear seus tokens em um contrato inteligente seguro por um período determinado (apenas durante a pré-venda) para ganhar tokens $DOGEBALL adicionais sem custo extra. As recompensas de staking serão liberadas após o período mínimo de vesting de 7 dias. Consulte a seção 'STAKING' em 'COMO COMPRAR ACIMA'. {link}",
+    "q3": "Como compro $DOGEBALL?",
+    "a3": "Você pode se juntar à comunidade $DOGEBALL simplesmente conectando sua carteira escolhida ao widget de pré-venda no topo desta página {link}. Selecione sua criptomoeda preferida para usar ou pague com seu Cartão de Crédito/Débito para garantir seus tokens $DOGEBALL.",
+    "q4": "Onde estão meus tokens $DOGEBALL?",
+    "a4": "Os usuários podem ver seu saldo $DOGEBALL assim que sua carteira estiver conectada (veja o topo da página). A seção 'Painel' no widget de pré-venda mostrará o saldo do usuário e o histórico de compras. {link}",
+    "q5": "Quando recebo meus tokens?",
+    "a5": "Após comprar $DOGEBALL na pré-venda, você pode usar a mesma carteira para reivindicar seus tokens antes da listagem inicial na exchange. Fique atento às nossas redes sociais para anúncios de reivindicação e datas de listagem.",
+    "q6": "O token $DOGEBALL é seguro para comprar?",
+    "a6": "Sim, o contrato $DOGEBALL foi auditado pela Coinsult, uma das maiores e mais confiáveis auditoras de projetos blockchain, alcançando 100% na pontuação geral de auditoria. {link} para o relatório completo de auditoria.",
+    "q7": "Como gero um código de indicação e uso códigos bônus?",
+    "a7": "Seu código de indicação único pode ser gerado clicando em 'Conectar carteira' e clicando em 'Painel'; cada usuário receberá seu próprio código de indicação único e link URL para fornecer a outros usuários. O usuário indicado deve inserir isso na tela 'Comprar' sob o botão 'Comprar $DOGEBALL' e clicar em 'Aplicar'. Os valores de bônus de indicação serão adicionados ao valor da compra e visíveis no 'Painel' (tanto para o indicador quanto para o usuário indicado). Códigos bônus de tempo limitado devem ser inseridos clicando em 'Código Bônus' (sob o botão 'Comprar $DOGEBALL' após a conexão da carteira) e clicando em 'Aplicar'."
+  },
+  "tokenomics": {
+    "title": "TOKENOMICS",
+    "contractAddress": "Endereço do contrato",
+    "totalSupply": "Oferta total",
+    "tokens": "Tokens",
+    "development": "Desenvolvimento",
+    "presale": "Pré-venda",
+    "treasuryReserves": "Reservas do tesouro",
+    "stakingGamesRewards": "Recompensas de staking e jogos",
+    "marketing": "Marketing",
+    "liquidity": "Liquidez"
+  },
+  "roadmapSteps": {
+    "mainDescription": "Entre na arena e mostre sua mira! Toque ou clique para lançar — cronometre certo e esmague cada alvo no seu caminho!",
+    "step1": "Marque muito!",
+    "step2": "Escale as classificações!",
+    "step3": "Torne-se o campeão definitivo do DOGEBALL!",
+    "description1": "Cada acerto te dá pontos, e combos elevam sua pontuação até o céu! Mas cuidado — perca muitos lançamentos, e é GAME OVER. Suba de nível para desbloquear diferentes fundos e arenas, tudo adiciona à experiência do jogo.",
+    "description2": "Os inimigos ficam mais rápidos e mais difíceis, e ficam distantes conforme você sobe de nível. Apenas os jogadores mais afiados e precisos podem alcançar a TOP 10 Leaderboard, onde o vencedor receberá o jackpot de $500k de tokens $DOGEBALL, com outro prêmio de $500k dividido entre os 9 jogadores restantes. Observe que apenas usuários que compraram tokens na pré-venda $DOGEBALL são elegíveis para fazer parte do PRÊMIO DE $1M."
+  },
+  "roadmapGame": {
+    "title": "O jogo começa em breve!",
+    "description": "Disponível para jogar logo após o início da pré-venda — fique de olho nos canais oficiais do Telegram e X nas redes sociais para notícias de lançamento",
+    "comingSoon": "Em breve",
+    "privacyNote": "Os usuários devem inserir o mesmo endereço de carteira que usaram para fazer compras de pré-venda ao concluir o jogo (a opção para inserir o endereço da carteira será exibida se a pontuação do jogo for alta o suficiente para entrar na tabela de classificação). Nota para proteger a privacidade e segurança do usuário, os endereços da carteira NÃO estarão visíveis no site ou mencionados em quaisquer canais de mídia social; apenas o nome de usuário escolhido inserido no próprio jogo será mencionado."
+  },
+  "ethL2": {
+    "heroTitle": "TORNEIRA DOGECHAIN",
+    "heroSubtitle": "Experimente nossa blockchain ETH L2 personalizada sem custo!",
+    "blockchainTitle": "Obtenha tokens de teste blockchain $DOGEBALL",
+    "blockchainSubtitle": "Os tokens de teste blockchain $DOGEBALL são gratuitos e não custam ao usuário nenhum cripto/dinheiro",
+    "blockchainDescription": "A cada 24 horas, os tokens de teste blockchain $DOGEBALL podem ser reivindicados pela mesma carteira (observe que esses tokens NÃO são os tokens que os usuários compram durante a pré-venda; esses tokens foram criados para os usuários experimentarem durante a pré-venda apenas e não têm valor de token)",
+    "card1Text": "Adicione a rede personalizada ETH L2 DOGECHAIN à sua carteira escolhida (consulte o site da sua carteira escolhida para detalhes sobre como adicionar uma rede personalizada) usando os detalhes abaixo:",
+    "blockchainName": "Nome da blockchain",
+    "rpcUrl": "URL RPC",
+    "chainId": "ID da cadeia",
+    "symbol": "Símbolo",
+    "card2Text": "Clique no botão {connectWallet} no topo da página para conectar sua carteira. Seu endereço de carteira será preenchido automaticamente na torneira abaixo",
+    "card3Text": "Selecione a quantidade de tokens de teste para usar (máx. 0,01 tokens de teste $DOGEBALL podem ser reivindicados usando a mesma carteira por período de 24 horas)",
+    "card4Text": "Clique no botão {send} abaixo para reivindicar seus tokens de teste $DOGEBALL gratuitos da torneira",
+    "card5Text": "Aguarde a conclusão da transação — os tokens aparecerão em sua carteira na rede DOGECHAIN.",
+    "card5Text2": "Veja todas as transações e atividades blockchain do nosso DOGECHAIN {here}",
+    "card6Text": "Teste a blockchain enviando tokens de teste $DOGEBALL para outros endereços de carteira (observe que a carteira receptora também deve ter a rede personalizada DOGECHAIN adicionada à sua carteira para receber os tokens de teste)",
+    "card7Text": "E pronto, você experimentou a velocidade, custo zero e segurança da blockchain DOGECHAIN ETH L2 criada sob medida!",
+    "selectToken": "Selecionar token",
+    "walletAddress": "Endereço da carteira",
+    "walletAddressPlaceholder": "Conecte sua carteira para preencher automaticamente seu endereço.",
+    "comingSoon": "Em breve",
+    "connectWallet": "Conectar carteira",
+    "send": "Enviar",
+    "here": "Aqui"
+  },
+  "common": {
+    "clickHere": "Clique aqui"
+  },
+  "timer": {
+    "days": "Dias",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "seconds": "Segundos"
+  },
+  "presale": {
+    "tabs": {
+      "buy": "Comprar",
+      "stake": "Stake",
+      "dashboard": "Painel"
+    },
+    "stage": {
+      "stage": "Fase"
+    },
+    "buyTab": {
+      "presalePrice": "Preço de pré-venda =",
+      "launchPrice": "Preço de lançamento =",
+      "connectWallet": "Conectar carteira",
+      "presaleEnded": "Pré-venda encerrada",
+      "selectToken": "Selecionar token",
+      "enterAmount": "Inserir valor",
+      "buyWithCard": "Comprar com cartão",
+      "comingSoon": "Em breve",
+      "bonusCode": "Código bônus",
+      "referralCode": "Código de indicação",
+      "confirmTransaction": "Confirme a transação em sua carteira...",
+      "waitingConfirmation": "Aguardando confirmação blockchain...",
+      "processingPurchase": "Processando sua compra..."
+    },
+    "stakeTab": {
+      "connectWalletMessage": "Conecte sua carteira para ver e gerenciar seu staking",
+      "availableToStake": "Disponível para stake",
+      "maxStake": "Stake máximo",
+      "maxUnstake": "Unstake máximo",
+      "stake": "Stake",
+      "unstake": "Unstake",
+      "ownedTokens": "Tokens possuídos",
+      "currentlyStaked": "Atualmente em stake",
+      "dailyInterest": "Juros diários",
+      "totalEarnings": "Ganhos totais",
+      "earnApy": "Ganhe {{apy}}% APY fazendo stake de seus tokens"
+    },
+    "historyTab": {
+      "connectWalletMessage": "Conecte sua carteira para ver seu painel",
+      "yourTransactions": "Suas transações",
+      "noTransactions": "Ainda não há transações",
+      "purchasesWillAppear": "Suas compras aparecerão aqui"
+    },
+    "referralCode": {
+      "label": "Código de indicação",
+      "placeholder": "Digite o código de indicação",
+      "applied": "Código de indicação aplicado!",
+      "connectWalletFirst": "Por favor, conecte sua carteira primeiro",
+      "enterCode": "Por favor, digite um código de indicação",
+      "cannotUseOwn": "Você não pode usar seu próprio código de indicação",
+      "appliedSuccess": "Código de indicação aplicado com sucesso!",
+      "invalidCode": "Código de indicação inválido"
+    },
+    "bonusCode": {
+      "label": "Código bônus",
+      "placeholder": "Digite o código bônus",
+      "applied": "Bônus aplicado!",
+      "connectWalletFirst": "Por favor, conecte sua carteira primeiro",
+      "enterCode": "Por favor, digite um código bônus",
+      "appliedSuccess": "Código bônus aplicado com sucesso!",
+      "invalidCode": "Código bônus inválido"
+    },
+    "referralData": {
+      "yourReferralLink": "Seu link de indicação",
+      "yourReferralCode": "Seu código de indicação",
+      "totalReferrals": "Total de indicações",
+      "tokensEarned": "Tokens ganhos",
+      "copy": "Copiar"
+    },
+    "codeInputs": {
+      "change": "Alterar",
+      "apply": "Aplicar"
+    },
+    "stageBox": {
+      "untilPriceRise": "ATÉ O AUMENTO DO PREÇO",
+      "of": "de",
+      "participants": "Participantes"
+    },
+    "bonusBanner": {
+      "presaleLaunchOffer": "Oferta de lançamento de pré-venda",
+      "useBonusCode": "Usar código bônus",
+      "toGetMore": "Para obter 10% mais tokens $DOGEBALL!",
+      "copied": "Copiado!",
+      "copyCode": "Copiar código"
+    },
+    "transactions": {
+      "awaitingPayment": "Aguardando pagamento",
+      "processing": "Processando...",
+      "manual": "Manual",
+      "purchase": "Compra"
+    },
+    "errors": {
+      "presaleEnded": "A pré-venda terminou",
+      "selectPaymentMethod": "Por favor, selecione um método de pagamento",
+      "enterAmount": "Por favor, digite um valor",
+      "cardPaymentFailed": "Pagamento com cartão falhou. Por favor, tente novamente.",
+      "paymentProcessing": "O pagamento está sendo processado. Verifique seu painel.",
+      "completePayment": "Complete seu pagamento na janela popup",
+      "transactionFailed": "A transação falhou. Por favor, tente novamente.",
+      "insufficientTokens": "Tokens insuficientes disponíveis para stake",
+      "failedToStake": "Falha ao fazer stake dos tokens",
+      "cannotUnstakeMore": "Não é possível fazer unstake mais do que está atualmente em stake",
+      "failedToUnstake": "Falha ao fazer unstake dos tokens"
+    },
+    "copy": "Copiar",
+    "tokenAmountInputs": {
+      "youPay": "Você paga",
+      "youReceive": "Você recebe"
+    },
+    "transactionDetails": {
+      "for": "por $",
+      "reason": "Motivo:"
+    },
+    "poweredBy": "Alimentado por",
+    "tokenSelect": {
+      "more": "Mais",
+      "otherCryptos": "+ Outras criptos"
+    }
+  }
+}

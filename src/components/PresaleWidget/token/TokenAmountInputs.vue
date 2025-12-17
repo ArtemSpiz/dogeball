@@ -8,7 +8,7 @@
         <p
           class="text-white font-grotesk text-sm font-medium leading-5 font-feature-off"
         >
-          You pay
+          {{ t("presale.tokenAmountInputs.youPay") }}
         </p>
         <input
           ref="paymentInputRef"
@@ -54,7 +54,7 @@
         <p
           class="text-white font-grotesk text-sm font-medium leading-5 font-feature-off"
         >
-          You receive
+          {{ t("presale.tokenAmountInputs.youReceive") }}
         </p>
         <input
           ref="receiveInputRef"
@@ -83,9 +83,12 @@
 
 <script setup>
 import { computed, ref } from "vue";
+import { useI18n } from "vue-i18n";
 import TokenBadge from "./TokenBadge.vue";
 import { usePresale } from "@/composables/usePresale";
 import { parseNum, formatPrecision, partialNumRegexp } from "@/utils/format";
+
+const { t } = useI18n();
 
 const props = defineProps({
   selectedToken: {
@@ -145,7 +148,7 @@ const handlePaymentInput = (e) => {
   // Calculate receive amount
   if (props.selectedToken && presale.stage.value) {
     const receiveNum = presale.calculateReceiveAmount(val, props.selectedToken);
-    emit("update:receiveAmount", formatPrecision(receiveNum, 0, 2));
+    emit("update:receiveAmount", (Math.floor(receiveNum * 10 ** 2) / 10 ** 2).toString());
   }
 };
 
@@ -178,7 +181,7 @@ const handleReceiveInput = (e) => {
   // Calculate payment amount
   if (props.selectedToken && presale.stage.value) {
     const paymentNum = presale.calculatePaymentAmount(val, props.selectedToken);
-    emit("update:paymentAmount", formatPrecision(paymentNum, 0, 6));
+    emit("update:paymentAmount", (Math.floor(paymentNum * 10 ** 6) / 10 ** 6).toString());
   }
 };
 </script>

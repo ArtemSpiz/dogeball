@@ -10,6 +10,9 @@ const PROJECT = "dball";
 
 /**
  * Base API fetch function
+ * @param {string} url
+ * @param {AxiosRequestConfig} [data={}]
+ * @returns {Promise<AxiosResponse<unknown>>}
  */
 export const apiFetch = async (url, options = {}) => {
   const res = await axios({
@@ -21,7 +24,18 @@ export const apiFetch = async (url, options = {}) => {
 };
 
 /**
+ * @typedef {object} UtmArgs
+ * @property {string} [referrer]
+ * @property {string} [utm_source]
+ * @property {string} [utm_medium]
+ * @property {string} [utm_campaign]
+ * @property {string} [utm_content]
+ * @property {string} [utm_term]
+ */
+
+/**
  * Get UTM args from URL
+ * @returns {UtmArgs}
  */
 export const getUtmArgs = () => {
   const url = new URL(window.location.href);
@@ -36,7 +50,13 @@ export const getUtmArgs = () => {
 };
 
 /**
- * Post leads (email signup)
+ * Post leads (email signup)*
+ * @param {object} args
+ * @param {string} args.email
+ * @param {string} args.name
+ * @param {string} [args.wallet_address]
+ * @param {string} [args.mobile]
+ * @returns {Promise<AxiosResponse<void>>}
  */
 export const postLeads = async ({ email, name, wallet_address, mobile }) => {
   return apiFetch(`/projects/${PROJECT}/leads`, {
@@ -47,6 +67,7 @@ export const postLeads = async ({ email, name, wallet_address, mobile }) => {
 
 /**
  * Get current active stage
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.Stage | null>>}
  */
 export const getActiveStage = () => {
   return apiFetch(`/projects/${PROJECT}/stages/current`);
@@ -54,6 +75,7 @@ export const getActiveStage = () => {
 
 /**
  * Get payment tokens (prices)
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.PaymentToken[]>>}
  */
 export const getPrices = () => {
   return apiFetch(`/projects/${PROJECT}/payment-tokens`);
@@ -61,6 +83,7 @@ export const getPrices = () => {
 
 /**
  * Get project info
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.Info>>}
  */
 export const getProjectInfo = () => {
   return apiFetch(`/projects/${PROJECT}/info`);
@@ -68,6 +91,8 @@ export const getProjectInfo = () => {
 
 /**
  * Get user by wallet address
+ * @param {string} address
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.User>>}
  */
 export const getUser = (address) => {
   return apiFetch(`/projects/${PROJECT}/wallet/${address}`);
@@ -75,6 +100,8 @@ export const getUser = (address) => {
 
 /**
  * Get SIWE message for signing
+ * @param {string} address
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.SweResponse>>}
  */
 export const getSiweMessage = (address) => {
   return apiFetch(`/projects/${PROJECT}/wallet/${address}/siwe/message`, {
@@ -86,8 +113,18 @@ export const getSiweMessage = (address) => {
   });
 };
 
+
+/**
+ * @typedef {object} SiweReturn
+ * @property {import("./api.types.d.ts").API.Token}
+ */
+
 /**
  * Verify SIWE message signature
+ * @param {string} address
+ * @param {string} message
+ * @param {string} signature
+ * @returns {Promise<AxiosResponse<SiweReturn>>}
  */
 export const verifySiweMessage = (address, message, signature) => {
   return apiFetch(`/projects/${PROJECT}/wallet/${address}/siwe/verify`, {
@@ -98,6 +135,12 @@ export const verifySiweMessage = (address, message, signature) => {
 
 /**
  * Create NowPayments transaction
+ * @param {object} args
+ * @param {string} args.wallet_address
+ * @param {number} args.payment_token_id
+ * @param {string} args.usd_amount
+ * @param {string} args.token_amount
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.Transaction>>}
  */
 export const createTransaction = ({
   wallet_address,
@@ -121,6 +164,12 @@ export const createTransaction = ({
 
 /**
  * Create card transaction (Wert)
+ * @param {object} args
+ * @param {string} args.wallet_address
+ * @param {number} args.payment_token_id
+ * @param {string} args.usd_amount
+ * @param {string} args.token_amount
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.Transaction>>}
  */
 export const createCardTransaction = ({ wallet_address, usd_amount }) => {
   return apiFetch(
@@ -137,6 +186,9 @@ export const createCardTransaction = ({ wallet_address, usd_amount }) => {
 
 /**
  * Create transaction metadata (for wallet transfers)
+ * @param {string} address
+ * @param {string} transactionHash
+ * @returns {Promise<AxiosResponse<null>>}
  */
 export const createTransactionMetadata = (address, transactionHash) => {
   return apiFetch(`/projects/${PROJECT}/wallet/${address}/transactions/metadata`, {
@@ -150,6 +202,11 @@ export const createTransactionMetadata = (address, transactionHash) => {
 
 /**
  * Get transaction history v2
+ * @param {string} project
+ * @param {string} address
+ * @param {number} page
+ * @param {number} [limit=12]
+ * @returns {Promise<AxiosResponse<import("./api.types").API.TransactionHistoryItemV2[]>>}
  */
 export const getTransactionHistoryV2 = (address, page = 0, limit = 12) => {
   return apiFetch(
@@ -161,16 +218,8 @@ export const getTransactionHistoryV2 = (address, page = 0, limit = 12) => {
 };
 
 /**
- * Get bonus transaction history
- */
-export const getBonusTransactionHistory = (address, page = 0, limit = 12) => {
-  return apiFetch(`/projects/${PROJECT}/wallet/${address}/bonus-transactions`, {
-    params: { page, limit },
-  });
-};
-
-/**
  * Get leaderboard
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.LeaderboardEntry[]>>}
  */
 export const getLeaderboard = () => {
   return apiFetch(`/projects/${PROJECT}/leaderboard`);
@@ -178,6 +227,7 @@ export const getLeaderboard = () => {
 
 /**
  * Get user leaderboard rank
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.LeaderboardEntry>>}
  */
 export const getUserLeaderboardRank = (address) => {
   return apiFetch(`/projects/${PROJECT}/leaderboard`, {
@@ -187,6 +237,7 @@ export const getUserLeaderboardRank = (address) => {
 
 /**
  * Get stake data
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.StakeData>>}
  */
 export const getStakeData = () => {
   return apiFetch(`/projects/${PROJECT}/stakes`);
@@ -194,6 +245,8 @@ export const getStakeData = () => {
 
 /**
  * Get user stake data
+ * @param {string} address
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.StakeData>>}
  */
 export const getUserStakeData = (address) => {
   return apiFetch(`/projects/${PROJECT}/wallet/${address}/stakes`);
@@ -201,6 +254,10 @@ export const getUserStakeData = (address) => {
 
 /**
  * Stake tokens
+ * @param {string} address
+ * @param {string} numTokens
+ * @param {string} accessToken
+ * @returns {Promise<AxiosResponse<void>>}
  */
 export const stakeTokens = (address, numTokens, accessToken) => {
   return apiFetch(`/projects/${PROJECT}/wallet/${address}/stakes`, {
@@ -214,6 +271,10 @@ export const stakeTokens = (address, numTokens, accessToken) => {
 
 /**
  * Unstake tokens
+ * @param {string} address
+ * @param {string} numTokens
+ * @param {string} accessToken
+ * @returns {Promise<AxiosResponse<void>>}
  */
 export const unstakeTokens = (address, numTokens, accessToken) => {
   return apiFetch(`/projects/${PROJECT}/wallet/${address}/unstake`, {
@@ -227,6 +288,10 @@ export const unstakeTokens = (address, numTokens, accessToken) => {
 
 /**
  * Apply bonus code
+ * @param {string} address
+ * @param {string} code
+ * @param {string} accessToken
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.BonusCode>>}
  */
 export const applyBonusCode = (address, code, accessToken) => {
   return apiFetch(`/projects/${PROJECT}/wallet/${address}/bonus-codes/${code}/apply`, {
@@ -239,6 +304,10 @@ export const applyBonusCode = (address, code, accessToken) => {
 
 /**
  * Update referral code
+ * @param {string} token
+ * @param {string} address
+ * @param {string} referralCode
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.User>>}
  */
 export const updateReferralCode = (token, address, referralCode) => {
   return apiFetch(`/projects/${PROJECT}/wallet/${address}`, {
@@ -252,6 +321,10 @@ export const updateReferralCode = (token, address, referralCode) => {
 
 /**
  * Update claim address
+ * @param {string} token
+ * @param {string} address
+ * @param {string} referralCode
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.User>>}
  */
 export const updateClaimAddress = (walletAddress, newClaimAddress, accessToken) => {
   return apiFetch(`/projects/${PROJECT}/wallet/${walletAddress}/claim-address`, {
@@ -265,6 +338,8 @@ export const updateClaimAddress = (walletAddress, newClaimAddress, accessToken) 
 
 /**
  * Get user ranks
+ * @param {string} address
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.UserRankData>>}
  */
 export const getUserRanks = (address) => {
   return apiFetch(`/projects/${PROJECT}/wallet/${address}/levels`);
@@ -272,6 +347,8 @@ export const getUserRanks = (address) => {
 
 /**
  * Level up user
+ * @param {string} address
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.UserRankData>>}
  */
 export const levelUpUser = (address) => {
   return apiFetch(`/projects/${PROJECT}/wallet/${address}/levels`, {
@@ -281,27 +358,18 @@ export const levelUpUser = (address) => {
 
 /**
  * Get referral bonuses
+ * @param {string} walletAddress
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.BonusCode>>}
  */
 export const getReferralBonuses = (walletAddress) => {
   return apiFetch(`/projects/${PROJECT}/wallet/${walletAddress}/referrals/bonuses`);
 };
 
 /**
- * Get banners
- */
-export const getBanners = () => {
-  return apiFetch(`/projects/${PROJECT}/banners`);
-};
-
-/**
- * Get banner image source URL
- */
-export const getBannerImageSrc = (url) => {
-  return `${BASE_URL}${url}`;
-};
-
-/**
  * Extract error message from API error
+ * @param {unknown} e
+ * @param {string} [defaultMsg]
+ * @returns {string}
  */
 export const getApiErrorMessage = (e, defaultMsg = "Internal server error") => {
   if (e?.response?.data) {
@@ -348,7 +416,6 @@ export default {
   createCardTransaction,
   createTransactionMetadata,
   getTransactionHistoryV2,
-  getBonusTransactionHistory,
   getLeaderboard,
   getUserLeaderboardRank,
   getStakeData,
@@ -361,8 +428,6 @@ export default {
   getUserRanks,
   levelUpUser,
   getReferralBonuses,
-  getBanners,
-  getBannerImageSrc,
   getApiErrorMessage,
 };
 
