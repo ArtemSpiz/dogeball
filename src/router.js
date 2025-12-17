@@ -13,24 +13,42 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
+    // Якщо є збережена позиція (браузерна навігація назад/вперед)
     if (savedPosition) {
-      return savedPosition;
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(savedPosition);
+        }, 100);
+      });
     }
 
-    return {
-      top: 0,
-      left: 0,
-      behavior: "auto", // важливо для мобільних
-    };
+    // Для нових переходів - завжди скролимо вгору
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ top: 0, left: 0, behavior: "instant" });
+      }, 0);
+    });
   },
 });
 
+router.beforeEach((to, from, next) => {
+  // Примусово скролимо вгору перед переходом
+  if (typeof window !== "undefined") {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }
+  next();
+});
+
 router.afterEach(() => {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
+  // Додатковий скрол після завершення переходу
+  setTimeout(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, 10);
+
+  // І ще один для мобільних браузерів
+  setTimeout(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, 100);
 });
 
 export default router;

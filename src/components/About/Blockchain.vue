@@ -2,7 +2,7 @@
 import { useI18n } from "vue-i18n";
 import { computed } from "vue";
 import BlockchainCenterLine from "@/assets/img/About/BlockchainCenterLine.png";
-import { ref, onMounted, onUnmounted, reactive } from "vue";
+import { ref, onMounted, onUnmounted, reactive, onBeforeUnmount } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Copy from "@/assets/icons/Copy.vue";
@@ -15,7 +15,6 @@ const getTextWithButton = (key, buttonKey, buttonClass) => {
   const text = t(key);
   const buttonText = t(buttonKey);
   const buttonHtml = `<span class="${buttonClass}">${buttonText}</span>`;
-  // Extract just the key name from "ethL2.connectWallet" -> "connectWallet"
   const keyName = buttonKey.split(".").pop();
   return text.replace(`{${keyName}}`, buttonHtml);
 };
@@ -24,7 +23,6 @@ const getTextWithLink = (key, linkKey) => {
   const text = t(key);
   const linkText = t(linkKey);
   const linkHtml = `<span class="text-[#4FBBFF] underline">${linkText}</span>`;
-  // Extract just the key name from "ethL2.here" -> "here"
   const keyName = linkKey.split(".").pop();
   return text.replace(`{${keyName}}`, linkHtml);
 };
@@ -81,6 +79,7 @@ const BlockchainCards = computed(() => [
 
 const sectionRef = ref(null);
 const cardsContainer = ref(null);
+let scrollTriggerInstance = null;
 
 onMounted(() => {
   if (window.innerWidth >= 768) return;
@@ -95,7 +94,7 @@ onMounted(() => {
     zIndex: cards.length - i,
   }));
 
-  ScrollTrigger.create({
+  scrollTriggerInstance = ScrollTrigger.create({
     trigger: cardsContainer.value,
     start: "top top",
     end: "+=300%",
@@ -124,6 +123,23 @@ onMounted(() => {
       });
     },
   });
+});
+
+onBeforeUnmount(() => {
+  // Очищаємо ScrollTrigger перед розмонтуванням
+  if (scrollTriggerInstance) {
+    scrollTriggerInstance.kill();
+    scrollTriggerInstance = null;
+  }
+
+  // Очищаємо всі інші ScrollTriggers
+  ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+
+  // Скидаємо стилі для карток
+  if (window.innerWidth < 768) {
+    const cards = gsap.utils.toArray(".process-card");
+    gsap.set(cards, { clearProps: "all" });
+  }
 });
 
 onUnmounted(() => {
@@ -206,7 +222,9 @@ const blockchainDescription = computed(() => {
             sub.copy && handleCopy(sub.data, copyRefs[index + '-' + sub.name])
           "
         >
-          <div class="gap-2 items-center text-start grid grid-cols-[repeat(2,120px)]">
+          <div
+            class="gap-2 items-center text-start grid grid-cols-[repeat(2,120px)]"
+          >
             <div class="w-[110px] description">{{ sub.name }}</div>
             <div
               :class="['', sub.copy ? 'cursor-pointer' : '']"
