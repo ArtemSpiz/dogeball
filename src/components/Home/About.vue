@@ -124,7 +124,10 @@ const AboutCards = computed(() => [
         to="/eth-l2"
         class="w-full max-w-[200px] justify-center flex"
       >
-        <CustomButton :title="t('about.clickHere')" class="w-full max-w-[200px]" />
+        <CustomButton
+          :title="t('about.clickHere')"
+          class="w-full max-w-[200px]"
+        />
       </router-link>
 
       <div
