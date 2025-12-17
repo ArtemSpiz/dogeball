@@ -10,7 +10,9 @@
       ]"
       @click="handleClick"
     >
-      <div :class="['flex gap-2 max-sm:gap-1 items-center', { 'mx-auto': isCard }]">
+      <div
+        :class="['flex gap-2 max-sm:gap-1 items-center', { 'mx-auto': isCard }]"
+      >
         <!-- Card Icons -->
         <CardIcons v-if="isCard" />
         <!-- Token Icon -->
@@ -23,7 +25,9 @@
         </template>
 
         <div class="flex flex-col text-start items-start leading-none">
-          <p class="max-sm:text-xs text-white font-grotesk text-base font-medium leading-5 font-feature-off">
+          <p
+            class="max-sm:text-xs text-white font-grotesk text-base font-medium leading-5 font-feature-off"
+          >
             {{ text }}
           </p>
           <p
@@ -81,8 +85,11 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
+import { useI18n } from "vue-i18n";
 import { CardIcons, ChevronDownIcon } from "../icons";
 import { getTokenIcon } from "../utils/tokens";
+
+const { t } = useI18n();
 
 const props = defineProps({
   tokens: {
@@ -116,9 +123,18 @@ const emit = defineEmits(["update:value"]);
 const dropdownOpen = ref(false);
 const buttonRef = ref(null);
 
+const moreText = computed(() => t("presale.tokenSelect.more"));
+
 const text = computed(() => {
-  if (props.placeholder === "More") {
-    return props.value?.symbol.toUpperCase() ?? "More";
+  // Check if it's the "More" button by comparing with translated value
+  const isMorePlaceholder =
+    props.placeholder === moreText.value ||
+    props.defaultLabel === moreText.value ||
+    props.placeholder === "More" || // Fallback for backwards compatibility
+    props.defaultLabel === "More"; // Fallback for backwards compatibility
+
+  if (isMorePlaceholder) {
+    return props.value?.symbol.toUpperCase() ?? moreText.value;
   }
   return (
     props.value?.symbol.toUpperCase() ??
@@ -130,7 +146,13 @@ const text = computed(() => {
 });
 
 const isMoreButton = computed(() => {
-  return props.placeholder === "More" || props.defaultLabel === "More";
+  // Check both current translation and English fallback
+  return (
+    props.placeholder === moreText.value ||
+    props.defaultLabel === moreText.value ||
+    props.placeholder === "More" || // Fallback for backwards compatibility
+    props.defaultLabel === "More"
+  ); // Fallback for backwards compatibility
 });
 
 const isCard = computed(() => {

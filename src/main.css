@@ -126,34 +126,45 @@ body {
 
 /* === Clash Grotesk === */
 @font-face {
-  font-family: "ClashGrotesk-Regular";
-  src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Regular.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "ClashGrotesk-Bold";
-  src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Bold.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "ClashGrotesk-Extralight";
+  font-family: "ClashGrotesk";
   src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Extralight.otf")
     format("opentype");
+  font-weight: 200;
 }
+
 @font-face {
-  font-family: "ClashGrotesk-Light";
+  font-family: "ClashGrotesk";
   src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Light.otf")
     format("opentype");
+  font-weight: 300;
 }
+
 @font-face {
-  font-family: "ClashGrotesk-Medium";
+  font-family: "ClashGrotesk";
+  src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "ClashGrotesk";
   src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Medium.otf")
     format("opentype");
+  font-weight: 500;
 }
+
 @font-face {
-  font-family: "ClashGrotesk-Semibold";
+  font-family: "ClashGrotesk";
   src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Semibold.otf")
     format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "ClashGrotesk";
+  src: url("/src/assets/fonts/ClashGrotesk_Complete/ClashGrotesk-Bold.otf")
+    format("opentype");
+  font-weight: 700;
 }
 
 @layer utilities {

@@ -2,62 +2,78 @@
   <Teleport to="body">
     <div
       :class="[
-        'fixed top-0 left-0 w-full h-full z-[100] flex items-center justify-center',
-        rootClasses
+        'fixed px-5 top-0 left-0 w-full h-full z-[100] flex items-center justify-center transition-opacity duration-300',
+        rootClasses,
       ]"
     >
       <div
         :class="[
-          'absolute top-0 left-0 w-full h-full bg-[#000]/70 transition-opacity',
-          backdropClasses
+          'absolute top-0 left-0 w-full h-full bg-[#000]/70 backdrop-blur-sm transition-opacity duration-300',
+          backdropClasses,
         ]"
         @click="$emit('close')"
       />
+
       <div
-        {...others}
+        v-bind="attrs"
         :class="[
-          'bg-[#1F0F5B] shadow-[0_0_20px_0_#263166] border border-[#8B94F5] relative z-[1] p-4 rounded-xl w-full max-w-[25rem] flex flex-col gap-4 text-[#fff] max-h-[calc(100%-2rem)] overflow-y-auto transition-transform',
+          'relative z-[1] p-6 max-md:p-4 rounded-3xl max-md:rounded-2xl w-full max-w-[28rem] flex flex-col gap-6 text-white max-h-[calc(100%-2rem)] overflow-y-auto transition-all duration-300',
+          'border border-white/20 bg-[rgba(23,138,184,0.40)] shadow-[0_0_14px_0_#5464D8] backdrop-blur-[5px]',
           modalClasses,
-          props.class
+          props.class,
         ]"
-        :style="{'--text-secondary': '#aaa', '--border': '#fff', 'color-scheme': 'dark', ...props.style}"
+        :style="{
+          '--text-secondary': '#aaa',
+          '--border': '#fff',
+          'color-scheme': 'dark',
+          ...props.style,
+        }"
       >
-        <p v-if="title" class="text-center text-lg font-bold">{{title}}</p>
-        <button
-          aria-label="Close modal"
-          @click="$emit('close')"
-          className="rounded-full flex items-center justify-center w-8 h-8 p-[0.375rem] absolute top-4 right-4 transition-colors hover:bg-[#000]/10"
-        >
-          <CloseIcon className="w-full h-full" />
-        </button>
-        <slot></slot>
+        <div class="flex items-center justify-between">
+          <h2 v-if="title" class="text-xl font-bold">
+            {{ title }}
+          </h2>
+
+          <button
+            aria-label="Close modal"
+            @click="$emit('close')"
+            class="rounded-full flex items-center justify-center w-8 h-8 p-2 transition-all duration-300 hover:bg-white/10 border border-white/10 hover:border-white/20 ml-auto"
+          >
+            <CloseIcon class="w-full h-full" />
+          </button>
+        </div>
+
+        <slot />
       </div>
     </div>
   </Teleport>
 </template>
 
 <script setup>
-  import { computed } from 'vue';
-  import CloseIcon from "@/assets/icons/Close.vue"
+import { computed, useAttrs } from "vue";
+import CloseIcon from "@/assets/icons/Close.vue";
 
-  defineEmits(["close"])
-  const props = defineProps({
-    open: {
-      type: Boolean,
-      required: true
-    },
-    title: {
-      type: String
-    },
-    class: {
-      type: String
-    },
-    style: {
-      type: Object
-    }
-  })
+defineEmits(["close"]);
 
-  const rootClasses = computed(() => !props.open ? "pointer-events-none" : "")
-  const backdropClasses = computed(() => !props.open ? "opacity-0" : "")
-  const modalClasses = computed(() => !props.open ? "translate-y-[calc(100vh+2rem)]" : "");
+const attrs = useAttrs();
+
+const props = defineProps({
+  open: {
+    type: Boolean,
+    required: true,
+  },
+  title: String,
+  class: String,
+  style: Object,
+});
+
+const rootClasses = computed(() =>
+  !props.open ? "pointer-events-none opacity-0" : "opacity-100"
+);
+const backdropClasses = computed(() =>
+  !props.open ? "opacity-0" : "opacity-100"
+);
+const modalClasses = computed(() =>
+  !props.open ? "scale-95 opacity-0" : "scale-100 opacity-100"
+);
 </script>

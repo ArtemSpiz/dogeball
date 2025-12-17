@@ -8,15 +8,17 @@ const isMobile = window.innerWidth < 768;
 
 <template>
   <div
-    class="h-[500px]  2xl:h-[700px] max-md:h-[430px] max-sm:h-[330px] w-full overflow-hidden flex justify-center pt-[70px] max-md:pt-[40px] bg-cover bg-bottom bg-no-repeat relative bg-[url('@/assets/img/Home/FeaturedBg.png')] max-md:bg-[url('@/assets/img/Home/FeaturedBgMob.png')]"
+    class="h-[500px] 2xl:h-[700px] max-md:h-[430px] max-sm:h-[330px] w-full overflow-hidden flex justify-center pt-[70px] max-md:pt-[40px] bg-cover bg-bottom bg-no-repeat relative bg-[url('@/assets/img/Home/FeaturedBg.png')] max-md:bg-[url('@/assets/img/Home/FeaturedBgMob.png')]"
   >
     <div
-      class="h-auto w-full max-w-[900px] max-md:min-w-[550px] absolute bottom-0 max-md:bottom-[30px] right-1/2 translate-x-1/2"
+      class="h-auto w-full 2xl:max-w-[1200px] max-w-[900px] max-md:min-w-[550px] absolute bottom-0 max-md:bottom-[30px] right-1/2 translate-x-1/2"
     >
       <img :src="FeaturedImg" class="object-contain" />
     </div>
 
-    <div class="w-full h-auto absolute bottom-0 right-0 z-10 max-md:max-h-[600px]">
+    <div
+      class="w-full h-auto absolute bottom-0 right-0 z-10 max-md:max-h-[600px]"
+    >
       <img
         :src="isMobile ? FeaturedBallsMob : FeaturedBalls"
         class="object-contain"

@@ -29,10 +29,10 @@
         v-if="moreTokens.length > 0"
         :value="moreTokens.find((t) => t.id === value?.id) || null"
         :tokens="moreTokens"
-        :default-label="'More'"
-        :placeholder="'More'"
-        :selected="moreTokens.some((t) => t.id === value?.id)  && selectedGroup === mainCryptoGroups.length + 1"
-        @update:value="(token) => handleTokenChange(token, mainCryptoGroups.length + 1)"
+        :default-label="t('presale.tokenSelect.more')"
+        :placeholder="t('presale.tokenSelect.more')"
+        :selected="moreTokens.some((t) => t.id === value?.id)"
+        @update:value="handleTokenChange"
       />
     </div>
 
@@ -47,7 +47,7 @@
         <span
           class="text-white font-grotesk text-lg font-medium leading-5 font-feature-off"
         >
-          + Other Cryptos
+          {{ t("presale.tokenSelect.otherCryptos") }}
         </span>
       </div>
     </div>
@@ -55,10 +55,13 @@
 </template>
 
 <script setup>
+import { useI18n } from "vue-i18n";
 import { computed, ref } from "vue";
 import TokenSelect from "./TokenSelect.vue";
 import coinLogosImage from "@/assets/img/logos/coin-logos.webp";
 import { useApiState } from "@/composables";
+
+const { t } = useI18n();
 
 const props = defineProps({
   value: {

@@ -1,7 +1,7 @@
 <template>
   <section
     id="presale"
-    class="w-full py-[100px] max-md:py-12 flex flex-col items-center gap-4 relative bg-cover bg-center bg-no-repeat min-h-screen"
+    class="w-full py-[100px] max-md:py-1 max-2xl:!bg-cover bgFill flex flex-col items-center gap-4 relative bg-center bg-no-repeat min-h-screen"
     :style="{ backgroundImage: `url(${bgImage})` }"
   >
     <!-- Background overlay for better widget visibility -->
@@ -21,6 +21,7 @@
 
 <script setup>
 import Widget from "./Widget.vue";
+import WalletTransferModal from "./modals/WalletTransferModal.vue";
 import BonusBanner from "./shared/BonusBanner.vue";
 import { Toast } from "./ui";
 import bgImage from "@/assets/img/bg-presale.png";

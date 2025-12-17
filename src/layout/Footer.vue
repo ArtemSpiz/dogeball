@@ -1,23 +1,27 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 import Telegram from "@/assets/icons/Telegram.vue";
 import X from "@/assets/icons/X.vue";
 import Logo from "@/assets/img/Logo.png";
 import Moscot from "@/assets/img/Moscot.png";
 
-const LinksFooter = [
+const { t } = useI18n();
+
+const LinksFooter = computed(() => [
   {
-    title: "Terms & conditions",
+    title: t("footer.termsConditions"),
     link: "/TermsandConditions.pdf",
   },
   {
-    title: "Cookies policy",
+    title: t("footer.cookiesPolicy"),
     link: "/CookiesPolicy.pdf",
   },
   {
-    title: "Privacy policy",
+    title: t("footer.privacyPolicy"),
     link: "/PrivacyPolicy.pdf",
   },
-];
+]);
 </script>
 
 <template>
@@ -68,18 +72,15 @@ const LinksFooter = [
     </div>
 
     <div
-      class="flex flex-col justify-between h-[-webkit-fill-available] gap-2 pb-8 max-md:pb-0"
+      class="flex flex-col justify-between h-[-webkit-fill-available] max-md:h-max gap-2 pb-8 max-md:pb-0"
     >
       <div
-        class="text-base font-normal leading-[120%] max-w-[365px]  max-md:mx-auto"
+        class="text-base font-normal leading-[120%] max-w-[365px] max-md:mx-auto"
       >
-        Disclaimer: $DOGEBALL is a utility backed meme coin. Cryptocurrency
-        markets are highly volatile, invest with caution. Cryptocurrency may be
-        unregulated in your jurisdiction. Beware of '$DOGEBALL' copycat websites
-        and social media channels (official links on this website only).
+        {{ t("footer.disclaimer") }}
       </div>
       <div class="description">
-        Copyright © 2025 DOGEBALL. All rights reserved.
+        {{ t("footer.copyright") }}
       </div>
     </div>
 

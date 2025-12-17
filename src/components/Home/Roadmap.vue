@@ -1,56 +1,60 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 import RoadmapImage1 from "@/assets/img/Home/RoadmapImg1.png";
 import RoadmapImage2 from "@/assets/img/Home/RoadmapImg2.png";
 import RoadmapImage3 from "@/assets/img/Home/RoadmapImg3.png";
 import RoadmapImage4 from "@/assets/img/Home/RoadmapImg4.png";
 import bg from "@/assets/img/Home/RoadmapBg.png";
 
-const RoadmapCards = [
+const { t } = useI18n();
+
+const RoadmapCards = computed(() => [
   {
-    phase: "Phase 1",
-    title: "Evolution",
+    phase: t("roadmap.phase1"),
+    title: t("roadmap.evolution"),
     subtitles: [
-      { subtitle: "The evolution of the DOGE to $DOGEBALL" },
-      { subtitle: "$DOGEBALL game-plan created" },
-      { subtitle: "Social channels and website developed" },
-      { subtitle: "Contract created and audited" },
+      { subtitle: t("roadmap.phase1Sub1") },
+      { subtitle: t("roadmap.phase1Sub2") },
+      { subtitle: t("roadmap.phase1Sub3") },
+      { subtitle: t("roadmap.phase1Sub4") },
     ],
     image: RoadmapImage1,
   },
   {
-    phase: "Phase 2",
-    title: "Development",
+    phase: t("roadmap.phase2"),
+    title: t("roadmap.development"),
     subtitles: [
-      { subtitle: "$DOGEBALL game developed" },
-      { subtitle: "DOGECHAIN EVM L2 deployed" },
-      { subtitle: "Community Expansion" },
-      { subtitle: "Presale begins" },
+      { subtitle: t("roadmap.phase2Sub1") },
+      { subtitle: t("roadmap.phase2Sub2") },
+      { subtitle: t("roadmap.phase2Sub3") },
+      { subtitle: t("roadmap.phase2Sub4") },
     ],
     image: RoadmapImage2,
   },
   {
-    phase: "Phase 3",
-    title: "Expansion",
+    phase: t("roadmap.phase3"),
+    title: t("roadmap.expansion"),
     subtitles: [
-      { subtitle: "Global marketing campaign" },
-      { subtitle: "Corporate gaming partnerships" },
-      { subtitle: "$DOGEBALL listed on global exchanges" },
-      { subtitle: "$DOGEBALL becomes viral" },
+      { subtitle: t("roadmap.phase3Sub1") },
+      { subtitle: t("roadmap.phase3Sub2") },
+      { subtitle: t("roadmap.phase3Sub3") },
+      { subtitle: t("roadmap.phase3Sub4") },
     ],
     image: RoadmapImage3,
   },
   {
-    phase: "Phase 4",
-    title: "Game and V2 expansion",
+    phase: t("roadmap.phase4"),
+    title: t("roadmap.gameV2Expansion"),
     subtitles: [
-      { subtitle: "$DOGEBALL V2 game development" },
-      { subtitle: "Continued CEX listings" },
-      { subtitle: "L2 Blockchain global release" },
-      { subtitle: "Future evolution tokens created" },
+      { subtitle: t("roadmap.phase4Sub1") },
+      { subtitle: t("roadmap.phase4Sub2") },
+      { subtitle: t("roadmap.phase4Sub3") },
+      { subtitle: t("roadmap.phase4Sub4") },
     ],
     image: RoadmapImage4,
   },
-];
+]);
 </script>
 
 <template>
@@ -61,7 +65,7 @@ const RoadmapCards = [
     <div
       class="max-w-[2000px] mx-auto justify-start pt-[85px] max-xl:py-[85px] max-md:py-12 flex flex-col items-center gap-8 px-20 max-md:px-5"
     >
-      <div class="title uppercase">Roadmap</div>
+      <div class="title uppercase">{{ t("roadmap.title") }}</div>
       <div
         class="flex gap-4 max-md:gap-2 justify-center relative items-start max-xl:grid max-xl:grid-cols-2 max-md:grid-cols-1"
       >
@@ -70,7 +74,7 @@ const RoadmapCards = [
           :key="index"
           :class="[
             'p-8 gap-4 max-md:px-6 max-md:py-4 h-auto max-xl:h-full w-[307px] max-xl:w-auto flex flex-col items-start border border-[#8B94F5] backdrop-blur-[5px] rounded-2xl bg-[rgba(53,19,147,0.52)] max-xl:mt-0',
-            { 'mt-24': index === 1 },
+            { 'mt-[101px]': index === 1 },
             { 'mt-24': index === 2 },
           ]"
         >
@@ -100,19 +104,18 @@ const RoadmapCards = [
             :class="[
               'absolute max-xl:hidden',
               {
-                'translate-y-[50%] w-[535px] h-[365px] left-[-20px]':
+                'translate-y-[56%] w-[600px] h-[353px] left-[-55px]':
                   index === 0,
               },
               {
-                'translate-y-[59%] w-[230px] h-[275px] left-[-25px]':
+                'translate-y-[60%] w-[210px] h-[275px] left-[-23px]':
                   index === 1,
               },
               {
-                'translate-y-[55%] w-[360px] h-[290px] left-[-40px]':
-                  index === 2,
+                'translate-y-[68%] w-[320px] h-[260px] left-[2px]': index === 2,
               },
               {
-                'translate-y-[38%] w-[690px] h-[400px] left-[-364px]':
+                'translate-y-[45%] w-[645px] h-[380px] left-[-322px]':
                   index === 3,
               },
             ]"

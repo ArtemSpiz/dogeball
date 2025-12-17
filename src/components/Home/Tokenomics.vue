@@ -1,4 +1,6 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 import Copy from "@/assets/icons/Copy.vue";
 import { reactive, ref } from "vue";
 import TokenomicsImg1 from "@/assets/img/Home/TokenomicsImg1.png";
@@ -9,6 +11,8 @@ import TokenomicsImg5 from "@/assets/img/Home/TokenomicsImg5.png";
 import TokenomicsImg6 from "@/assets/img/Home/TokenomicsImg6.png";
 import TokenomicsLineLeft from "@/assets/img/Home/TokenomicsLineLeft.png";
 import TokenomicsLineRight from "@/assets/img/Home/TokenomicsLineRight.png";
+
+const { t } = useI18n();
 
 const copyRefs = reactive({});
 
@@ -22,10 +26,10 @@ const handleCopy = (text, copyComponent) => {
 
 const data = "0x57f67ed05631a83c5e3300e28e4d1867a9c9db6a";
 
-const TokenomicsCards = [
+const TokenomicsCards = computed(() => [
   {
     percents: "10%",
-    name: "Development",
+    name: t("tokenomics.development"),
     price: "8,000,000,000",
     image: TokenomicsImg1,
     color: "#69200A",
@@ -34,7 +38,7 @@ const TokenomicsCards = [
   },
   {
     percents: "25%",
-    name: "Presale",
+    name: t("tokenomics.presale"),
     price: "20,000,000,000",
     image: TokenomicsImg2,
     color: "#FA7B55",
@@ -43,7 +47,7 @@ const TokenomicsCards = [
   },
   {
     percents: "10%",
-    name: "Treasury Reserves",
+    name: t("tokenomics.treasuryReserves"),
     price: "8,000,000,000",
     image: TokenomicsImg3,
     color: "#942B0C",
@@ -52,7 +56,7 @@ const TokenomicsCards = [
   },
   {
     percents: "15%",
-    name: "Staking & Games Rewards",
+    name: t("tokenomics.stakingGamesRewards"),
     price: "12,000,000,000",
     image: TokenomicsImg4,
     color: "#F45525",
@@ -61,7 +65,7 @@ const TokenomicsCards = [
   },
   {
     percents: "25%",
-    name: "Marketing",
+    name: t("tokenomics.marketing"),
     price: "20,000,000,000",
     image: TokenomicsImg5,
     color: "#BA320A",
@@ -70,19 +74,19 @@ const TokenomicsCards = [
   },
   {
     percents: "15%",
-    name: "Liquidity",
+    name: t("tokenomics.liquidity"),
     price: "12,000,000,000",
     image: TokenomicsImg6,
     color: "#E53501",
     percent: 15,
     startAngle: 144,
   },
-];
+]);
 
-const TokenomicsCardsMobile = [
+const TokenomicsCardsMobile = computed(() => [
   {
     percents: "25%",
-    name: "Presale",
+    name: t("tokenomics.presale"),
     price: "20,000,000,000",
     image: TokenomicsImg2,
     color: "#BA320A",
@@ -91,7 +95,7 @@ const TokenomicsCardsMobile = [
   },
   {
     percents: "15%",
-    name: "Staking & Games Rewards",
+    name: t("tokenomics.stakingGamesRewards"),
     price: "12,000,000,000",
     image: TokenomicsImg4,
     color: "#E53501",
@@ -100,7 +104,7 @@ const TokenomicsCardsMobile = [
   },
   {
     percents: "15%",
-    name: "Liquidity",
+    name: t("tokenomics.liquidity"),
     price: "12,000,000,000",
     image: TokenomicsImg6,
     color: "#F45525",
@@ -109,7 +113,7 @@ const TokenomicsCardsMobile = [
   },
   {
     percents: "25%",
-    name: "Marketing",
+    name: t("tokenomics.marketing"),
     price: "20,000,000,000",
     image: TokenomicsImg5,
     color: "#FA7B55",
@@ -118,7 +122,7 @@ const TokenomicsCardsMobile = [
   },
   {
     percents: "10%",
-    name: "Treasury Reserves",
+    name: t("tokenomics.treasuryReserves"),
     price: "8,000,000,000",
     image: TokenomicsImg3,
     color: "#69200A",
@@ -127,14 +131,14 @@ const TokenomicsCardsMobile = [
   },
   {
     percents: "10%",
-    name: "Development",
+    name: t("tokenomics.development"),
     price: "8,000,000,000",
     image: TokenomicsImg1,
     color: "#942B0C",
     percent: 10,
     startAngle: 324,
   },
-];
+]);
 
 const createSegmentPath = (percent, startAngle) => {
   const angle = (percent / 100) * 360;
@@ -173,15 +177,15 @@ const hoverIndex = ref(null);
 <template>
   <div
     id="tokenomics"
-    class="flex flex-col max-xl:!bg-cover bgFill max-lg:bg-cover max-x:bg-[center_bottom] bg-no-repeat relative items-center justify-center gap-10 max-md:gap-8 py-20 max-md:py-12 bg-[url('@/assets/img/Home/TokenomicsBg.png')] max-md:bg-[url('@/assets/img/Home/TokenomicsBgMob.png')]"
+    class="flex flex-col max-xl:!bg-cover bgFill max-lg:bg-cover max-x:bg-[center_bottom] max-md:bg-[calc(100%_+_70px)_bottom] bg-no-repeat relative items-center justify-center gap-10 max-md:gap-8 py-20 max-md:py-12 bg-[url('@/assets/img/Home/TokenomicsBg.png')] max-md:bg-[url('@/assets/img/Home/TokenomicsBgMob.png')]"
   >
     <div class="flex flex-col text-center items-center gap-8">
-      <div class="title">TOKENOMICS</div>
+      <div class="title">{{ t("tokenomics.title") }}</div>
       <div class="flex flex-col items-center gap-4 max-md:gap-2">
         <div
           class="text-2xl font-medium leading-[110%] max-lg:text-xl max-md:text-sm"
         >
-          Contract Address
+          {{ t("tokenomics.contractAddress") }}
         </div>
         <div
           @click="data && handleCopy(data, copyRefs[index + '-' + data])"
@@ -238,13 +242,15 @@ const hoverIndex = ref(null);
         <div
           class="text-[rgba(255,255,255,0.70)] text-lg leading-[120%] font-medium"
         >
-          Total Supply
+          {{ t("tokenomics.totalSupply") }}
         </div>
         <div class="flex items-center gap-2">
           <div class="text-[#EDFFA4] font-medium text-[32px] leading-[110%]">
             80BN
           </div>
-          <div class="font-medium text-2xl leading-[110%]">Tokens</div>
+          <div class="font-medium text-2xl leading-[110%]">
+            {{ t("tokenomics.tokens") }}
+          </div>
         </div>
       </div>
 
