@@ -7,7 +7,8 @@
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
     "faqs": "FAQ",
-    "connectWallet": "Connetti portafoglio"
+    "connectWallet": "Connetti portafoglio",
+    "disconnectWallet": "Disconnetti Portafoglio"
   },
   "footer": {
     "termsConditions": "Termini e condizioni",
@@ -198,7 +199,7 @@
       "currentlyStaked": "Attualmente in stake",
       "dailyInterest": "Interesse giornaliero",
       "totalEarnings": "Guadagni totali",
-      "earnApy": "Guadagna {{apy}}% APY facendo stake dei tuoi token"
+      "earnApy": "Guadagna {apy}% APY facendo stake dei tuoi token"
     },
     "historyTab": {
       "connectWalletMessage": "Connetti il tuo portafoglio per visualizzare la tua dashboard",

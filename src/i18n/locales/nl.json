@@ -7,7 +7,8 @@
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
     "faqs": "Veelgestelde vragen",
-    "connectWallet": "Portemonnee verbinden"
+    "connectWallet": "Portemonnee verbinden",
+    "disconnectWallet": "Koppel Wallet los"
   },
   "footer": {
     "termsConditions": "Algemene voorwaarden",
@@ -198,7 +199,7 @@
       "currentlyStaked": "Momenteel gestaked",
       "dailyInterest": "Dagelijkse rente",
       "totalEarnings": "Totale verdiensten",
-      "earnApy": "Verdien {{apy}}% APY door uw tokens te staken"
+      "earnApy": "Verdien {apy}% APY door uw tokens te staken"
     },
     "historyTab": {
       "connectWalletMessage": "Verbind uw portemonnee om uw dashboard te bekijken",

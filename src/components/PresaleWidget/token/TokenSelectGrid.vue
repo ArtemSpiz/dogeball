@@ -79,8 +79,6 @@ const apiData = useApiState();
 const ERC20_ORDER = ["ETH", "USDT", "USDC", "PEPE", "SHIB", "FLOKI"];
 // BEP-20 tokens (shown under BNB button)
 const BEP20_ORDER = ["BNB", "BUSD", "USDT", "USDC"];
-// More dropdown tokens
-const MORE_SYMBOLS = ["XRP", "DOGE", "TON", "TRX", "ADA"];
 
 // Helper to check if chain is ERC-20 / Ethereum
 const isErc20Chain = (chain) => {
@@ -105,6 +103,11 @@ const isSolanaChain = (chain) => {
   const c = (chain || "").toUpperCase();
   return c === "SOLANA" || c === "SOL";
 };
+
+const isBaseChain = (chain) => {
+  const c = (chain || "").toUpperCase();
+  return c === "BASE";
+}
 
 const cardToken = computed(() => {
   const tokens = apiData.paymentTokens.value ?? [];
@@ -140,9 +143,7 @@ const usdtOtherChains = computed(() => {
   const tokens = apiData.paymentTokens.value ?? [];
   return tokens.filter(
     (t) =>
-      t.symbol.toUpperCase() === "USDT" &&
-      !isErc20Chain(t.chain) &&
-      !isBep20Chain(t.chain)
+      t.symbol.toUpperCase() === "USDT"
   );
 });
 
@@ -221,13 +222,10 @@ const mainCryptoGroups = computed(() => {
 // More tokens - coins like XRP, DOGE, TON, TRX, ADA
 const moreTokens = computed(() => {
   const tokens = apiData.paymentTokens.value ?? [];
-  const moreList = [];
-
-  MORE_SYMBOLS.forEach((symbol) => {
-    const found = tokens.filter(
-      (t) => t.symbol.toUpperCase() === symbol.toUpperCase()
-    );
-    moreList.push(...found);
+  const moreList = tokens.filter((token) => {
+    const foundInOtherGroup = mainCryptoGroups.value.find((group) => group.tokens.find((currToken) => token.id === currToken.id))
+	if (token.symbol.toUpperCase() === 'CARD') return false
+    return !foundInOtherGroup
   });
 
   return moreList;

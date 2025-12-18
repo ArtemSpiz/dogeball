@@ -7,7 +7,8 @@
     "tokenomics": "トークノミクス",
     "ethL2": "ETH L2",
     "faqs": "よくある質問",
-    "connectWallet": "ウォレットを接続"
+    "connectWallet": "ウォレットを接続",
+    "disconnectWallet": "ウォレットの切断"
   },
   "footer": {
     "termsConditions": "利用規約",
@@ -198,7 +199,7 @@
       "currentlyStaked": "現在ステーク中",
       "dailyInterest": "日次利息",
       "totalEarnings": "総収益",
-      "earnApy": "トークンをステーキングして{{apy}}% APYを獲得"
+      "earnApy": "トークンをステーキングして{apy}% APYを獲得"
     },
     "historyTab": {
       "connectWalletMessage": "ウォレットを接続してダッシュボードを表示",

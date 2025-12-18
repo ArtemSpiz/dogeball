@@ -7,7 +7,8 @@
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
     "faqs": "UKK",
-    "connectWallet": "Yhdistä lompakko"
+    "connectWallet": "Yhdistä lompakko",
+    "disconnectWallet": "Katkaise Wallet-yhteys"
   },
   "footer": {
     "termsConditions": "Ehdot ja säännöt",
@@ -198,7 +199,7 @@
       "currentlyStaked": "Tällä hetkellä staketettu",
       "dailyInterest": "Päivittäinen korko",
       "totalEarnings": "Kokonaistulot",
-      "earnApy": "Ansaitse {{apy}}% APY stakkaamalla tokenisi"
+      "earnApy": "Ansaitse {apy}% APY stakkaamalla tokenisi"
     },
     "historyTab": {
       "connectWalletMessage": "Yhdistä lompakkosi nähdäksesi hallintapaneelisi",

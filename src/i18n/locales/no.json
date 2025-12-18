@@ -7,7 +7,8 @@
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
     "faqs": "FAQ",
-    "connectWallet": "Koble til lommebok"
+    "connectWallet": "Koble til lommebok",
+    "disconnectWallet": "Koble fra Wallet"
   },
   "footer": {
     "termsConditions": "Vilkår og betingelser",
@@ -198,7 +199,7 @@
       "currentlyStaked": "For tiden staket",
       "dailyInterest": "Daglig rente",
       "totalEarnings": "Totale inntekter",
-      "earnApy": "Tjen {{apy}}% APY ved å stake tokensene dine"
+      "earnApy": "Tjen {apy}% APY ved å stake tokensene dine"
     },
     "historyTab": {
       "connectWalletMessage": "Koble til lommeboken din for å vise dashboarden din",

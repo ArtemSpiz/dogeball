@@ -7,7 +7,8 @@
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
     "faqs": "Câu hỏi thường gặp",
-    "connectWallet": "Kết nối ví"
+    "connectWallet": "Kết nối ví",
+    "disconnectWallet": "Ngắt kết nối ví"
   },
   "footer": {
     "termsConditions": "Điều khoản & điều kiện",
@@ -198,7 +199,7 @@
       "currentlyStaked": "Đang Stake",
       "dailyInterest": "Lãi suất hàng ngày",
       "totalEarnings": "Tổng thu nhập",
-      "earnApy": "Kiếm {{apy}}% APY bằng cách stake token của bạn"
+      "earnApy": "Kiếm {apy}% APY bằng cách stake token của bạn"
     },
     "historyTab": {
       "connectWalletMessage": "Kết nối ví của bạn để xem bảng điều khiển của bạn",

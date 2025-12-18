@@ -7,7 +7,8 @@
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
     "faqs": "FAQs",
-    "connectWallet": "Connect Wallet"
+    "connectWallet": "Connect Wallet",
+    "disconnectWallet": "Disconnect Wallet"
   },
   "footer": {
     "termsConditions": "Terms & conditions",
@@ -195,7 +196,7 @@
       "currentlyStaked": "Currently Staked",
       "dailyInterest": "Daily Interest",
       "totalEarnings": "Total Earnings",
-      "earnApy": "Earn {{apy}}% APY by staking your tokens"
+      "earnApy": "Earn {apy}% APY by staking your tokens"
     },
     "historyTab": {
       "connectWalletMessage": "Connect your wallet to view your dashboard",

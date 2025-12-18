@@ -7,7 +7,8 @@
     "tokenomics": "Токеномика",
     "ethL2": "ETH L2",
     "faqs": "Часто задаваемые вопросы",
-    "connectWallet": "Подключить кошелек"
+    "connectWallet": "Подключить кошелек",
+    "disconnectWallet": "Отключить кошелек"
   },
   "footer": {
     "termsConditions": "Условия и положения",
@@ -198,7 +199,7 @@
       "currentlyStaked": "В настоящее время в стейкинге",
       "dailyInterest": "Ежедневный процент",
       "totalEarnings": "Общий доход",
-      "earnApy": "Заработайте {{apy}}% APY, делая стейкинг ваших токенов"
+      "earnApy": "Заработайте {apy}% APY, делая стейкинг ваших токенов"
     },
     "historyTab": {
       "connectWalletMessage": "Подключите кошелек для просмотра панели управления",

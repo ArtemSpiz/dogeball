@@ -7,7 +7,8 @@
     "tokenomics": "代币经济学",
     "ethL2": "ETH L2",
     "faqs": "常见问题",
-    "connectWallet": "连接钱包"
+    "connectWallet": "连接钱包",
+    "disconnectWallet": "断开钱包连接"
   },
   "footer": {
     "termsConditions": "条款和条件",
@@ -198,7 +199,7 @@
       "currentlyStaked": "当前质押",
       "dailyInterest": "每日利息",
       "totalEarnings": "总收入",
-      "earnApy": "通过质押您的代币赚取{{apy}}% APY"
+      "earnApy": "通过质押您的代币赚取{apy}% APY"
     },
     "historyTab": {
       "connectWalletMessage": "连接您的钱包以查看您的仪表板",

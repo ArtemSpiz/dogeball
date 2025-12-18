@@ -7,7 +7,8 @@
     "tokenomics": "الاقتصاد الرمزي",
     "ethL2": "ETH L2",
     "faqs": "الأسئلة الشائعة",
-    "connectWallet": "ربط المحفظة"
+    "connectWallet": "ربط المحفظة",
+    "disconnectWallet": "افصل المحفظة"
   },
   "footer": {
     "termsConditions": "الشروط والأحكام",
@@ -198,7 +199,7 @@
       "currentlyStaked": "مخزن حالياً",
       "dailyInterest": "الفائدة اليومية",
       "totalEarnings": "إجمالي الأرباح",
-      "earnApy": "اكسب {{apy}}% APY عن طريق تخزين رموزك"
+      "earnApy": "اكسب {apy}% APY عن طريق تخزين رموزك"
     },
     "historyTab": {
       "connectWalletMessage": "اربط محفظتك لعرض لوحة التحكم الخاصة بك",

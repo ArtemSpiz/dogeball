@@ -11,16 +11,15 @@
         {{ t("presale.historyTab.connectWalletMessage") }}
       </p>
       <Button 
-       @click="presale.connect" 
+       @click="presale.showConnectWalletModal" 
        :disabled="isBuying || presale.presaleEnded.value"
        variant="primary" 
        class="h-11 px-6 !bg-[#EB4102] !bg-none text-base font-semibold"
        style="border-radius: 80px"
 >
-        {{ t("presale.buyTab.connectWallet") }}
        <Spinner v-if="isBuying" :size="5" />
         <template v-else>
-          <span>Connect Wallet</span>
+       	 {{ t("presale.buyTab.connectWallet") }}
         </template>
       </Button>
     </div>

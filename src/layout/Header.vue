@@ -81,7 +81,7 @@ const scrollToSection = async (hash) => {
     el.scrollIntoView({ behavior: "smooth" });
   }
 };
-const { address, disconnect, showConnectWalletModal } = useWallet();
+const { address, disconnect, showConnectWalletModal, isConnected } = useWallet();
 
 const onWalletClick = () => {
   if (address.value) disconnect();
@@ -188,7 +188,12 @@ const onWalletClick = () => {
           class="py-3 px-4 max-w-[360px] w-full bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
           @click="onWalletClick"
         >
-          {{ t("header.connectWallet") }}
+          <template v-if="isConnected.value">
+            {{ t("header.connectWallet") }}
+          </template>
+          <template v-else>
+            {{ t("header.disconnectWallet") }}
+          </template>
         </button>
 
         <div class="flex gap-3 items-center">

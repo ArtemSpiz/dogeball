@@ -15,6 +15,7 @@ import ShibIcon from "../icons/ShibIcon.vue";
 import BusdIcon from "../icons/BusdIcon.vue";
 import FlokiIcon from "../icons/FlokiIcon.vue";
 import MaticIcon from "../icons/MaticIcon.vue";
+import LtcIcon from "../icons/LtcIcon.vue"
 
 /**
  * Token icon mapping
@@ -37,6 +38,7 @@ export const TOKEN_ICONS = {
   busd: BusdIcon,
   floki: FlokiIcon,
   matic: MaticIcon,
+  ltc: LtcIcon
 };
 
 /**
@@ -76,6 +78,7 @@ export const TOKEN_NAMES = {
   TON: { default: "TON Chain" },
   ADA: { default: "Cardano" },
   CARD: { default: "Card" },
+  LTC: {default: 'Litecoin'}
 };
 
 /**

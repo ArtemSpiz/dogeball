@@ -7,7 +7,8 @@
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
     "faqs": "คำถามที่พบบ่อย",
-    "connectWallet": "เชื่อมต่อกระเป๋าเงิน"
+    "connectWallet": "เชื่อมต่อกระเป๋าเงิน",
+    "disconnectWallet": "ยกเลิกการเชื่อมต่อกระเป๋าเงิน"
   },
   "footer": {
     "termsConditions": "ข้อกำหนดและเงื่อนไข",
@@ -198,7 +199,7 @@
       "currentlyStaked": "กำลังสเตคอยู่",
       "dailyInterest": "ดอกเบี้ยรายวัน",
       "totalEarnings": "รายได้รวม",
-      "earnApy": "รับ {{apy}}% APY โดยการสเตคโทเค็นของคุณ"
+      "earnApy": "รับ {apy}% APY โดยการสเตคโทเค็นของคุณ"
     },
     "historyTab": {
       "connectWalletMessage": "เชื่อมต่อกระเป๋าเงินของคุณเพื่อดูแดชบอร์ดของคุณ",

@@ -331,10 +331,7 @@ const handleBuy = async () => {
       setTimeout(() => (nowPaymentsModalVisible.value = true), 50);
     }
   } catch (err) {
-    const message =
-      err?.shortMessage ||
-      err?.message ||
-      t("presale.errors.transactionFailed");
+    const message = presaleApi.getApiErrorMessage(err, t("presale.errors.transactionFailed"));
     toast.showError(message);
     console.error("Buy error:", err);
   }
