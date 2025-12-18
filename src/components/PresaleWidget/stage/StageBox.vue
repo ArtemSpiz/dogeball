@@ -17,7 +17,7 @@
       </template>
       <p
         v-else
-        class="text-center text-white font-crisis text-2xl leading-none"
+        class="text-center relative text-white font-crisis text-2xl leading-none"
         style="
           font-weight: 400;
           -webkit-font-smoothing: antialiased;
@@ -25,6 +25,8 @@
         "
       >
         {{ formattedRaised }}
+
+        <span class="text-xs absolute bottom-0 translate-x-2">raised</span>
       </p>
 
       <!-- Labels -->
@@ -84,7 +86,7 @@ const formattedRaised = computed(() => {
     parseNum(presale.stage.value?.cumulative_usd_raised),
     true,
     0,
-    0
+    100
   );
 });
 
