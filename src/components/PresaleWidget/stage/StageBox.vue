@@ -26,7 +26,10 @@
       >
         {{ formattedRaised }}
 
-        <span class="text-xs absolute bottom-0 translate-x-2">raised</span>
+        <span
+          class="text-white font-grotesk text-xs font-normal leading-none absolute bottom-0 translate-x-2"
+          >raised</span
+        >
       </p>
 
       <!-- Labels -->

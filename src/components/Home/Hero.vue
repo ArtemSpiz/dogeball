@@ -45,7 +45,9 @@ const submit = async () => {
       <div class="title max-w-[800px] px-3">
         {{ t("hero.title") }}
       </div>
-      <div class="font-grotesk leading-[120%] text-base font-normal max-md:text-sm max-w-[470px] mt-4 max-md:px-3">
+      <div
+        class="font-grotesk leading-[120%] text-base font-normal max-md:text-sm max-w-[470px] mt-4 max-md:px-3"
+      >
         {{ t("hero.subtitle") }}
       </div>
       <TimerCounter />
@@ -66,21 +68,32 @@ const submit = async () => {
             :placeholder="t('hero.emailPlaceholder')"
           />
         </div>
-        <CustomButton :title="t('hero.getEarlyAccess')" class="w-full" >
-           <Spinner v-if="loading" :size="6" />
+        <CustomButton :title="t('hero.getEarlyAccess')" class="w-full">
+          <Spinner v-if="loading" :size="6" />
         </CustomButton>
       </div>
 
       <div class="flex gap-4 items-center">
-        <CustomButton
-          :title="t('hero.audit')"
-          class="py-[18px] !text-[22px] !w-[160px] max-md:h-[50px]"
-        />
-        <CustomButton
-          :title="t('hero.whitepaper')"
-          white-bg="true"
-          class="py-[18px] !text-[22px] !w-[160px] max-md:h-[50px]"
-        />
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="/DOGEBALLCoinsultAudit.pdf"
+        >
+          <CustomButton
+            :title="t('hero.audit')"
+            class="py-[18px] !text-[22px] !w-[160px] max-md:h-[50px]"
+        /></a>
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="/DOGEBALLWhitepaper.pdf"
+        >
+          <CustomButton
+            :title="t('hero.whitepaper')"
+            white-bg="true"
+            class="py-[18px] !text-[22px] !w-[160px] max-md:h-[50px]"
+        /></a>
       </div>
 
       <div
