@@ -5,7 +5,7 @@
  */
 
 // Token prices
-export const LAUNCH_PRICE = 0.025;
+export const LAUNCH_PRICE = 0.015;
 export const PRESALE_MIN_USD = 10;
 
 // Default values
