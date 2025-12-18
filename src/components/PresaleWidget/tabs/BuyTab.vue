@@ -18,10 +18,10 @@
 
     <!-- Presale/Launch Price Bar -->
     <div
-      class="flex px-3 sm:px-4 py-2 max-md:justify-center justify-between sm:justify-center items-center gap-1  self-stretch rounded-2xl border border-white/20 bg-[rgba(8,12,35,0.48)]"
+      class="flex px-3 sm:px-4 py-2 max-md:justify-center justify-between sm:justify-center items-center gap-1 self-stretch rounded-2xl border border-white/20 bg-[rgba(8,12,35,0.48)]"
     >
       <span
-        class="gap-1 max-md:gap-0.5  text-white text-sm max-md:text-xs font-semibold leading-5 font-grotesk whitespace-nowrap overflow-hidden text-ellipsis h-full flex items-center font-feature-off"
+        class="gap-1 max-md:gap-0.5 text-white text-sm max-md:text-xs font-semibold leading-5 font-grotesk whitespace-nowrap overflow-hidden text-ellipsis h-full flex items-center font-feature-off"
       >
         {{ t("presale.buyTab.presalePrice") }}
         <span class="text-[#59A6FD]">
@@ -46,7 +46,6 @@
 
     <!-- Main Action Button -->
     <Button
-      @click="handleBuy"
       :disabled="isBuying || presale.presaleEnded.value"
       variant="primary"
       class="w-full h-11 px-6 !bg-[#EB4102] !bg-none text-base font-semibold"
@@ -331,7 +330,10 @@ const handleBuy = async () => {
       setTimeout(() => (nowPaymentsModalVisible.value = true), 50);
     }
   } catch (err) {
-    const message = presaleApi.getApiErrorMessage(err, t("presale.errors.transactionFailed"));
+    const message = presaleApi.getApiErrorMessage(
+      err,
+      t("presale.errors.transactionFailed")
+    );
     toast.showError(message);
     console.error("Buy error:", err);
   }

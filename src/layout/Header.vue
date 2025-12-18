@@ -81,7 +81,8 @@ const scrollToSection = async (hash) => {
     el.scrollIntoView({ behavior: "smooth" });
   }
 };
-const { address, disconnect, showConnectWalletModal, isConnected } = useWallet();
+const { address, disconnect, showConnectWalletModal, isConnected } =
+  useWallet();
 
 const onWalletClick = () => {
   if (address.value) disconnect();
@@ -147,7 +148,6 @@ const onWalletClick = () => {
         </a>
         <button
           class="h-[2.75rem] leading-[1.3] px-4 bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
-          @click="onWalletClick"
         >
           {{ t("header.connectWallet") }}
         </button>
@@ -185,8 +185,7 @@ const onWalletClick = () => {
       <div class="flex flex-col w-full items-center gap-4">
         <LanguageSelector @change="changeLanguage" />
         <button
-          class="py-3 px-4 max-w-[360px] w-full bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
-          @click="onWalletClick"
+          class="py-3 max-md:max-h-[40px] max-md:flex max-md:items-center max-md:justify-center px-4 max-w-[360px] w-full bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
         >
           <template v-if="isConnected.value">
             {{ t("header.connectWallet") }}
