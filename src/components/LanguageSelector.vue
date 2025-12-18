@@ -68,7 +68,7 @@ onUnmounted(() => {
     <!-- Trigger / Current language -->
     <button
       @click="toggleDropdown"
-      class="w-full bg-[rgba(30,10,90,0.9)] backdrop-blur-xl border border-[#8B94F5] rounded-xl shadow-[0_0_40px_0_#1a1449] px-3 py-2.5 flex items-center justify-between gap-2"
+      class="w-full bg-[rgb(28,32,62)] rounded-[20px] px-3 py-2.5 flex items-center justify-between gap-2"
     >
       <div class="flex items-center gap-2 flex-1 min-w-0">
         <div
@@ -105,7 +105,7 @@ onUnmounted(() => {
     <!-- Dropdown list -->
     <div
       v-if="isOpen && availableLanguages.length > 0"
-      class="absolute right-0 top-full mt-1 w-[320px] max-lg:w-full max-lg:left-0 max-lg:right-0 bg-[rgba(30,10,90,0.95)] backdrop-blur-xl border border-[#8B94F5] rounded-xl overflow-hidden shadow-[0_0_40px_0_#1a1449] z-50"
+      class="absolute right-0 top-full mt-1 w-[320px] max-lg:w-full max-lg:left-0 max-lg:right-0 bg-[rgb(28,32,62)] rounded-[20px] overflow-hidden z-50"
     >
       <div
         class="grid grid-cols-2 max-lg:grid-cols-1 max-lg:max-h-[200px] max-lg:overflow-y-auto"
@@ -114,7 +114,7 @@ onUnmounted(() => {
           v-for="lang in availableLanguages"
           :key="lang.code"
           @click="selectLanguage(lang.code)"
-          class="flex items-center gap-3 px-4 py-3 cursor-pointer transition-all duration-200 hover:bg-[rgba(30,20,60,0.8)]"
+          class="flex items-center gap-3 px-4 py-3 cursor-pointer transition-all duration-200 hover:bg-[rgba(255,238,225,0.16)]"
         >
           <div
             class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden"
