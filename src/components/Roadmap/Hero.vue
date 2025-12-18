@@ -164,7 +164,7 @@ onUnmounted(() => {
   >
     <!-- Video container -->
     <div
-      class="absolute w-full h-full max-w-[1025px] bottom-[120px] max-h-[515px] 2xl:max-h-[1050px] 2xl:max-w-[1820px] 2xl:h-[62%] max-xl:h-[370px] max-[400px]:px-4 max-[400px]:bottom-[130px] max-md:w-screen max-md:max-w-[800px] max-md:max-h-[350px] max-[400px]:max-h-[180px] max-md:bottom-0 z-[1] overflow-hidden rounded-md right-1/2 translate-x-1/2"
+      class="absolute w-full h-full max-w-[1025px] bottom-[120px] max-h-[515px] 2xl:max-h-[1050px] 2xl:max-w-[1820px] 2xl:h-[62%] max-xl:h-[370px] max-[400px]:px-4 max-[400px]:bottom-[150px] max-md:w-screen max-md:max-w-[800px] max-md:max-h-[350px] max-[400px]:max-h-[180px] max-md:bottom-0 z-[1] overflow-hidden rounded-md right-1/2 translate-x-1/2"
     >
       <!-- Wrapper for object-fill behavior -->
       <div
