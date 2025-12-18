@@ -19,12 +19,22 @@ const getTextWithButton = (key, buttonKey, buttonClass) => {
   return text.replace(`{${keyName}}`, buttonHtml);
 };
 
-const getTextWithLink = (key, linkKey) => {
-  const text = t(key);
-  const linkText = t(linkKey);
-  const linkHtml = `<span class="text-[#4FBBFF] underline">${linkText}</span>`;
-  const keyName = linkKey.split(".").pop();
-  return text.replace(`{${keyName}}`, linkHtml);
+const EXPLORER_URL = "http://78.141.225.190:3001/";
+
+// Replaces `{here}` in the translation with a real link to the explorer.
+// Uses the locale text for `ethL2.here` as the visible label.
+const getTextWithExplorerLink = (
+  key,
+  placeholderKey = "here",
+  linkTextKey = "ethL2.here"
+) => {
+  // vue-i18n treats `{here}` as an interpolation placeholder; if not provided it becomes empty.
+  // Use a sentinel token and replace it with the real anchor HTML.
+  const LINK_TOKEN = "__EXPLORER_LINK__";
+  const text = t(key, { [placeholderKey]: LINK_TOKEN });
+  const linkText = t(linkTextKey) || "Here";
+  const linkHtml = `<a href="${EXPLORER_URL}" target="_blank" rel="noopener noreferrer" class="underline cursor-pointer hover:opacity-90">${linkText}</a>`;
+  return text.replace(LINK_TOKEN, linkHtml);
 };
 
 const BlockchainCards = computed(() => [
@@ -65,7 +75,7 @@ const BlockchainCards = computed(() => [
   {
     number: "5",
     text: t("ethL2.card5Text"),
-    text2: getTextWithLink("ethL2.card5Text2", "ethL2.here"),
+    text2: getTextWithExplorerLink("ethL2.card5Text2", "here", "ethL2.here"),
   },
   {
     number: "6",
