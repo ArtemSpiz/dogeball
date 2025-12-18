@@ -22,11 +22,15 @@ const scrollToPresale = () => {
 };
 
 const getTextWithLink = (key) => {
-  const text = t(key);
-  const linkHtml = `<a @click.prevent="scrollToPresale" href='#presale' class="underline">${t(
-    "common.clickHere"
-  )}</a>`;
-  return text.replace("{link}", linkHtml);
+  // vue-i18n treats `{link}` as an interpolation placeholder and will render it as an empty
+  // string if no value is provided. We provide a sentinel token and replace it with HTML.
+  const LINK_TOKEN = "__PRESALE_LINK__";
+  const text = t(key, { link: LINK_TOKEN });
+  const clickHereText = t("common.clickHere") || "Click Here";
+  // Note: v-html does not compile Vue directives like @click, so we use a data attribute
+  // and delegate the click in `handleHtmlClick`.
+  const linkHtml = `<a href="#presale" data-scroll="presale" class="underline text-inherit cursor-pointer hover:opacity-90">${clickHereText}</a>`;
+  return text.replace(LINK_TOKEN, linkHtml);
 };
 
 const HowBuyCards = computed(() => [
@@ -69,13 +73,15 @@ function handleHtmlClick(e) {
   e.preventDefault();
 
   const id = target.getAttribute("data-scroll");
+  if (id === "presale") {
+    scrollToPresale();
+    return;
+  }
+
   const el = document.getElementById(id);
   if (!el) return;
 
-  el.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 </script>
 

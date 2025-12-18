@@ -10,26 +10,29 @@ import FAQDogs from "@/assets/img/Home/FAQDogs.png";
 const { t } = useI18n();
 
 const getTextWithLink = (key, linkType = "presale") => {
-  const text = t(key);
+  // vue-i18n treats `{link}` as an interpolation placeholder and will render it as an empty
+  // string if no value is provided. Use a sentinel token and replace it with HTML.
+  const LINK_TOKEN = "__FAQ_LINK__";
+  const text = t(key, { link: LINK_TOKEN });
   let linkHtml = "";
   if (linkType === "presale") {
-    linkHtml = `<a data-scroll="presale" class="underline">${t(
+    linkHtml = `<a data-scroll="presale" class="underline text-inherit cursor-pointer hover:opacity-90">${t(
       "common.clickHere"
     )}</a>`;
   } else if (linkType === "howToBuy") {
-    linkHtml = `<a href="#howToBuy" class="underline">${t(
+    linkHtml = `<a data-scroll="howToBuy" class="underline text-inherit cursor-pointer hover:opacity-90">${t(
       "common.clickHere"
     )}</a>`;
   } else if (linkType === "whitepaper") {
-    linkHtml = `<a href="/DOGEBALLWhitepaper.pdf" target="_blank" class="underline">${t(
+    linkHtml = `<a href="/DOGEBALLWhitepaper.pdf" target="_blank" class="underline text-inherit cursor-pointer hover:opacity-90">${t(
       "common.clickHere"
     )}</a>`;
   } else if (linkType === "presaleParens") {
-    linkHtml = `<a data-scroll="presale" class="underline">(${t(
+    linkHtml = `<a data-scroll="presale" class="underline text-inherit cursor-pointer hover:opacity-90">(${t(
       "common.clickHere"
     )})</a>`;
   }
-  return text.replace("{link}", linkHtml);
+  return text.replace(LINK_TOKEN, linkHtml);
 };
 
 const FAQcards = computed(() => [
@@ -70,7 +73,7 @@ const FAQcardsMob = computed(() => [
   },
   {
     title: t("faq.q3"),
-    text: getTextWithLink("faq.a3", "presaleParens"),
+    text: getTextWithLink("faq.a3", "presale"),
   },
   {
     title: t("faq.q2"),
@@ -105,6 +108,8 @@ const isMobile = window.innerWidth < 768;
 function handleHtmlClick(e) {
   const target = e.target.closest("[data-scroll]");
   if (!target) return;
+
+  e.preventDefault();
 
   const id = target.getAttribute("data-scroll");
   const el = document.getElementById(id);
@@ -231,6 +236,7 @@ function handleHtmlClick(e) {
               <p
                 v-if="openIndex === i * 2 + 1"
                 v-html="card.text"
+                @click="handleHtmlClick"
                 class="text-base leading-[120%] z-50 pl-12"
               />
             </Transition>
