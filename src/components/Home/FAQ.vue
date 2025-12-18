@@ -24,7 +24,7 @@ const getTextWithLink = (key, linkType = "presale") => {
       "common.clickHere"
     )}</a>`;
   } else if (linkType === "whitepaper") {
-    linkHtml = `<a href="/DOGEBALLWhitepaper.pdf" target="_blank" class="underline text-inherit cursor-pointer hover:opacity-90">${t(
+    linkHtml = `<a href="/DOGEBALLCoinsultAudit.pdf" target="_blank" class="underline text-inherit cursor-pointer hover:opacity-90">${t(
       "common.clickHere"
     )}</a>`;
   } else if (linkType === "presaleParens") {
