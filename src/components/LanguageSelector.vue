@@ -68,7 +68,7 @@ onUnmounted(() => {
     <!-- Trigger / Current language -->
     <button
       @click="toggleDropdown"
-      class="w-full bg-[rgb(28,32,62)] rounded-[20px] px-3 py-2.5 flex items-center justify-between gap-2"
+      class="w-full bg-[rgb(28,32,62)] rounded-xl px-3 py-2.5 flex items-center justify-between gap-2"
     >
       <div class="flex items-center gap-2 flex-1 min-w-0">
         <div
@@ -105,7 +105,7 @@ onUnmounted(() => {
     <!-- Dropdown list -->
     <div
       v-if="isOpen && availableLanguages.length > 0"
-      class="absolute right-0 top-full mt-1 w-[320px] max-lg:w-full max-lg:left-0 max-lg:right-0 bg-[rgb(28,32,62)] rounded-[20px] overflow-hidden z-50"
+      class="absolute right-0 top-full mt-1 w-[320px] max-lg:w-full max-lg:left-0 max-lg:right-0 bg-[rgb(28,32,62)] rounded-xl overflow-hidden z-50"
     >
       <div
         class="grid grid-cols-2 max-lg:grid-cols-1 max-lg:max-h-[200px] max-lg:overflow-y-auto"
