@@ -191,16 +191,22 @@ const onWalletClick = () => {
         </button>
 
         <div class="flex gap-3 items-center">
-          <div
+          <a
+            href="https://t.me/dogeballtoken"
+            target="_blank"
+            rel="noopener noreferrer"
             class="bg-[rgba(255,238,225,0.10)] cursor-pointer p-2 rounded-full"
           >
             <Telegram />
-          </div>
-          <div
+          </a>
+          <a
+            href="https://x.com/dogeballtoken"
+            target="_blank"
+            rel="noopener noreferrer"
             class="bg-[rgba(255,238,225,0.10)] cursor-pointer p-2 rounded-full"
           >
             <X />
-          </div>
+          </a>
         </div>
       </div>
     </div>
