@@ -89,8 +89,6 @@
       <ReferralCodeInput v-else-if="visibleOption === 'referral'" />
     </Transition>
 
-    <!-- Powered By -->
-    <PoweredBy />
     <NowPaymentsModal
       v-if="nowPaymentsTransaction"
       :open="nowPaymentsModalVisible"
@@ -121,7 +119,6 @@ import { ref, watch, computed, onMounted, watchEffect } from "vue";
 import StageBox from "../stage/StageBox.vue";
 import { TokenSelectGrid, TokenAmountInputs } from "../token";
 import { Button, Spinner, PillButton } from "../ui";
-import PoweredBy from "../shared/PoweredBy.vue";
 import BonusCodeInput from "../code/BonusCodeInput.vue";
 import ReferralCodeInput from "../code/ReferralCodeInput.vue";
 import { usePresale, BuyStateType } from "@/composables/usePresale";
