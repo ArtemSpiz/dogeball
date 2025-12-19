@@ -2,29 +2,22 @@
   <div
     class="flex flex-col gap-3 sm:gap-4 min-w-0 overflow-hidden min-h-0 w-full"
   >
-    <!-- Connect Wallet Prompt -->
-    <div
-      v-if="!presale.isConnected.value"
-      class="flex flex-col items-center gap-4 py-8"
-    >
+    <!-- Coming Soon -->
+    <div class="flex flex-col items-center gap-4 py-8">
       <p class="text-white/70 text-center font-grotesk">
         {{ t("presale.historyTab.connectWalletMessage") }}
       </p>
-      <Button 
-       @click="presale.showConnectWalletModal" 
-       :disabled="isBuying || presale.presaleEnded.value"
-       variant="primary" 
-       class="h-11 px-6 !bg-[#EB4102] !bg-none text-base font-semibold"
-       style="border-radius: 80px"
->
-       <Spinner v-if="isBuying" :size="5" />
-        <template v-else>
-       	 {{ t("presale.buyTab.connectWallet") }}
-        </template>
+      <Button
+        variant="primary"
+        class="h-11 px-6 !bg-[#EB4102] !bg-none text-base font-semibold"
+        style="border-radius: 80px"
+      >
+        {{ t("presale.buyTab.connectWallet") }}
       </Button>
     </div>
 
-    <template v-else>
+    <!-- Dashboard Content (Hidden) -->
+    <template v-if="false">
       <!-- User Referral Data -->
       <div class="flex-shrink-0 flex flex-col gap-2 sm:gap-3 w-full">
         <UserReferralData />
@@ -52,19 +45,7 @@
 
 <script setup>
 import { useI18n } from "vue-i18n";
-import UserReferralData from "../user/UserReferralData.vue";
-import TransactionHistoryList from "../transaction/TransactionHistoryList.vue";
 import { Button } from "../ui";
-import { usePresale } from "@/composables/usePresale";
-import Spinner from "../ui/Spinner.vue";
 
 const { t } = useI18n();
-const presale = usePresale();
-
-const handleBuy = async () => {
-  if (!presale.isConnected.value) {
-    presale.showConnectWalletModal();
-    return;
-  }
-};
 </script>

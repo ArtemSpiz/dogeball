@@ -190,6 +190,7 @@
     },
     "stakeTab": {
       "connectWalletMessage": "Koble til lommeboken din for å vise og administrere stakingen din",
+      "comingSoonMessage": "Staking-funksjonalitet vil være tilgjengelig snart",
       "availableToStake": "Tilgjengelig for stake",
       "maxStake": "Maks stake",
       "maxUnstake": "Maks unstake",
@@ -203,6 +204,7 @@
     },
     "historyTab": {
       "connectWalletMessage": "Koble til lommeboken din for å vise dashboarden din",
+      "comingSoonMessage": "Dashboard-funksjonalitet vil være tilgjengelig snart",
       "yourTransactions": "Dine transaksjoner",
       "noTransactions": "Ingen transaksjoner ennå",
       "purchasesWillAppear": "Kjøpene dine vil vises her"

@@ -190,6 +190,7 @@
     },
     "stakeTab": {
       "connectWalletMessage": "اربط محفظتك لعرض وإدارة التخزين الخاص بك",
+      "comingSoonMessage": "ستكون وظيفة التخزين متاحة قريباً",
       "availableToStake": "متاح للتخزين",
       "maxStake": "الحد الأقصى للتخزين",
       "maxUnstake": "الحد الأقصى لإلغاء التخزين",
@@ -203,6 +204,7 @@
     },
     "historyTab": {
       "connectWalletMessage": "اربط محفظتك لعرض لوحة التحكم الخاصة بك",
+      "comingSoonMessage": "ستكون وظيفة لوحة التحكم متاحة قريباً",
       "yourTransactions": "معاملاتك",
       "noTransactions": "لا توجد معاملات بعد",
       "purchasesWillAppear": "ستظهر مشترياتك هنا"

@@ -187,6 +187,7 @@
     },
     "stakeTab": {
       "connectWalletMessage": "Connect your wallet to view and manage your staking",
+      "comingSoonMessage": "Staking functionality will be available soon",
       "availableToStake": "Available to Stake",
       "maxStake": "Max Stake",
       "maxUnstake": "Max Unstake",
@@ -200,6 +201,7 @@
     },
     "historyTab": {
       "connectWalletMessage": "Connect your wallet to view your dashboard",
+      "comingSoonMessage": "Dashboard functionality will be available soon",
       "yourTransactions": "Your Transactions",
       "noTransactions": "No transactions yet",
       "purchasesWillAppear": "Your purchases will appear here"

@@ -190,6 +190,7 @@
     },
     "stakeTab": {
       "connectWalletMessage": "Verbind uw portemonnee om uw staking te bekijken en te beheren",
+      "comingSoonMessage": "Staking-functionaliteit zal binnenkort beschikbaar zijn",
       "availableToStake": "Beschikbaar om te staken",
       "maxStake": "Maximaal staken",
       "maxUnstake": "Maximaal unstaken",
@@ -203,6 +204,7 @@
     },
     "historyTab": {
       "connectWalletMessage": "Verbind uw portemonnee om uw dashboard te bekijken",
+      "comingSoonMessage": "Dashboard-functionaliteit zal binnenkort beschikbaar zijn",
       "yourTransactions": "Uw transacties",
       "noTransactions": "Nog geen transacties",
       "purchasesWillAppear": "Uw aankopen verschijnen hier"

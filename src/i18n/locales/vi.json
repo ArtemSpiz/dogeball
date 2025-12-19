@@ -190,6 +190,7 @@
     },
     "stakeTab": {
       "connectWalletMessage": "Kết nối ví của bạn để xem và quản lý staking của bạn",
+      "comingSoonMessage": "Tính năng staking sẽ sớm có sẵn",
       "availableToStake": "Có sẵn để Stake",
       "maxStake": "Stake tối đa",
       "maxUnstake": "Unstake tối đa",
@@ -203,6 +204,7 @@
     },
     "historyTab": {
       "connectWalletMessage": "Kết nối ví của bạn để xem bảng điều khiển của bạn",
+      "comingSoonMessage": "Tính năng bảng điều khiển sẽ sớm có sẵn",
       "yourTransactions": "Giao dịch của bạn",
       "noTransactions": "Chưa có giao dịch",
       "purchasesWillAppear": "Các giao dịch mua của bạn sẽ xuất hiện ở đây"

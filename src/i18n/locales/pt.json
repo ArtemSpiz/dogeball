@@ -190,6 +190,7 @@
     },
     "stakeTab": {
       "connectWalletMessage": "Conecte sua carteira para ver e gerenciar seu staking",
+      "comingSoonMessage": "A funcionalidade de staking estará disponível em breve",
       "availableToStake": "Disponível para stake",
       "maxStake": "Stake máximo",
       "maxUnstake": "Unstake máximo",
@@ -203,6 +204,7 @@
     },
     "historyTab": {
       "connectWalletMessage": "Conecte sua carteira para ver seu painel",
+      "comingSoonMessage": "A funcionalidade do painel estará disponível em breve",
       "yourTransactions": "Suas transações",
       "noTransactions": "Ainda não há transações",
       "purchasesWillAppear": "Suas compras aparecerão aqui"

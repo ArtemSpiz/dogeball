@@ -190,6 +190,7 @@
     },
     "stakeTab": {
       "connectWalletMessage": "ウォレットを接続してステーキングを表示および管理",
+      "comingSoonMessage": "ステーキング機能は間もなく利用可能になります",
       "availableToStake": "ステーク可能",
       "maxStake": "最大ステーク",
       "maxUnstake": "最大アンステーク",
@@ -203,6 +204,7 @@
     },
     "historyTab": {
       "connectWalletMessage": "ウォレットを接続してダッシュボードを表示",
+      "comingSoonMessage": "ダッシュボード機能は間もなく利用可能になります",
       "yourTransactions": "あなたのトランザクション",
       "noTransactions": "まだトランザクションがありません",
       "purchasesWillAppear": "購入履歴はここに表示されます"

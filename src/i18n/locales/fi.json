@@ -190,6 +190,7 @@
     },
     "stakeTab": {
       "connectWalletMessage": "Yhdistä lompakkosi nähdäksesi ja hallitaksesi stakingiasi",
+      "comingSoonMessage": "Staking-toiminnallisuus tulee pian saataville",
       "availableToStake": "Saatavilla stakingiin",
       "maxStake": "Maksimi stake",
       "maxUnstake": "Maksimi unstake",
@@ -203,6 +204,7 @@
     },
     "historyTab": {
       "connectWalletMessage": "Yhdistä lompakkosi nähdäksesi hallintapaneelisi",
+      "comingSoonMessage": "Hallintapaneelin toiminnallisuus tulee pian saataville",
       "yourTransactions": "Tapahtumasi",
       "noTransactions": "Ei vielä tapahtumia",
       "purchasesWillAppear": "Ostoksesi näkyvät täällä"

@@ -187,12 +187,7 @@ const onWalletClick = () => {
         <button
           class="py-3 max-md:max-h-[40px] max-md:flex max-md:items-center max-md:justify-center px-4 max-w-[360px] w-full bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
         >
-          <template v-if="isConnected.value">
-            {{ t("header.connectWallet") }}
-          </template>
-          <template v-else>
-            {{ t("header.disconnectWallet") }}
-          </template>
+          {{ t("header.connectWallet") }}
         </button>
 
         <div class="flex gap-3 items-center">

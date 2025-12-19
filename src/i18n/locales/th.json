@@ -190,6 +190,7 @@
     },
     "stakeTab": {
       "connectWalletMessage": "เชื่อมต่อกระเป๋าเงินของคุณเพื่อดูและจัดการการสเตคของคุณ",
+      "comingSoonMessage": "ฟังก์ชันการสเตคจะพร้อมใช้งานเร็วๆ นี้",
       "availableToStake": "พร้อมสำหรับสเตค",
       "maxStake": "สเตคสูงสุด",
       "maxUnstake": "ยกเลิกสเตคสูงสุด",
@@ -203,6 +204,7 @@
     },
     "historyTab": {
       "connectWalletMessage": "เชื่อมต่อกระเป๋าเงินของคุณเพื่อดูแดชบอร์ดของคุณ",
+      "comingSoonMessage": "ฟังก์ชันแดชบอร์ดจะพร้อมใช้งานเร็วๆ นี้",
       "yourTransactions": "ธุรกรรมของคุณ",
       "noTransactions": "ยังไม่มีธุรกรรม",
       "purchasesWillAppear": "การซื้อของคุณจะปรากฏที่นี่"

@@ -190,6 +190,7 @@
     },
     "stakeTab": {
       "connectWalletMessage": "Forbind din tegnebog for at se og administrere din staking",
+      "comingSoonMessage": "Staking-funktionalitet vil være tilgængelig snart",
       "availableToStake": "Tilgængelig til stake",
       "maxStake": "Maks stake",
       "maxUnstake": "Maks unstake",
@@ -203,6 +204,7 @@
     },
     "historyTab": {
       "connectWalletMessage": "Forbind din tegnebog for at se dit dashboard",
+      "comingSoonMessage": "Dashboard-funktionalitet vil være tilgængelig snart",
       "yourTransactions": "Dine transaktioner",
       "noTransactions": "Ingen transaktioner endnu",
       "purchasesWillAppear": "Dine køb vil vises her"

@@ -1,28 +1,21 @@
 <template>
   <div class="flex flex-col gap-4 w-full min-w-0 max-w-full">
-    <!-- Connect Wallet Prompt -->
-    <div
-      v-if="!presale.isConnected.value"
-      class="flex flex-col items-center gap-4 py-8"
-    >
+    <!-- Coming Soon -->
+    <div class="flex flex-col items-center gap-4 py-8">
       <p class="text-white/70 text-center font-grotesk">
         {{ t("presale.stakeTab.connectWalletMessage") }}
       </p>
-      <Button 
-        @click="presale.showConnectWalletModal"  
-        :disabled="isBuying || presale.presaleEnded.value"
+      <Button
         variant="primary"
         class="h-11 px-6 !bg-[#EB4102] !bg-none text-base font-semibold"
-        style="border-radius: 80px">
-       <Spinner v-if="isBuying" :size="5" />
-        <template v-else>
-          {{ t("presale.buyTab.connectWallet") }}
-        </template>
+        style="border-radius: 80px"
+      >
+        {{ t("presale.buyTab.connectWallet") }}
       </Button>
     </div>
 
-    <!-- Staking Content -->
-    <template v-else>
+    <!-- Staking Content (Hidden) -->
+    <template v-if="false">
       <!-- Stake Info Cards -->
       <div class="flex flex-col gap-2 w-full">
         <InfoCard

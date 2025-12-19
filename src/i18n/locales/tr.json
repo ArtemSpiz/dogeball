@@ -190,6 +190,7 @@
     },
     "stakeTab": {
       "connectWalletMessage": "Staking'inizi görüntülemek ve yönetmek için cüzdanınızı bağlayın",
+      "comingSoonMessage": "Staking işlevselliği yakında kullanılabilir olacak",
       "availableToStake": "Stake Edilebilir",
       "maxStake": "Maksimum Stake",
       "maxUnstake": "Maksimum Unstake",
@@ -203,6 +204,7 @@
     },
     "historyTab": {
       "connectWalletMessage": "Dashboard'unuzu görüntülemek için cüzdanınızı bağlayın",
+      "comingSoonMessage": "Dashboard işlevselliği yakında kullanılabilir olacak",
       "yourTransactions": "İşlemleriniz",
       "noTransactions": "Henüz işlem yok",
       "purchasesWillAppear": "Satın alımlarınız burada görünecek"
