@@ -16,7 +16,7 @@ let interval;
 
 const updateCountdown = () => {
   const now = new Date().getTime();
-  const targetDate = new Date("2025-12-22T23:59:59").getTime();
+  const targetDate = new Date("2026-01-02T16:59:59Z").getTime();
   const difference = targetDate - now;
 
   if (difference > 0) {
