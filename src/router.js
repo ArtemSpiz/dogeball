@@ -36,7 +36,14 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-router.afterEach(() => {
+router.afterEach((to) => {
+  // Track page view in Google Analytics
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("config", "G-STFHVRL32Z", {
+      page_path: to.fullPath,
+    });
+  }
+
   setTimeout(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, 10);
