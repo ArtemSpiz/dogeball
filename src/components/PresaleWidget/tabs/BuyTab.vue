@@ -71,23 +71,35 @@
       {{ buyStateMessage }}
     </p>
 
-    <!-- Code Input Buttons -->
-    <div class="flex flex-row justify-center items-center gap-3">
-      <PillButton
-        v-for="item in codeOptions"
-        :key="item.value"
-        :active="visibleOption === item.value"
-        @click="toggleCodeOption(item.value)"
-      >
-        {{ item.label }}
-      </PillButton>
-    </div>
+    <div class="relative h-10">
+      <!-- Code Input Buttons -->
+      <Transition name="slide-fade" mode="out-in">
+        <div v-if="!visibleOption" class="flex flex-row justify-center items-center gap-3 absolute left-0 right-0 top-1/2 -translate-y-1/2">
+          <PillButton
+            v-for="item in codeOptions"
+            :key="item.value"
+            :active="visibleOption === item.value"
+            @click="toggleCodeOption(item.value)"
+          >
+            {{ item.label }}
+          </PillButton>
+        </div>
+      </Transition>
 
-    <!-- Code Inputs -->
-    <Transition name="slide-fade" mode="out-in">
-      <BonusCodeInput v-if="visibleOption === 'bonus'" />
-      <ReferralCodeInput v-else-if="visibleOption === 'referral'" />
-    </Transition>
+      <!-- Code Inputs -->
+      <Transition name="slide-fade" mode="out-in">
+        <div v-if="visibleOption" class="flex gap-2 absolute left-0 right-0 top-1/2 -translate-y-1/2">
+          <BonusCodeInput v-if="visibleOption === 'bonus'" class="flex-1" />
+          <ReferralCodeInput v-else-if="visibleOption === 'referral'" class="flex-1" />
+          <button
+            @click="visibleOption = null"
+            class="h-8 w-8 flex items-center justify-center my-auto ml-auto rounded-full hover:bg-[rgba(255,255,255,0.1)] cursor-pointer transition-colors"
+          >
+            <CloseIcon class="h-5 w-5" />
+          </button>
+        </div>
+      </Transition>
+    </div>
 
     <NowPaymentsModal
       v-if="nowPaymentsTransaction"
@@ -130,6 +142,7 @@ import NowPaymentsModal from "../modals/NowPaymentsModal.vue";
 import WalletTransferModal from "../modals/WalletTransferModal.vue";
 import { isWalletTransferSupported } from "@/utils/web3";
 import ContactModal from "../modals/ContactModal.vue";
+import CloseIcon from "@/assets/icons/Close.vue"
 
 const { t } = useI18n();
 
