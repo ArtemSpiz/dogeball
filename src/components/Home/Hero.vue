@@ -19,7 +19,7 @@ const submit = async () => {
   if (loading.value) return;
   loading.value = true;
   try {
-	console.log(email.value)
+    console.log(email.value);
     await presaleApi.postLeads({
       email: email.value,
       wallet_address: accountData.address.value ?? undefined,
@@ -46,10 +46,18 @@ const submit = async () => {
       <div class="title max-w-[800px] px-3">
         {{ t("hero.title") }}
       </div>
+      <div class="title max-w-[800px] px-3 mt-2">
+        {{ t("hero.whitelistSignup") }}
+      </div>
       <div
-        class="font-grotesk leading-[120%] text-base font-normal max-md:text-sm max-w-[470px] mt-4 max-md:px-3"
+        class="font-grotesk leading-[120%] text-base font-normal max-md:text-sm max-w-[470px] mt-4 max-md:mt-3 max-md:px-3"
       >
         {{ t("hero.subtitle") }}
+      </div>
+      <div
+        class="font-grotesk leading-[120%] text-base font-normal max-md:text-sm max-w-[470px] mt-6 max-md:mt-2"
+      >
+        {{ t("hero.presaleLaunch") }}
       </div>
       <TimerCounter />
     </div>
@@ -66,11 +74,15 @@ const submit = async () => {
           </div>
           <input
             class="py-1 w-full px-2 h-10 border border-[#DCDCDC] rounded-lg bg-[rgba(255,255,255,0.06)] text-base font-medium text-[rgba(255,255,255,0.30)]"
-        	@input="(e) => email = e.currentTarget.value"
+            @input="(e) => (email = e.currentTarget.value)"
             :placeholder="t('hero.emailPlaceholder')"
           />
         </div>
-        <CustomButton :title="loading ? '' : t('hero.getEarlyAccess')" class="w-full" @click="submit">
+        <CustomButton
+          :title="loading ? '' : t('hero.getEarlyAccess')"
+          class="w-full"
+          @click="submit"
+        >
           <Spinner v-if="loading" :size="6" />
         </CustomButton>
       </div>

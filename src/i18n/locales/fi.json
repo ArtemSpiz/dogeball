@@ -19,7 +19,9 @@
   },
   "hero": {
     "title": "MAAILMAN ENSIMMÄINEN L2-VOIMAAN PERUSTUVA KRYPTOPELI",
+    "whitelistSignup": "REKISTERÖIDY ENNENMYYNTI-VALKOISEEN LUETTELOON",
     "subtitle": "$DOGEBALL, ainoa krypto-pelaava DOGE mukautetulla EVM L2 -lohkoketjulla. Nopea, halpa, turvallinen. Pelaa mahdollisuudesta voittaa $1M",
+    "presaleLaunch": "ENNENMYYNTI KÄYNNISTYY..",
     "whitelistEmail": "Syötä sähköposti lisättäväksi valkoiseen listaan",
     "emailPlaceholder": "sähköpostisi",
     "getEarlyAccess": "Hanki varhainen pääsy!",

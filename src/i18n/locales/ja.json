@@ -19,7 +19,9 @@
   },
   "hero": {
     "title": "世界初のL2パワード暗号ゲーム",
+    "whitelistSignup": "プレセールホワイトリストに登録",
     "subtitle": "$DOGEBALL、カスタムEVM L2ブロックチェーン上で唯一の暗号プレイDOGE。高速、低コスト、安全。$1Mを獲得するチャンスをプレイ",
+    "presaleLaunch": "プレセール開始まで..",
     "whitelistEmail": "ホワイトリストに追加するメールアドレスを入力",
     "emailPlaceholder": "メールアドレス",
     "getEarlyAccess": "早期アクセスを取得！",

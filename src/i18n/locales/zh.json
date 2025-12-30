@@ -19,7 +19,9 @@
   },
   "hero": {
     "title": "世界上第一个L2驱动的加密游戏",
+    "whitelistSignup": "注册预售白名单",
     "subtitle": "$DOGEBALL，在自定义EVM L2区块链上唯一玩加密的DOGE。快速、便宜、安全。玩游戏有机会赢得$1M",
+    "presaleLaunch": "预售将在..后启动",
     "whitelistEmail": "输入电子邮件以添加到白名单",
     "emailPlaceholder": "您的电子邮件",
     "getEarlyAccess": "获得早期访问！",

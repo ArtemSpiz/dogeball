@@ -19,7 +19,9 @@
   },
   "hero": {
     "title": "THE WORLD'S FIRST L2 POWERED CRYPTO GAME",
+    "whitelistSignup": "SIGN UP FOR THE PRESALE WHITELIST",
     "subtitle": "$DOGEBALL, the only crypto-playing DOGE on a custom EVM L2 blockchain. Fast, cheap, secure. Play for a shot at $1M",
+    "presaleLaunch": "PRESALE LAUNCHES IN..",
     "whitelistEmail": "Enter email to be added to the Whitelist",
     "emailPlaceholder": "your email",
     "getEarlyAccess": "Get early access!",

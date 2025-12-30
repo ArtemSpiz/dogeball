@@ -19,7 +19,9 @@
   },
   "hero": {
     "title": "DAS ERSTE L2-BETRIEBENE KRYPTO-SPIEL DER WELT",
+    "whitelistSignup": "MELDEN SIE SICH FÜR DIE PRESALE-WHITELIST AN",
     "subtitle": "$DOGEBALL, der einzige Krypto-spielende DOGE auf einer benutzerdefinierten EVM L2 Blockchain. Schnell, günstig, sicher. Spielen Sie für eine Chance auf $1M",
+    "presaleLaunch": "PRESALE STARTET IN..",
     "whitelistEmail": "E-Mail eingeben, um zur Whitelist hinzugefügt zu werden",
     "emailPlaceholder": "Ihre E-Mail",
     "getEarlyAccess": "Frühen Zugang erhalten!",

@@ -19,7 +19,9 @@
   },
   "hero": {
     "title": "O PRIMEIRO JOGO CRIPTO ALIMENTADO POR L2 DO MUNDO",
+    "whitelistSignup": "CADASTRE-SE NA LISTA BRANCA DA PRÉ-VENDA",
     "subtitle": "$DOGEBALL, o único DOGE que joga cripto em uma blockchain EVM L2 personalizada. Rápido, barato, seguro. Jogue por uma chance de ganhar $1M",
+    "presaleLaunch": "A PRÉ-VENDA COMEÇA EM..",
     "whitelistEmail": "Digite o email para ser adicionado à Lista Branca",
     "emailPlaceholder": "seu email",
     "getEarlyAccess": "Obtenha acesso antecipado!",
