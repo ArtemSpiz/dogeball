@@ -89,7 +89,7 @@ const formattedRaised = computed(() => {
     parseNum(presale.stage.value?.cumulative_usd_raised),
     true,
     0,
-    100
+    2
   );
 });
 
