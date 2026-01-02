@@ -50,7 +50,7 @@
       variant="primary"
       class="w-full h-11 px-6 !bg-[#EB4102] !bg-none text-base font-semibold"
       style="border-radius: 80px"
-	  @click="handleBuy"
+      @click="handleBuy"
     >
       <Spinner v-if="isBuying" :size="5" />
       <template v-else>
@@ -105,7 +105,7 @@
     <NowPaymentsModal
       v-if="nowPaymentsTransaction"
       :open="nowPaymentsModalVisible"
-      @close="() => (nowPaymentsModalVisible = false)"
+      @close="closeNowPayments"
       :transaction="nowPaymentsTransaction"
     />
     <WalletTransferModal
@@ -182,7 +182,7 @@ const buyButtonText = computed(() => {
   if (selectedToken.value.symbol.toUpperCase() === "CARD") {
     return t("presale.buyTab.buyWithCard");
   }
-  return t("presale.buyTab.comingSoon");
+  return t("presale.tabs.buy");
 });
 
 const buyStateMessage = computed(() => {
@@ -257,15 +257,17 @@ const closeWalletTransfer = () => {
   contactModalVisible.value = true;
 };
 
+const closeNowPayments = () => {
+  nowPaymentsModalVisible.value = false
+  contactModalVisible.value = true
+}
+
 const handleBuy = async () => {
   // Connect wallet if not connected
   if (!presale.isConnected.value) {
     presale.showConnectWalletModal();
     return;
   }
-
-  // Coming soon buy not yet enabled
-  return
 
   // Validation
   if (presale.presaleEnded.value) {

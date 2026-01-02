@@ -142,7 +142,7 @@ const statusCols = {
 </script>
 
 <template>
-  <Modal title="Transaction" :open="true" @close="$emit('close')">
+  <Modal title="Transaction" :open="props.open" @close="$emit('close')">
     <div class="flex flex-col gap-4 max-md:gap-3">
       <div
         class="flex items-center gap-3 self-stretch rounded-2xl border border-white/20 bg-[rgba(8,12,35,0.48)] p-3 transition-colors hover:bg-[rgba(8,12,35,0.6)]"

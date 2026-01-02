@@ -267,7 +267,6 @@ export function useBuy() {
   }) => {
     try {
       buyLoading.value = true
-      updateState({ state: BuyStateType.SENDING });
 
       if (!walletAddress) {
         throw new Error("Please connect your wallet");
@@ -280,13 +279,11 @@ export function useBuy() {
         token_amount: paymentAmount.toString(),
       });
 
-      updateState({ state: BuyStateType.FINISHED, transaction: res.data });
       buyLoading.value = false
 
       return { type: "created", transaction: res.data };
     } catch (err) {
       buyLoading.value = false
-      updateState({ state: BuyStateType.ERRORED, error: err });
       throw err;
     }
   };

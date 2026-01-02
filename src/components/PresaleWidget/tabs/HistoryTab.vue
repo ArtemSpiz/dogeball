@@ -2,7 +2,6 @@
   <div
     class="flex flex-col gap-3 sm:gap-4 min-w-0 overflow-hidden min-h-0 w-full"
   >
-    <!-- Coming Soon -->
     <div v-if="!address" class="flex flex-col items-center gap-4 py-8">
       <p class="text-white/70 text-center font-grotesk">
         {{ t("presale.historyTab.connectWalletMessage") }}
@@ -16,12 +15,8 @@
         {{ t("presale.buyTab.connectWallet") }}
       </Button>
     </div>
-	<div v-if="address">
-	  <p class="text-center text-white/70 text-lg mt-4">{{ t("presale.buyTab.comingSoon") }}</p>
-	</div>
 
-    <!-- Dashboard Content (Hidden) -->
-    <template v-if="false">
+    <template v-if="address">
       <!-- User Referral Data -->
       <div class="flex-shrink-0 flex flex-col gap-2 sm:gap-3 w-full">
         <UserReferralData />

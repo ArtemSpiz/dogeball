@@ -1,6 +1,5 @@
 <template>
   <div class="flex flex-col gap-4 w-full min-w-0 max-w-full">
-    <!-- Coming Soon -->
     <div v-if="!presale.address.value" class="flex flex-col items-center gap-4 py-8">
       <p class="text-white/70 text-center font-grotesk">
         {{ t("presale.stakeTab.connectWalletMessage") }}
@@ -14,12 +13,8 @@
         {{ t("presale.buyTab.connectWallet") }}
       </Button>
     </div>
-	<div v-if="presale.address.value">
-	  <p class="text-center text-white/70 text-lg mt-4">{{ t("presale.buyTab.comingSoon") }}</p>
-	</div>
 
-    <!-- Staking Content (Hidden) -->
-    <template v-if="false">
+    <template v-if="presale.address.value">
       <!-- Stake Info Cards -->
       <div class="flex flex-col gap-2 w-full">
         <InfoCard
