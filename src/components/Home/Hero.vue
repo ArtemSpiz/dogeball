@@ -81,20 +81,20 @@ const submit = async () => {
         <div class="title max-w-[800px] px-3">
           {{ t("hero.title") }}
         </div>
-        <div class="title max-w-[800px] px-3 mt-2">
+        <!-- <div class="title max-w-[800px] px-3 mt-2">
           {{ t("hero.whitelistSignup") }}
-        </div>
+        </div> -->
         <div
           class="font-grotesk leading-[120%] text-base font-normal max-md:text-sm max-w-[470px] mt-4 max-md:mt-3 max-md:px-3"
         >
           {{ t("hero.subtitle") }}
         </div>
-        <div
+        <!-- <div
           class="font-grotesk leading-[120%] text-base font-normal max-md:text-sm max-w-[470px] mt-6 max-md:mt-2"
         >
           {{ t("hero.presaleLaunch") }}
-        </div>
-        <TimerCounter />
+        </div> -->
+        <!-- <TimerCounter /> -->
       </div>
 
       <div
