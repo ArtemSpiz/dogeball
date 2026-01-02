@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-4 w-full min-w-0 max-w-full">
     <!-- Coming Soon -->
-    <div class="flex flex-col items-center gap-4 py-8">
+    <div v-if="!presale.address.value" class="flex flex-col items-center gap-4 py-8">
       <p class="text-white/70 text-center font-grotesk">
         {{ t("presale.stakeTab.connectWalletMessage") }}
       </p>
@@ -9,10 +9,14 @@
         variant="primary"
         class="h-11 px-6 !bg-[#EB4102] !bg-none text-base font-semibold"
         style="border-radius: 80px"
+		@click="showConnectWalletModal"
       >
         {{ t("presale.buyTab.connectWallet") }}
       </Button>
     </div>
+	<div v-if="presale.address.value">
+	  <p class="text-center text-white/70 text-lg mt-4">{{ t("presale.buyTab.comingSoon") }}</p>
+	</div>
 
     <!-- Staking Content (Hidden) -->
     <template v-if="false">
@@ -135,6 +139,7 @@ import {
   MIN_STAKE_AMOUNT,
   MIN_UNSTAKE_AMOUNT,
 } from "@/config/presale";
+import { showConnectWalletModal } from "@/presale-gg/stores/modal.store";
 
 const { t } = useI18n();
 

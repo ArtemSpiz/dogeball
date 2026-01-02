@@ -50,6 +50,7 @@
       variant="primary"
       class="w-full h-11 px-6 !bg-[#EB4102] !bg-none text-base font-semibold"
       style="border-radius: 80px"
+	  @click="handleBuy"
     >
       <Spinner v-if="isBuying" :size="5" />
       <template v-else>
@@ -262,6 +263,9 @@ const handleBuy = async () => {
     presale.showConnectWalletModal();
     return;
   }
+
+  // Coming soon buy not yet enabled
+  return
 
   // Validation
   if (presale.presaleEnded.value) {

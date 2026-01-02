@@ -3,7 +3,7 @@
     class="flex flex-col gap-3 sm:gap-4 min-w-0 overflow-hidden min-h-0 w-full"
   >
     <!-- Coming Soon -->
-    <div class="flex flex-col items-center gap-4 py-8">
+    <div v-if="!address" class="flex flex-col items-center gap-4 py-8">
       <p class="text-white/70 text-center font-grotesk">
         {{ t("presale.historyTab.connectWalletMessage") }}
       </p>
@@ -11,10 +11,14 @@
         variant="primary"
         class="h-11 px-6 !bg-[#EB4102] !bg-none text-base font-semibold"
         style="border-radius: 80px"
+		@click="showConnectWalletModal"
       >
         {{ t("presale.buyTab.connectWallet") }}
       </Button>
     </div>
+	<div v-if="address">
+	  <p class="text-center text-white/70 text-lg mt-4">{{ t("presale.buyTab.comingSoon") }}</p>
+	</div>
 
     <!-- Dashboard Content (Hidden) -->
     <template v-if="false">
@@ -46,6 +50,11 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import { Button } from "../ui";
+import { TransactionHistoryList } from "../transaction";
+import { showConnectWalletModal } from "@/presale-gg/stores/modal.store";
+import { useWallet } from "@/composables";
+import { UserReferralData } from "../user";
 
+const { address } = useWallet()
 const { t } = useI18n();
 </script>
