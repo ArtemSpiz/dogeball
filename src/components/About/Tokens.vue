@@ -4,6 +4,7 @@ import { useI18n } from "vue-i18n";
 import ArrowDropDown from "@/assets/icons/ArrowDropDown.vue";
 import TokenIcon1 from "@/assets/img/About/TokenIcon1.png";
 import CustomButton from "@/ui/CustomButton.vue";
+import Spinner from "@/components/PresaleWidget/ui/Spinner.vue";
 import { useWallet } from "@/composables/blockchain/useWallet";
 import { useToast } from "@/composables/useToast";
 import { claimFaucetTokens } from "@/api/faucet";
@@ -148,13 +149,21 @@ const handleClaim = async () => {
             {{ t("ethL2.walletAddress") }}
           </div>
           <input
+            v-model="walletAddress"
             :placeholder="t('ethL2.walletAddressPlaceholder')"
             class="p-2 w-full max-h-[40px] border rounded-lg gap-2 flex items-center border-[#DCDCDC] bg-[rgba(255,255,255,0.06)] placeholder:text-lg max-md:placeholder:text-xs text-lg max-md:text-base placeholder:text-[rgba(255,255,255,0.30)] text-[rgba(255,255,255,0.30)]"
           />
         </div>
       </div>
 
-      <CustomButton :title="t('ethL2.comingSoon')" class="w-full" />
+      <CustomButton
+        :title="isClaiming ? '' : t('ethL2.send')"
+        :disabled="isClaiming"
+        class="w-full"
+        @click="handleClaim"
+      >
+        <Spinner v-if="isClaiming" :size="6" />
+      </CustomButton>
     </div>
   </div>
 </template>

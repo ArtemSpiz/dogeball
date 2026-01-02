@@ -5,8 +5,8 @@
 
 import axios from "axios";
 
-// Get server URL from environment variable or use default
-const BASE_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:3000";
+// Faucet API base URL
+const BASE_URL = "https://dogeball-faucet.vercel.app";
 
 /**
  * Claim tokens from faucet
