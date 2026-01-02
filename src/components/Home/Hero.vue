@@ -59,7 +59,7 @@ const submit = async () => {
 <template>
   <div class="relative">
     <div
-      class="absolute top-[60px] left-0 right-0 bg-[#8B94F5] text-white py-1 overflow-hidden z-10 max-xl:top-[40px]"
+      class="absolute top-[70px] left-0 right-0 bg-[#8B94F5] text-white py-1 overflow-hidden z-10 max-xl:top-[40px]"
     >
       <Vue3Marquee
         :duration="tickerDuration"
