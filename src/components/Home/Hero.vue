@@ -75,7 +75,7 @@ const submit = async () => {
       </Vue3Marquee>
     </div>
     <div
-      class="h-screen 2xl:h-[calc(100vh+100px)] 2xl:max-h-[1400px] 2xl:bg-bottom max-md:h-[calc(100vh-30px)] max-md:min-h-[660px] relative min-h-[600px] px-5 pt-[100px] flex flex-col items-center justify-between pb-[56px] bg-[url('@/assets/img/Home/HeroBg.png')] max-xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat"
+      class="h-screen 2xl:h-[calc(100vh+100px)] 2xl:max-h-[1400px] 2xl:bg-bottom max-md:h-auto max-md:min-h-[440px] relative min-h-[600px] px-5 pt-[100px] max-md:pt-[80px] flex flex-col items-center justify-between pb-[56px] max-md:pb-[30px] bg-[url('@/assets/img/Home/HeroBg.png')] max-xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat mobile-bg-crop"
     >
       <div class="text-center flex flex-col items-center justify-center w-full">
         <div class="title max-w-[800px] px-3">
@@ -100,7 +100,7 @@ const submit = async () => {
       <div
         class="max-w-[2000px] w-full flex justify-center items-center mx-auto relative max-md:static"
       >
-        <div
+        <!-- <div
           class="flex absolute bottom-0 left-[120px] max-xl:left-[20px] max-lg:hidden w-full max-w-[325px] max-xl:max-w-[300px] flex-col p-4 gap-4 border border-[#8B94F5] rounded-2xl bg-[rgba(53,19,147,0.52)] backdrop-blur-[5px] shadow-[0_0_154px_0_#263166]"
         >
           <div>
@@ -120,9 +120,9 @@ const submit = async () => {
           >
             <Spinner v-if="loading" :size="6" />
           </CustomButton>
-        </div>
+        </div> -->
 
-        <div class="flex gap-4 items-center">
+        <div class="flex gap-4 items-center max-md:hidden">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -130,7 +130,7 @@ const submit = async () => {
           >
             <CustomButton
               :title="t('hero.audit')"
-              class="py-[18px] !text-[22px] !w-[160px] max-md:h-[50px]"
+              class="py-[18px] !text-[22px] !w-[160px]"
           /></a>
 
           <a
@@ -141,7 +141,7 @@ const submit = async () => {
             <CustomButton
               :title="t('hero.whitepaper')"
               white-bg="true"
-              class="py-[18px] !text-[22px] !w-[160px] max-md:h-[50px]"
+              class="py-[18px] !text-[22px] !w-[160px]"
           /></a>
         </div>
       </div>
@@ -149,4 +149,11 @@ const submit = async () => {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+@media (max-width: 768px) {
+  .mobile-bg-crop {
+    background-size: 250% auto !important;
+    background-position: center bottom !important;
+  }
+}
+</style>
