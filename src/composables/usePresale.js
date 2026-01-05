@@ -37,7 +37,7 @@ import {
   getContractAddress,
   getDecimals,
 } from "@/utils/web3";
-import { refetchUserData, refetchUserStakeData } from "@/presale-gg/stores/user.store";
+import { refetchUserData, refetchUserStakeData, resetUserBonusCode } from "@/presale-gg/stores/user.store";
 import { useStaking } from "./blockchain/useStaking";
 
 // Re-export for convenience
@@ -147,17 +147,12 @@ export function usePresale() {
       throw new Error("Please connect your wallet");
     }
 
-    const result = await codes.applyBonusCode({
-      address: address.value,
-      code,
-    });
-
-    userData.appliedBonusCode.value = result;
+    const result = await codes.applyBonusCode(code);
     return result;
   };
 
   const resetBonusCode = () => {
-    userData.appliedBonusCode.value = null;
+    resetUserBonusCode()
   };
 
   const applyReferralCode = async (code) => {
@@ -165,10 +160,7 @@ export function usePresale() {
       throw new Error("Please connect your wallet");
     }
 
-    await codes.applyReferralCode({
-      address: address.value,
-      code,
-    });
+    await codes.applyReferralCode(code);
 
     await refetchUserData();
   };

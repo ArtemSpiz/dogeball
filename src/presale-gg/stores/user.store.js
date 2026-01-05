@@ -180,6 +180,7 @@ export const userApplyBonusCode = async (code, options) => {
   const token = await getUserToken(options);
   const res = await api.applyBonusCode(address, code, token.token);
   $userState.setKey("appliedBonusCode", res.data);
+  return res.data
 };
 
 export const userLevelUp = async () => {

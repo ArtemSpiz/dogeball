@@ -4,7 +4,7 @@
  */
 
 import { ref } from "vue";
-import { userApplyBonusCode } from "@/presale-gg/stores/user.store";
+import { userApplyBonusCode, userUpdateReferralCode } from "@/presale-gg/stores/user.store";
 
 /**
  * Codes composable
@@ -19,7 +19,9 @@ export function useCodes() {
   const applyBonusCode = async (code) => {
     bonusCodeLoading.value = true;
     try {
-      await userApplyBonusCode(code)
+      const res = await userApplyBonusCode(code)
+      bonusCodeLoading.value = false;
+      return res
     } finally {
       bonusCodeLoading.value = false;
     }
@@ -31,7 +33,7 @@ export function useCodes() {
   const applyReferralCode = async (code) => {
     referralCodeLoading.value = true;
     try {
-      await userApplyBonusCode(code)
+      await userUpdateReferralCode(code)
     } finally {
       referralCodeLoading.value = false;
     }

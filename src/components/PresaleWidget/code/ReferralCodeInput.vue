@@ -16,6 +16,8 @@ import { useI18n } from "vue-i18n";
 import { usePresale } from "@/composables/usePresale";
 import { useToast } from "@/composables/useToast";
 import CodeInputs from "./CodeInputs.vue";
+import { userResetReferralCode } from "@/presale-gg/stores/user.store";
+import { presaleApi } from "@/api";
 
 const { t } = useI18n();
 const presale = usePresale();
@@ -48,16 +50,13 @@ const handleApply = async (code) => {
     await presale.applyReferralCode(code.trim());
     toast.showSuccess(t("presale.referralCode.appliedSuccess"));
   } catch (err) {
-    const message =
-      err?.response?.data?.message ||
-      err?.message ||
-      t("presale.referralCode.invalidCode");
+    const message = presaleApi.getApiErrorMessage(err, t("presale.referralCode.invalidCode"))
     toast.showError(message);
     throw err;
   }
 };
 
 const handleChange = () => {
-  // Referral codes cannot be reset once applied
+  userResetReferralCode()
 };
 </script>
