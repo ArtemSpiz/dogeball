@@ -80,7 +80,7 @@ const stageFrac = computed(() => {
 
 const progressPercent = computed(() => {
   return Intl.NumberFormat("en-US", { maximumFractionDigits: 0 }).format(
-    stageFrac.value * 100
+    (1 - stageFrac.value) * 100
   );
 });
 
