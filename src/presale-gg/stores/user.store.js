@@ -42,19 +42,21 @@ export const defaultUserState = {
 export const $userState = map({ ...defaultUserState });
 export const useUserState = () => useStore($userState);
 
-document.addEventListener("wagmi-loaded", async () => {
-  const { config } = await getConfig();
-  watchAccount(config, {
-    onChange: (account) => {
-      const address = account.address;
-      if (!address) return $userState.set({ ...defaultUserState });
-      api.getUser(address).then((res) => $userState.setKey("user", res.data));
-      api
-        .getUserStakeData(address)
-        .then((res) => $userState.setKey("userStakeData", res.data));
-    },
+if (typeof window !== "undefined") {
+  document.addEventListener("wagmi-loaded", async () => {
+    const { config } = await getConfig();
+    watchAccount(config, {
+      onChange: (account) => {
+        const address = account.address;
+        if (!address) return $userState.set({ ...defaultUserState });
+        api.getUser(address).then((res) => $userState.setKey("user", res.data));
+        api
+          .getUserStakeData(address)
+          .then((res) => $userState.setKey("userStakeData", res.data));
+      },
+    });
   });
-});
+}
 
 /**
  * @param {object} [options]
@@ -73,16 +75,19 @@ export const getUserToken = async (options) => {
   if (!address || !isConnected) throw new Error("Please connect your wallet");
   const messageRes = await api.getSiweMessage(address);
   if (!options?.noToast) {
-    addToast("Confirm the message signature in your wallet", ToastType.INFO)
+    addToast("Confirm the message signature in your wallet", ToastType.INFO);
   }
   let signedMessage = await signMessage(config, {
     message: messageRes.data.message,
   }).catch((err) => {
-    addToast(api.getApiErrorMessage(err, "Error signing message"), ToastType.ERROR) 
+    addToast(
+      api.getApiErrorMessage(err, "Error signing message"),
+      ToastType.ERROR
+    );
     throw new Error("Error confirming user");
   });
   if (!options?.noToast) {
-    addToast("Successfully signed wallet message", ToastType.INFO)
+    addToast("Successfully signed wallet message", ToastType.INFO);
   }
   const validRes = await api.verifySiweMessage(
     address,
@@ -109,7 +114,7 @@ export const refetchUserData = async () => {
   if (!address || !isConnected) throw new Error("Please connect your wallet");
   const res = await api.getUser(address);
   $userState.setKey("user", res.data);
-}
+};
 
 /**
  * @param {string | number} tokens
@@ -180,7 +185,7 @@ export const userApplyBonusCode = async (code, options) => {
   const token = await getUserToken(options);
   const res = await api.applyBonusCode(address, code, token.token);
   $userState.setKey("appliedBonusCode", res.data);
-  return res.data
+  return res.data;
 };
 
 export const userLevelUp = async () => {

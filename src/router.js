@@ -1,56 +1,51 @@
-import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/pages/Home.vue";
 import About from "./pages/About.vue";
 import Roadmap from "./pages/Roadmap.vue";
 
-const routes = [
-  { path: "/", name: "Home", component: Home },
-  { path: "/eth-l2", name: "ETH L2", component: About },
-  { path: "/play-$DOGEBALL", name: "Roadmap", component: Roadmap },
-];
-
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(savedPosition);
-        }, 100);
-      });
-    }
-
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({ top: 0, left: 0, behavior: "smooth" });
-      }, 0);
-    });
+export const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+    meta: {
+      title: "$DOGEBALL – Meme coin, presale and game on Ethereum L2",
+      description:
+        "Join $DOGEBALL – the ultimate meme coin presale on Ethereum L2. Play, earn rewards, and be part of the future of decentralized gaming. Buy $DOGEBALL tokens now!",
+      ogTitle: "$DOGEBALL – Meme coin, presale and game on Ethereum L2",
+      ogDescription:
+        "Join $DOGEBALL – the ultimate meme coin presale on Ethereum L2. Play, earn rewards, and be part of the future of decentralized gaming.",
+      ogImage: "https://dogeball.gg/logo.png",
+      canonical: "https://dogeball.gg/",
+    },
   },
-});
-
-router.beforeEach((to, from, next) => {
-  if (typeof window !== "undefined") {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }
-  next();
-});
-
-router.afterEach((to) => {
-  // Track page view in Google Analytics
-  if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("config", "G-STFHVRL32Z", {
-      page_path: to.fullPath,
-    });
-  }
-
-  setTimeout(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, 10);
-
-  setTimeout(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, 100);
-});
-
-export default router;
+  {
+    path: "/eth-l2",
+    name: "ETH L2",
+    component: About,
+    meta: {
+      title: "$DOGEBALL on Ethereum L2 – Scalable, Fast, Low-Cost",
+      description:
+        "Discover $DOGEBALL on Ethereum L2. Experience fast transactions, low gas fees, and seamless gameplay. Built on cutting-edge Layer 2 technology for the best user experience.",
+      ogTitle: "$DOGEBALL on Ethereum L2 – Scalable, Fast, Low-Cost",
+      ogDescription:
+        "Discover $DOGEBALL on Ethereum L2. Experience fast transactions, low gas fees, and seamless gameplay.",
+      ogImage: "https://dogeball.gg/logo.png",
+      canonical: "https://dogeball.gg/eth-l2",
+    },
+  },
+  {
+    path: "/play-$DOGEBALL",
+    name: "Roadmap",
+    component: Roadmap,
+    meta: {
+      title: "Play $DOGEBALL – Roadmap & Game Features",
+      description:
+        "Explore the $DOGEBALL roadmap and upcoming game features. Learn about tokenomics, staking rewards, and the future of the $DOGEBALL ecosystem.",
+      ogTitle: "Play $DOGEBALL – Roadmap & Game Features",
+      ogDescription:
+        "Explore the $DOGEBALL roadmap and upcoming game features. Learn about tokenomics, staking rewards, and the future.",
+      ogImage: "https://dogeball.gg/logo.png",
+      canonical: "https://dogeball.gg/play-$DOGEBALL",
+    },
+  },
+];

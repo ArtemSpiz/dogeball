@@ -34,7 +34,9 @@ export const getConfig = async () => {
   if (!configPromise) configPromise = import("./connections");
   const res = await configPromise;
   configRef.current = res;
-  document.dispatchEvent(new Event("wagmi-loaded"));
+  if (typeof window !== "undefined") {
+    document.dispatchEvent(new Event("wagmi-loaded"));
+  }
   getPublicClient();
   return res;
 };
@@ -92,25 +94,29 @@ export const connections = [
     hide: () =>
       typeof window === "undefined" ||
       (!("phantom" in window) && !getIsMobile()),
-    onClick: !("phantom" in window)
-      ? () => {
-          const url = new URL(window.location.href);
-          let newUrl = `${url.origin}${url.pathname}`;
-          newUrl += "?" + url.searchParams.toString();
-          if (url.search) newUrl += "&";
-          newUrl += `connect_wallet=${encodeURIComponent("phantom-wallet")}`;
-          window.open(
-            `https://phantom.app/ul/browse/${encodeURIComponent(
-              newUrl
-            )}?ref=${encodeURIComponent(window.location.href)}`,
-            "_blank"
-          );
-        }
-      : undefined,
+    onClick:
+      typeof window !== "undefined" && !("phantom" in window)
+        ? () => {
+            const url = new URL(window.location.href);
+            let newUrl = `${url.origin}${url.pathname}`;
+            newUrl += "?" + url.searchParams.toString();
+            if (url.search) newUrl += "&";
+            newUrl += `connect_wallet=${encodeURIComponent("phantom-wallet")}`;
+            window.open(
+              `https://phantom.app/ul/browse/${encodeURIComponent(
+                newUrl
+              )}?ref=${encodeURIComponent(window.location.href)}`,
+              "_blank"
+            );
+          }
+        : undefined,
   },
 ];
 
-if (localStorage.getItem("connect-wallet-id-v2")) {
+if (
+  typeof window !== "undefined" &&
+  localStorage.getItem("connect-wallet-id-v2")
+) {
   getConfig().then(({ loadStoredConnection }) => {
     loadStoredConnection();
   });

@@ -18,7 +18,8 @@ import da from "./locales/da.json";
 import th from "./locales/th.json";
 
 // Get saved language from localStorage or default to English
-const savedLocale = localStorage.getItem("locale") || "en";
+const savedLocale =
+  typeof window !== "undefined" ? localStorage.getItem("locale") || "en" : "en";
 
 const i18n = createI18n({
   legacy: false,

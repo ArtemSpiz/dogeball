@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { onMounted, onUnmounted, ref } from "vue";
 
 /** @type {import("vue").Ref<{address: string | null, addresses: string[], chainId: number | null, isConnected: boolean}>} */
-const accountData = ref(null)
+const accountData = ref(null);
 
 /**
  * @typedef {object} GetAccountReturnType
@@ -14,8 +14,7 @@ const accountData = ref(null)
  * @property {boolean} isConnected
  */
 export const useAccount = () => {
-  
-  const abortController = new AbortController()
+  const abortController = new AbortController();
 
   onMounted(() => {
     const config = configRef.current?.config;
@@ -34,13 +33,17 @@ export const useAccount = () => {
       unwatch = _unwatch;
     };
     if (config) func();
-    else document.addEventListener("wagmi-loaded", func, {signal: abortController.signal});
+    else if (typeof window !== "undefined") {
+      document.addEventListener("wagmi-loaded", func, {
+        signal: abortController.signal,
+      });
+    }
     abortController.signal.addEventListener("abort", () => {
-      if (unwatch) unwatch()
-    })
+      if (unwatch) unwatch();
+    });
   });
 
-  onUnmounted(() => abortController.abort())
-  
-  return accountData
+  onUnmounted(() => abortController.abort());
+
+  return accountData;
 };
