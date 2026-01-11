@@ -14,8 +14,8 @@ export const routes = [
       ogTitle: "$DOGEBALL – Meme coin, presale and game on Ethereum L2",
       ogDescription:
         "Join $DOGEBALL – the ultimate meme coin presale on Ethereum L2. Play, earn rewards, and be part of the future of decentralized gaming.",
-      ogImage: "https://dogeballtoken.com/logo.png",
-      canonical: "https://dogeballtoken.com/",
+      ogImage: "https://www.dogeballtoken.com/logo.png",
+      canonical: "https://www.dogeballtoken.com/",
     },
   },
   {
@@ -29,8 +29,8 @@ export const routes = [
       ogTitle: "$DOGEBALL on Ethereum L2 – Scalable, Fast, Low-Cost",
       ogDescription:
         "Discover $DOGEBALL on Ethereum L2. Experience fast transactions, low gas fees, and seamless gameplay.",
-      ogImage: "https://dogeballtoken.com/logo.png",
-      canonical: "https://dogeballtoken.com/eth-l2",
+      ogImage: "https://www.dogeballtoken.com/logo.png",
+      canonical: "https://www.dogeballtoken.com/eth-l2",
     },
   },
   {
@@ -44,8 +44,8 @@ export const routes = [
       ogTitle: "Play $DOGEBALL – Roadmap & Game Features",
       ogDescription:
         "Explore the $DOGEBALL roadmap and upcoming game features. Learn about tokenomics, staking rewards, and the future.",
-      ogImage: "https://dogeballtoken.com/logo.png",
-      canonical: "https://dogeballtoken.com/play-$DOGEBALL",
+      ogImage: "https://www.dogeballtoken.com/logo.png",
+      canonical: "https://www.dogeballtoken.com/play-$DOGEBALL",
     },
   },
 ];

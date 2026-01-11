@@ -24,7 +24,7 @@ export const createApp = ViteSSG(
     const updateMetaTags = (to) => {
       if (!to.meta) return;
 
-      const baseUrl = "https://dogeballtoken.com/";
+      const baseUrl = "https://www.dogeballtoken.com/";
       const title = to.meta.title || "$DOGEBALL";
       const description =
         to.meta.description ||
