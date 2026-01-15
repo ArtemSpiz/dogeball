@@ -43,6 +43,9 @@ const AboutCards = computed(() => [
   >
     <div class="flex flex-col items-center gap-8">
       <div class="title">{{ t("about.title") }}</div>
+      <div class="font-grotesk text-2xl text-center font-medium max-md:text-xl">
+        {{ t("about.secSubtitle") }}
+      </div>
       <div class="flex items-center text-center flex-col gap-4">
         <div class="font-grotesk text-2xl font-medium max-md:text-xl">
           {{ t("about.subtitle") }}

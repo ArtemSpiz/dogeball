@@ -64,6 +64,26 @@ const FAQcards = computed(() => [
     title: t("faq.q7"),
     text: t("faq.a7"),
   },
+  {
+    title: t("faq.q8"),
+    text: t("faq.a8"),
+  },
+  {
+    title: t("faq.q9"),
+    text: t("faq.a9"),
+  },
+  {
+    title: t("faq.q10"),
+    text: t("faq.a10"),
+  },
+  {
+    title: t("faq.q11"),
+    text: t("faq.a11"),
+  },
+  {
+    title: t("faq.q12"),
+    text: t("faq.a12"),
+  },
 ]);
 
 const FAQcardsMob = computed(() => [
@@ -95,6 +115,26 @@ const FAQcardsMob = computed(() => [
     title: t("faq.q6"),
     text: getTextWithLink("faq.a6", "whitepaper"),
   },
+  {
+    title: t("faq.q8"),
+    text: t("faq.a8"),
+  },
+  {
+    title: t("faq.q9"),
+    text: t("faq.a9"),
+  },
+  {
+    title: t("faq.q10"),
+    text: t("faq.a10"),
+  },
+  {
+    title: t("faq.q11"),
+    text: t("faq.a11"),
+  },
+  {
+    title: t("faq.q12"),
+    text: t("faq.a12"),
+  },
 ]);
 
 const openIndex = ref(null);
@@ -125,7 +165,7 @@ function handleHtmlClick(e) {
 <template>
   <div
     id="faq"
-    class="flex px-5 h-[1000px] max-2xl:!bg-cover bgFill max-lg:h-[950px] max-md:h-max flex-col relative py-20 max-md:py-12 max-md:pb-0 gap-12 bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Home/FAQBg.png')] overflow-hidden max-md:bg-[url('@/assets/img/Home/FAQBgMob.png')]"
+    class="flex px-5 h-[1200px] max-2xl:!bg-cover bgFill max-lg:h-[1250px] max-md:h-max flex-col relative py-20 max-md:py-12 max-md:pb-0 gap-12 bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Home/FAQBg.png')] overflow-hidden max-md:bg-[url('@/assets/img/Home/FAQBgMob.png')]"
   >
     <div class="title z-20 uppercase max-w-[700px] text-center mx-auto">
       {{ t("faq.title") }}
@@ -137,7 +177,7 @@ function handleHtmlClick(e) {
       <img :src="FAQDogs" class="object-contain" />
     </div>
 
-    <div class="flex z-30 flex-col gap-4 max-w-7xl mx-auto max-md:h-[640px]">
+    <div class="flex z-30 flex-col gap-4 max-w-7xl mx-auto max-md:h-[1000px]">
       <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
         <div class="flex flex-col gap-4">
           <div

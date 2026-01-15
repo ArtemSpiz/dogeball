@@ -60,12 +60,17 @@ const RoadmapCards = computed(() => [
 <template>
   <div
     id="roadmap"
-    class="relative h-[800px] max-xl:!bg-cover bgFill bg-center bg-no-repeat bg-[url('@/assets/img/Home/RoadmapBg.png')] max-xl:h-auto"
+    class="relative h-[950px] max-xl:!bg-cover bgFill bg-center bg-no-repeat bg-[url('@/assets/img/Home/RoadmapBg.png')] max-xl:h-auto"
   >
     <div
       class="max-w-[2000px] mx-auto justify-start pt-[85px] max-xl:py-[85px] max-md:py-12 flex flex-col items-center gap-8 px-20 max-md:px-5"
     >
-      <div class="title uppercase">{{ t("roadmap.title") }}</div>
+        <div class="title uppercase text-center">{{ t("roadmap.title") }}</div>
+        <div
+          class="font-grotesk text-2xl text-center font-medium max-md:text-xl"
+        >
+          {{ t("roadmap.subtitle") }}
+        </div>
       <div
         class="flex gap-4 max-md:gap-2 justify-center relative items-start max-xl:grid max-xl:grid-cols-2 max-md:grid-cols-1"
       >
@@ -79,7 +84,7 @@ const RoadmapCards = computed(() => [
           ]"
         >
           <div class="flex flex-col gap-2">
-            <div class="font-medium text-base leading-[125%]">
+            <div class="font-medium text-sm leading-[125%]">
               {{ card.phase }}
             </div>
             <div class="font-semibold text-xl leading-[110%]">
@@ -104,18 +109,18 @@ const RoadmapCards = computed(() => [
             :class="[
               'absolute max-xl:hidden',
               {
-                'translate-y-[56%] w-[600px] h-[353px] left-[-55px]':
+                'translate-y-[60%] w-[600px] h-[353px] left-[-55px]':
                   index === 0,
               },
               {
-                'translate-y-[60%] w-[210px] h-[275px] left-[-23px]':
+                'translate-y-[65%] w-[210px] h-[275px] left-[-23px]':
                   index === 1,
               },
               {
-                'translate-y-[68%] w-[320px] h-[260px] left-[2px]': index === 2,
+                'translate-y-[74%] w-[320px] h-[260px] left-[2px]': index === 2,
               },
               {
-                'translate-y-[45%] w-[645px] h-[380px] left-[-322px]':
+                'translate-y-[49%] w-[645px] h-[380px] left-[-322px]':
                   index === 3,
               },
             ]"

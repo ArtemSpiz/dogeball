@@ -91,14 +91,21 @@ function handleHtmlClick(e) {
     class="bg-[center_bottom] max-xl:!bg-cover bgFill bg-cover bg-no-repeat bg-[url('@/assets/img/Home/HowToBuyBg.png')] max-lg:bg-[url('@/assets/img/Home/HowToBuyBgMob.png')]"
   >
     <div
-      class="flex max-w-[2000px] mx-auto relative overflow-hidden gap-14 max-md:gap-8 max-xl:flex-col max-lg:h-[900px] max-md:h-[750px] py-[150px] max-md:py-12"
+      class="flex max-w-[2000px] mx-auto relative overflow-hidden gap-14 max-md:gap-8 max-xl:flex-col max-lg:h-[1200px] max-md:h-[860px] py-[150px] max-md:py-12"
     >
-      <div
-        class="title min-w-[340px] pl-20 max-lg:px-20 max-md:px-5 max-md:mx-auto max-md:text-center max-md:min-w-0 max-md:max-w-[165px]"
-      >
-        {{ t("howToBuy.title") }}
-      </div>
+      <div class="flex flex-col">
+        <div
+          class="title min-w-[340px] pl-20 max-lg:px-20 max-md:px-5 max-md:mx-auto max-md:text-center max-md:min-w-0 max-md:max-w-[365px]"
+        >
+          {{ t("howToBuy.title") }}
+        </div>
 
+        <div
+          class="font-grotesk z-20 text-2xl max-md:text-center font-medium max-md:text-base pl-20 max-lg:px-20 max-md:px-5 max-md:mx-auto mt-4"
+        >
+          {{ t("howToBuy.subtitle") }}
+        </div>
+      </div>
       <div
         class="grid grid-cols-[repeat(3,1fr)] pr-20 max-xl:px-20 grid-rows-[repeat(2,1fr)] gap-6 max-lg:hidden"
       >
