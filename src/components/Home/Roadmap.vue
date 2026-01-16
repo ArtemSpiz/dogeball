@@ -65,12 +65,10 @@ const RoadmapCards = computed(() => [
     <div
       class="max-w-[2000px] mx-auto justify-start pt-[85px] max-xl:py-[85px] max-md:py-12 flex flex-col items-center gap-8 px-20 max-md:px-5"
     >
-        <div class="title uppercase text-center">{{ t("roadmap.title") }}</div>
-        <div
-          class="font-grotesk text-2xl text-center font-medium max-md:text-xl"
-        >
-          {{ t("roadmap.subtitle") }}
-        </div>
+      <div class="title uppercase text-center">{{ t("roadmap.title") }}</div>
+      <div class="font-grotesk text-base text-center font-medium md:text-xl">
+        {{ t("roadmap.subtitle") }}
+      </div>
       <div
         class="flex gap-4 max-md:gap-2 justify-center relative items-start max-xl:grid max-xl:grid-cols-2 max-md:grid-cols-1"
       >
@@ -84,12 +82,12 @@ const RoadmapCards = computed(() => [
           ]"
         >
           <div class="flex flex-col gap-2">
-            <div class="font-medium text-sm leading-[125%]">
+            <div class="font-semibold text-xl leading-[110%]">
               {{ card.phase }}
             </div>
-            <div class="font-semibold text-xl leading-[110%]">
+            <!-- <div class="font-semibold text-xl leading-[110%]">
               {{ card.title }}
-            </div>
+            </div> -->
           </div>
           <div class="flex flex-col gap-2">
             <div

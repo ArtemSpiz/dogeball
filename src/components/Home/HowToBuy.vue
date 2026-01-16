@@ -26,7 +26,7 @@ const getTextWithLink = (key) => {
   // string if no value is provided. We provide a sentinel token and replace it with HTML.
   const LINK_TOKEN = "__PRESALE_LINK__";
   const text = t(key, { link: LINK_TOKEN });
-  const clickHereText = t("common.clickHere") || "Click Here";
+  const clickHereText = t("common.howToBuy") || "Click Here";
   // Note: v-html does not compile Vue directives like @click, so we use a data attribute
   // and delegate the click in `handleHtmlClick`.
   const linkHtml = `<a href="#presale" data-scroll="presale" class="underline text-inherit cursor-pointer hover:opacity-90">${clickHereText}</a>`;
@@ -60,7 +60,7 @@ const HowBuyCards = computed(() => [
   },
   {
     type: "orange",
-    underTitle: t("howToBuy.earnRewards"),
+    // underTitle: t("howToBuy.earnRewards"),
     title: t("howToBuy.staking"),
     text: t("howToBuy.stakingDesc"),
   },

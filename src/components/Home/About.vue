@@ -39,18 +39,20 @@ const AboutCards = computed(() => [
 <template>
   <div
     id="about"
-    class="flex flex-col gap-9 max-md:gap-8 pt-[80px] max-md:py-12 pb-[120px] justify-center items-center px-[100px] max-lg:px-11 max-md:px-5 bg-[url('@/assets/img/Home/AboutBg.png')] bg-cover bg-bottom bg-no-repeat"
+    class="flex flex-col gap-9 max-md:gap-8 pt-[80px] max-md:py-12 pb-[120px] justify-center items-center px-[100px] lg:px-11 max-md:px-5 bg-[url('@/assets/img/Home/AboutBg.png')] bg-cover bg-bottom bg-no-repeat"
   >
     <div class="flex flex-col items-center gap-8">
       <div class="title">{{ t("about.title") }}</div>
-      <div class="font-grotesk text-2xl text-center font-medium max-md:text-xl">
+      <div class="font-grotesk text-base text-center font-medium md:text-xl">
         {{ t("about.secSubtitle") }}
       </div>
       <div class="flex items-center text-center flex-col gap-4">
-        <div class="font-grotesk text-2xl font-medium max-md:text-xl">
+        <div class="title">
           {{ t("about.subtitle") }}
         </div>
-        <div class="description max-w-[730px]">
+        <div
+          class="font-grotesk text-base font-medium md:text-xl max-w-[730px]"
+        >
           {{ t("about.description") }}
         </div>
       </div>
@@ -62,7 +64,7 @@ const AboutCards = computed(() => [
         v-for="(card, i) in AboutCards"
         :key="i"
         :class="[
-          'px-8 max-md:px-2 py-4 relative  min-w-[50px] max-md:w-full max-md:min-w-0 h-[120px] self-stretch gap-4 flex flex-col items-center justify-center bg-[rgba(53,19,147,0.52)]  rounded-2xl backdrop-blur-[5px]',
+          'px-8 max-md:px-2 py-4 relative  min-w-[50px] max-md:w-full max-md:min-w-0 h-[120px] self-stretch gap-4 flex flex-col items-center justify-between bg-[rgba(53,19,147,0.52)]  rounded-2xl backdrop-blur-[5px]',
           {
             'max-md:order-1': i === 0, // 1
             'max-md:order-2': i === 1, // 2
@@ -108,10 +110,10 @@ const AboutCards = computed(() => [
         </div>
 
         <div
-          class="font-grotesk z-10 leading-[110%] text-lg max-md:leading-[125%] max-md:text-base font-medium max-w-[300px] text-center"
+          class="font-grotesk z-10 leading-[110%] text-xs max-md:leading-[125%] md:text-base font-medium max-w-[300px] text-center"
           :class="[
-            { 'max-md:max-w-[80px]': i === 4 },
-            { 'max-md:max-w-[120px]': i === 3 },
+            { 'max-w-nonne md:max-w-[80px]': i === 4 },
+            { 'md:max-w-[120px]': i === 3 },
           ]"
         >
           {{ card.title }}
