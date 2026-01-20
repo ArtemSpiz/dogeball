@@ -1,21 +1,29 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "$DOGEBALL - Meme coin, presale and game on Ethereum L2",
+  "short_name": "$DOGEBALL",
+  "description": "$DOGEBALL is the ultimate meme coin and arcade-style game on Ethereum L2 with presale, staking and rewards for the community.",
   "icons": [
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
     {
       "src": "/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     },
     {
       "src": "/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "theme_color": "#8B94F5",
+  "background_color": "#000000",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
 }
