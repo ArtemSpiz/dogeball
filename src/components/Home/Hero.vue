@@ -85,7 +85,7 @@ const submit = async () => {
           {{ t("hero.whitelistSignup") }}
         </div> -->
         <div
-          class="font-grotesk leading-[120%] text-base font-normal max-md:text-sm max-w-[470px] mt-4 max-md:mt-3 max-md:px-3"
+          class="font-grotesk leading-[120%] text-base font-normal max-md:text-sm max-w-[470px] mt-4 max-md:mt-3 max-md:px-3 subtitle-text"
         >
           {{ t("hero.subtitle") }}
         </div>
@@ -154,6 +154,27 @@ const submit = async () => {
   .mobile-bg-crop {
     background-size: 250% auto !important;
     background-position: center bottom !important;
+  }
+}
+
+/* Improve subtitle readability on mobile */
+.subtitle-text {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 768px) {
+  .subtitle-text {
+    text-shadow: 
+      0 2px 20px rgba(0, 0, 0, 1),
+      0 1px 8px rgba(0, 0, 0, 1),
+      0 0 4px rgba(0, 0, 0, 1),
+      0 4px 16px rgba(0, 0, 0, 0.9);
+    /* Optional: Add subtle backdrop for extra readability */
+    /* background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 8px 12px;
+    border-radius: 8px; */
   }
 }
 </style>
