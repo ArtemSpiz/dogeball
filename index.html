@@ -43,16 +43,31 @@
     />
 
     <!-- Favicons - Order matters: most specific first -->
+    <!-- Standard favicon.ico (must be first for maximum compatibility) -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+    <!-- SVG favicon for modern browsers -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- PNG favicons in multiple sizes for Google -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    
+    <!-- Apple touch icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    
+    <!-- Web manifest -->
     <link rel="manifest" href="/site.webmanifest" />
     
     <!-- Additional meta for better Google indexing -->
     <meta name="theme-color" content="#8B94F5" />
+    
+    <!-- Google-specific favicon hint -->
+    <link rel="icon" type="image/png" href="/logo.png" />
 
     <link rel="canonical" href="https://www.dogeballtoken.com/" />
 
