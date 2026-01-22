@@ -247,6 +247,9 @@
       "participants": "Người tham gia"
     },
     "bonusBanner": {
+      "turnRewards": "MÃ THƯỞNG THỜI GIAN GIỚI HẠN: sử dụng mã ",
+      "dashboardEarn": "DB50",
+      "turnRewardsSuffix": " để nhận thêm 50% token #DOGEBALL",
       "presaleLaunchOffer": "Ưu đãi ra mắt bán trước",
       "useBonusCode": "Sử dụng mã thưởng",
       "toGetMore": "Để nhận thêm 10% token $DOGEBALL!",

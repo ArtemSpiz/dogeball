@@ -9,6 +9,7 @@
       <span class="font-semibold">{{
         t("presale.bonusBanner.dashboardEarn")
       }}</span>
+      {{ t("presale.bonusBanner.turnRewardsSuffix") }}
     </p>
   </div>
 </template>

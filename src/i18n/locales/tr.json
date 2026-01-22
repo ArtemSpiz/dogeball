@@ -247,6 +247,9 @@
       "participants": "Katılımcılar"
     },
     "bonusBanner": {
+      "turnRewards": "SINIRLI SÜRE BONUS KODU: kod kullan ",
+      "dashboardEarn": "DB50",
+      "turnRewardsSuffix": " %50 ekstra #DOGEBALL token almak için",
       "presaleLaunchOffer": "Ön Satış Lansman Teklifi",
       "useBonusCode": "Bonus Kodu Kullan",
       "toGetMore": "%10 Daha Fazla $DOGEBALL Token Almak İçin!",

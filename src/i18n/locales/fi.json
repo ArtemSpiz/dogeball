@@ -247,6 +247,9 @@
       "participants": "Osallistujat"
     },
     "bonusBanner": {
+      "turnRewards": "RAJOITETTU AIKA BONUSKOODI: käytä koodia ",
+      "dashboardEarn": "DB50",
+      "turnRewardsSuffix": " saadaksesi 50% ylimääräistä #DOGEBALL-tokeneita",
       "presaleLaunchOffer": "Esimyynnin käynnistystarjous",
       "useBonusCode": "Käytä bonuskoodia",
       "toGetMore": "Saadaksesi 10% enemmän $DOGEBALL-tokeneita!",

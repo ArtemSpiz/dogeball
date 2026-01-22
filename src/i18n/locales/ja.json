@@ -247,6 +247,9 @@
       "participants": "参加者"
     },
     "bonusBanner": {
+      "turnRewards": "期間限定ボーナスコード: コード ",
+      "dashboardEarn": "DB50",
+      "turnRewardsSuffix": " を使用して50%追加の#DOGEBALLトークンを獲得",
       "presaleLaunchOffer": "プレセールローンチオファー",
       "useBonusCode": "ボーナスコードを使用",
       "toGetMore": "10%多くの$DOGEBALLトークンを獲得するには！",

@@ -247,6 +247,9 @@
       "participants": "Participants"
     },
     "bonusBanner": {
+      "turnRewards": "CODE BONUS TEMPS LIMITÉ : utilisez le code ",
+      "dashboardEarn": "DB50",
+      "turnRewardsSuffix": " pour obtenir 50% de tokens #DOGEBALL supplémentaires",
       "presaleLaunchOffer": "Offre de lancement de prévente",
       "useBonusCode": "Utiliser le code bonus",
       "toGetMore": "Pour obtenir 10% de tokens $DOGEBALL en plus !",

@@ -247,6 +247,9 @@
       "participants": "ผู้เข้าร่วม"
     },
     "bonusBanner": {
+      "turnRewards": "รหัสโบนัสเวลาจำกัด: ใช้รหัส ",
+      "dashboardEarn": "DB50",
+      "turnRewardsSuffix": " เพื่อรับโทเค็น #DOGEBALL เพิ่มอีก 50%",
       "presaleLaunchOffer": "ข้อเสนอเปิดตัวการขายล่วงหน้า",
       "useBonusCode": "ใช้รหัสโบนัส",
       "toGetMore": "เพื่อรับโทเค็น $DOGEBALL เพิ่มอีก 10%!",

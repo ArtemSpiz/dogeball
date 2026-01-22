@@ -247,6 +247,9 @@
       "participants": "Deelnemers"
     },
     "bonusBanner": {
+      "turnRewards": "BEPERKTE TIJD BONUSCODE: gebruik code ",
+      "dashboardEarn": "DB50",
+      "turnRewardsSuffix": " om 50% extra #DOGEBALL tokens te krijgen",
       "presaleLaunchOffer": "Voorverkoop Lancering Aanbieding",
       "useBonusCode": "Gebruik Bonuscode",
       "toGetMore": "Om 10% meer $DOGEBALL-tokens te krijgen!",

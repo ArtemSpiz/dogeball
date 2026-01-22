@@ -261,8 +261,9 @@
       "stage": "Stage"
     },
     "bonusBanner": {
-      "turnRewards": "Turn your network into rewards. Generate your referral code from the",
-      "dashboardEarn": "Dashboard and earn 10% extra $DOGEBALL per referral",
+      "turnRewards": "LIMITED TIME BONUS CODE: use code ",
+      "dashboardEarn": "DB50",
+      "turnRewardsSuffix": " to get 50% extra #DOGEBALL tokens",
       "presaleLaunchOffer": "Presale Launch Offer",
       "useBonusCode": "Use Bonus Code",
       "toGetMore": "To Get 10% More $DOGEBALL tokens!",

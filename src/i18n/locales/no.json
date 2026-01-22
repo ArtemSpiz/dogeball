@@ -247,6 +247,9 @@
       "participants": "Deltakere"
     },
     "bonusBanner": {
+      "turnRewards": "BEGRENSET TID BONUSKODE: bruk kode ",
+      "dashboardEarn": "DB50",
+      "turnRewardsSuffix": " for å få 50% ekstra #DOGEBALL tokens",
       "presaleLaunchOffer": "Forsalgs lanserings tilbud",
       "useBonusCode": "Bruk bonuskode",
       "toGetMore": "For å få 10% flere $DOGEBALL-tokens!",

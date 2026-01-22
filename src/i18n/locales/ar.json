@@ -247,6 +247,9 @@
       "participants": "المشاركون"
     },
     "bonusBanner": {
+      "turnRewards": "رمز المكافأة لفترة محدودة: استخدم الرمز ",
+      "dashboardEarn": "DB50",
+      "turnRewardsSuffix": " للحصول على 50% إضافية من رموز #DOGEBALL",
       "presaleLaunchOffer": "عرض إطلاق البيع المسبق",
       "useBonusCode": "استخدم رمز المكافأة",
       "toGetMore": "للحصول على 10% المزيد من رموز $DOGEBALL!",

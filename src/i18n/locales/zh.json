@@ -247,6 +247,9 @@
       "participants": "参与者"
     },
     "bonusBanner": {
+      "turnRewards": "限时奖金代码：使用代码 ",
+      "dashboardEarn": "DB50",
+      "turnRewardsSuffix": " 获得50%额外的#DOGEBALL代币",
       "presaleLaunchOffer": "预售启动优惠",
       "useBonusCode": "使用奖金代码",
       "toGetMore": "获得10%更多的$DOGEBALL代币！",
