@@ -58,19 +58,24 @@ const AboutCards = computed(() => [
       </div>
     </div>
     <div
-      class="flex flex-wrap gap-4 max-w-[1400px] max-md:gap-2 items-center justify-center max-md:grid max-md:grid-cols-2 max-md:grid-rows-3 max-md:w-full"
+      class="grid grid-cols-6 gap-4 max-w-[1400px] max-md:gap-2 max-md:grid-cols-2 max-md:grid-rows-3 max-md:w-full"
     >
       <div
         v-for="(card, i) in AboutCards"
         :key="i"
         :class="[
-          'px-8 max-md:px-2 py-4 relative  min-w-[50px] max-md:w-full max-md:min-w-0 h-[120px] self-stretch gap-4 flex flex-col items-center justify-between bg-[rgba(53,19,147,0.52)]  rounded-2xl backdrop-blur-[5px]',
+          'px-8 max-md:px-2 py-4 relative max-md:w-full max-md:min-w-0 h-[120px] gap-4 flex flex-col items-center justify-between bg-[rgba(53,19,147,0.52)] rounded-2xl backdrop-blur-[5px]',
           {
             'max-md:order-1': i === 0, // 1
             'max-md:order-2': i === 1, // 2
             'max-md:order-3': i === 3, // 4
             'max-md:order-4': i === 4, // 5
-            'max-md:order-5 max-md:col-span-2': i === 2,
+            'max-md:order-5 max-md:col-span-2': i === 2, // Mobile: last card spans full width
+            // Desktop grid layout: 3-2 (top row: 3 cards, bottom row: 2 cards centered, same width as top)
+            'max-md:col-span-1': i !== 2, // Mobile: all cards except last one span 1 column
+            'md:col-span-2': i === 0 || i === 1 || i === 2, // Desktop top row: Cards 1, 2, 3 each span 2 columns
+            'md:col-span-2 md:col-start-2': i === 3, // Desktop bottom row: Card 4 spans 2 columns starting at column 2 (centered)
+            'md:col-span-2 md:col-start-4': i === 4, // Desktop bottom row: Card 5 spans 2 columns starting at column 4 (centered)
           },
         ]"
       >
@@ -110,10 +115,12 @@ const AboutCards = computed(() => [
         </div>
 
         <div
-          class="font-grotesk z-10 leading-[110%] text-xs max-md:leading-[125%] md:text-base font-medium max-w-[300px] text-center"
+          class="font-grotesk z-10 leading-[110%] text-xs max-md:leading-[125%] md:text-base font-medium text-center max-md:max-w-full"
           :class="[
-            { 'max-w-nonne md:max-w-[80px]': i === 4 },
-            { 'md:max-w-[120px]': i === 3 },
+            { 'md:max-w-[300px]': i !== 3 && i !== 4 && i !== 2 }, // Desktop top row cards keep max-width
+            { 'max-md:max-w-[120px] md:max-w-[250px]': i === 3 }, // Mobile & Desktop first bottom card: narrower to allow 2 lines
+            { 'max-md:max-w-[150px]': i === 2 }, // Mobile last card: reduced max-width
+            { 'md:max-w-full': i === 4 }, // Desktop second bottom card uses full width
           ]"
         >
           {{ card.title }}
