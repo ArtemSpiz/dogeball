@@ -117,6 +117,9 @@
     "marketing": "营销",
     "liquidity": "流动性"
   },
+  "blog": {
+    "title": "博客"
+  },
   "roadmapSteps": {
     "mainDescription": "进入竞技场，展示您的目标！点击或点击投掷——把握好时机，粉碎路上的每一个目标！",
     "step1": "得分高！",

@@ -117,6 +117,9 @@
     "marketing": "Marketing",
     "liquidity": "Liquidez"
   },
+  "blog": {
+    "title": "BLOG"
+  },
   "roadmapSteps": {
     "mainDescription": "¡Entra a la arena y muestra tu puntería! Toca o haz clic para lanzar: hazlo en el momento adecuado y destruye todos los objetivos que encuentres!",
     "step1": "¡Marca muchos puntos!",

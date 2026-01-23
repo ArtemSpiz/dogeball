@@ -117,6 +117,9 @@
     "marketing": "Marketing",
     "liquidity": "Liquidez"
   },
+  "blog": {
+    "title": "BLOG"
+  },
   "roadmapSteps": {
     "mainDescription": "Entre na arena e mostre sua mira! Toque ou clique para lançar — cronometre certo e esmague cada alvo no seu caminho!",
     "step1": "Marque muito!",

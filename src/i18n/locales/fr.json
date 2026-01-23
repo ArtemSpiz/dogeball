@@ -117,6 +117,9 @@
     "marketing": "Marketing",
     "liquidity": "Liquidité"
   },
+  "blog": {
+    "title": "BLOG"
+  },
   "roadmapSteps": {
     "mainDescription": "Entrez dans l'arène et montrez votre visée ! Appuyez ou cliquez pour lancer — chronométrez bien et écrasez chaque cible sur votre chemin !",
     "step1": "Marquez gros !",

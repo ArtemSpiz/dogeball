@@ -117,6 +117,9 @@
     "marketing": "Marketing",
     "liquidity": "Liquidität"
   },
+  "blog": {
+    "title": "BLOG"
+  },
   "roadmapSteps": {
     "mainDescription": "Betreten Sie die Arena und zeigen Sie Ihr Ziel! Tippen oder klicken Sie zum Werfen – treffen Sie den richtigen Zeitpunkt und zerschmettern Sie jedes Ziel auf Ihrem Weg!",
     "step1": "Groß punkten!",

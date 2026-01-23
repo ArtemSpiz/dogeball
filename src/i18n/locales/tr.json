@@ -117,6 +117,9 @@
     "marketing": "Pazarlama",
     "liquidity": "Likidite"
   },
+  "blog": {
+    "title": "BLOG"
+  },
   "roadmapSteps": {
     "mainDescription": "Arenaya adım atın ve hedefinizi gösterin! Atmak için dokunun veya tıklayın – zamanlamayı doğru yapın ve yolunuzdaki her hedefi parçalayın!",
     "step1": "Büyük puan!",

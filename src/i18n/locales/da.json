@@ -117,6 +117,9 @@
     "marketing": "Markedsføring",
     "liquidity": "Likviditet"
   },
+  "blog": {
+    "title": "BLOG"
+  },
   "roadmapSteps": {
     "mainDescription": "Træd ind i arenaen og vis dit sigte! Tryk eller klik for at kaste — tidsbestem det rigtigt, og knus hvert mål på din vej!",
     "step1": "Score stort!",

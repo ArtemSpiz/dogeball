@@ -117,6 +117,9 @@
     "marketing": "Markkinointi",
     "liquidity": "Likviditeetti"
   },
+  "blog": {
+    "title": "BLOG"
+  },
   "roadmapSteps": {
     "mainDescription": "Astu areenalle ja näytä tavoitteesi! Napauta tai klikkaa heittääksesi — ajoita oikein ja murskaa jokainen kohde tielläsi!",
     "step1": "Tee isoja pisteitä!",
