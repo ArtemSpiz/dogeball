@@ -1,0 +1,9 @@
+# Unity WebGL Build Files - Track with Git LFS
+# Uncompressed Unity build files
+public/Build/*.data filter=lfs diff=lfs merge=lfs -text
+public/Build/*.wasm filter=lfs diff=lfs merge=lfs -text
+public/Build/*.framework.js filter=lfs diff=lfs merge=lfs -text
+public/Build/*.loader.js filter=lfs diff=lfs merge=lfs -text
+
+# Legacy: Track compressed .br files if they exist
+public/Build/*.br filter=lfs diff=lfs merge=lfs -text

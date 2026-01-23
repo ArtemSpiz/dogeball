@@ -17,25 +17,27 @@ const privacyNote = computed(() => {
   <div
     class="flex flex-col gap-14 max-md:gap-10 h-[590px] text-center justify-center items-center px-5 max-md:h-max max-md:py-12 bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Roadmap/GameBg.png')] max-md:bg-[url('@/assets/img/Roadmap/GameBgMob.png')]"
   >
-    <div class="flex flex-col items-center gap-9 max-md:gap-7">
-      <div class="flex flex-col items-center gap-8 max-md:gap-6">
-        <div class="title uppercase whitespace-nowrap">
+    <div class="flex flex-col items-center gap-9 max-md:gap-7 w-full">
+      <div class="flex flex-col items-center gap-8 max-md:gap-6 w-full px-4">
+        <div class="title uppercase max-md:whitespace-normal max-md:text-center break-words">
           {{ t("roadmapGame.title") }}
         </div>
         <div
-          class="text-2xl max-md:text-xl font-medium leading-[80%] max-md:leading-[100%] max-w-[900px]"
+          class="text-2xl max-md:text-base font-medium leading-[90%] max-md:leading-[120%] max-w-[900px] w-full px-2 break-words"
         >
           {{ t("roadmapGame.description") }}
         </div>
       </div>
-      <CustomButton
-        :title="t('roadmapGame.comingSoon')"
-        class="w-full max-w-[200px]"
-      />
+      <router-link to="/play" class="w-full max-w-[200px] justify-center flex">
+        <CustomButton
+          :title="t('roadmapGame.play')"
+          class="w-full max-w-[200px]"
+        />
+      </router-link>
     </div>
 
     <div
-      class="rounded-2xl relative max-w-[800px] decoration-from-font bg-[rgba(0,0,0,0.36)] font-grotesk p-6 text-base font-medium leading-[125%]"
+      class="rounded-2xl relative max-w-[800px] w-full mx-4 decoration-from-font bg-[rgba(0,0,0,0.36)] font-grotesk p-6 max-md:p-4 text-base max-md:text-sm font-medium leading-[125%] break-words overflow-hidden"
     >
       <div
         class="absolute inset-0 rounded-2xl pointer-events-none"

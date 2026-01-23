@@ -126,8 +126,9 @@
     "description2": "Kẻ thù trở nên nhanh hơn và khó khăn hơn, và bị đẩy xa khi bạn lên cấp. Chỉ những người chơi sắc bén và chính xác nhất mới có thể đạt được Bảng xếp hạng TOP 10, nơi người chiến thắng sẽ nhận được giải độc đắc $500k token $DOGEBALL, với $500k giải thưởng khác được chia cho 9 người chơi còn lại. Lưu ý rằng chỉ những người dùng đã mua token trong bán trước $DOGEBALL mới đủ điều kiện để tham gia GIẢI THƯỞNG $1M."
   },
   "roadmapGame": {
-    "title": "Trò chơi sắp bắt đầu!",
-    "description": "Có sẵn để chơi ngay sau khi bán trước bắt đầu - theo dõi các kênh truyền thông xã hội Telegram và X chính thức để biết tin tức ra mắt",
+    "title": "TRÒ CHƠI HIỆN ĐÃ CÓ SẴN ĐỂ CHƠI!",
+    "play": "Chơi",
+    "description": "Chơi ngay bằng cách nhấp vào bên dưới. Lưu ý rằng trò chơi chỉ chơi ở chế độ ngang và trên thiết bị di động hoạt động tốt nhất trong trình duyệt mặc định của điện thoại (người dùng Apple nên sử dụng iOS, người dùng Android nên sử dụng Chrome)",
     "comingSoon": "Sắp ra mắt",
     "privacyNote": "Người dùng phải nhập cùng địa chỉ ví mà họ đã sử dụng để mua bán trước khi hoàn thành trò chơi (tùy chọn nhập địa chỉ ví sẽ được hiển thị nếu điểm trò chơi đủ cao để lên bảng xếp hạng). Lưu ý để bảo vệ quyền riêng tư và bảo mật của người dùng, địa chỉ ví SẼ KHÔNG hiển thị trên trang web hoặc được đề cập trong bất kỳ kênh truyền thông xã hội nào; chỉ tên người dùng được chọn nhập trong chính trò chơi mới được đề cập."
   },

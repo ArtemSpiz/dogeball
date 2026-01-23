@@ -126,8 +126,9 @@
     "description2": "Viholliset nopeutuvat ja kovenevat, ja etääntyvät kun nousevat tasoja. Vain terävimmät ja tarkimmat pelaajat voivat saavuttaa TOP 10 -pistetaulukon, jossa voittaja saa $500k jättipotin $DOGEBALL-tokeneista, toisen $500k palkintopotin jaettuna jäljellä olevien 9 pelaajan kesken. Huomaa, että vain käyttäjät, jotka ovat ostaneet tokeneita $DOGEBALL-esimyynnissä, ovat oikeutettuja olemaan osa $1M PALKINTOPOTISTA."
   },
   "roadmapGame": {
-    "title": "Peli alkaa pian!",
-    "description": "Pelattavissa pian esimyynnin alkamisen jälkeen — pysy kuulolla virallisissa Telegram- ja X-sosiaalisen median kanavissa julkaisutiedoista",
+    "title": "PELI ON NYT PELATTAVISSA!",
+    "play": "Pelaa",
+    "description": "Pelaa nyt klikkaamalla alla. Huomaa, että peliä pelataan vain vaakasuunnassa ja mobiililaitteella se toimii parhaiten puhelimesi oletusselaimessa (Apple-käyttäjien tulisi käyttää iOS:ää, Android-käyttäjien tulisi käyttää Chromea)",
     "comingSoon": "Tulossa pian",
     "privacyNote": "Käyttäjien on syötettävä sama lompakko-osoite, jota he käyttivät esimyynti-ostoihin pelin valmistumisen yhteydessä (vaihtoehto lompakko-osoitteen syöttämiseen näytetään, jos pelin pistemäärä on tarpeeksi korkea päästäksesi pistetaulukkoon). Huomautus käyttäjän yksityisyyden ja turvallisuuden suojaamiseksi, lompakko-osoitteet EIVÄT näy verkkosivustolla tai mainita missään sosiaalisen median kanavissa; vain pelin sisällä syötetty valittu käyttäjänimi mainitaan."
   },

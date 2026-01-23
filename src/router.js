@@ -1,6 +1,7 @@
 import Home from "@/pages/Home.vue";
 import About from "./pages/About.vue";
 import Roadmap from "./pages/Roadmap.vue";
+import Game from "./pages/Game.vue";
 
 export const routes = [
   {
@@ -46,6 +47,21 @@ export const routes = [
         "Explore the $DOGEBALL roadmap and upcoming game features. Learn about tokenomics, staking rewards, and the future.",
       ogImage: "https://www.dogeballtoken.com/logo.png",
       canonical: "https://www.dogeballtoken.com/play-$DOGEBALL",
+    },
+  },
+  {
+    path: "/play",
+    name: "Game",
+    component: Game,
+    meta: {
+      title: "Play $DOGEBALL Game",
+      description:
+        "Play the $DOGEBALL Unity game. Experience the ultimate meme coin arcade-style game on Ethereum L2.",
+      ogTitle: "Play $DOGEBALL Game",
+      ogDescription:
+        "Play the $DOGEBALL Unity game. Experience the ultimate meme coin arcade-style game.",
+      ogImage: "https://www.dogeballtoken.com/logo.png",
+      canonical: "https://www.dogeballtoken.com/play",
     },
   },
 ];
