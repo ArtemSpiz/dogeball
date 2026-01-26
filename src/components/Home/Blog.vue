@@ -118,28 +118,38 @@ onMounted(() => {
     id="blog"
     class="flex flex-col items-center justify-center gap-10 max-md:gap-8 py-20 max-md:py-12 bg-[center_center] bg-cover bg-no-repeat bg-[url('@/assets/img/bg-blog.jpg')] relative"
   >
-    <div class="title uppercase text-center">{{ t("blog.title") }}</div>
+    <!-- Title with mobile buttons -->
+    <div class="w-full max-w-[1600px] px-5 flex items-center justify-between gap-4 max-md:flex md:hidden">
+      <div class="title">{{ t("blog.title") }}</div>
+      
+      <!-- Navigation Buttons (Mobile only) -->
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <button
+          @click="scrollLeft"
+          class="bg-[rgba(53,19,147,0.8)] backdrop-blur-sm rounded-lg p-2 hover:bg-[rgba(53,19,147,1)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          aria-label="Scroll left"
+          :disabled="!canScrollLeft"
+        >
+          <ArrowLeft class="w-5 h-5 text-white" />
+        </button>
+
+        <button
+          @click="scrollRight"
+          class="bg-[rgba(53,19,147,0.8)] backdrop-blur-sm rounded-lg p-2 hover:bg-[rgba(53,19,147,1)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          aria-label="Scroll right"
+          :disabled="!canScrollRight"
+        >
+          <ArrowRight class="w-5 h-5 text-white" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Title (Desktop only - centered) -->
+    <div class="w-full max-w-[1600px] px-5 hidden md:block">
+      <div class="title text-center">{{ t("blog.title") }}</div>
+    </div>
 
     <div class="w-full max-w-[1600px] px-5 relative">
-      <!-- Left Arrow Button -->
-      <button
-        v-if="canScrollLeft"
-        @click="scrollLeft"
-        class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-[rgba(53,19,147,0.8)] backdrop-blur-sm rounded-full p-3 hover:bg-[rgba(53,19,147,1)] transition-all max-md:hidden"
-        aria-label="Scroll left"
-      >
-        <ArrowLeft class="w-6 h-6 text-white" />
-      </button>
-
-      <!-- Right Arrow Button -->
-      <button
-        v-if="canScrollRight"
-        @click="scrollRight"
-        class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-[rgba(53,19,147,0.8)] backdrop-blur-sm rounded-full p-3 hover:bg-[rgba(53,19,147,1)] transition-all max-md:hidden"
-        aria-label="Scroll right"
-      >
-        <ArrowRight class="w-6 h-6 text-white" />
-      </button>
 
       <!-- Carousel Container -->
       <div
@@ -229,6 +239,27 @@ onMounted(() => {
             </div>
           </a>
         </div>
+      </div>
+
+      <!-- Navigation Buttons (Desktop only - below carousel) -->
+      <div class="hidden md:flex items-center justify-center gap-2 mt-6">
+        <button
+          @click="scrollLeft"
+          class="bg-[rgba(53,19,147,0.8)] backdrop-blur-sm rounded-lg p-2 hover:bg-[rgba(53,19,147,1)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          aria-label="Scroll left"
+          :disabled="!canScrollLeft"
+        >
+          <ArrowLeft class="w-5 h-5 text-white" />
+        </button>
+
+        <button
+          @click="scrollRight"
+          class="bg-[rgba(53,19,147,0.8)] backdrop-blur-sm rounded-lg p-2 hover:bg-[rgba(53,19,147,1)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          aria-label="Scroll right"
+          :disabled="!canScrollRight"
+        >
+          <ArrowRight class="w-5 h-5 text-white" />
+        </button>
       </div>
     </div>
   </div>

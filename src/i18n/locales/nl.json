@@ -6,6 +6,7 @@
     "playDogeball": "Speel $DOGEBALL",
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
+    "blog": "Blog",
     "faqs": "Veelgestelde vragen",
     "connectWallet": "Portemonnee verbinden",
     "disconnectWallet": "Koppel Wallet los"
@@ -118,7 +119,7 @@
     "liquidity": "Liquiditeit"
   },
   "blog": {
-    "title": "BLOG"
+    "title": "Blog"
   },
   "roadmapSteps": {
     "mainDescription": "Stap de arena binnen en toon uw doel! Tik of klik om te gooien – timing is alles, en verpletter elk doel op uw pad!",

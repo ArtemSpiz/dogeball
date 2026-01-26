@@ -6,6 +6,7 @@
     "playDogeball": "Play $DOGEBALL",
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
+    "blog": "Blog",
     "faqs": "FAQs",
     "connectWallet": "Connect Wallet",
     "disconnectWallet": "Disconnect Wallet"
@@ -131,7 +132,7 @@
     "liquidity": "Liquidity"
   },
   "blog": {
-    "title": "BLOG"
+    "title": "Blog"
   },
   "roadmapSteps": {
     "mainDescription": "Step into the arena and show your aim! Tap or click to throw – time it right, and smash every target in your way!",

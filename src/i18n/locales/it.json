@@ -6,6 +6,7 @@
     "playDogeball": "Gioca $DOGEBALL",
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
+    "blog": "Blog",
     "faqs": "FAQ",
     "connectWallet": "Connetti portafoglio",
     "disconnectWallet": "Disconnetti Portafoglio"
@@ -118,7 +119,7 @@
     "liquidity": "Liquidità"
   },
   "blog": {
-    "title": "BLOG"
+    "title": "Blog"
   },
   "roadmapSteps": {
     "mainDescription": "Entra nell'arena e mostra la tua mira! Tocca o clicca per lanciare — tempismo perfetto, e distruggi ogni bersaglio sulla tua strada!",

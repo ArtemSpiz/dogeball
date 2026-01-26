@@ -6,6 +6,7 @@
     "playDogeball": "Pelaa $DOGEBALL",
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
+    "blog": "Blog",
     "faqs": "UKK",
     "connectWallet": "Yhdistä lompakko",
     "disconnectWallet": "Katkaise Wallet-yhteys"
@@ -118,7 +119,7 @@
     "liquidity": "Likviditeetti"
   },
   "blog": {
-    "title": "BLOG"
+    "title": "Blog"
   },
   "roadmapSteps": {
     "mainDescription": "Astu areenalle ja näytä tavoitteesi! Napauta tai klikkaa heittääksesi — ajoita oikein ja murskaa jokainen kohde tielläsi!",

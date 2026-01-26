@@ -6,6 +6,7 @@
     "playDogeball": "Jouer $DOGEBALL",
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
+    "blog": "Blog",
     "faqs": "FAQ",
     "connectWallet": "Connecter le portefeuille",
     "disconnectWallet": "Déconnecter le portefeuille"
@@ -118,7 +119,7 @@
     "liquidity": "Liquidité"
   },
   "blog": {
-    "title": "BLOG"
+    "title": "Blog"
   },
   "roadmapSteps": {
     "mainDescription": "Entrez dans l'arène et montrez votre visée ! Appuyez ou cliquez pour lancer — chronométrez bien et écrasez chaque cible sur votre chemin !",

@@ -6,6 +6,7 @@
     "playDogeball": "$DOGEBALL spielen",
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
+    "blog": "Blog",
     "faqs": "Häufig gestellte Fragen",
     "connectWallet": "Wallet verbinden",
     "disconnectWallet": "Wallet trennen"
@@ -118,7 +119,7 @@
     "liquidity": "Liquidität"
   },
   "blog": {
-    "title": "BLOG"
+    "title": "Blog"
   },
   "roadmapSteps": {
     "mainDescription": "Betreten Sie die Arena und zeigen Sie Ihr Ziel! Tippen oder klicken Sie zum Werfen – treffen Sie den richtigen Zeitpunkt und zerschmettern Sie jedes Ziel auf Ihrem Weg!",
