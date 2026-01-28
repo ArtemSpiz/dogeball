@@ -65,9 +65,9 @@ const scrollRight = () => {
 };
 
 const staticBlogPost = {
-  title: "What is Layer 2, and Why Does it Matter?",
+  title: "Is DOGEBALL Crypto the Most Productive Meme Coin of 2026? Let's Find Out",
   publishedDate: "January 27",
-  content: "Think of the Ethereum Mainnet as a busy, expensive highway. Layer 2 (L2) is like an express lane built right above it. It handles the \"heavy lifting\" of thousands of transactions at lightning speed...",
+  content: "For years, the dream of \"Play-to-Earn\" (P2E) has been held back by a single, frustrating reality: the Ethereum mainnet was never built for high-speed gaming. Imagine trying to play a fast-paced game where every move costs $20 in gas fees and takes 3 minutes to confirm...",
   link: "/blog-01",
   isInternal: true, // Flag to indicate internal link
 };
