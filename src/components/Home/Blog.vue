@@ -1,62 +1,20 @@
 <script setup>
 import { useI18n } from "vue-i18n";
-import { computed, ref, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import Star from "@/assets/icons/Star.vue";
 import ArrowLeft from "@/assets/icons/ArrowLeft.vue";
 import ArrowRight from "@/assets/icons/ArrowRight.vue";
+import Spinner from "@/components/PresaleWidget/ui/Spinner.vue";
+import { getYouTubeVideos } from "@/api/youtube";
 
 const { t } = useI18n();
 
 const carouselRef = ref(null);
 const canScrollLeft = ref(false);
 const canScrollRight = ref(true);
-
-// Sample blog data - using English placeholders
-// All blog posts must have thumbnails
-const PLACEHOLDER_THUMBNAIL = "https://placehold.net/600x400.png";
-
-const blogPosts = computed(() => [
-  {
-    title: "Understanding $DOGEBALL Tokenomics and Presale Strategy",
-    rating: 4.5,
-    author: "Crypto Analyst",
-    authorDescription: "Expert in blockchain economics and token distribution models",
-    link: "#",
-    thumbnail: PLACEHOLDER_THUMBNAIL,
-  },
-  {
-    title: "How to Play $DOGEBALL: Complete Game Guide",
-    rating: 5.0,
-    author: "Gaming Expert",
-    authorDescription: "Professional game reviewer and crypto gaming enthusiast",
-    link: "#",
-    thumbnail: PLACEHOLDER_THUMBNAIL,
-  },
-  {
-    title: "Ethereum Layer 2 Explained: Why $DOGEBALL Chose L2",
-    rating: 4.8,
-    author: "Blockchain Developer",
-    authorDescription: "Specialist in Layer 2 scaling solutions and EVM compatibility",
-    link: "#",
-    thumbnail: PLACEHOLDER_THUMBNAIL,
-  },
-  {
-    title: "$DOGEBALL Staking Tutorial: Maximize Your Rewards",
-    rating: 4.7,
-    author: "DeFi Strategist",
-    authorDescription: "DeFi expert focused on yield optimization and staking strategies",
-    link: "#",
-    thumbnail: PLACEHOLDER_THUMBNAIL,
-  },
-  {
-    title: "The Future of Play-to-Earn Gaming with $DOGEBALL",
-    rating: 4.9,
-    author: "Gaming Industry Analyst",
-    authorDescription: "Researcher studying the intersection of gaming and blockchain technology",
-    link: "#",
-    thumbnail: PLACEHOLDER_THUMBNAIL,
-  },
-]);
+const blogPosts = ref([]);
+const isLoading = ref(true);
+const error = ref(null);
 
 const renderStars = (rating) => {
   const fullStars = Math.floor(rating);
@@ -105,7 +63,36 @@ const scrollRight = () => {
   });
 };
 
-onMounted(() => {
+const fetchBlogPosts = async () => {
+  try {
+    isLoading.value = true;
+    error.value = null;
+    const response = await getYouTubeVideos();
+    
+    if (response.success && response.data) {
+      // Map API response to component structure
+      blogPosts.value = response.data.map((item) => ({
+        title: item.title,
+        rating: item.rating || null, // Handle null rating
+        author: item.author,
+        authorDescription: item.authorDescription,
+        link: item.youtubeUrl,
+        thumbnail: item.thumbnailUrl,
+      }));
+    } else {
+      error.value = "Failed to load blog posts";
+    }
+  } catch (err) {
+    console.error("Error fetching blog posts:", err);
+    error.value = "Failed to load blog posts";
+  } finally {
+    isLoading.value = false;
+  }
+};
+
+onMounted(async () => {
+  await fetchBlogPosts();
+  
   if (carouselRef.value) {
     carouselRef.value.addEventListener("scroll", checkScrollButtons);
     checkScrollButtons();
@@ -119,11 +106,11 @@ onMounted(() => {
     class="flex flex-col items-center justify-center gap-10 max-md:gap-8 py-20 max-md:py-12 bg-[center_center] bg-cover bg-no-repeat bg-[url('@/assets/img/bg-blog.jpg')] relative"
   >
     <!-- Title with mobile buttons -->
-    <div class="w-full max-w-[1600px] px-5 flex items-center justify-between gap-4 max-md:flex md:hidden">
+    <div class="w-full max-w-[1600px] lg:max-w-[1200px] px-5 flex items-center justify-between gap-4 max-md:flex md:hidden">
       <div class="title">{{ t("blog.title") }}</div>
       
       <!-- Navigation Buttons (Mobile only) -->
-      <div class="flex items-center gap-2 flex-shrink-0">
+      <div v-if="!isLoading && !error && blogPosts.length > 1" class="flex items-center gap-2 flex-shrink-0">
         <button
           @click="scrollLeft"
           class="bg-[rgba(53,19,147,0.8)] backdrop-blur-sm rounded-lg p-2 hover:bg-[rgba(53,19,147,1)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
@@ -145,11 +132,11 @@ onMounted(() => {
     </div>
 
     <!-- Title (Desktop only - centered) -->
-    <div class="w-full max-w-[1600px] px-5 hidden md:block">
+    <div class="w-full max-w-[1600px] lg:max-w-[1200px] px-5 hidden md:block">
       <div class="title text-center">{{ t("blog.title") }}</div>
     </div>
 
-    <div class="w-full max-w-[1600px] px-5 relative">
+    <div class="w-full max-w-[1600px] lg:max-w-[1200px] px-5 relative">
 
       <!-- Carousel Container -->
       <div
@@ -158,13 +145,30 @@ onMounted(() => {
         @scroll="checkScrollButtons"
       >
         <div class="flex gap-6 max-md:gap-4 pb-4 items-stretch">
+          <!-- Loading state -->
+          <div v-if="isLoading" class="w-full flex items-center justify-center py-20">
+            <Spinner :size="12" class="text-white" />
+          </div>
+          
+          <!-- Error state -->
+          <div v-else-if="error" class="w-full text-center py-10 text-white">
+            {{ error }}
+          </div>
+          
+          <!-- No posts state -->
+          <div v-else-if="blogPosts.length === 0" class="w-full text-center py-10 text-white">
+            No blog posts available
+          </div>
+          
+          <!-- Blog posts -->
           <a
             v-for="(post, index) in blogPosts"
+            v-else
             :key="index"
             :href="post.link"
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] xl:w-[calc((100%-72px)/4)] snap-center flex-shrink-0"
+            class="w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] snap-center flex-shrink-0"
           >
             <div
               class="p-6 max-md:p-4 gap-4 backdrop-blur-sm relative bg-[rgba(53,19,147,0.52)] rounded-2xl flex flex-col transition-all hover:scale-[1.02] cursor-pointer h-[400px] w-full"
@@ -204,7 +208,7 @@ onMounted(() => {
                 </div>
 
                 <!-- Rating -->
-                <div class="flex items-center gap-2 flex-shrink-0">
+                <div v-if="post.rating" class="flex items-center gap-2 flex-shrink-0">
                   <div class="flex items-center gap-1">
                     <Star
                       v-for="i in renderStars(post.rating).fullStars"
@@ -242,7 +246,7 @@ onMounted(() => {
       </div>
 
       <!-- Navigation Buttons (Desktop only - below carousel) -->
-      <div class="hidden md:flex items-center justify-center gap-2 mt-6">
+      <div v-if="!isLoading && !error && blogPosts.length > 1" class="hidden md:flex items-center justify-center gap-2 mt-6">
         <button
           @click="scrollLeft"
           class="bg-[rgba(53,19,147,0.8)] backdrop-blur-sm rounded-lg p-2 hover:bg-[rgba(53,19,147,1)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
