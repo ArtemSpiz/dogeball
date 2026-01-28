@@ -1,6 +1,7 @@
 import Home from "@/pages/Home.vue";
 import About from "./pages/About.vue";
 import Roadmap from "./pages/Roadmap.vue";
+import BlogPost from "./pages/BlogPost.vue";
 
 export const routes = [
   {
@@ -46,6 +47,21 @@ export const routes = [
         "Explore the $DOGEBALL roadmap and upcoming game features. Learn about tokenomics, staking rewards, and the future.",
       ogImage: "https://www.dogeballtoken.com/logo.png",
       canonical: "https://www.dogeballtoken.com/play-$DOGEBALL",
+    },
+  },
+  {
+    path: "/blog-01",
+    name: "BlogPost",
+    component: BlogPost,
+    meta: {
+      title: "What is Layer 2, and Why Does it Matter? – $DOGEBALL",
+      description:
+        "Learn about Layer 2 technology and why it matters for DOGEBALL. Discover how DogeChain enables micro-transactions, instant feedback, and scalability.",
+      ogTitle: "What is Layer 2, and Why Does it Matter? – $DOGEBALL",
+      ogDescription:
+        "Learn about Layer 2 technology and why it matters for DOGEBALL. Discover how DogeChain enables micro-transactions, instant feedback, and scalability.",
+      ogImage: "https://www.dogeballtoken.com/logo.png",
+      canonical: "https://www.dogeballtoken.com/blog-01",
     },
   },
 ];

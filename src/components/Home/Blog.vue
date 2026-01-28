@@ -1,6 +1,7 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import { ref, onMounted } from "vue";
+import { RouterLink } from "vue-router";
 import Star from "@/assets/icons/Star.vue";
 import ArrowLeft from "@/assets/icons/ArrowLeft.vue";
 import ArrowRight from "@/assets/icons/ArrowRight.vue";
@@ -63,6 +64,14 @@ const scrollRight = () => {
   });
 };
 
+const staticBlogPost = {
+  title: "What is Layer 2, and Why Does it Matter?",
+  publishedDate: "January 27",
+  content: "Think of the Ethereum Mainnet as a busy, expensive highway. Layer 2 (L2) is like an express lane built right above it. It handles the \"heavy lifting\" of thousands of transactions at lightning speed...",
+  link: "/blog-01",
+  isInternal: true, // Flag to indicate internal link
+};
+
 const fetchBlogPosts = async () => {
   try {
     isLoading.value = true;
@@ -78,13 +87,21 @@ const fetchBlogPosts = async () => {
         authorDescription: item.authorDescription,
         link: item.youtubeUrl,
         thumbnail: item.thumbnailUrl,
+        isInternal: false, // External link
       }));
+      
+      // Add static blog post after YouTube videos
+      blogPosts.value.push(staticBlogPost);
     } else {
       error.value = "Failed to load blog posts";
+      // Even if API fails, show the static blog post
+      blogPosts.value = [staticBlogPost];
     }
   } catch (err) {
     console.error("Error fetching blog posts:", err);
     error.value = "Failed to load blog posts";
+    // Even if API fails, show the static blog post
+    blogPosts.value = [staticBlogPost];
   } finally {
     isLoading.value = false;
   }
@@ -161,87 +178,144 @@ onMounted(async () => {
           </div>
           
           <!-- Blog posts -->
-          <a
-            v-for="(post, index) in blogPosts"
-            v-else
-            :key="index"
-            :href="post.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] snap-center flex-shrink-0"
-          >
-            <div
-              class="p-6 max-md:p-4 gap-4 backdrop-blur-sm relative bg-[rgba(53,19,147,0.52)] rounded-2xl flex flex-col transition-all hover:scale-[1.02] cursor-pointer h-[400px] w-full"
+          <template v-for="(post, index) in blogPosts" v-else :key="index">
+            <!-- YouTube/External Posts -->
+            <a
+              v-if="!post.isInternal"
+              :href="post.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] snap-center flex-shrink-0"
             >
               <div
-                class="absolute inset-0 rounded-2xl"
-                style="
-                  background: linear-gradient(
-                    145deg,
-                    rgba(255, 255, 255, 0.6) 0%,
-                    rgba(255, 255, 255, 0.1) 40%,
-                    rgba(255, 255, 255, 0.6) 100%
-                  );
-                  -webkit-mask: linear-gradient(#fff 0 0) content-box,
-                    linear-gradient(#fff 0 0);
-                  -webkit-mask-composite: xor;
-                  mask-composite: exclude;
-                  padding: 1px;
-                "
-              ></div>
-
-              <div class="flex flex-col gap-3 z-10 flex-1 min-h-0">
-                <!-- Thumbnail Image -->
-                <div class="w-full h-[200px] max-md:h-[170px] rounded-lg overflow-hidden flex-shrink-0">
-                  <img
-                    :src="post.thumbnail"
-                    :alt="post.title"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-
-                <!-- Title -->
+                class="p-6 max-md:p-4 gap-4 backdrop-blur-sm relative bg-[rgba(53,19,147,0.52)] rounded-2xl flex flex-col transition-all hover:scale-[1.02] cursor-pointer h-[400px] w-full"
+              >
                 <div
-                  class="text-xl max-md:text-lg font-bold leading-[110%] line-clamp-2 flex-shrink-0"
-                >
-                  {{ post.title }}
-                </div>
+                  class="absolute inset-0 rounded-2xl"
+                  style="
+                    background: linear-gradient(
+                      145deg,
+                      rgba(255, 255, 255, 0.6) 0%,
+                      rgba(255, 255, 255, 0.1) 40%,
+                      rgba(255, 255, 255, 0.6) 100%
+                    );
+                    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                      linear-gradient(#fff 0 0);
+                    -webkit-mask-composite: xor;
+                    mask-composite: exclude;
+                    padding: 1px;
+                  "
+                ></div>
 
-                <!-- Rating -->
-                <div v-if="post.rating" class="flex items-center gap-2 flex-shrink-0">
-                  <div class="flex items-center gap-1">
-                    <Star
-                      v-for="i in renderStars(post.rating).fullStars"
-                      :key="'full-' + i"
-                      class="w-4 h-4 text-[#FFD700] fill-current"
-                    />
-                    <Star
-                      v-if="renderStars(post.rating).hasHalfStar"
-                      class="w-4 h-4 text-[#FFD700] fill-current opacity-50"
-                    />
-                    <Star
-                      v-for="i in renderStars(post.rating).emptyStars"
-                      :key="'empty-' + i"
-                      class="w-4 h-4 text-gray-400 fill-current"
+                <div class="flex flex-col gap-3 z-10 flex-1 min-h-0">
+                  <!-- Thumbnail Image -->
+                  <div class="w-full h-[200px] max-md:h-[170px] rounded-lg overflow-hidden flex-shrink-0">
+                    <img
+                      :src="post.thumbnail"
+                      :alt="post.title"
+                      class="w-full h-full object-cover"
                     />
                   </div>
-                  <span class="text-sm font-medium">{{ post.rating }}</span>
-                </div>
 
-                <!-- Author -->
-                <div class="flex flex-col gap-1 pt-2 border-t border-white/20 flex-shrink-0 mt-auto">
-                  <div class="text-base max-md:text-sm font-semibold line-clamp-1">
-                    {{ post.author }}
-                  </div>
+                  <!-- Title -->
                   <div
-                    class="text-sm max-md:text-xs text-white/80 leading-[120%] line-clamp-1"
+                    class="text-xl max-md:text-lg font-bold leading-[110%] line-clamp-2 flex-shrink-0"
                   >
-                    {{ post.authorDescription }}
+                    {{ post.title }}
+                  </div>
+
+                  <!-- Rating -->
+                  <div v-if="post.rating" class="flex items-center gap-2 flex-shrink-0">
+                    <div class="flex items-center gap-1">
+                      <Star
+                        v-for="i in renderStars(post.rating).fullStars"
+                        :key="'full-' + i"
+                        class="w-4 h-4 text-[#FFD700] fill-current"
+                      />
+                      <Star
+                        v-if="renderStars(post.rating).hasHalfStar"
+                        class="w-4 h-4 text-[#FFD700] fill-current opacity-50"
+                      />
+                      <Star
+                        v-for="i in renderStars(post.rating).emptyStars"
+                        :key="'empty-' + i"
+                        class="w-4 h-4 text-gray-400 fill-current"
+                      />
+                    </div>
+                    <span class="text-sm font-medium">{{ post.rating }}</span>
+                  </div>
+
+                  <!-- Author -->
+                  <div class="flex flex-col gap-1 pt-2 border-t border-white/20 flex-shrink-0 mt-auto">
+                    <div class="text-base max-md:text-sm font-semibold line-clamp-1">
+                      {{ post.author }}
+                    </div>
+                    <div
+                      class="text-sm max-md:text-xs text-white/80 leading-[120%] line-clamp-1"
+                    >
+                      {{ post.authorDescription }}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+
+            <!-- Internal Blog Post (Same Style as YouTube Cards) -->
+            <RouterLink
+              v-else
+              :to="post.link"
+              class="w-full md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] snap-center flex-shrink-0"
+            >
+              <div
+                class="p-6 max-md:p-4 gap-4 backdrop-blur-sm relative bg-[rgba(53,19,147,0.52)] rounded-2xl flex flex-col transition-all hover:scale-[1.02] cursor-pointer h-[400px] w-full"
+              >
+                <div
+                  class="absolute inset-0 rounded-2xl"
+                  style="
+                    background: linear-gradient(
+                      145deg,
+                      rgba(255, 255, 255, 0.6) 0%,
+                      rgba(255, 255, 255, 0.1) 40%,
+                      rgba(255, 255, 255, 0.6) 100%
+                    );
+                    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                      linear-gradient(#fff 0 0);
+                    -webkit-mask-composite: xor;
+                    mask-composite: exclude;
+                    padding: 1px;
+                  "
+                ></div>
+
+                <div class="flex flex-col gap-5 z-10 flex-1 min-h-0">
+                  <!-- Title -->
+                  <div
+                    class="mt-4 text-3xl max-md:text-2xl font-bold leading-[110%] line-clamp-2 flex-shrink-0"
+                  >
+                    {{ post.title }}
+                  </div>
+
+                  <!-- Published Date -->
+                  <div class="text-sm text-white/60 flex-shrink-0">
+                    {{ post.publishedDate }}
+                  </div>
+
+                  <!-- Content Preview -->
+                  <div
+                    class="mt-4 text-md text-white/80 leading-[140%] line-clamp-4 flex-1"
+                  >
+                    {{ post.content }}
+                  </div>
+
+                  <!-- READ MORE Link -->
+                  <div class="flex flex-col gap-1 flex-shrink-0 mt-auto">
+                    <span class="text-blue-400 underline text-sm font-medium">
+                      READ MORE
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </RouterLink>
+          </template>
         </div>
       </div>
 
