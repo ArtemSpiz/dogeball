@@ -6,6 +6,7 @@
     "playDogeball": "Jogar $DOGEBALL",
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
+    "blog": "Blog",
     "faqs": "Perguntas frequentes",
     "connectWallet": "Conectar carteira",
     "disconnectWallet": "Desconectar carteira"
@@ -116,6 +117,9 @@
     "stakingGamesRewards": "Recompensas de staking e jogos",
     "marketing": "Marketing",
     "liquidity": "Liquidez"
+  },
+  "blog": {
+    "title": "Blog"
   },
   "roadmapSteps": {
     "mainDescription": "Entre na arena e mostre sua mira! Toque ou clique para lançar — cronometre certo e esmague cada alvo no seu caminho!",

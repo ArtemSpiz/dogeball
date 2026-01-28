@@ -6,6 +6,7 @@
     "playDogeball": "$DOGEBALLをプレイ",
     "tokenomics": "トークノミクス",
     "ethL2": "ETH L2",
+    "blog": "ブログ",
     "faqs": "よくある質問",
     "connectWallet": "ウォレットを接続",
     "disconnectWallet": "ウォレットの切断"
@@ -116,6 +117,9 @@
     "stakingGamesRewards": "ステーキング＆ゲーム報酬",
     "marketing": "マーケティング",
     "liquidity": "流動性"
+  },
+  "blog": {
+    "title": "ブログ"
   },
   "roadmapSteps": {
     "mainDescription": "アリーナに足を踏み入れ、あなたの狙いを見せてください！タップまたはクリックして投げる — タイミングを合わせて、道中のすべてのターゲットを粉砕してください！",

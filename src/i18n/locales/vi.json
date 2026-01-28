@@ -6,6 +6,7 @@
     "playDogeball": "Chơi $DOGEBALL",
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
+    "blog": "Blog",
     "faqs": "Câu hỏi thường gặp",
     "connectWallet": "Kết nối ví",
     "disconnectWallet": "Ngắt kết nối ví"
@@ -116,6 +117,9 @@
     "stakingGamesRewards": "Phần thưởng Staking & Trò chơi",
     "marketing": "Tiếp thị",
     "liquidity": "Thanh khoản"
+  },
+  "blog": {
+    "title": "Blog"
   },
   "roadmapSteps": {
     "mainDescription": "Bước vào đấu trường và thể hiện mục tiêu của bạn! Chạm hoặc nhấp để ném – tính đúng thời điểm và đập vỡ mọi mục tiêu trên đường đi của bạn!",

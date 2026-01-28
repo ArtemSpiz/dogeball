@@ -6,6 +6,7 @@
     "playDogeball": "Spill $DOGEBALL",
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
+    "blog": "Blog",
     "faqs": "FAQ",
     "connectWallet": "Koble til lommebok",
     "disconnectWallet": "Koble fra Wallet"
@@ -116,6 +117,9 @@
     "stakingGamesRewards": "Staking & spillbelønninger",
     "marketing": "Markedsføring",
     "liquidity": "Likviditet"
+  },
+  "blog": {
+    "title": "Blog"
   },
   "roadmapSteps": {
     "mainDescription": "Gå inn i arenaen og vis målet ditt! Trykk eller klikk for å kaste — tidsbestem det riktig, og knus hvert mål i veien!",

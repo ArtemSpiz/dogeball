@@ -8,6 +8,7 @@ import Roadmap from "@/components/Home/Roadmap.vue";
 import HowToBuy from "@/components/Home/HowToBuy.vue";
 import FAQ from "@/components/Home/FAQ.vue";
 import Tokenomics from "@/components/Home/Tokenomics.vue";
+import Blog from "@/components/Home/Blog.vue";
 import EmailInput from "@/components/Home/EmailInput.vue";
 import CustomButton from "@/ui/CustomButton.vue";
 import { useI18n } from "vue-i18n";
@@ -61,5 +62,6 @@ onMounted(() => {
   <Roadmap />
   <HowToBuy />
   <Tokenomics />
+  <Blog />
   <FAQ />
 </template>

@@ -6,6 +6,7 @@
     "playDogeball": "Jugar $DOGEBALL",
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
+    "blog": "Blog",
     "faqs": "Preguntas frecuentes",
     "connectWallet": "Conectar billetera",
     "disconnectWallet": "Desconectar billetera"
@@ -116,6 +117,9 @@
     "stakingGamesRewards": "Recompensas de staking y juegos",
     "marketing": "Marketing",
     "liquidity": "Liquidez"
+  },
+  "blog": {
+    "title": "Blog"
   },
   "roadmapSteps": {
     "mainDescription": "¡Entra a la arena y muestra tu puntería! Toca o haz clic para lanzar: hazlo en el momento adecuado y destruye todos los objetivos que encuentres!",

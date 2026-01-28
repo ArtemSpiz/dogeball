@@ -6,6 +6,7 @@
     "playDogeball": "العب $DOGEBALL",
     "tokenomics": "الاقتصاد الرمزي",
     "ethL2": "ETH L2",
+    "blog": "المدونة",
     "faqs": "الأسئلة الشائعة",
     "connectWallet": "ربط المحفظة",
     "disconnectWallet": "افصل المحفظة"
@@ -116,6 +117,9 @@
     "stakingGamesRewards": "مكافآت التخزين والألعاب",
     "marketing": "التسويق",
     "liquidity": "السيولة"
+  },
+  "blog": {
+    "title": "المدونة"
   },
   "roadmapSteps": {
     "mainDescription": "ادخل إلى الساحة وأظهر هدفك! اضغط أو انقر للرمي — توقيت صحيح، واكسر كل هدف في طريقك!",

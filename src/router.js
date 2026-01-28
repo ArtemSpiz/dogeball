@@ -1,6 +1,7 @@
 import Home from "@/pages/Home.vue";
 import About from "./pages/About.vue";
 import Roadmap from "./pages/Roadmap.vue";
+import BlogPost from "./pages/BlogPost.vue";
 
 export const routes = [
   {
@@ -46,6 +47,21 @@ export const routes = [
         "Explore the $DOGEBALL roadmap and upcoming game features. Learn about tokenomics, staking rewards, and the future.",
       ogImage: "https://www.dogeballtoken.com/logo.png",
       canonical: "https://www.dogeballtoken.com/play-$DOGEBALL",
+    },
+  },
+  {
+    path: "/blog-01",
+    name: "BlogPost",
+    component: BlogPost,
+    meta: {
+      title: "Is DOGEBALL Crypto the Most Productive Meme Coin of 2026? – $DOGEBALL",
+      description:
+        "Discover how DOGEBALL uses Layer 2 technology to solve the gas problem in crypto gaming. Learn about the $1M prize pool, real-time gameplay, and why DOGEBALL is leading the utility-backed meme coin revolution.",
+      ogTitle: "Is DOGEBALL Crypto the Most Productive Meme Coin of 2026? – $DOGEBALL",
+      ogDescription:
+        "Discover how DOGEBALL uses Layer 2 technology to solve the gas problem in crypto gaming. Learn about the $1M prize pool, real-time gameplay, and why DOGEBALL is leading the utility-backed meme coin revolution.",
+      ogImage: "https://www.dogeballtoken.com/logo.png",
+      canonical: "https://www.dogeballtoken.com/blog-01",
     },
   },
 ];
