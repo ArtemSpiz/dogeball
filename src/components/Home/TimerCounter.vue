@@ -16,7 +16,7 @@ let interval;
 
 const updateCountdown = () => {
   const now = new Date().getTime();
-  const targetDate = new Date("2026-01-02T16:59:59Z").getTime();
+  const targetDate = new Date("2026-01-30T17:00:00Z").getTime();
   const difference = targetDate - now;
 
   if (difference > 0) {
@@ -49,7 +49,7 @@ const splitDigits = (value) => value.split("");
 
 <template>
   <div
-    class="mt-1 p-4 max-md:p-3 w-max flex items-center justify-center gap-4 backdrop-blur-[2px] rounded-2xl max-md:rounded-md border-2 border-white/20 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
+    class="mt-8 max-md:mt-6 p-4 max-md:p-3 w-max flex items-center justify-center gap-4 backdrop-blur-[2px] rounded-2xl max-md:rounded-md border-2 border-white/20 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
   >
     <div class="flex gap-2">
       <div class="flex flex-col items-center">
