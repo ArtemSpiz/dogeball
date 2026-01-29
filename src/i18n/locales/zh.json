@@ -6,6 +6,7 @@
     "playDogeball": "玩 $DOGEBALL",
     "tokenomics": "代币经济学",
     "ethL2": "ETH L2",
+    "blog": "博客",
     "faqs": "常见问题",
     "connectWallet": "连接钱包",
     "disconnectWallet": "断开钱包连接"
@@ -116,6 +117,9 @@
     "stakingGamesRewards": "质押和游戏奖励",
     "marketing": "营销",
     "liquidity": "流动性"
+  },
+  "blog": {
+    "title": "博客"
   },
   "roadmapSteps": {
     "mainDescription": "进入竞技场，展示您的目标！点击或点击投掷——把握好时机，粉碎路上的每一个目标！",

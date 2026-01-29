@@ -6,6 +6,7 @@
     "playDogeball": "$DOGEBALL Oyna",
     "tokenomics": "Tokenomics",
     "ethL2": "ETH L2",
+    "blog": "Blog",
     "faqs": "SSS",
     "connectWallet": "Cüzdanı Bağla",
     "disconnectWallet": "Cüzdanın Bağlantısını Kes"
@@ -116,6 +117,9 @@
     "stakingGamesRewards": "Staking & Oyun Ödülleri",
     "marketing": "Pazarlama",
     "liquidity": "Likidite"
+  },
+  "blog": {
+    "title": "Blog"
   },
   "roadmapSteps": {
     "mainDescription": "Arenaya adım atın ve hedefinizi gösterin! Atmak için dokunun veya tıklayın – zamanlamayı doğru yapın ve yolunuzdaki her hedefi parçalayın!",
