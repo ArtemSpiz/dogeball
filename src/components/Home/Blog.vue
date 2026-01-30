@@ -64,13 +64,22 @@ const scrollRight = () => {
   });
 };
 
-const staticBlogPost = {
-  title: "Is DOGEBALL Crypto the Most Productive Meme Coin of 2026? Let's Find Out",
-  publishedDate: "January 27",
-  content: "For years, the dream of \"Play-to-Earn\" (P2E) has been held back by a single, frustrating reality: the Ethereum mainnet was never built for high-speed gaming. Imagine trying to play a fast-paced game where every move costs $20 in gas fees and takes 3 minutes to confirm...",
-  link: "/blog-01",
-  isInternal: true, // Flag to indicate internal link
-};
+const staticBlogPosts = [
+  {
+    title: "What is DOGEBALL Crypto 2026: An Introduction to High-Performance P2E Gaming",
+    publishedDate: "January 27",
+    content: "If you have spent any time in the gaming world recently, you've likely noticed a trend. The initial excitement around \"Play-to-Earn\" has often been met with a frustrating reality: high gas fees, slow transaction speeds, and games that feel more like chores than entertainment...",
+    link: "/blog-01",
+    isInternal: true, // Flag to indicate internal link
+  },
+  {
+    title: "Is DOGEBALL Crypto the Most Productive Meme Coin of 2026? Let's Find Out",
+    publishedDate: "January 28",
+    content: "For years, the dream of \"Play-to-Earn\" (P2E) has been held back by a single, frustrating reality: the Ethereum mainnet was never built for high-speed gaming. Imagine trying to play a fast-paced game where every move costs $20 in gas fees and takes 3 minutes to confirm...",
+    link: "/blog-02",
+    isInternal: true, // Flag to indicate internal link
+  },
+];
 
 const fetchBlogPosts = async () => {
   try {
@@ -90,18 +99,18 @@ const fetchBlogPosts = async () => {
         isInternal: false, // External link
       }));
       
-      // Add static blog post after YouTube videos
-      blogPosts.value.push(staticBlogPost);
+      // Add static blog posts after YouTube videos
+      blogPosts.value.push(...staticBlogPosts);
     } else {
       error.value = "Failed to load blog posts";
-      // Even if API fails, show the static blog post
-      blogPosts.value = [staticBlogPost];
+      // Even if API fails, show the static blog posts
+      blogPosts.value = [...staticBlogPosts];
     }
   } catch (err) {
     console.error("Error fetching blog posts:", err);
     error.value = "Failed to load blog posts";
-    // Even if API fails, show the static blog post
-    blogPosts.value = [staticBlogPost];
+    // Even if API fails, show the static blog posts
+    blogPosts.value = [...staticBlogPosts];
   } finally {
     isLoading.value = false;
   }
