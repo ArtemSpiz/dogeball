@@ -3,6 +3,7 @@ import About from "./pages/About.vue";
 import Roadmap from "./pages/Roadmap.vue";
 import Game from "./pages/Game.vue";
 import BlogPost from "./pages/BlogPost.vue";
+import BlogPost2 from "./pages/BlogPost2.vue";
 
 export const routes = [
   {
@@ -70,14 +71,29 @@ export const routes = [
     name: "BlogPost",
     component: BlogPost,
     meta: {
-      title: "Is DOGEBALL Crypto the Most Productive Meme Coin of 2026? – $DOGEBALL",
+      title: "What is DOGEBALL Crypto 2026: An Introduction to High-Performance P2E Gaming – $DOGEBALL",
+      description:
+        "Learn about DOGEBALL ($DOGEBALL) - a high-performance gaming ecosystem on Ethereum Layer 2. Discover the $1M P2E prize pool, DogeChain L2 infrastructure, and Coinsult-audited smart contracts with 100% security score.",
+      ogTitle: "What is DOGEBALL Crypto 2026: An Introduction to High-Performance P2E Gaming – $DOGEBALL",
+      ogDescription:
+        "Learn about DOGEBALL ($DOGEBALL) - a high-performance gaming ecosystem on Ethereum Layer 2. Discover the $1M P2E prize pool, DogeChain L2 infrastructure, and Coinsult-audited smart contracts with 100% security score.",
+      ogImage: "https://www.dogeballtoken.com/logo.png",
+      canonical: "https://www.dogeballtoken.com/blog-01",
+    },
+  },
+  {
+    path: "/blog-02",
+    name: "BlogPost2",
+    component: BlogPost2,
+    meta: {
+      title: "Is DOGEBALL Crypto the Most Productive Meme Coin of 2026? Let's Find Out – $DOGEBALL",
       description:
         "Discover how DOGEBALL uses Layer 2 technology to solve the gas problem in crypto gaming. Learn about the $1M prize pool, real-time gameplay, and why DOGEBALL is leading the utility-backed meme coin revolution.",
-      ogTitle: "Is DOGEBALL Crypto the Most Productive Meme Coin of 2026? – $DOGEBALL",
+      ogTitle: "Is DOGEBALL Crypto the Most Productive Meme Coin of 2026? Let's Find Out – $DOGEBALL",
       ogDescription:
         "Discover how DOGEBALL uses Layer 2 technology to solve the gas problem in crypto gaming. Learn about the $1M prize pool, real-time gameplay, and why DOGEBALL is leading the utility-backed meme coin revolution.",
       ogImage: "https://www.dogeballtoken.com/logo.png",
-      canonical: "https://www.dogeballtoken.com/blog-01",
+      canonical: "https://www.dogeballtoken.com/blog-02",
     },
   },
 ];
