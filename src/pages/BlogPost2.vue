@@ -122,6 +122,22 @@ const { t } = useI18n();
           <p class="mt-8">
             The "Gas Problem" didn't kill crypto gaming; it just forced it to evolve. Projects like DOGEBALL are proving that with the right tech, the future of gaming is decentralized, fast, and incredibly rewarding.
           </p>
+
+          <!-- Related Article -->
+          <div class="mt-12 mb-8">
+            <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-6 max-md:p-4">
+              <div class="text-xl max-md:text-lg font-bold mb-3 text-white">Related Article</div>
+              <p class="text-white/80 mb-4">
+                Want to learn more about DOGEBALL? Check out our introduction to the high-performance P2E gaming ecosystem.
+              </p>
+              <a
+                href="/blog-01"
+                class="inline-block text-blue-400 hover:text-blue-300 underline font-medium transition-colors"
+              >
+                What is DOGEBALL Crypto 2026: An Introduction to High-Performance P2E Gaming →
+              </a>
+            </div>
+          </div>
         </div>
       </article>
     </div>
