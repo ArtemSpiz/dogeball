@@ -94,7 +94,7 @@ const submit = async () => {
         >
           {{ t("hero.presaleLaunch") }}
         </div> -->
-        <TimerCounter />
+        <!-- <TimerCounter /> -->
       </div>
 
       <div
