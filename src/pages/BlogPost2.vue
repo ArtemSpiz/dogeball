@@ -1,5 +1,6 @@
 <script setup>
 import { useI18n } from "vue-i18n";
+import { RouterLink } from "vue-router";
 
 const { t } = useI18n();
 </script>
@@ -30,10 +31,10 @@ const { t } = useI18n();
               <div class="text-2xl max-md:text-xl font-bold mb-4 text-white">Key Takeaways</div>
               <ul class="list-disc list-inside space-y-3 ml-4">
                 <li>
-                  <strong>The "Gas Problem" Solved:</strong> DOGEBALL ($DOGEBALL) uses a custom Layer 2 (L2) called DogeChain to eliminate high fees and slow speeds.
+                  <strong>The "Gas Problem" Solved:</strong> DOGEBALL ($DOGEBALL) uses a custom Layer 2 (L2) called <RouterLink to="/blog-01" class="text-blue-400 hover:text-blue-300 underline">DogeChain</RouterLink> to eliminate high fees and slow speeds.
                 </li>
                 <li>
-                  <strong>Real-Time Gameplay:</strong> Transactions on the DogeChain L2 are processed in under 2 seconds, making high-speed, competitive gaming possible.
+                  <strong>Real-Time Gameplay:</strong> Transactions on the <RouterLink to="/blog-01" class="text-blue-400 hover:text-blue-300 underline">DogeChain</RouterLink> L2 are processed in under 2 seconds, making high-speed, competitive gaming possible.
                 </li>
                 <li>
                   <strong>Massive Rewards:</strong> The ecosystem features a $1,000,000 Prize Pool, including a $500,000 grand prize for the top player on the global leaderboard.
@@ -52,7 +53,7 @@ const { t } = useI18n();
               Think of the Ethereum Mainnet as a busy, expensive highway. Layer 2 (L2) is like an express lane built right above it. It handles the "heavy lifting" of thousands of transactions at lightning speed, then bundles them together and sends a single report back to the main highway.
             </p>
             <p>
-              For a project like DOGEBALL, which operates on a custom EVM-compatible Layer 2 known as DogeChain, this technology is the "secret sauce." It allows for:
+              For a project like DOGEBALL, which operates on a custom EVM-compatible Layer 2 known as <RouterLink to="/blog-01" class="text-blue-400 hover:text-blue-300 underline">DogeChain</RouterLink>, this technology is the "secret sauce." It allows for:
             </p>
             <ul class="list-disc list-inside space-y-3 ml-4 mt-4">
               <li>
@@ -82,7 +83,7 @@ const { t } = useI18n();
                   <strong>Throw & Level Up:</strong> Players control characters in a fast-paced arena, throwing virtual dodgeballs to eliminate opponents and earn experience points (XP).
                 </li>
                 <li>
-                  <strong>Wallet-Connected Gameplay:</strong> Your game progress is tied directly to your wallet on the DogeChain L2, ensuring all achievements and rewards are transparent and truly yours.
+                  <strong>Wallet-Connected Gameplay:</strong> Your game progress is tied directly to your wallet on the <RouterLink to="/blog-01" class="text-blue-400 hover:text-blue-300 underline">DogeChain</RouterLink> L2, ensuring all achievements and rewards are transparent and truly yours.
                 </li>
                 <li>
                   <strong>The Competitive Edge:</strong> The game features a live leaderboard that tracks the best players globally. This isn't just for bragging rights, it's the gateway to one of the biggest reward pools in the industry.

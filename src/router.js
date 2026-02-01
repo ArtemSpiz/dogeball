@@ -4,6 +4,7 @@ import Roadmap from "./pages/Roadmap.vue";
 import Game from "./pages/Game.vue";
 import BlogPost from "./pages/BlogPost.vue";
 import BlogPost2 from "./pages/BlogPost2.vue";
+import BlogPost3 from "./pages/BlogPost3.vue";
 
 export const routes = [
   {
@@ -94,6 +95,21 @@ export const routes = [
         "Discover how DOGEBALL uses Layer 2 technology to solve the gas problem in crypto gaming. Learn about the $1M prize pool, real-time gameplay, and why DOGEBALL is leading the utility-backed meme coin revolution.",
       ogImage: "https://www.dogeballtoken.com/logo.png",
       canonical: "https://www.dogeballtoken.com/blog-02",
+    },
+  },
+  {
+    path: "/blog-03",
+    name: "BlogPost3",
+    component: BlogPost3,
+    meta: {
+      title: "Best Crypto to Buy in 2026: How to Win Big in the $1M DOGEBALL Arena – $DOGEBALL",
+      description:
+        "Discover why DOGEBALL ($DOGEBALL) is the best crypto to buy in 2026. Learn about the $1M prize pool, 80% staking rewards, and how to earn through active gameplay or passive staking on DogeChain L2.",
+      ogTitle: "Best Crypto to Buy in 2026: How to Win Big in the $1M DOGEBALL Arena – $DOGEBALL",
+      ogDescription:
+        "Discover why DOGEBALL ($DOGEBALL) is the best crypto to buy in 2026. Learn about the $1M prize pool, 80% staking rewards, and how to earn through active gameplay or passive staking on DogeChain L2.",
+      ogImage: "https://www.dogeballtoken.com/logo.png",
+      canonical: "https://www.dogeballtoken.com/blog-03",
     },
   },
 ];

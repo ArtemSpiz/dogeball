@@ -79,6 +79,13 @@ const staticBlogPosts = [
     link: "/blog-02",
     isInternal: true, // Flag to indicate internal link
   },
+  {
+    title: "Best Crypto to Buy in 2026: How to Win Big in the $1M DOGEBALL Arena",
+    publishedDate: "January 29",
+    content: "In the early days of crypto, \"gaming\" usually meant clicking a button once an hour and hoping for a reward. Those days are over. As the DOGEBALL crypto 2026 era takes hold, the community is moving toward high-adrenaline, skill-based competition that rewards real talent...",
+    link: "/blog-03",
+    isInternal: true, // Flag to indicate internal link
+  },
 ];
 
 const fetchBlogPosts = async () => {
