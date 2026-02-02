@@ -5,6 +5,7 @@ import Game from "./pages/Game.vue";
 import BlogPost from "./pages/BlogPost.vue";
 import BlogPost2 from "./pages/BlogPost2.vue";
 import BlogPost3 from "./pages/BlogPost3.vue";
+import BlogPost4 from "./pages/BlogPost4.vue";
 
 export const routes = [
   {
@@ -110,6 +111,21 @@ export const routes = [
         "Discover why DOGEBALL ($DOGEBALL) is the best crypto to buy in 2026. Learn about the $1M prize pool, 80% staking rewards, and how to earn through active gameplay or passive staking on DogeChain L2.",
       ogImage: "https://www.dogeballtoken.com/logo.png",
       canonical: "https://www.dogeballtoken.com/blog-03",
+    },
+  },
+  {
+    path: "/blog-04",
+    name: "BlogPost4",
+    component: BlogPost4,
+    meta: {
+      title: "DOGEBALL Crypto 2026-2028 Price Prediction – $DOGEBALL",
+      description:
+        "Get data-driven DOGEBALL ($DOGEBALL) price predictions for 2026-2028. Learn about the 50x presale-to-listing gap, 80% APY staking rewards, and long-term price targets based on DogeChain L2 infrastructure.",
+      ogTitle: "DOGEBALL Crypto 2026-2028 Price Prediction – $DOGEBALL",
+      ogDescription:
+        "Get data-driven DOGEBALL ($DOGEBALL) price predictions for 2026-2028. Learn about the 50x presale-to-listing gap, 80% APY staking rewards, and long-term price targets based on DogeChain L2 infrastructure.",
+      ogImage: "https://www.dogeballtoken.com/logo.png",
+      canonical: "https://www.dogeballtoken.com/blog-04",
     },
   },
 ];
