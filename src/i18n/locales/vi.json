@@ -32,6 +32,7 @@
   "roadmap": {
     "welcome": "CHÀO MỪNG ĐẾN VỚI TRÒ CHƠI DOGEBALL!",
     "title": "Lộ trình",
+    "subtitle": "Lộ trình DOGEBALL phác thảo con đường phát triển đầy đủ từ việc tạo token và ra mắt presale đến niêm yết trên các sàn giao dịch toàn cầu và mở rộng trò chơi. Mỗi giai đoạn tập trung vào việc cung cấp cơ sở hạ tầng thực tế, phát triển cộng đồng DOGEBALL và mở rộng hệ sinh thái game Ethereum Layer 2.",
     "phase1": "Giai đoạn 1",
     "phase2": "Giai đoạn 2",
     "phase3": "Giai đoạn 3",
@@ -59,7 +60,8 @@
   },
   "about": {
     "title": "GIỚI THIỆU",
-    "subtitle": "Sự chuyển đổi của các đồng meme crypto",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) là một dự án presale crypto Ethereum Layer 2 được xây dựng cho game blockchain nhanh chóng và chi phí thấp. Hệ sinh thái DOGEBALL cung cấp năng lượng cho một trò chơi bóng rổ play-to-earn nơi người chơi cạnh tranh on-chain để giành phần thưởng token thực và giải thưởng $1 triệu. Được xây dựng trên mạng Layer 2 tương thích EVM tùy chỉnh, DOGEBALL cho phép giao dịch gần như tức thì, phí cực thấp, phần thưởng staking và gameplay có thể mở rộng được thiết kế cho việc áp dụng hàng loạt.",
+    "subtitle": "DOGEBALL Token ($DOGEBALL) là gì?",
     "description": "Ở trung tâm của DOGECHAIN là trò chơi $DOGEBALL — một trò chơi né bóng trực tuyến gây nghiện nơi người chơi ném DOGEBALLs, lên cấp, leo bảng xếp hạng và cạnh tranh cho giải thưởng $1M ($500k cho người chơi hàng đầu)!",
     "card1": "Trò chơi trực tuyến $DOGEBALL, chơi để giành một phần $1m!",
     "card2": "Blockchain ETH L2 được xây dựng tùy chỉnh với phí người dùng cực thấp",
@@ -163,7 +165,8 @@
     "here": "Ở đây"
   },
   "common": {
-    "clickHere": "Nhấp vào đây"
+    "clickHere": "Nhấp vào đây",
+    "howToBuy": "Mua DOGEBALL Token"
   },
   "timer": {
     "days": "Ngày",
@@ -252,8 +255,8 @@
       "participants": "Người tham gia"
     },
     "bonusBanner": {
-      "turnRewards": "MÃ THƯỞNG THỜI GIAN GIỚI HẠN: sử dụng mã ",
-      "dashboardEarn": "DB50",
+      "turnRewards": "Biến mạng lưới của bạn thành phần thưởng. Tạo mã giới thiệu của bạn từ",
+      "dashboardEarn": "Bảng điều khiển và kiếm thêm 10% $DOGEBALL cho mỗi lượt giới thiệu",
       "turnRewardsSuffix": " để nhận thêm 50% token #DOGEBALL",
       "presaleLaunchOffer": "Ưu đãi ra mắt bán trước",
       "useBonusCode": "Sử dụng mã thưởng",

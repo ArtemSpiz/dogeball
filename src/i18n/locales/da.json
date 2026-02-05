@@ -32,6 +32,7 @@
   "roadmap": {
     "welcome": "VELKOMMEN TIL DOGEBALL-SPILLET!",
     "title": "Ruteplan",
+    "subtitle": "DOGEBALL-ruteplanen skitserer den fulde udviklingsvej fra tokenoprettelse og forsalgslancering til globale børsnoteringer og spilekspansion. Hver fase fokuserer på at levere reel infrastruktur, vokse DOGEBALL-fællesskabet og udvide Ethereum Layer 2 gaming-økosystemet.",
     "phase1": "Fase 1",
     "phase2": "Fase 2",
     "phase3": "Fase 3",
@@ -59,7 +60,8 @@
   },
   "about": {
     "title": "OM",
-    "subtitle": "Overgangen af krypto meme-mønter",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) er et Ethereum Layer 2 crypto forsalgsprojekt bygget til hurtig, lavpris blockchain-gaming. DOGEBALL-økosystemet driver et play-to-earn basketball-spil, hvor spillere konkurrerer on-chain for rigtige token-belønninger og en $1 million præmiepulje. Bygget på et brugerdefineret EVM-kompatibelt Layer 2-netværk gør DOGEBALL næsten øjeblikkelige transaktioner, ultra-lave gebyrer, staking-belønninger og skalerbar gameplay muligt, designet til masseadoption.",
+    "subtitle": "Hvad er DOGEBALL Token ($DOGEBALL)?",
     "description": "I centrum af DOGECHAIN er $DOGEBALL-spillet — et afhængighedsskabende online dodgeball-spil, hvor spillere kaster DOGEBALLs, går op i niveau, klatrer på ledertavlen og konkurrerer om en $1M præmiepulje ($500k til topspilleren)!",
     "card1": "$DOGEBALL online-spil, spil for at vinde del af $1m!",
     "card2": "Brugerdefineret bygget ETH L2 Blockchain med ultra-lave brugergebyrer",
@@ -163,7 +165,8 @@
     "here": "Her"
   },
   "common": {
-    "clickHere": "Klik her"
+    "clickHere": "Klik her",
+    "howToBuy": "Køb DOGEBALL Token"
   },
   "timer": {
     "days": "Dage",
@@ -252,8 +255,8 @@
       "participants": "Deltagere"
     },
     "bonusBanner": {
-      "turnRewards": "BEGRÆNSET TID BONUSKODE: brug kode ",
-      "dashboardEarn": "DB50",
+      "turnRewards": "Gør dit netværk til belønninger. Generer din henvisningskode fra",
+      "dashboardEarn": "Dashboard og optjen 10% ekstra $DOGEBALL per henvisning",
       "turnRewardsSuffix": " for at få 50% ekstra #DOGEBALL tokens",
       "presaleLaunchOffer": "Forsalgs lancerings tilbud",
       "useBonusCode": "Brug bonuskode",

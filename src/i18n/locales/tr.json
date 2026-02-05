@@ -32,6 +32,7 @@
   "roadmap": {
     "welcome": "DOGEBALL OYUNUNA HOŞ GELDİNİZ!",
     "title": "Yol Haritası",
+    "subtitle": "DOGEBALL yol haritası, token oluşturma ve ön satış lansmanından küresel borsa listelerine ve oyun genişlemesine kadar tam geliştirme yolunu özetler. Her aşama, gerçek altyapı sağlamaya, DOGEBALL topluluğunu büyütmeye ve Ethereum Layer 2 oyun ekosistemini genişletmeye odaklanır.",
     "phase1": "Faz 1",
     "phase2": "Faz 2",
     "phase3": "Faz 3",
@@ -59,7 +60,8 @@
   },
   "about": {
     "title": "HAKKINDA",
-    "subtitle": "Kripto meme coin'lerin geçişi",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL), hızlı, düşük maliyetli blockchain oyunları için oluşturulmuş bir Ethereum Layer 2 kripto ön satış projesidir. DOGEBALL ekosistemi, oyuncuların gerçek token ödülleri ve 1 milyon dolarlık ödül havuzu için zincir üzerinde yarıştığı bir play-to-earn basketbol oyununu destekler. Özel bir EVM uyumlu Layer 2 ağı üzerine inşa edilen DOGEBALL, neredeyse anında işlemler, ultra düşük ücretler, staking ödülleri ve kitlesel benimseme için tasarlanmış ölçeklenebilir oyun deneyimi sağlar.",
+    "subtitle": "DOGEBALL Token ($DOGEBALL) Nedir?",
     "description": "DOGECHAIN'in merkezinde $DOGEBALL oyunu var — oyuncuların DOGEBALL'ları attığı, seviye atladığı, liderlik tablosuna tırmandığı ve $1M ödül havuzu için yarıştığı (en iyi oyuncuya $500k) bağımlılık yapan bir online dodgeball oyunu!",
     "card1": "$DOGEBALL online oyunu, $1m'nin bir kısmını kazanmak için oyna!",
     "card2": "Ultra düşük kullanıcı ücretleriyle özel yapılmış ETH L2 Blockchain",
@@ -71,7 +73,8 @@
     "partnerships": "Dünyanın en büyük oyun organizasyonlarıyla ortaklıklar devam ediyor"
   },
   "howToBuy": {
-    "title": "NASIL SATIN ALINIR",
+    "title": "DOGEBALL Token ($DOGEBALL) Nasıl Satın Alınır",
+    "subtitle": "DOGEBALL token satın almak resmi ön satış web sitesi üzerinden basittir. Kullanıcılar ETH, USDT, BNB, BTC ve SOL dahil popüler kripto paraları kullanarak veya banka kartı ile $DOGEBALL satın alabilir. Cüzdanınızı bağlamak, ödeme yönteminizi seçmek ve ön satış bitmeden DOGEBALL tokenlerini almak için aşağıdaki adımları izleyin.",
     "step1": "Adım 1",
     "step2": "Adım 2",
     "step3": "Adım 3",
@@ -163,7 +166,8 @@
     "here": "Burada"
   },
   "common": {
-    "clickHere": "Buraya Tıklayın"
+    "clickHere": "Buraya Tıklayın",
+    "howToBuy": "DOGEBALL Token Satın Al"
   },
   "timer": {
     "days": "Gün",
@@ -252,8 +256,8 @@
       "participants": "Katılımcılar"
     },
     "bonusBanner": {
-      "turnRewards": "SINIRLI SÜRE BONUS KODU: kod kullan ",
-      "dashboardEarn": "DB50",
+      "turnRewards": "Ağınızı ödüllere dönüştürün. Referans kodunuzu oluşturun",
+      "dashboardEarn": "Kontrol panelinden ve her referans için %10 ekstra $DOGEBALL kazanın",
       "turnRewardsSuffix": " %50 ekstra #DOGEBALL token almak için",
       "presaleLaunchOffer": "Ön Satış Lansman Teklifi",
       "useBonusCode": "Bonus Kodu Kullan",

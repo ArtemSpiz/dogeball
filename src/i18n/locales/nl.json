@@ -32,6 +32,7 @@
   "roadmap": {
     "welcome": "WELKOM BIJ HET DOGEBALL-SPEL!",
     "title": "Roadmap",
+    "subtitle": "De DOGEBALL-roadmap schetst het volledige ontwikkelingspad van tokencreatie en presale-lancering tot wereldwijde beursnoteringen en game-uitbreiding. Elke fase richt zich op het leveren van echte infrastructuur, het laten groeien van de DOGEBALL-gemeenschap en het uitbreiden van het Ethereum Layer 2 gaming-ecosysteem.",
     "phase1": "Fase 1",
     "phase2": "Fase 2",
     "phase3": "Fase 3",
@@ -59,7 +60,8 @@
   },
   "about": {
     "title": "OVER ONS",
-    "subtitle": "De overgang van crypto meme-munten",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) is een Ethereum Layer 2 crypto presale-project gebouwd voor snelle, goedkope blockchain-gaming. Het DOGEBALL-ecosysteem drijft een play-to-earn basketbalgame aan waarbij spelers on-chain concurreren voor echte tokenbeloningen en een prijzenpot van $1 miljoen. Gebouwd op een aangepast EVM-compatibel Layer 2-netwerk maakt DOGEBALL bijna directe transacties, ultra-lage kosten, staking-beloningen en schaalbare gameplay mogelijk, ontworpen voor massale adoptie.",
+    "subtitle": "Wat is DOGEBALL Token ($DOGEBALL)?",
     "description": "In het centrum van DOGECHAIN staat het $DOGEBALL-spel — een verslavend online trefbal-spel waarbij spelers DOGEBALLs gooien, level up gaan, de ranglijst beklimmen en strijden om een $1M prijzenpot ($500k voor de beste speler)!",
     "card1": "$DOGEBALL online-spel, speel om een deel van $1m te winnen!",
     "card2": "Aangepast gebouwde ETH L2 Blockchain met ultra-lage gebruikerskosten",
@@ -71,7 +73,8 @@
     "partnerships": "Partnerschappen met 's werelds grootste gamingorganisaties zijn in uitvoering"
   },
   "howToBuy": {
-    "title": "HOE TE KOPEN",
+    "title": "Hoe DOGEBALL Token ($DOGEBALL) te kopen",
+    "subtitle": "DOGEBALL token kopen is eenvoudig via de officiële presale-website. Gebruikers kunnen $DOGEBALL kopen met populaire cryptocurrencies waaronder ETH, USDT, BNB, BTC en SOL, of met bankpas. Volg de onderstaande stappen om uw portemonnee te verbinden, uw betaalmethode te selecteren en DOGEBALL-tokens te ontvangen voordat de presale eindigt.",
     "step1": "Stap 1",
     "step2": "Stap 2",
     "step3": "Stap 3",
@@ -163,7 +166,8 @@
     "here": "Hier"
   },
   "common": {
-    "clickHere": "Klik hier"
+    "clickHere": "Klik hier",
+    "howToBuy": "Koop DOGEBALL Token"
   },
   "timer": {
     "days": "Dagen",
@@ -252,8 +256,8 @@
       "participants": "Deelnemers"
     },
     "bonusBanner": {
-      "turnRewards": "BEPERKTE TIJD BONUSCODE: gebruik code ",
-      "dashboardEarn": "DB50",
+      "turnRewards": "Maak van uw netwerk beloningen. Genereer uw verwijzingscode vanuit het",
+      "dashboardEarn": "Dashboard en verdien 10% extra $DOGEBALL per verwijzing",
       "turnRewardsSuffix": " om 50% extra #DOGEBALL tokens te krijgen",
       "presaleLaunchOffer": "Voorverkoop Lancering Aanbieding",
       "useBonusCode": "Gebruik Bonuscode",

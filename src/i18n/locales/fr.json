@@ -32,6 +32,7 @@
   "roadmap": {
     "welcome": "BIENVENUE DANS LE JEU DOGEBALL !",
     "title": "Feuille de route",
+    "subtitle": "La feuille de route DOGEBALL décrit le chemin de développement complet de la création du token et du lancement de la prévente aux listes d'échanges mondiaux et à l'expansion du jeu. Chaque phase se concentre sur la fourniture d'infrastructure réelle, la croissance de la communauté DOGEBALL et l'expansion de l'écosystème de jeu Ethereum Layer 2.",
     "phase1": "Phase 1",
     "phase2": "Phase 2",
     "phase3": "Phase 3",
@@ -59,7 +60,8 @@
   },
   "about": {
     "title": "À PROPOS",
-    "subtitle": "La transition des pièces mème crypto",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) est un projet de prévente crypto Ethereum Layer 2 construit pour le jeu blockchain rapide et à faible coût. L'écosystème DOGEBALL alimente un jeu de basketball play-to-earn où les joueurs rivalisent on-chain pour de vraies récompenses de tokens et un prix de 1 million de dollars. Construit sur un réseau Layer 2 compatible EVM personnalisé, DOGEBALL permet des transactions quasi instantanées, des frais ultra-faibles, des récompenses de staking et un gameplay scalable conçu pour l'adoption de masse.",
+    "subtitle": "Qu'est-ce que DOGEBALL Token ($DOGEBALL) ?",
     "description": "Au centre de DOGECHAIN se trouve le jeu $DOGEBALL — un jeu de dodgeball en ligne addictif où les joueurs lancent des DOGEBALLs, montent de niveau, grimpent au classement et rivalisent pour un prix de $1M ($500k au meilleur joueur) !",
     "card1": "Jeu en ligne $DOGEBALL, jouez pour gagner une partie de $1m !",
     "card2": "Blockchain ETH L2 personnalisée avec des frais utilisateur ultra-faibles",
@@ -71,7 +73,8 @@
     "partnerships": "Des partenariats avec les plus grandes organisations de jeu au monde sont en cours"
   },
   "howToBuy": {
-    "title": "COMMENT ACHETER",
+    "title": "Comment acheter DOGEBALL Token ($DOGEBALL)",
+    "subtitle": "Acheter DOGEBALL token est simple via le site web officiel de prévente. Les utilisateurs peuvent acheter $DOGEBALL en utilisant des cryptomonnaies populaires incluant ETH, USDT, BNB, BTC et SOL, ou par carte bancaire. Suivez les étapes ci-dessous pour connecter votre portefeuille, sélectionner votre méthode de paiement et recevoir des tokens DOGEBALL avant la fin de la prévente.",
     "step1": "Étape 1",
     "step2": "Étape 2",
     "step3": "Étape 3",
@@ -163,7 +166,8 @@
     "here": "Ici"
   },
   "common": {
-    "clickHere": "Cliquez ici"
+    "clickHere": "Cliquez ici",
+    "howToBuy": "Acheter DOGEBALL Token"
   },
   "timer": {
     "days": "Jours",
@@ -252,8 +256,8 @@
       "participants": "Participants"
     },
     "bonusBanner": {
-      "turnRewards": "CODE BONUS TEMPS LIMITÉ : utilisez le code ",
-      "dashboardEarn": "DB50",
+      "turnRewards": "Transformez votre réseau en récompenses. Générez votre code de parrainage depuis le",
+      "dashboardEarn": "Tableau de bord et gagnez 10% de $DOGEBALL supplémentaire par parrainage",
       "turnRewardsSuffix": " pour obtenir 50% de tokens #DOGEBALL supplémentaires",
       "presaleLaunchOffer": "Offre de lancement de prévente",
       "useBonusCode": "Utiliser le code bonus",

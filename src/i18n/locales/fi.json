@@ -32,6 +32,7 @@
   "roadmap": {
     "welcome": "TERVETULOA DOGEBALL-PELIIN!",
     "title": "Tiekartta",
+    "subtitle": "DOGEBALL-tiekartta hahmottelee täyden kehityspolun tokenin luomisesta ja esimyynnin käynnistyksestä globaaleihin pörssilistauksiin ja pelin laajentamiseen. Jokainen vaihe keskittyy todellisen infrastruktuurin toimittamiseen, DOGEBALL-yhteisön kasvattamiseen ja Ethereum Layer 2 -peliekosysteemin laajentamiseen.",
     "phase1": "Vaihe 1",
     "phase2": "Vaihe 2",
     "phase3": "Vaihe 3",
@@ -59,7 +60,8 @@
   },
   "about": {
     "title": "TIETOJA",
-    "subtitle": "Kryptomeme-kolikoiden siirtyminen",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) on Ethereum Layer 2 -kryptovaluutan esimyyntiprojekti, joka on rakennettu nopeaan ja edulliseen lohkoketjupelaamiseen. DOGEBALL-ekosysteemi käyttää play-to-earn -koripallopeliä, jossa pelaajat kilpailevat ketjussa todellisista token-palkkioista ja miljoonan dollarin palkintopotista. Rakennettu mukautetulle EVM-yhteensopivalle Layer 2 -verkolle, DOGEBALL mahdollistaa lähes välittömät tapahtumat, erittäin alhaiset maksut, staking-palkkiot ja skaalautuvan pelattavuuden, joka on suunniteltu massiiviseen käyttöönottoon.",
+    "subtitle": "Mikä on DOGEBALL Token ($DOGEBALL)?",
     "description": "DOGECHAINin keskellä on $DOGEBALL-peli — koukuttava online-dodgeball-peli, jossa pelaajat heittävät DOGEBALLeja, nousevat tasoja, kiipeävät pistetaulukossa ja kilpailevat $1M palkintopotista ($500k parhaalle pelaajalle)!",
     "card1": "$DOGEBALL online-peli, pelaa voittaaksesi osan $1m:sta!",
     "card2": "Mukautettu rakennettu ETH L2 Lohkoketju erittäin alhaisilla käyttäjämaksuilla",
@@ -71,7 +73,8 @@
     "partnerships": "Kumppanuudet maailman suurimpien peliorganisaatioiden kanssa ovat käynnissä"
   },
   "howToBuy": {
-    "title": "MITEN OSTAA",
+    "title": "Miten ostaa DOGEBALL Token ($DOGEBALL)",
+    "subtitle": "DOGEBALL-tokenin ostaminen on yksinkertaista virallisen esimyyntisivuston kautta. Käyttäjät voivat ostaa $DOGEBALL:ia käyttämällä suosittuja kryptovaluuttoja, mukaan lukien ETH, USDT, BNB, BTC ja SOL, tai pankkikortilla. Noudata alla olevia vaiheita yhdistääksesi lompakkosi, valitaksesi maksutapasi ja vastaanottaaksesi DOGEBALL-tokeneita ennen kuin esimyynti päättyy.",
     "step1": "Vaihe 1",
     "step2": "Vaihe 2",
     "step3": "Vaihe 3",
@@ -163,7 +166,8 @@
     "here": "Täällä"
   },
   "common": {
-    "clickHere": "Klikkaa tässä"
+    "clickHere": "Klikkaa tässä",
+    "howToBuy": "Osta DOGEBALL Token"
   },
   "timer": {
     "days": "Päivää",
@@ -252,8 +256,8 @@
       "participants": "Osallistujat"
     },
     "bonusBanner": {
-      "turnRewards": "RAJOITETTU AIKA BONUSKOODI: käytä koodia ",
-      "dashboardEarn": "DB50",
+      "turnRewards": "Muunna verkostosi palkkioiksi. Luo suosituskoodisi",
+      "dashboardEarn": "Hallintapaneelista ja ansaitse 10% ylimääräistä $DOGEBALL:ia per suositus",
       "turnRewardsSuffix": " saadaksesi 50% ylimääräistä #DOGEBALL-tokeneita",
       "presaleLaunchOffer": "Esimyynnin käynnistystarjous",
       "useBonusCode": "Käytä bonuskoodia",

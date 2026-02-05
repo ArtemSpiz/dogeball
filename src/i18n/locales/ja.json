@@ -32,6 +32,7 @@
   "roadmap": {
     "welcome": "DOGEBALLゲームへようこそ！",
     "title": "ロードマップ",
+    "subtitle": "DOGEBALLロードマップは、トークンの作成とプレセールの開始からグローバル取引所への上場、ゲームの拡張までの完全な開発パスを概説しています。各フェーズは、実際のインフラストラクチャの提供、DOGEBALLコミュニティの成長、Ethereum Layer 2ゲーミングエコシステムの拡大に焦点を当てています。",
     "phase1": "フェーズ1",
     "phase2": "フェーズ2",
     "phase3": "フェーズ3",
@@ -59,7 +60,8 @@
   },
   "about": {
     "title": "概要",
-    "subtitle": "暗号ミームコインの移行",
+    "secSubtitle": "DOGEBALL Token（$DOGEBALL）は、高速で低コストのブロックチェーンゲーミングのために構築されたEthereum Layer 2暗号プレセールプロジェクトです。DOGEBALLエコシステムは、プレイヤーがオンチェーンで実際のトークン報酬と100万ドルの賞金プールを競うplay-to-earnバスケットボールゲームを動かします。カスタムEVM互換Layer 2ネットワーク上に構築されたDOGEBALLは、ほぼ瞬時のトランザクション、超低手数料、ステーキング報酬、マスアダプション向けに設計されたスケーラブルなゲームプレイを可能にします。",
+    "subtitle": "DOGEBALL Token（$DOGEBALL）とは？",
     "description": "DOGECHAINの中心にあるのは$DOGEBALLゲームです — プレイヤーがDOGEBALLを投げ、レベルアップし、リーダーボードを登り、$1Mの賞金プール（トッププレイヤーに$500k）を競う中毒性のあるオンラインドッジボールゲームです！",
     "card1": "$DOGEBALLオンラインゲーム、$1mの一部を獲得するためにプレイ！",
     "card2": "超低ユーザー手数料のカスタム構築ETH L2ブロックチェーン",
@@ -71,7 +73,8 @@
     "partnerships": "世界最大のゲーミング組織とのパートナーシップが進行中です"
   },
   "howToBuy": {
-    "title": "購入方法",
+    "title": "DOGEBALL Token（$DOGEBALL）の購入方法",
+    "subtitle": "DOGEBALLトークンの購入は、公式プレセールウェブサイトから簡単に行えます。ユーザーは、ETH、USDT、BNB、BTC、SOLなどの人気のある暗号通貨、または銀行カードを使用して$DOGEBALLを購入できます。以下の手順に従って、ウォレットを接続し、支払い方法を選択し、プレセールが終了する前にDOGEBALLトークンを受け取ります。",
     "step1": "ステップ1",
     "step2": "ステップ2",
     "step3": "ステップ3",
@@ -163,7 +166,8 @@
     "here": "ここ"
   },
   "common": {
-    "clickHere": "ここをクリック"
+    "clickHere": "ここをクリック",
+    "howToBuy": "DOGEBALLトークンを購入"
   },
   "timer": {
     "days": "日",
@@ -252,8 +256,8 @@
       "participants": "参加者"
     },
     "bonusBanner": {
-      "turnRewards": "期間限定ボーナスコード: コード ",
-      "dashboardEarn": "DB50",
+      "turnRewards": "ネットワークを報酬に変える。紹介コードを生成する",
+      "dashboardEarn": "ダッシュボードから、紹介ごとに10%追加の$DOGEBALLを獲得",
       "turnRewardsSuffix": " を使用して50%追加の#DOGEBALLトークンを獲得",
       "presaleLaunchOffer": "プレセールローンチオファー",
       "useBonusCode": "ボーナスコードを使用",
