@@ -5,7 +5,7 @@
     <p
       class="text-white text-center font-grotesk font-medium text-sm max-md:text-xs leading-[120%]"
     >
-      {{ t("presale.bonusBanner.turnRewards") }}
+      {{ t("presale.bonusBanner.turnRewards") }}<br />
       <span class="font-semibold">{{
         t("presale.bonusBanner.dashboardEarn")
       }}</span>
