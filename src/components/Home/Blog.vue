@@ -5,17 +5,12 @@ import { RouterLink } from "vue-router";
 import Star from "@/assets/icons/Star.vue";
 import ArrowLeft from "@/assets/icons/ArrowLeft.vue";
 import ArrowRight from "@/assets/icons/ArrowRight.vue";
-import Spinner from "@/components/PresaleWidget/ui/Spinner.vue";
-import { getYouTubeVideos } from "@/api/youtube";
 
 const { t } = useI18n();
 
 const carouselRef = ref(null);
 const canScrollLeft = ref(false);
 const canScrollRight = ref(true);
-const blogPosts = ref([]);
-const isLoading = ref(true);
-const error = ref(null);
 
 const renderStars = (rating) => {
   const fullStars = Math.floor(rating);
@@ -112,44 +107,9 @@ const staticBlogPosts = [
   },
 ];
 
-const fetchBlogPosts = async () => {
-  try {
-    isLoading.value = true;
-    error.value = null;
-    const response = await getYouTubeVideos();
+const blogPosts = ref([...staticBlogPosts]);
 
-    if (response.success && response.data) {
-      // Map API response to component structure
-      blogPosts.value = response.data.map((item) => ({
-        title: item.title,
-        rating: item.rating || null, // Handle null rating
-        author: item.author,
-        authorDescription: item.authorDescription,
-        link: item.youtubeUrl,
-        thumbnail: item.thumbnailUrl,
-        isInternal: false, // External link
-      }));
-
-      // Add static blog posts after YouTube videos
-      blogPosts.value.push(...staticBlogPosts);
-    } else {
-      error.value = "Failed to load blog posts";
-      // Even if API fails, show the static blog posts
-      blogPosts.value = [...staticBlogPosts];
-    }
-  } catch (err) {
-    console.error("Error fetching blog posts:", err);
-    error.value = "Failed to load blog posts";
-    // Even if API fails, show the static blog posts
-    blogPosts.value = [...staticBlogPosts];
-  } finally {
-    isLoading.value = false;
-  }
-};
-
-onMounted(async () => {
-  await fetchBlogPosts();
-
+onMounted(() => {
   if (carouselRef.value) {
     carouselRef.value.addEventListener("scroll", checkScrollButtons);
     checkScrollButtons();
@@ -170,7 +130,7 @@ onMounted(async () => {
 
       <!-- Navigation Buttons (Mobile only) -->
       <div
-        v-if="!isLoading && !error && blogPosts.length > 1"
+        v-if="blogPosts.length > 1"
         class="flex items-center gap-2 flex-shrink-0"
       >
         <button
@@ -206,29 +166,8 @@ onMounted(async () => {
         @scroll="checkScrollButtons"
       >
         <div class="flex gap-6 max-md:gap-4 pb-4 items-stretch">
-          <!-- Loading state -->
-          <div
-            v-if="isLoading"
-            class="w-full flex items-center justify-center py-20"
-          >
-            <Spinner :size="12" class="text-white" />
-          </div>
-
-          <!-- Error state -->
-          <div v-else-if="error" class="w-full text-center py-10 text-white">
-            {{ error }}
-          </div>
-
-          <!-- No posts state -->
-          <div
-            v-else-if="blogPosts.length === 0"
-            class="w-full text-center py-10 text-white"
-          >
-            No blog posts available
-          </div>
-
           <!-- Blog posts -->
-          <template v-for="(post, index) in blogPosts" v-else :key="index">
+          <template v-for="(post, index) in blogPosts" :key="index">
             <!-- YouTube/External Posts -->
             <a
               v-if="!post.isInternal"
@@ -380,7 +319,7 @@ onMounted(async () => {
 
       <!-- Navigation Buttons (Desktop only - below carousel) -->
       <div
-        v-if="!isLoading && !error && blogPosts.length > 1"
+        v-if="blogPosts.length > 1"
         class="hidden md:flex items-center justify-center gap-2 mt-6"
       >
         <button
