@@ -69,7 +69,8 @@ const submit = async () => {
       >
         <div class="shrink-0 px-6 flex items-center">
           <span class="font-grotesk font-semibold text-xs whitespace-nowrap">
-            $DOGEBALL TOKEN PRESALE IS LIVE!
+            USE BONUS CODE DB75 for 75% EXTRA TOKENS. TOP BUYER FOR THE WEEK
+            GETS FURTHER BONUS OF 100% FOR ENTIRE WEEKS SPEND!
           </span>
         </div>
       </Vue3Marquee>
@@ -164,11 +165,8 @@ const submit = async () => {
 
 @media (max-width: 768px) {
   .subtitle-text {
-    text-shadow: 
-      0 2px 20px rgba(0, 0, 0, 1),
-      0 1px 8px rgba(0, 0, 0, 1),
-      0 0 4px rgba(0, 0, 0, 1),
-      0 4px 16px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 1), 0 1px 8px rgba(0, 0, 0, 1),
+      0 0 4px rgba(0, 0, 0, 1), 0 4px 16px rgba(0, 0, 0, 0.9);
     /* Optional: Add subtle backdrop for extra readability */
     /* background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4px);
