@@ -218,20 +218,35 @@ export const getTransactionHistoryV2 = (address, page = 0, limit = 12) => {
 };
 
 /**
- * Get leaderboard
+ * Get referral leaderboard (top 30)
+ * @param {object} [options]
+ * @param {boolean} [options.showAllTime] If true, all-time; if false, monthly; if omitted, API default (monthly)
  * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.LeaderboardEntry[]>>}
  */
-export const getLeaderboard = () => {
-  return apiFetch(`/projects/${PROJECT}/leaderboard`);
+export const getLeaderboard = (options = {}) => {
+  const params = {};
+  if (options.showAllTime !== undefined) {
+    params.show_all_time = options.showAllTime;
+  }
+  return apiFetch(`/projects/${PROJECT}/leaderboard`, {
+    params: Object.keys(params).length ? params : undefined,
+  });
 };
 
 /**
- * Get user leaderboard rank
- * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.LeaderboardEntry>>}
+ * Get a single wallet's referral leaderboard entry
+ * @param {string} address
+ * @param {object} [options]
+ * @param {boolean} [options.showAllTime] Must match {@link getLeaderboard} for the same period
+ * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.LeaderboardEntry | import("./api.types.d.ts").API.LeaderboardEntry[]>>}
  */
-export const getUserLeaderboardRank = (address) => {
+export const getUserLeaderboardRank = (address, options = {}) => {
   return apiFetch(`/projects/${PROJECT}/leaderboard`, {
-    params: { wallet_address: address, show_all_time: true },
+    params: {
+      wallet_address: address,
+      show_all_time:
+        options.showAllTime !== undefined ? options.showAllTime : true,
+    },
   });
 };
 

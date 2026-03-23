@@ -11,9 +11,9 @@
       DOGEBALL Crypto Presale 2026
     </h2>
     <div
-      class="relative z-10 flex flex-col gap-2.5 items-center w-full max-w-[519px] p-2.5"
+      class="relative z-10 flex flex-col gap-2.5 items-center w-full max-w-[519px] lg:max-w-[570px] p-2.5"
     >
-      <Widget class="max-w-[487px] w-full" />
+      <Widget class="max-w-[487px] lg:max-w-[538px] w-full" />
       <BonusBanner />
     </div>
 

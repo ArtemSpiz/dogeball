@@ -9,16 +9,16 @@
         class="flex flex-col gap-4 flex-shrink-0 w-full justify-start flex-1 h-0"
       >
         <!-- Tab Wrapper -->
-        <div class="flex items-center justify-center w-full">
+        <div class="w-full">
           <div
-            class="inline-flex items-center gap-1 rounded-[80px] flex-wrap justify-center"
+            class="flex w-full items-center gap-1 rounded-[80px] justify-between"
             style="background: rgba(255, 255, 255, 0.15)"
           >
             <button
               v-for="tab in tabs"
               :key="tab.key"
               :class="[
-                'flex items-center justify-center gap-1 sm:gap-1.5 px-3 sm:px-4 py-2 rounded-full font-medium relative overflow-hidden text-sm sm:text-base font-grotesk transition-all duration-300',
+                'flex flex-1 min-w-0 items-center justify-center gap-0 sm:gap-1.5 px-1 sm:px-4 py-2 rounded-full font-medium relative overflow-hidden text-[10px] sm:text-base font-grotesk transition-all duration-300 whitespace-nowrap',
                 selectedTabKey === tab.key
                   ? 'bg-white text-[#212F5C] shadow-md'
                   : 'text-white hover:bg-white/10',
@@ -28,9 +28,9 @@
               <component
                 :is="tab.icon"
                 :color="selectedTabKey === tab.key ? '#212F5C' : '#FFF'"
-                class="w-4 h-4 flex-shrink-0 transition-colors duration-300"
+                class="hidden sm:block w-4 h-4 flex-shrink-0 transition-colors duration-300"
               />
-              <span class="text-center font-medium text-sm leading-none">
+              <span class="text-center font-medium text-[10px] sm:text-sm leading-none">
                 {{ tab.label }}
               </span>
             </button>
@@ -52,8 +52,9 @@ import { useI18n } from "vue-i18n";
 import BuyTab from "./tabs/BuyTab.vue";
 import StakeTab from "./tabs/StakeTab.vue";
 import HistoryTab from "./tabs/HistoryTab.vue";
+import LeaderboardTab from "./tabs/LeaderboardTab.vue";
 import { Loader } from "./ui";
-import { BuyIcon, StakeIcon, DashboardIcon } from "./icons";
+import { BuyIcon, StakeIcon, DashboardIcon, LeaderboardIcon } from "./icons";
 import { usePresale } from "@/composables/usePresale";
 
 const { t } = useI18n();
@@ -77,6 +78,12 @@ const tabs = computed(() => [
     key: "history",
     icon: DashboardIcon,
     component: HistoryTab,
+  },
+  {
+    label: t("presale.tabs.leaderboard"),
+    key: "leaderboard",
+    icon: LeaderboardIcon,
+    component: LeaderboardTab,
   },
 ]);
 

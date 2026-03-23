@@ -11,6 +11,7 @@ export { default as CardIcons } from "./CardIcons.vue";
 export { default as BuyIcon } from "./BuyIcon.vue";
 export { default as StakeIcon } from "./StakeIcon.vue";
 export { default as DashboardIcon } from "./DashboardIcon.vue";
+export { default as LeaderboardIcon } from "./LeaderboardIcon.vue";
 
 // Token Icons
 export { default as DogeballIcon } from "./DogeballIcon.vue";

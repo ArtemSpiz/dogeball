@@ -92,6 +92,21 @@
     "stakingDesc": "Lock your presale purchase tokens in our secure and audited smart-contract staking pool; earn $DOGEBALL rewards with a high 80% APY and maximize your $DOGEBALL token return.",
     "clickHere": "Buy DOGEBALL Token"
   },
+  "referralLeaderboard": {
+    "title": "REFERRAL LEADERBOARD",
+    "subtitle": "Top referrers for the $DOGEBALL presale. Rankings show referral count and $DOGEBALL tokens earned from the referral program.",
+    "periodAllTime": "All time",
+    "periodMonthly": "This month",
+    "rank": "Rank",
+    "wallet": "Wallet",
+    "referrals": "Referrals",
+    "totalRaised": "Tokens earned",
+    "yourRow": "Your wallet",
+    "loading": "Loading leaderboard…",
+    "error": "Could not load the leaderboard. Please try again later.",
+    "empty": "No leaderboard data yet.",
+    "notRanked": "N/A"
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "q1": "What is $DOGEBALL?",
@@ -189,7 +204,8 @@
     "tabs": {
       "buy": "Buy",
       "stake": "Stake",
-      "dashboard": "Dashboard"
+      "dashboard": "Dashboard",
+      "leaderboard": "Leaderboard"
     },
     "buyTab": {
       "presalePrice": "Presale Price =",
@@ -280,6 +296,20 @@
       "processing": "Processing...",
       "manual": "Manual",
       "purchase": "Purchase"
+    },
+    "leaderboardTab": {
+      "title": "Referral Leaderboard",
+      "allTime": "All time",
+      "monthly": "This month",
+      "rank": "Rank",
+      "wallet": "Wallet",
+      "referrals": "Referrals",
+      "tokensEarned": "Tokens earned",
+      "you": "You",
+      "loading": "Loading leaderboard...",
+      "error": "Could not load leaderboard right now.",
+      "empty": "No leaderboard data yet.",
+      "notRanked": "N/A"
     },
     "errors": {
       "presaleEnded": "Presale has ended",
