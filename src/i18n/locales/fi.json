@@ -257,7 +257,7 @@
     },
     "bonusBanner": {
       "turnRewards": "YSTÄVÄNPÄIVÄN Rajoitettu tarjous",
-      "dashboardEarn": "Käytä bonuskoodia DB75 saadaksesi 75% ylimääräisiä tokeneja. Viikon paras ostaja saa 100% lisäbonustokeneja - liity Telegram-ryhmään nähdäksesi parhaat ostajat Buybotissa.",
+      "dashboardEarn": "Käytä bonuskoodia DB75 saadaksesi 75% ylimääräisiä tokeneja.",
       "turnRewardsSuffix": " saadaksesi 50% ylimääräistä #DOGEBALL-tokeneita",
       "presaleLaunchOffer": "Esimyynnin käynnistystarjous",
       "useBonusCode": "Käytä bonuskoodia",

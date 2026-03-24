@@ -69,8 +69,7 @@ const submit = async () => {
       >
         <div class="shrink-0 px-6 flex items-center">
           <span class="font-grotesk font-semibold text-xs whitespace-nowrap">
-            USE BONUS CODE DB75 for 75% EXTRA TOKENS. TOP BUYER FOR THE WEEK
-            GETS FURTHER BONUS OF 100% FOR ENTIRE WEEKS SPEND!
+            USE BONUS CODE DB75 for 75% EXTRA TOKENS.
           </span>
         </div>
       </Vue3Marquee>

@@ -3,7 +3,7 @@
     class="flex flex-col justify-center items-center gap-3 rounded-2xl border border-white/20 bg-white/10 shadow-[0_0_14px_0_#5464D8] backdrop-blur-sm px-6 max-md:p-4 py-4 w-full max-w-[519px]"
   >
     <p
-      class="text-white text-center font-grotesk font-medium text-sm max-md:text-xs leading-[120%]"
+      class="text-white text-center font-grotesk font-medium text-base max-md:text-sm leading-[120%]"
     >
       <!-- {{ t("presale.bonusBanner.turnRewards") }}<br /> -->
       <span class="font-semibold">{{
