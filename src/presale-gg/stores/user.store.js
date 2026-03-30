@@ -1,4 +1,5 @@
 import { map } from "nanostores";
+import { pushWalletConnectOnce } from "@/utils/gtm";
 import api from "@/api/presale";
 import { getAccount, signMessage, watchAccount } from "@wagmi/core";
 import { getConfig } from "../web3";
@@ -49,6 +50,7 @@ if (typeof window !== "undefined") {
       onChange: (account) => {
         const address = account.address;
         if (!address) return $userState.set({ ...defaultUserState });
+        pushWalletConnectOnce();
         api.getUser(address).then((res) => $userState.setKey("user", res.data));
         api
           .getUserStakeData(address)

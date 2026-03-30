@@ -8,6 +8,8 @@
   import ErrorIcon from '@/assets/icons/Error.vue';
   import { capitalize } from "@/utils/format"
   import { QRCodeCanvas } from '@akamfoad/qrcode';
+  import { refetchUserData, refetchUserStakeData } from "@/presale-gg/stores/user.store";
+  import { pushPurchaseFromTransactionOnce } from "@/utils/gtm";
 
   /** @type {{open: boolean, transaction: import("@/api/api.types").API.Transaction}} */
   const props = defineProps({
@@ -64,6 +66,7 @@
         if (abortController.signal.aborted) return;
         status.value = "paid";
         completedTransaction.value = trx;
+        pushPurchaseFromTransactionOnce(trx);
       });
     });
     onWatcherCleanup(() => abortController.abort());
