@@ -69,7 +69,7 @@ const submit = async () => {
       >
         <div class="shrink-0 px-6 flex items-center">
           <span class="font-grotesk font-semibold text-xs whitespace-nowrap">
-            USE BONUS CODE DB75 for 75% EXTRA TOKENS.
+            USE BONUS CODE DB25 for 25% EXTRA TOKENS.
           </span>
         </div>
       </Vue3Marquee>
@@ -159,13 +159,18 @@ const submit = async () => {
 
 /* Improve subtitle readability on mobile */
 .subtitle-text {
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9);
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.8),
+    0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 @media (max-width: 768px) {
   .subtitle-text {
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 1), 0 1px 8px rgba(0, 0, 0, 1),
-      0 0 4px rgba(0, 0, 0, 1), 0 4px 16px rgba(0, 0, 0, 0.9);
+    text-shadow:
+      0 2px 20px rgba(0, 0, 0, 1),
+      0 1px 8px rgba(0, 0, 0, 1),
+      0 0 4px rgba(0, 0, 0, 1),
+      0 4px 16px rgba(0, 0, 0, 0.9);
     /* Optional: Add subtle backdrop for extra readability */
     /* background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4px);
