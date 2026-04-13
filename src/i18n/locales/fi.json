@@ -55,9 +55,10 @@
     "phase3Sub3": "$DOGEBALL listattu globaaleihin pörsseihin",
     "phase3Sub4": "$DOGEBALL muuttuu viraaliksi",
     "phase4Sub1": "$DOGEBALL V2 -pelin kehitys",
-    "phase4Sub2": "CEX-listaukset jatkuvat",
-    "phase4Sub3": "L2 Lohkoketjun globaali julkaisu",
-    "phase4Sub4": "Tulevaisuuden evoluutiotokenit luotu"
+    "phase4Sub2": "$DOGEPAY-sovelluksen julkaisu Apple App Storessa ja Google Playssa",
+    "phase4Sub3": "CEX-listaukset jatkuvat",
+    "phase4Sub4": "L2 Lohkoketjun globaali julkaisu",
+    "phase4Sub5": "Tulevaisuuden evoluutiotokenit luotu"
   },
   "about": {
     "title": "TIETOJA",

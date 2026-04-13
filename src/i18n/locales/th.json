@@ -55,9 +55,10 @@
     "phase3Sub3": "$DOGEBALL ขึ้นทะเบียนในตลาดแลกเปลี่ยนทั่วโลก",
     "phase3Sub4": "$DOGEBALL กลายเป็นไวรัล",
     "phase4Sub1": "พัฒนาเกม $DOGEBALL V2",
-    "phase4Sub2": "รายชื่อ CEX ต่อเนื่อง",
-    "phase4Sub3": "เปิดตัวบล็อกเชน L2 ทั่วโลก",
-    "phase4Sub4": "สร้างโทเค็นวิวัฒนาการในอนาคต"
+    "phase4Sub2": "เปิดตัวแอป $DOGEPAY บน Apple App Store และ Google Play Store",
+    "phase4Sub3": "รายชื่อ CEX ต่อเนื่อง",
+    "phase4Sub4": "เปิดตัวบล็อกเชน L2 ทั่วโลก",
+    "phase4Sub5": "สร้างโทเค็นวิวัฒนาการในอนาคต"
   },
   "about": {
     "title": "เกี่ยวกับ",
