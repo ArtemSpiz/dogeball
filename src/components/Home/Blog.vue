@@ -5,17 +5,12 @@ import { RouterLink } from "vue-router";
 import Star from "@/assets/icons/Star.vue";
 import ArrowLeft from "@/assets/icons/ArrowLeft.vue";
 import ArrowRight from "@/assets/icons/ArrowRight.vue";
-import Spinner from "@/components/PresaleWidget/ui/Spinner.vue";
-import { getYouTubeVideos } from "@/api/youtube";
 
 const { t } = useI18n();
 
 const carouselRef = ref(null);
 const canScrollLeft = ref(false);
 const canScrollRight = ref(true);
-const blogPosts = ref([]);
-const isLoading = ref(true);
-const error = ref(null);
 
 const renderStars = (rating) => {
   const fullStars = Math.floor(rating);
@@ -45,7 +40,8 @@ const scrollLeft = () => {
   const cardsPerView = getCardsPerView();
   const containerWidth = carouselRef.value.clientWidth;
   const gap = window.innerWidth <= 768 ? 16 : 24;
-  const scrollAmount = (containerWidth - gap * (cardsPerView - 1)) / cardsPerView + gap;
+  const scrollAmount =
+    (containerWidth - gap * (cardsPerView - 1)) / cardsPerView + gap;
   carouselRef.value.scrollBy({
     left: -scrollAmount,
     behavior: "smooth",
@@ -57,7 +53,8 @@ const scrollRight = () => {
   const cardsPerView = getCardsPerView();
   const containerWidth = carouselRef.value.clientWidth;
   const gap = window.innerWidth <= 768 ? 16 : 24;
-  const scrollAmount = (containerWidth - gap * (cardsPerView - 1)) / cardsPerView + gap;
+  const scrollAmount =
+    (containerWidth - gap * (cardsPerView - 1)) / cardsPerView + gap;
   carouselRef.value.scrollBy({
     left: scrollAmount,
     behavior: "smooth",
@@ -66,59 +63,53 @@ const scrollRight = () => {
 
 const staticBlogPosts = [
   {
-    title: "What is DOGEBALL Crypto 2026: An Introduction to High-Performance P2E Gaming",
+    title:
+      "What is DOGEBALL Crypto 2026: An Introduction to High-Performance P2E Gaming",
     publishedDate: "January 27",
-    content: "If you have spent any time in the gaming world recently, you've likely noticed a trend. The initial excitement around \"Play-to-Earn\" has often been met with a frustrating reality: high gas fees, slow transaction speeds, and games that feel more like chores than entertainment...",
+    content:
+      'If you have spent any time in the gaming world recently, you\'ve likely noticed a trend. The initial excitement around "Play-to-Earn" has often been met with a frustrating reality: high gas fees, slow transaction speeds, and games that feel more like chores than entertainment...',
     link: "/blog-01",
     isInternal: true, // Flag to indicate internal link
   },
   {
-    title: "Is DOGEBALL Crypto the Most Productive Meme Coin of 2026? Let's Find Out",
-    publishedDate: "January 28",
-    content: "For years, the dream of \"Play-to-Earn\" (P2E) has been held back by a single, frustrating reality: the Ethereum mainnet was never built for high-speed gaming. Imagine trying to play a fast-paced game where every move costs $20 in gas fees and takes 3 minutes to confirm...",
+    title:
+      "Is DOGEBALL Crypto the Most Productive Meme Coin of 2026? Let's Find Out",
+    publishedDate: "January 27",
+    content:
+      'For years, the dream of "Play-to-Earn" (P2E) has been held back by a single, frustrating reality: the Ethereum mainnet was never built for high-speed gaming. Imagine trying to play a fast-paced game where every move costs $20 in gas fees and takes 3 minutes to confirm...',
     link: "/blog-02",
+    isInternal: true, // Flag to indicate internal link
+  },
+  {
+    title:
+      "Best Crypto to Buy in 2026: How to Win Big in the $1M DOGEBALL Arena",
+    publishedDate: "January 30",
+    content:
+      'In the early days of crypto, "gaming" usually meant clicking a button once an hour and hoping for a reward. Those days are over. As the DOGEBALL crypto 2026 era takes hold, the community is moving toward high-adrenaline, skill-based competition that rewards real talent...',
+    link: "/blog-03",
+    isInternal: true, // Flag to indicate internal link
+  },
+  {
+    title: "DOGEBALL Crypto 2026-2028 Price Prediction",
+    publishedDate: "January 30",
+    content:
+      'Let\'s be honest: most price predictions are just numbers pulled out of thin air to build hype. But as we head into the DOGEBALL crypto 2026 cycle, the market has grown up. Investors are tired of "moon" promises and are starting to ask the only question that actually matters: Does this token have a reason to exist three years from now?',
+    link: "/blog-04",
+    isInternal: true, // Flag to indicate internal link
+  },
+  {
+    title: "Why DOGEBALL is the Best Crypto in 2026 for Gamers",
+    publishedDate: "January 30",
+    content:
+      'The gaming industry is currently undergoing its most significant shift since the invention of the microtransaction. For years, "Play-to-Earn" (P2E) was the industry\'s buzzword, but by early 2026, the cracks in that model became impossible to ignore. Many early projects felt like chores rather than entertainment, with economies that collapsed as soon as the hype died down.',
+    link: "/blog-05",
     isInternal: true, // Flag to indicate internal link
   },
 ];
 
-const fetchBlogPosts = async () => {
-  try {
-    isLoading.value = true;
-    error.value = null;
-    const response = await getYouTubeVideos();
-    
-    if (response.success && response.data) {
-      // Map API response to component structure
-      blogPosts.value = response.data.map((item) => ({
-        title: item.title,
-        rating: item.rating || null, // Handle null rating
-        author: item.author,
-        authorDescription: item.authorDescription,
-        link: item.youtubeUrl,
-        thumbnail: item.thumbnailUrl,
-        isInternal: false, // External link
-      }));
-      
-      // Add static blog posts after YouTube videos
-      blogPosts.value.push(...staticBlogPosts);
-    } else {
-      error.value = "Failed to load blog posts";
-      // Even if API fails, show the static blog posts
-      blogPosts.value = [...staticBlogPosts];
-    }
-  } catch (err) {
-    console.error("Error fetching blog posts:", err);
-    error.value = "Failed to load blog posts";
-    // Even if API fails, show the static blog posts
-    blogPosts.value = [...staticBlogPosts];
-  } finally {
-    isLoading.value = false;
-  }
-};
+const blogPosts = ref([...staticBlogPosts]);
 
-onMounted(async () => {
-  await fetchBlogPosts();
-  
+onMounted(() => {
   if (carouselRef.value) {
     carouselRef.value.addEventListener("scroll", checkScrollButtons);
     checkScrollButtons();
@@ -132,11 +123,16 @@ onMounted(async () => {
     class="flex flex-col items-center justify-center gap-10 max-md:gap-8 py-20 max-md:py-12 bg-[center_center] bg-cover bg-no-repeat bg-[url('@/assets/img/bg-blog.jpg')] relative"
   >
     <!-- Title with mobile buttons -->
-    <div class="w-full max-w-[1600px] lg:max-w-[1200px] px-5 flex items-center justify-between gap-4 max-md:flex md:hidden">
+    <div
+      class="w-full max-w-[1600px] lg:max-w-[1200px] px-5 flex items-center justify-between gap-4 max-md:flex md:hidden"
+    >
       <div class="title">{{ t("blog.title") }}</div>
-      
+
       <!-- Navigation Buttons (Mobile only) -->
-      <div v-if="!isLoading && !error && blogPosts.length > 1" class="flex items-center gap-2 flex-shrink-0">
+      <div
+        v-if="blogPosts.length > 1"
+        class="flex items-center gap-2 flex-shrink-0"
+      >
         <button
           @click="scrollLeft"
           class="bg-[rgba(53,19,147,0.8)] backdrop-blur-sm rounded-lg p-2 hover:bg-[rgba(53,19,147,1)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
@@ -163,7 +159,6 @@ onMounted(async () => {
     </div>
 
     <div class="w-full max-w-[1600px] lg:max-w-[1200px] px-5 relative">
-
       <!-- Carousel Container -->
       <div
         ref="carouselRef"
@@ -171,23 +166,8 @@ onMounted(async () => {
         @scroll="checkScrollButtons"
       >
         <div class="flex gap-6 max-md:gap-4 pb-4 items-stretch">
-          <!-- Loading state -->
-          <div v-if="isLoading" class="w-full flex items-center justify-center py-20">
-            <Spinner :size="12" class="text-white" />
-          </div>
-          
-          <!-- Error state -->
-          <div v-else-if="error" class="w-full text-center py-10 text-white">
-            {{ error }}
-          </div>
-          
-          <!-- No posts state -->
-          <div v-else-if="blogPosts.length === 0" class="w-full text-center py-10 text-white">
-            No blog posts available
-          </div>
-          
           <!-- Blog posts -->
-          <template v-for="(post, index) in blogPosts" v-else :key="index">
+          <template v-for="(post, index) in blogPosts" :key="index">
             <!-- YouTube/External Posts -->
             <a
               v-if="!post.isInternal"
@@ -218,7 +198,9 @@ onMounted(async () => {
 
                 <div class="flex flex-col gap-3 z-10 flex-1 min-h-0">
                   <!-- Thumbnail Image -->
-                  <div class="w-full h-[200px] max-md:h-[170px] rounded-lg overflow-hidden flex-shrink-0">
+                  <div
+                    class="w-full h-[200px] max-md:h-[170px] rounded-lg overflow-hidden flex-shrink-0"
+                  >
                     <img
                       :src="post.thumbnail"
                       :alt="post.title"
@@ -234,7 +216,10 @@ onMounted(async () => {
                   </div>
 
                   <!-- Rating -->
-                  <div v-if="post.rating" class="flex items-center gap-2 flex-shrink-0">
+                  <div
+                    v-if="post.rating"
+                    class="flex items-center gap-2 flex-shrink-0"
+                  >
                     <div class="flex items-center gap-1">
                       <Star
                         v-for="i in renderStars(post.rating).fullStars"
@@ -255,8 +240,12 @@ onMounted(async () => {
                   </div>
 
                   <!-- Author -->
-                  <div class="flex flex-col gap-1 pt-2 border-t border-white/20 flex-shrink-0 mt-auto">
-                    <div class="text-base max-md:text-sm font-semibold line-clamp-1">
+                  <div
+                    class="flex flex-col gap-1 pt-2 border-t border-white/20 flex-shrink-0 mt-auto"
+                  >
+                    <div
+                      class="text-base max-md:text-sm font-semibold line-clamp-1"
+                    >
                       {{ post.author }}
                     </div>
                     <div
@@ -329,7 +318,10 @@ onMounted(async () => {
       </div>
 
       <!-- Navigation Buttons (Desktop only - below carousel) -->
-      <div v-if="!isLoading && !error && blogPosts.length > 1" class="hidden md:flex items-center justify-center gap-2 mt-6">
+      <div
+        v-if="blogPosts.length > 1"
+        class="hidden md:flex items-center justify-center gap-2 mt-6"
+      >
         <button
           @click="scrollLeft"
           class="bg-[rgba(53,19,147,0.8)] backdrop-blur-sm rounded-lg p-2 hover:bg-[rgba(53,19,147,1)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"

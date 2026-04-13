@@ -22,6 +22,7 @@ import {
   isWalletTransferSupported,
 } from "@/utils/web3";
 import erc20Abi from "@/abi/erc20.json";
+import { pushPurchaseFromTransactionOnce } from "@/utils/gtm";
 
 const buyLoading = ref(false)
 /**
@@ -248,6 +249,8 @@ export function useBuy() {
         transactionHash,
       });
 
+      pushPurchaseFromTransactionOnce(transaction);
+
       return { type: "sent", transactionHash, transaction };
     } catch (err) {
       updateState({ state: BuyStateType.ERRORED, error: err });
@@ -338,6 +341,8 @@ export function useBuy() {
         if (checking) return;
         checking = true;
         waitForNextTransaction(walletAddress, createdAt).then((trx) => {
+          if (checkSignal.aborted) return;
+          pushPurchaseFromTransactionOnce(trx);
           if (successCalled || checkSignal.aborted) return;
           handleSuccess(parseNum(trx?.tokens_bought), trx);
           widget.close();

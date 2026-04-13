@@ -19,9 +19,9 @@
     "copyright": "Bản quyền © 2025 DOGEBALL. Tất cả các quyền được bảo lưu."
   },
   "hero": {
-    "title": "TRÒ CHƠI CRYPTO ĐẦU TIÊN TRÊN THẾ GIỚI ĐƯỢC CUNG CẤP BỞI L2",
+    "title": "PRESALE TOKEN DOGEBALL – TRÒ CHƠI CRYPTO ETHEREUM L2 VÀ CHUYỂN ĐỔI FIAT–CRYPTO",
     "whitelistSignup": "ĐĂNG KÝ VÀO DANH SÁCH TRẮNG BÁN TRƯỚC",
-    "subtitle": "$DOGEBALL, DOGE duy nhất chơi crypto trên blockchain L2 EVM tùy chỉnh. Nhanh, rẻ, an toàn. Chơi để có cơ hội giành $1M",
+    "subtitle": "DOGEBALL ($DOGEBALL) là đợt bán trước crypto Ethereum Layer 2 cho trò chơi dodgeball play-to-earn và ứng dụng $DOGEPAY với offramp Fiat to Crypto – bán crypto lấy fiat và gửi đến bất kỳ tài khoản ngân hàng nào trên thế giới. Giao dịch nhanh, phí thấp và giải thưởng cạnh tranh 1 triệu USD trong trò chơi của chúng tôi.",
     "presaleLaunch": "BÁN TRƯỚC BẮT ĐẦU SAU..",
     "whitelistEmail": "Nhập email để được thêm vào Danh sách trắng",
     "emailPlaceholder": "email của bạn",
@@ -32,6 +32,7 @@
   "roadmap": {
     "welcome": "CHÀO MỪNG ĐẾN VỚI TRÒ CHƠI DOGEBALL!",
     "title": "Lộ trình",
+    "subtitle": "Lộ trình DOGEBALL phác thảo con đường phát triển đầy đủ từ việc tạo token và ra mắt presale đến niêm yết trên các sàn giao dịch toàn cầu và mở rộng trò chơi. Mỗi giai đoạn tập trung vào việc cung cấp cơ sở hạ tầng thực tế, phát triển cộng đồng DOGEBALL và mở rộng hệ sinh thái game Ethereum Layer 2.",
     "phase1": "Giai đoạn 1",
     "phase2": "Giai đoạn 2",
     "phase3": "Giai đoạn 3",
@@ -59,7 +60,8 @@
   },
   "about": {
     "title": "GIỚI THIỆU",
-    "subtitle": "Sự chuyển đổi của các đồng meme crypto",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) là một dự án presale crypto Ethereum Layer 2 được xây dựng cho game blockchain nhanh chóng và chi phí thấp. Hệ sinh thái DOGEBALL cung cấp năng lượng cho một trò chơi bóng rổ play-to-earn nơi người chơi cạnh tranh on-chain để giành phần thưởng token thực và giải thưởng $1 triệu. Được xây dựng trên mạng Layer 2 tương thích EVM tùy chỉnh, DOGEBALL cho phép giao dịch gần như tức thì, phí cực thấp, phần thưởng staking và gameplay có thể mở rộng được thiết kế cho việc áp dụng hàng loạt.",
+    "subtitle": "DOGEBALL Token ($DOGEBALL) là gì?",
     "description": "Ở trung tâm của DOGECHAIN là trò chơi $DOGEBALL — một trò chơi né bóng trực tuyến gây nghiện nơi người chơi ném DOGEBALLs, lên cấp, leo bảng xếp hạng và cạnh tranh cho giải thưởng $1M ($500k cho người chơi hàng đầu)!",
     "card1": "Trò chơi trực tuyến $DOGEBALL, chơi để giành một phần $1m!",
     "card2": "Blockchain ETH L2 được xây dựng tùy chỉnh với phí người dùng cực thấp",
@@ -130,8 +132,9 @@
     "description2": "Kẻ thù trở nên nhanh hơn và khó khăn hơn, và bị đẩy xa khi bạn lên cấp. Chỉ những người chơi sắc bén và chính xác nhất mới có thể đạt được Bảng xếp hạng TOP 10, nơi người chiến thắng sẽ nhận được giải độc đắc $500k token $DOGEBALL, với $500k giải thưởng khác được chia cho 9 người chơi còn lại. Lưu ý rằng chỉ những người dùng đã mua token trong bán trước $DOGEBALL mới đủ điều kiện để tham gia GIẢI THƯỞNG $1M."
   },
   "roadmapGame": {
-    "title": "Trò chơi sắp bắt đầu!",
-    "description": "Có sẵn để chơi ngay sau khi bán trước bắt đầu - theo dõi các kênh truyền thông xã hội Telegram và X chính thức để biết tin tức ra mắt",
+    "title": "TRÒ CHƠI HIỆN ĐÃ CÓ SẴN ĐỂ CHƠI!",
+    "play": "Chơi",
+    "description": "Chơi ngay bằng cách nhấp vào bên dưới. Lưu ý rằng trò chơi chỉ chơi ở chế độ ngang và trên thiết bị di động hoạt động tốt nhất trong trình duyệt mặc định của điện thoại (người dùng Apple nên sử dụng iOS, người dùng Android nên sử dụng Chrome)",
     "comingSoon": "Sắp ra mắt",
     "privacyNote": "Người dùng phải nhập cùng địa chỉ ví mà họ đã sử dụng để mua bán trước khi hoàn thành trò chơi (tùy chọn nhập địa chỉ ví sẽ được hiển thị nếu điểm trò chơi đủ cao để lên bảng xếp hạng). Lưu ý để bảo vệ quyền riêng tư và bảo mật của người dùng, địa chỉ ví SẼ KHÔNG hiển thị trên trang web hoặc được đề cập trong bất kỳ kênh truyền thông xã hội nào; chỉ tên người dùng được chọn nhập trong chính trò chơi mới được đề cập."
   },
@@ -162,7 +165,8 @@
     "here": "Ở đây"
   },
   "common": {
-    "clickHere": "Nhấp vào đây"
+    "clickHere": "Nhấp vào đây",
+    "howToBuy": "Mua DOGEBALL Token"
   },
   "timer": {
     "days": "Ngày",
@@ -251,8 +255,8 @@
       "participants": "Người tham gia"
     },
     "bonusBanner": {
-      "turnRewards": "MÃ THƯỞNG THỜI GIAN GIỚI HẠN: sử dụng mã ",
-      "dashboardEarn": "DB50",
+      "turnRewards": "ƯU ĐÃI GIỚI HẠN NGÀY LỄ TÌNH NHÂN",
+      "dashboardEarn": "Sử dụng mã thưởng DB25 để nhận thêm 25% token.",
       "turnRewardsSuffix": " để nhận thêm 50% token #DOGEBALL",
       "presaleLaunchOffer": "Ưu đãi ra mắt bán trước",
       "useBonusCode": "Sử dụng mã thưởng",

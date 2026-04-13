@@ -19,9 +19,9 @@
     "copyright": "版权所有 © 2025 DOGEBALL。保留所有权利。"
   },
   "hero": {
-    "title": "世界上第一个L2驱动的加密游戏",
+    "title": "DOGEBALL 代币预售 – 以太坊 L2 加密游戏及法币与加密货币兑换",
     "whitelistSignup": "注册预售白名单",
-    "subtitle": "$DOGEBALL，在自定义EVM L2区块链上唯一玩加密的DOGE。快速、便宜、安全。玩游戏有机会赢得$1M",
+    "subtitle": "DOGEBALL ($DOGEBALL) 是一项以太坊 Layer 2 加密预售，为 play-to-earn 躲避球游戏以及 $DOGEPAY 应用提供支持，可实现 Fiat to Crypto Offramp——将加密资产卖出为法币并汇款至全球任意银行账户。交易快速、费用低廉，我们的游戏设有 100 万美元竞技奖池。",
     "presaleLaunch": "预售将在..后启动",
     "whitelistEmail": "输入电子邮件以添加到白名单",
     "emailPlaceholder": "您的电子邮件",
@@ -32,6 +32,7 @@
   "roadmap": {
     "welcome": "欢迎来到DOGEBALL游戏！",
     "title": "路线图",
+    "subtitle": "DOGEBALL路线图概述了从代币创建和预售启动到全球交易所上市和游戏扩展的完整开发路径。每个阶段都专注于提供真实的基础设施、发展DOGEBALL社区以及扩展Ethereum Layer 2游戏生态系统。",
     "phase1": "第一阶段",
     "phase2": "第二阶段",
     "phase3": "第三阶段",
@@ -59,7 +60,8 @@
   },
   "about": {
     "title": "关于",
-    "subtitle": "加密模因币的转变",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) 是一个为快速、低成本的区块链游戏而构建的Ethereum Layer 2加密预售项目。DOGEBALL生态系统支持一个play-to-earn篮球游戏，玩家在链上竞争真实的代币奖励和100万美元的奖金池。构建在自定义EVM兼容的Layer 2网络上，DOGEBALL实现了近乎即时的交易、超低费用、质押奖励以及为大规模采用而设计的可扩展游戏玩法。",
+    "subtitle": "什么是DOGEBALL Token ($DOGEBALL)？",
     "description": "DOGECHAIN的核心是$DOGEBALL游戏——一个令人上瘾的在线躲避球游戏，玩家投掷DOGEBALLs，升级，攀登排行榜，争夺$1M奖金池（顶级玩家$500k）！",
     "card1": "$DOGEBALL在线游戏，玩游戏赢得$1m的一部分！",
     "card2": "定制构建的ETH L2区块链，用户费用极低",
@@ -71,7 +73,8 @@
     "partnerships": "与世界最大游戏组织的合作伙伴关系正在进行中"
   },
   "howToBuy": {
-    "title": "如何购买",
+    "title": "如何购买DOGEBALL Token ($DOGEBALL)",
+    "subtitle": "通过官方预售网站购买DOGEBALL代币很简单。用户可以使用流行的加密货币（包括ETH、USDT、BNB、BTC和SOL）或银行卡购买$DOGEBALL。按照以下步骤连接您的钱包，选择您的支付方式，并在预售结束前接收DOGEBALL代币。",
     "step1": "步骤1",
     "step2": "步骤2",
     "step3": "步骤3",
@@ -130,8 +133,9 @@
     "description2": "敌人变得更快更强，随着您升级而距离更远。只有最敏锐和最准确的玩家才能到达TOP 10排行榜，获胜者将获得$DOGEBALL代币的$500k大奖，另外$500k奖金池将在其余9名玩家之间分配。请注意，只有在$DOGEBALL预售中购买代币的用户才有资格成为$1M奖金池的一部分。"
   },
   "roadmapGame": {
-    "title": "游戏即将开始！",
-    "description": "预售开始后不久即可游玩——请关注官方Telegram和X社交媒体渠道以获取发布新闻",
+    "title": "游戏现已可玩！",
+    "play": "游戏",
+    "description": "点击下方立即开始游戏。请注意，游戏仅支持横屏模式，在移动设备上使用手机默认浏览器效果最佳（苹果用户应使用iOS，安卓用户应使用Chrome）",
     "comingSoon": "即将推出",
     "privacyNote": "用户必须在完成游戏时输入与用于进行预售购买的相同钱包地址（如果游戏分数足够高以进入排行榜，将显示输入钱包地址的选项）。请注意，为了保护用户隐私和安全，钱包地址不会在网站上可见，也不会在任何社交媒体渠道中提及；只会提及游戏本身内输入的选择用户名。"
   },
@@ -162,7 +166,8 @@
     "here": "这里"
   },
   "common": {
-    "clickHere": "点击这里"
+    "clickHere": "点击这里",
+    "howToBuy": "购买DOGEBALL Token"
   },
   "timer": {
     "days": "天",
@@ -251,8 +256,8 @@
       "participants": "参与者"
     },
     "bonusBanner": {
-      "turnRewards": "限时奖金代码：使用代码 ",
-      "dashboardEarn": "DB50",
+      "turnRewards": "情人节限时优惠",
+      "dashboardEarn": "使用优惠码 DB25 可获得 25% 额外代币。",
       "turnRewardsSuffix": " 获得50%额外的#DOGEBALL代币",
       "presaleLaunchOffer": "预售启动优惠",
       "useBonusCode": "使用奖金代码",

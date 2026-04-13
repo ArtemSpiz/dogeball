@@ -1,47 +1,45 @@
 /**
- * Google Analytics utility functions
- * Measurement ID: G-STFHVRL32Z
+ * Analytics via Google Tag Manager (dataLayer).
  */
 
+function ensureDataLayer() {
+  if (typeof window === "undefined") return null;
+  window.dataLayer = window.dataLayer || [];
+  return window.dataLayer;
+}
+
 /**
- * Track a custom event in Google Analytics
- * @param {string} eventName - The name of the event (e.g., 'button_click', 'purchase')
- * @param {object} eventParams - Additional parameters for the event
- * @example
- * trackEvent('button_click', { button_name: 'buy_now', page: 'home' })
- * trackEvent('purchase', { value: 100, currency: 'USD' })
+ * Track a custom event (GTM dataLayer).
+ * @param {string} eventName
+ * @param {object} eventParams
  */
 export const trackEvent = (eventName, eventParams = {}) => {
-  if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("event", eventName, eventParams);
-  }
+  const dl = ensureDataLayer();
+  if (!dl) return;
+  dl.push({ event: eventName, ...eventParams });
 };
 
 /**
- * Track a page view manually (usually handled automatically by router)
- * @param {string} pagePath - The path of the page
- * @param {string} pageTitle - Optional page title
+ * Track a page view (SPA route changes).
+ * @param {string} pagePath
+ * @param {string | null} pageTitle
  */
 export const trackPageView = (pagePath, pageTitle = null) => {
-  if (typeof window !== "undefined" && window.gtag) {
-    const config = {
-      page_path: pagePath,
-    };
-    if (pageTitle) {
-      config.page_title = pageTitle;
-    }
-    window.gtag("config", "G-STFHVRL32Z", config);
-  }
+  const dl = ensureDataLayer();
+  if (!dl) return;
+  const payload = {
+    event: "page_view",
+    page_path: pagePath,
+  };
+  if (pageTitle) payload.page_title = pageTitle;
+  dl.push(payload);
 };
 
 /**
- * Set user properties in Google Analytics
- * @param {object} properties - User properties to set
- * @example
- * setUserProperties({ user_id: '12345', user_type: 'premium' })
+ * @param {object} properties
  */
 export const setUserProperties = (properties) => {
-  if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("set", "user_properties", properties);
-  }
+  const dl = ensureDataLayer();
+  if (!dl) return;
+  dl.push({ user_properties: properties });
 };

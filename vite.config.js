@@ -15,4 +15,7 @@ export default defineConfig({
   ssgOptions: {
     script: "async",
   },
+  preview: {
+    allowedHosts: ["www.dogeballtoken.com", "dogeballtoken.com"],
+  },
 });

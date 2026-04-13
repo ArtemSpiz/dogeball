@@ -19,9 +19,9 @@
     "copyright": "Copyright © 2025 DOGEBALL. Tous droits réservés."
   },
   "hero": {
-    "title": "LE PREMIER JEU CRYPTO ALIMENTÉ PAR L2 AU MONDE",
+    "title": "PRÉVENTE DU TOKEN DOGEBALL – JEU CRYPTO ETHEREUM L2 ET CONVERSION FIAT-CRYPTO",
     "whitelistSignup": "INSCRIVEZ-VOUS À LA LISTE BLANCHE DE PRÉVENTE",
-    "subtitle": "$DOGEBALL, le seul DOGE jouant la crypto sur une blockchain EVM L2 personnalisée. Rapide, pas cher, sécurisé. Jouez pour une chance de gagner $1M",
+    "subtitle": "DOGEBALL ($DOGEBALL) est une prévente crypto Ethereum Layer 2 qui alimente un jeu de dodgeball play-to-earn et l’application $DOGEPAY avec offramp Fiat to Crypto – vendez des crypto contre du fiat et envoyez vers n’importe quel compte bancaire dans le monde. Transactions rapides, frais bas et cagnotte compétitive d’un million de dollars dans notre jeu.",
     "presaleLaunch": "LA PRÉVENTE SE LANCE DANS..",
     "whitelistEmail": "Entrez l'email pour être ajouté à la liste blanche",
     "emailPlaceholder": "votre email",
@@ -32,6 +32,7 @@
   "roadmap": {
     "welcome": "BIENVENUE DANS LE JEU DOGEBALL !",
     "title": "Feuille de route",
+    "subtitle": "La feuille de route DOGEBALL décrit le chemin de développement complet de la création du token et du lancement de la prévente aux listes d'échanges mondiaux et à l'expansion du jeu. Chaque phase se concentre sur la fourniture d'infrastructure réelle, la croissance de la communauté DOGEBALL et l'expansion de l'écosystème de jeu Ethereum Layer 2.",
     "phase1": "Phase 1",
     "phase2": "Phase 2",
     "phase3": "Phase 3",
@@ -59,7 +60,8 @@
   },
   "about": {
     "title": "À PROPOS",
-    "subtitle": "La transition des pièces mème crypto",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) est un projet de prévente crypto Ethereum Layer 2 construit pour le jeu blockchain rapide et à faible coût. L'écosystème DOGEBALL alimente un jeu de basketball play-to-earn où les joueurs rivalisent on-chain pour de vraies récompenses de tokens et un prix de 1 million de dollars. Construit sur un réseau Layer 2 compatible EVM personnalisé, DOGEBALL permet des transactions quasi instantanées, des frais ultra-faibles, des récompenses de staking et un gameplay scalable conçu pour l'adoption de masse.",
+    "subtitle": "Qu'est-ce que DOGEBALL Token ($DOGEBALL) ?",
     "description": "Au centre de DOGECHAIN se trouve le jeu $DOGEBALL — un jeu de dodgeball en ligne addictif où les joueurs lancent des DOGEBALLs, montent de niveau, grimpent au classement et rivalisent pour un prix de $1M ($500k au meilleur joueur) !",
     "card1": "Jeu en ligne $DOGEBALL, jouez pour gagner une partie de $1m !",
     "card2": "Blockchain ETH L2 personnalisée avec des frais utilisateur ultra-faibles",
@@ -71,7 +73,8 @@
     "partnerships": "Des partenariats avec les plus grandes organisations de jeu au monde sont en cours"
   },
   "howToBuy": {
-    "title": "COMMENT ACHETER",
+    "title": "Comment acheter DOGEBALL Token ($DOGEBALL)",
+    "subtitle": "Acheter DOGEBALL token est simple via le site web officiel de prévente. Les utilisateurs peuvent acheter $DOGEBALL en utilisant des cryptomonnaies populaires incluant ETH, USDT, BNB, BTC et SOL, ou par carte bancaire. Suivez les étapes ci-dessous pour connecter votre portefeuille, sélectionner votre méthode de paiement et recevoir des tokens DOGEBALL avant la fin de la prévente.",
     "step1": "Étape 1",
     "step2": "Étape 2",
     "step3": "Étape 3",
@@ -130,8 +133,9 @@
     "description2": "Les ennemis deviennent plus rapides et plus durs, et s'éloignent à mesure que vous montez de niveau. Seuls les joueurs les plus aiguisés et les plus précis peuvent atteindre le TOP 10 du classement, où le gagnant recevra le jackpot de $500k de tokens $DOGEBALL, avec un autre prix de $500k réparti entre les 9 joueurs restants. Notez que seuls les utilisateurs qui ont acheté des tokens dans la prévente $DOGEBALL sont éligibles pour faire partie du PRIX DE $1M."
   },
   "roadmapGame": {
-    "title": "Le jeu commence bientôt !",
-    "description": "Disponible pour jouer peu de temps après le début de la prévente — gardez un œil sur les canaux officiels Telegram et X sur les médias sociaux pour les nouvelles de lancement",
+    "title": "LE JEU EST MAINTENANT DISPONIBLE POUR JOUER !",
+    "play": "Jouer",
+    "description": "Jouez maintenant en cliquant ci-dessous. Notez que le jeu se joue uniquement en mode paysage et sur mobile, fonctionne mieux dans le navigateur par défaut de votre téléphone (les utilisateurs Apple doivent utiliser iOS, les utilisateurs Android doivent utiliser Chrome)",
     "comingSoon": "Bientôt disponible",
     "privacyNote": "Les utilisateurs doivent entrer la même adresse de portefeuille qu'ils ont utilisée pour effectuer des achats de prévente à la fin du jeu (l'option pour entrer l'adresse du portefeuille sera affichée si le score du jeu est suffisamment élevé pour atterrir sur le classement). Note pour protéger la confidentialité et la sécurité de l'utilisateur, les adresses de portefeuille NE SERONT PAS visibles sur le site web ou mentionnées dans les canaux de médias sociaux ; seul le nom d'utilisateur choisi entré dans le jeu lui-même sera mentionné."
   },
@@ -162,7 +166,8 @@
     "here": "Ici"
   },
   "common": {
-    "clickHere": "Cliquez ici"
+    "clickHere": "Cliquez ici",
+    "howToBuy": "Acheter DOGEBALL Token"
   },
   "timer": {
     "days": "Jours",
@@ -251,8 +256,8 @@
       "participants": "Participants"
     },
     "bonusBanner": {
-      "turnRewards": "CODE BONUS TEMPS LIMITÉ : utilisez le code ",
-      "dashboardEarn": "DB50",
+      "turnRewards": "OFFRE LIMITÉE SAINT-VALENTIN",
+      "dashboardEarn": "Utilisez le code bonus DB25 pour 25 % de tokens en plus.",
       "turnRewardsSuffix": " pour obtenir 50% de tokens #DOGEBALL supplémentaires",
       "presaleLaunchOffer": "Offre de lancement de prévente",
       "useBonusCode": "Utiliser le code bonus",

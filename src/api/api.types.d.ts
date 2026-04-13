@@ -170,8 +170,12 @@ export namespace API {
     rank: string;
     wallet_address: string;
     referral_count: string;
-    total_spent_usd: string;
-    total_earned_tokens: string;
+    /** USD volume from referred users (some API versions) */
+    total_spent_usd?: string;
+    /** Tokens earned from referrals (current presale.gg leaderboard shape) */
+    total_earned?: string;
+    /** Alternate name seen in docs */
+    total_earned_tokens?: string;
   }
 
   export interface PriceChartEntry {

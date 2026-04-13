@@ -19,9 +19,9 @@
     "copyright": "Copyright © 2025 DOGEBALL. Alle rettigheder forbeholdes."
   },
   "hero": {
-    "title": "VERDENS FØRSTE L2-DREVNE KRYPTO-SPIL",
+    "title": "DOGEBALL TOKEN PRESALE – ETHEREUM L2 KRYPTO-SPIL OG FIAT-TIL-KRYPTO-KONVERTERING",
     "whitelistSignup": "TILMELD DIG PRESALE WHITELISTEN",
-    "subtitle": "$DOGEBALL, den eneste krypto-spillende DOGE på en brugerdefineret EVM L2 blockchain. Hurtig, billig, sikker. Spil for en chance for at vinde $1M",
+    "subtitle": "DOGEBALL ($DOGEBALL) er et Ethereum Layer 2 crypto-presale, der driver et play-to-earn dodgeball-spil og $DOGEPAY-appen med Fiat to Crypto offramp – sælg crypto for fiat og send til enhver bankkonto i verden. Hurtige transaktioner, lave gebyrer og en konkurrencepræmie på $1 million i vores spil.",
     "presaleLaunch": "PRESALE STARTER OM..",
     "whitelistEmail": "Indtast email for at blive tilføjet til whitelisten",
     "emailPlaceholder": "din email",
@@ -32,6 +32,7 @@
   "roadmap": {
     "welcome": "VELKOMMEN TIL DOGEBALL-SPILLET!",
     "title": "Ruteplan",
+    "subtitle": "DOGEBALL-ruteplanen skitserer den fulde udviklingsvej fra tokenoprettelse og forsalgslancering til globale børsnoteringer og spilekspansion. Hver fase fokuserer på at levere reel infrastruktur, vokse DOGEBALL-fællesskabet og udvide Ethereum Layer 2 gaming-økosystemet.",
     "phase1": "Fase 1",
     "phase2": "Fase 2",
     "phase3": "Fase 3",
@@ -59,7 +60,8 @@
   },
   "about": {
     "title": "OM",
-    "subtitle": "Overgangen af krypto meme-mønter",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) er et Ethereum Layer 2 crypto forsalgsprojekt bygget til hurtig, lavpris blockchain-gaming. DOGEBALL-økosystemet driver et play-to-earn basketball-spil, hvor spillere konkurrerer on-chain for rigtige token-belønninger og en $1 million præmiepulje. Bygget på et brugerdefineret EVM-kompatibelt Layer 2-netværk gør DOGEBALL næsten øjeblikkelige transaktioner, ultra-lave gebyrer, staking-belønninger og skalerbar gameplay muligt, designet til masseadoption.",
+    "subtitle": "Hvad er DOGEBALL Token ($DOGEBALL)?",
     "description": "I centrum af DOGECHAIN er $DOGEBALL-spillet — et afhængighedsskabende online dodgeball-spil, hvor spillere kaster DOGEBALLs, går op i niveau, klatrer på ledertavlen og konkurrerer om en $1M præmiepulje ($500k til topspilleren)!",
     "card1": "$DOGEBALL online-spil, spil for at vinde del af $1m!",
     "card2": "Brugerdefineret bygget ETH L2 Blockchain med ultra-lave brugergebyrer",
@@ -130,8 +132,9 @@
     "description2": "Fjender bliver hurtigere og hårdere, og bliver distanceret, når du går op i niveau. Kun de skarpeste og mest præcise spillere kan nå TOP 10-ledertavlen, hvor vinderen vil modtage $500k jackpotten af $DOGEBALL-tokens, med en anden $500k præmiepulje delt mellem de resterende 9 spillere. Bemærk, at kun brugere, der har købt tokens i $DOGEBALL-forsalget, er berettiget til at være del af $1M PRÆMIEPULJEN."
   },
   "roadmapGame": {
-    "title": "Spillet starter snart!",
-    "description": "Tilgængelig at spille kort tid efter forsalget starter — hold øje med de officielle Telegram- og X-sociale mediekanaler for lanceringsnyheder",
+    "title": "SPILLET ER NU TILGÆNGELIGT AT SPILLE!",
+    "play": "Spil",
+    "description": "Spil nu ved at klikke nedenfor. Bemærk, at spillet kun afspilles i liggende tilstand, og på mobil fungerer det bedst i standardbrowseren til din telefon (Apple-brugere skal bruge iOS, Android-brugere skal bruge Chrome)",
     "comingSoon": "Kommer snart",
     "privacyNote": "Brugere skal indtaste samme tegnebogsadresse, som de har brugt til at foretage forsalgs-køb ved afslutning af spillet (muligheden for at indtaste tegnebogsadresse vil blive vist, hvis spilscoren er høj nok til at lande på ledertavlen). Bemærk for at beskytte brugerens privatliv og sikkerhed, vil tegnebogsadresser IKKE være synlige på hjemmesiden eller nævnt i nogen sociale mediekanaler; kun det valgte brugernavn indtastet i selve spillet vil blive nævnt."
   },
@@ -162,7 +165,8 @@
     "here": "Her"
   },
   "common": {
-    "clickHere": "Klik her"
+    "clickHere": "Klik her",
+    "howToBuy": "Køb DOGEBALL Token"
   },
   "timer": {
     "days": "Dage",
@@ -251,8 +255,8 @@
       "participants": "Deltagere"
     },
     "bonusBanner": {
-      "turnRewards": "BEGRÆNSET TID BONUSKODE: brug kode ",
-      "dashboardEarn": "DB50",
+      "turnRewards": "VALENTINSDAG BEGRÆNSET TILBUD",
+      "dashboardEarn": "Brug bonuskode DB25 for 25% ekstra tokens.",
       "turnRewardsSuffix": " for at få 50% ekstra #DOGEBALL tokens",
       "presaleLaunchOffer": "Forsalgs lancerings tilbud",
       "useBonusCode": "Brug bonuskode",

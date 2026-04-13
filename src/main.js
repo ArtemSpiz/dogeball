@@ -1,5 +1,6 @@
 import "./main.css";
 
+import { trackPageView } from "@/utils/analytics";
 import { ViteSSG } from "vite-ssg";
 import { createHead } from "@unhead/vue/client";
 import App from "./App.vue";
@@ -83,11 +84,8 @@ export const createApp = ViteSSG(
     });
 
     router.afterEach((to) => {
-      // Track page view in Google Analytics
-      if (isClient && typeof window !== "undefined" && window.gtag) {
-        window.gtag("config", "G-STFHVRL32Z", {
-          page_path: to.fullPath,
-        });
+      if (isClient && typeof window !== "undefined") {
+        trackPageView(to.fullPath);
       }
 
       if (isClient && typeof window !== "undefined") {

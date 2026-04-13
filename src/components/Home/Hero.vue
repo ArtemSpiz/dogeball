@@ -69,13 +69,13 @@ const submit = async () => {
       >
         <div class="shrink-0 px-6 flex items-center">
           <span class="font-grotesk font-semibold text-xs whitespace-nowrap">
-            $DOGEBALL TOKEN PRESALE IS LIVE!
+            USE BONUS CODE DB25 for 25% EXTRA TOKENS.
           </span>
         </div>
       </Vue3Marquee>
     </div>
     <div
-      class="h-screen 2xl:h-[calc(100vh+100px)] 2xl:max-h-[1400px] 2xl:bg-bottom max-md:h-auto max-md:min-h-[440px] relative min-h-[600px] px-5 pt-[100px] max-md:pt-[80px] flex flex-col items-center justify-between pb-[56px] max-md:pb-[30px] bg-[url('@/assets/img/Home/HeroBg.png')] max-xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat mobile-bg-crop"
+      class="h-screen 2xl:max-h-[1400px] 2xl:bg-bottom max-md:h-auto max-md:min-h-[440px] relative min-h-[600px] px-5 pt-[100px] max-md:pt-[80px] flex flex-col items-center justify-between pb-[56px] max-md:pb-[30px] bg-[url('@/assets/img/Home/HeroBg.png')] max-xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat mobile-bg-crop"
     >
       <div class="text-center flex flex-col items-center justify-center w-full">
         <div class="title max-w-[800px] px-3">
@@ -159,12 +159,14 @@ const submit = async () => {
 
 /* Improve subtitle readability on mobile */
 .subtitle-text {
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9);
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.8),
+    0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 @media (max-width: 768px) {
   .subtitle-text {
-    text-shadow: 
+    text-shadow:
       0 2px 20px rgba(0, 0, 0, 1),
       0 1px 8px rgba(0, 0, 0, 1),
       0 0 4px rgba(0, 0, 0, 1),

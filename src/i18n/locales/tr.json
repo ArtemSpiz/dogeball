@@ -19,9 +19,9 @@
     "copyright": "Telif Hakkı © 2025 DOGEBALL. Tüm hakları saklıdır."
   },
   "hero": {
-    "title": "DÜNYANIN İLK L2 GÜÇLÜ KRİPTO OYUNU",
+    "title": "DOGEBALL TOKEN PRESALE – ETHEREUM L2 KRİPTO OYUNU VE FİAT-KRİPTO DÖNÜŞÜMÜ",
     "whitelistSignup": "ÖN SATIŞ BEYAZ LİSTESİNE KAYDOLUN",
-    "subtitle": "$DOGEBALL, özel bir EVM L2 blockchain üzerinde kripto oynayan tek DOGE. Hızlı, ucuz, güvenli. $1M şansı için oyna",
+    "subtitle": "DOGEBALL ($DOGEBALL), play-to-earn dodgeball oyununu ve kriptoyu fiat karşılığında satıp dünyadaki herhangi bir banka hesabına göndermenizi sağlayan $DOGEPAY uygulamasını destekleyen bir Ethereum Layer 2 kripto ön satışıdır. Hızlı işlemler, düşük ücretler ve oyunumuzda 1 milyon dolarlık rekabetçi ödül havuzu.",
     "presaleLaunch": "ÖN SATIŞ BAŞLIYOR..",
     "whitelistEmail": "Whitelist'e eklenmek için e-posta girin",
     "emailPlaceholder": "e-posta adresiniz",
@@ -32,6 +32,7 @@
   "roadmap": {
     "welcome": "DOGEBALL OYUNUNA HOŞ GELDİNİZ!",
     "title": "Yol Haritası",
+    "subtitle": "DOGEBALL yol haritası, token oluşturma ve ön satış lansmanından küresel borsa listelerine ve oyun genişlemesine kadar tam geliştirme yolunu özetler. Her aşama, gerçek altyapı sağlamaya, DOGEBALL topluluğunu büyütmeye ve Ethereum Layer 2 oyun ekosistemini genişletmeye odaklanır.",
     "phase1": "Faz 1",
     "phase2": "Faz 2",
     "phase3": "Faz 3",
@@ -59,7 +60,8 @@
   },
   "about": {
     "title": "HAKKINDA",
-    "subtitle": "Kripto meme coin'lerin geçişi",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL), hızlı, düşük maliyetli blockchain oyunları için oluşturulmuş bir Ethereum Layer 2 kripto ön satış projesidir. DOGEBALL ekosistemi, oyuncuların gerçek token ödülleri ve 1 milyon dolarlık ödül havuzu için zincir üzerinde yarıştığı bir play-to-earn basketbol oyununu destekler. Özel bir EVM uyumlu Layer 2 ağı üzerine inşa edilen DOGEBALL, neredeyse anında işlemler, ultra düşük ücretler, staking ödülleri ve kitlesel benimseme için tasarlanmış ölçeklenebilir oyun deneyimi sağlar.",
+    "subtitle": "DOGEBALL Token ($DOGEBALL) Nedir?",
     "description": "DOGECHAIN'in merkezinde $DOGEBALL oyunu var — oyuncuların DOGEBALL'ları attığı, seviye atladığı, liderlik tablosuna tırmandığı ve $1M ödül havuzu için yarıştığı (en iyi oyuncuya $500k) bağımlılık yapan bir online dodgeball oyunu!",
     "card1": "$DOGEBALL online oyunu, $1m'nin bir kısmını kazanmak için oyna!",
     "card2": "Ultra düşük kullanıcı ücretleriyle özel yapılmış ETH L2 Blockchain",
@@ -71,7 +73,8 @@
     "partnerships": "Dünyanın en büyük oyun organizasyonlarıyla ortaklıklar devam ediyor"
   },
   "howToBuy": {
-    "title": "NASIL SATIN ALINIR",
+    "title": "DOGEBALL Token ($DOGEBALL) Nasıl Satın Alınır",
+    "subtitle": "DOGEBALL token satın almak resmi ön satış web sitesi üzerinden basittir. Kullanıcılar ETH, USDT, BNB, BTC ve SOL dahil popüler kripto paraları kullanarak veya banka kartı ile $DOGEBALL satın alabilir. Cüzdanınızı bağlamak, ödeme yönteminizi seçmek ve ön satış bitmeden DOGEBALL tokenlerini almak için aşağıdaki adımları izleyin.",
     "step1": "Adım 1",
     "step2": "Adım 2",
     "step3": "Adım 3",
@@ -130,8 +133,9 @@
     "description2": "Düşmanlar daha hızlı ve daha sert hale gelir ve seviye atladıkça mesafe alır. Sadece en keskin ve en doğru oyuncular TOP 10 Liderlik Tablosuna ulaşabilir, burada kazanan $DOGEBALL token'larının $500k jackpot'unu alacak, kalan 9 oyuncu arasında bölünen başka bir $500k ödül havuzu ile. $DOGEBALL ön satışında token satın alan kullanıcıların yalnızca $1M ÖDÜL HAVUZUNUN bir parçası olmaya hak kazandığını unutmayın."
   },
   "roadmapGame": {
-    "title": "Oyun Yakında Başlıyor!",
-    "description": "Ön satış başladıktan kısa süre sonra oynanabilir - lansman haberleri için resmi Telegram ve X sosyal medya kanallarını takip edin",
+    "title": "OYUN ŞİMDİ OYNANABİLİR!",
+    "play": "Oyna",
+    "description": "Aşağıya tıklayarak hemen oynayın. Oyunun yalnızca yatay modda oynandığını ve mobil oynatımda telefonunuzun varsayılan tarayıcısında en iyi çalıştığını unutmayın (Apple kullanıcıları iOS kullanmalı, Android kullanıcıları Chrome kullanmalı)",
     "comingSoon": "Yakında",
     "privacyNote": "Kullanıcılar, oyunu tamamladıklarında ön satış satın alımları için kullandıkları aynı cüzdan adresini girmelidir (oyun skoru liderlik tablosuna çıkmak için yeterince yüksekse cüzdan adresi girme seçeneği gösterilecektir). Kullanıcı gizliliğini ve güvenliğini korumak için, cüzdan adresleri web sitesinde görünmeyecek veya sosyal medya kanallarında bahsedilmeyecektir; yalnızca oyunun kendisi içinde girilen seçilen kullanıcı adı bahsedilecektir."
   },
@@ -162,7 +166,8 @@
     "here": "Burada"
   },
   "common": {
-    "clickHere": "Buraya Tıklayın"
+    "clickHere": "Buraya Tıklayın",
+    "howToBuy": "DOGEBALL Token Satın Al"
   },
   "timer": {
     "days": "Gün",
@@ -251,8 +256,8 @@
       "participants": "Katılımcılar"
     },
     "bonusBanner": {
-      "turnRewards": "SINIRLI SÜRE BONUS KODU: kod kullan ",
-      "dashboardEarn": "DB50",
+      "turnRewards": "SEVGİLİLER GÜNÜ Sınırlı Süre",
+      "dashboardEarn": "25% ekstra token için bonus kodu DB25 kullanın.",
       "turnRewardsSuffix": " %50 ekstra #DOGEBALL token almak için",
       "presaleLaunchOffer": "Ön Satış Lansman Teklifi",
       "useBonusCode": "Bonus Kodu Kullan",
