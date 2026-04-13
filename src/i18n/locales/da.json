@@ -110,7 +110,9 @@
     "q6": "Er $DOGEBALL-token sikkert at købe?",
     "a6": "Ja, $DOGEBALL-kontrakten er blevet revideret af Coinsult, en af de største og mest pålidelige blockchain-projektrevisorer, og opnåede 100% i den samlede revisionsscore. {link} for den fulde revisionsrapport.",
     "q7": "Hvordan genererer jeg en henvisningskode og bruger bonuskoder?",
-    "a7": "Din unikke henvisningskode kan genereres ved at klikke på 'Forbind tegnebog' og klikke på 'Dashboard'; hver bruger vil modtage deres egen unikke henvisningskode og URL-link at give til andre brugere. Den henviste bruger bør indtaste dette på 'Køb'-skærmen under knappen 'Køb $DOGEBALL' og klikke på 'Anvend'. Henvisningsbonusbeløb vil blive tilføjet til købsbeløbet og synligt i 'Dashboard' (for både henviser og henvist bruger). Begrænsede bonuskoder bør indtastes ved at klikke på 'Bonuskode' (under knappen 'Køb $DOGEBALL' efter tegnebogstilslutning) og klikke på 'Anvend'."
+    "a7": "Din unikke henvisningskode kan genereres ved at klikke på 'Forbind tegnebog' og klikke på 'Dashboard'; hver bruger vil modtage deres egen unikke henvisningskode og URL-link at give til andre brugere. Den henviste bruger bør indtaste dette på 'Køb'-skærmen under knappen 'Køb $DOGEBALL' og klikke på 'Anvend'. Henvisningsbonusbeløb vil blive tilføjet til købsbeløbet og synligt i 'Dashboard' (for både henviser og henvist bruger). Begrænsede bonuskoder bør indtastes ved at klikke på 'Bonuskode' (under knappen 'Køb $DOGEBALL' efter tegnebogstilslutning) og klikke på 'Anvend'.",
+    "q13": "Hvad er $DOGEPAY?",
+    "a13": "$DOGEPAY er en krypto-til-fiat-udvekslingstjeneste på vores tilpassede ETH L2 DOGECHAIN. Brugere kan konvertere krypto til fiat og sende til enhver bankkonto i verden. Se $DOGEPAY-siden ({link}) for flere detaljer og ofte stillede spørgsmål."
   },
   "tokenomics": {
     "title": "TOKENOMICS",

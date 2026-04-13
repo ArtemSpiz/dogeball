@@ -111,7 +111,9 @@
     "q6": "Is $DOGEBALL-token veilig om te kopen?",
     "a6": "Ja, het $DOGEBALL-contract is geauditeerd door Coinsult, een van de grootste en meest vertrouwde blockchain-projectauditeurs, met een score van 100% in de algehele auditscore. {link} voor het volledige auditrapport.",
     "q7": "Hoe genereer ik een verwijzingscode en gebruik ik bonuscodes?",
-    "a7": "Uw unieke verwijzingscode kan worden gegenereerd door te klikken op 'Portemonnee verbinden' en te klikken op 'Dashboard'; elke gebruiker krijgt zijn eigen unieke verwijzingscode en URL-link om aan andere gebruikers te geven. De doorverwezen gebruiker moet dit invoeren op het 'Kopen'-scherm onder de knop 'Koop $DOGEBALL' en klikken op 'Toepassen'. Verwijzingsbonusbedragen worden toegevoegd aan het aankoopbedrag en zijn zichtbaar in het 'Dashboard' (voor zowel de verwijzer als de doorverwezen gebruiker). Tijdelijk beperkte bonuscodes moeten worden ingevoerd door te klikken op 'Bonuscode' (onder de knop 'Koop $DOGEBALL' na portemonnee-verbinding) en te klikken op 'Toepassen'."
+    "a7": "Uw unieke verwijzingscode kan worden gegenereerd door te klikken op 'Portemonnee verbinden' en te klikken op 'Dashboard'; elke gebruiker krijgt zijn eigen unieke verwijzingscode en URL-link om aan andere gebruikers te geven. De doorverwezen gebruiker moet dit invoeren op het 'Kopen'-scherm onder de knop 'Koop $DOGEBALL' en klikken op 'Toepassen'. Verwijzingsbonusbedragen worden toegevoegd aan het aankoopbedrag en zijn zichtbaar in het 'Dashboard' (voor zowel de verwijzer als de doorverwezen gebruiker). Tijdelijk beperkte bonuscodes moeten worden ingevoerd door te klikken op 'Bonuscode' (onder de knop 'Koop $DOGEBALL' na portemonnee-verbinding) en te klikken op 'Toepassen'.",
+    "q13": "Wat is $DOGEPAY?",
+    "a13": "$DOGEPAY is een crypto-naar-fiat-wisseldienst op onze aangepaste ETH L2 DOGECHAIN. Gebruikers kunnen crypto omzetten naar fiat en naar elke bankrekening ter wereld sturen. Zie de $DOGEPAY-pagina ({link}) voor meer details en veelgestelde vragen."
   },
   "tokenomics": {
     "title": "TOKENOMICS",

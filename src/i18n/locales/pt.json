@@ -111,7 +111,9 @@
     "q6": "O token $DOGEBALL é seguro para comprar?",
     "a6": "Sim, o contrato $DOGEBALL foi auditado pela Coinsult, uma das maiores e mais confiáveis auditoras de projetos blockchain, alcançando 100% na pontuação geral de auditoria. {link} para o relatório completo de auditoria.",
     "q7": "Como gero um código de indicação e uso códigos bônus?",
-    "a7": "Seu código de indicação único pode ser gerado clicando em 'Conectar carteira' e clicando em 'Painel'; cada usuário receberá seu próprio código de indicação único e link URL para fornecer a outros usuários. O usuário indicado deve inserir isso na tela 'Comprar' sob o botão 'Comprar $DOGEBALL' e clicar em 'Aplicar'. Os valores de bônus de indicação serão adicionados ao valor da compra e visíveis no 'Painel' (tanto para o indicador quanto para o usuário indicado). Códigos bônus de tempo limitado devem ser inseridos clicando em 'Código Bônus' (sob o botão 'Comprar $DOGEBALL' após a conexão da carteira) e clicando em 'Aplicar'."
+    "a7": "Seu código de indicação único pode ser gerado clicando em 'Conectar carteira' e clicando em 'Painel'; cada usuário receberá seu próprio código de indicação único e link URL para fornecer a outros usuários. O usuário indicado deve inserir isso na tela 'Comprar' sob o botão 'Comprar $DOGEBALL' e clicar em 'Aplicar'. Os valores de bônus de indicação serão adicionados ao valor da compra e visíveis no 'Painel' (tanto para o indicador quanto para o usuário indicado). Códigos bônus de tempo limitado devem ser inseridos clicando em 'Código Bônus' (sob o botão 'Comprar $DOGEBALL' após a conexão da carteira) e clicando em 'Aplicar'.",
+    "q13": "O que é $DOGEPAY?",
+    "a13": "$DOGEPAY é um serviço de câmbio de cripto para fiduciário na nossa DOGECHAIN ETH L2 personalizada. Permite converter cripto em moeda fiduciária e enviar para qualquer conta bancária no mundo. Veja a página $DOGEPAY ({link}) para mais detalhes e FAQs."
   },
   "tokenomics": {
     "title": "TOKENOMICS",

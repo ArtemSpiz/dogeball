@@ -1,6 +1,7 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import { computed } from "vue";
+import { useRouter } from "vue-router";
 import Minus from "@/assets/icons/Minus.vue";
 import Plus from "@/assets/icons/Plus.vue";
 import { ref } from "vue";
@@ -8,6 +9,7 @@ import FAQdog from "@/assets/img/Home/FAQdogMob.png";
 import FAQDogs from "@/assets/img/Home/FAQDogs.png";
 
 const { t } = useI18n();
+const router = useRouter();
 
 const getTextWithLink = (key, linkType = "presale") => {
   // vue-i18n treats `{link}` as an interpolation placeholder and will render it as an empty
@@ -31,6 +33,10 @@ const getTextWithLink = (key, linkType = "presale") => {
     linkHtml = `<a data-scroll="presale" class="underline text-inherit cursor-pointer hover:opacity-90">(${t(
       "common.clickHere"
     )})</a>`;
+  } else if (linkType === "dogepay") {
+    linkHtml = `<a href="/dogepay" data-route="/dogepay" class="underline text-inherit cursor-pointer hover:opacity-90">${t(
+      "common.clickHere"
+    )}</a>`;
   }
   return text.replace(LINK_TOKEN, linkHtml);
 };
@@ -84,6 +90,10 @@ const FAQcards = computed(() => [
     title: t("faq.q12"),
     text: t("faq.a12"),
   },
+  {
+    title: t("faq.q13"),
+    text: getTextWithLink("faq.a13", "dogepay"),
+  },
 ]);
 
 const FAQcardsMob = computed(() => [
@@ -135,6 +145,10 @@ const FAQcardsMob = computed(() => [
     title: t("faq.q12"),
     text: t("faq.a12"),
   },
+  {
+    title: t("faq.q13"),
+    text: getTextWithLink("faq.a13", "dogepay"),
+  },
 ]);
 
 const openIndex = ref(null);
@@ -146,6 +160,13 @@ function toggleOpen(index) {
 const isMobile = window.innerWidth < 768;
 
 function handleHtmlClick(e) {
+  const routeLink = e.target.closest("a[data-route]");
+  if (routeLink) {
+    e.preventDefault();
+    router.push(routeLink.getAttribute("data-route") || "/dogepay");
+    return;
+  }
+
   const target = e.target.closest("[data-scroll]");
   if (!target) return;
 
@@ -165,7 +186,7 @@ function handleHtmlClick(e) {
 <template>
   <div
     id="faq"
-    class="flex px-5 h-[1200px] max-2xl:!bg-cover bgFill max-lg:h-[1250px] max-md:h-max flex-col relative py-20 max-md:py-12 max-md:pb-0 gap-12 bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Home/FAQBg.png')] overflow-hidden max-md:bg-[url('@/assets/img/Home/FAQBgMob.png')]"
+    class="flex px-5 h-[1320px] max-2xl:!bg-cover bgFill max-lg:h-[1370px] max-md:h-max flex-col relative py-20 max-md:py-12 max-md:pb-0 gap-12 bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Home/FAQBg.png')] overflow-hidden max-md:bg-[url('@/assets/img/Home/FAQBgMob.png')]"
   >
     <div class="title z-20 uppercase max-w-[700px] text-center mx-auto">
       {{ t("faq.title") }}
@@ -177,110 +198,56 @@ function handleHtmlClick(e) {
       <img :src="FAQDogs" class="object-contain" />
     </div>
 
-    <div class="flex z-30 flex-col gap-4 max-w-7xl mx-auto max-md:h-[1000px]">
-      <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
-        <div class="flex flex-col gap-4">
+    <div class="flex z-30 flex-col gap-4 max-w-7xl mx-auto max-md:h-[1120px]">
+      <!-- Single grid + document order (q1,q2 / q3,q4 / …) so each row shares one height -->
+      <div
+        class="grid grid-cols-2 max-md:grid-cols-1 gap-4 items-stretch max-md:max-w-[450px] max-md:mx-auto"
+      >
+        <div
+          v-for="(card, idx) in isMobile ? FAQcardsMob : FAQcards"
+          :key="idx"
+          class="p-8 max-md:p-4 gap-4 w-full max-w-[450px] max-md:max-w-none justify-self-center h-full backdrop-blur-sm relative bg-[rgba(53,19,147,0.52)] rounded-2xl flex flex-col transition-all"
+        >
           <div
-            v-for="(card, i) in isMobile
-              ? FAQcardsMob
-              : FAQcards.filter((_, idx) => idx % 2 === 0)"
-            :key="isMobile ? i : i * 2"
-            class="p-8 max-md:p-4 gap-4 w-full max-w-[450px] backdrop-blur-sm relative bg-[rgba(53,19,147,0.52)] rounded-2xl flex flex-col transition-all"
+            class="absolute inset-0 rounded-2xl"
+            style="
+              background: linear-gradient(
+                145deg,
+                rgba(255, 255, 255, 0.6) 0%,
+                rgba(255, 255, 255, 0.1) 40%,
+                rgba(255, 255, 255, 0.6) 100%
+              );
+              -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+              -webkit-mask-composite: xor;
+              mask-composite: exclude;
+              padding: 1px;
+            "
+          ></div>
+
+          <div
+            class="flex gap-4 items-start cursor-pointer z-50"
+            @click="toggleOpen(idx)"
           >
             <div
-              class="absolute inset-0 rounded-2xl"
-              style="
-                background: linear-gradient(
-                  145deg,
-                  rgba(255, 255, 255, 0.6) 0%,
-                  rgba(255, 255, 255, 0.1) 40%,
-                  rgba(255, 255, 255, 0.6) 100%
-                );
-                -webkit-mask: linear-gradient(#fff 0 0) content-box,
-                  linear-gradient(#fff 0 0);
-                -webkit-mask-composite: xor;
-                mask-composite: exclude;
-                padding: 1px;
-              "
-            ></div>
-
-            <div
-              class="flex gap-4 items-start cursor-pointer z-50"
-              @click="toggleOpen(isMobile ? i : i * 2)"
+              class="rounded-full h-8 w-8 min-w-[32px] flex items-center bg-[#FFEEE1] justify-center shrink-0"
             >
-              <div
-                class="rounded-full h-8 w-8 min-w-[32px] flex items-center bg-[#FFEEE1] justify-center"
-              >
-                <component
-                  :is="openIndex === (isMobile ? i : i * 2) ? Minus : Plus"
-                />
-              </div>
-
-              <div
-                class="text-xl max-md:text-base my-auto font-bold leading-[110%]"
-              >
-                {{ card.title }}
-              </div>
+              <component :is="openIndex === idx ? Minus : Plus" />
             </div>
 
-            <Transition name="expand">
-              <p
-                v-if="openIndex === (isMobile ? i : i * 2)"
-                v-html="card.text"
-                @click="handleHtmlClick"
-                class="text-base max-md:text-sm leading-[120%] font-grotesk font-normal z-50 pl-12 max-md:pl-0"
-              />
-            </Transition>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-4 max-md:hidden">
-          <div
-            v-for="(card, i) in FAQcards.filter((_, idx) => idx % 2 === 1)"
-            :key="i * 2 + 1"
-            class="p-8 gap-4 w-full max-w-[450px] backdrop-blur-sm relative bg-[rgba(53,19,147,0.52)] rounded-2xl flex flex-col transition-all"
-          >
-            <div
-              class="absolute inset-0 rounded-2xl"
-              style="
-                background: linear-gradient(
-                  145deg,
-                  rgba(255, 255, 255, 0.6) 0%,
-                  rgba(255, 255, 255, 0.1) 40%,
-                  rgba(255, 255, 255, 0.6) 100%
-                );
-                -webkit-mask: linear-gradient(#fff 0 0) content-box,
-                  linear-gradient(#fff 0 0);
-                -webkit-mask-composite: xor;
-                mask-composite: exclude;
-                padding: 1px;
-              "
-            ></div>
-
-            <div
-              class="flex gap-4 items-start cursor-pointer z-50"
-              @click="toggleOpen(i * 2 + 1)"
-            >
-              <div
-                class="rounded-full h-8 w-8 min-w-[32px] flex items-center bg-[#FFEEE1] justify-center"
-              >
-                <component :is="openIndex === i * 2 + 1 ? Minus : Plus" />
-              </div>
-
-              <div class="text-xl my-auto font-bold leading-[110%]">
-                {{ card.title }}
-              </div>
+            <div class="text-xl max-md:text-base my-auto font-bold leading-[110%]">
+              {{ card.title }}
             </div>
-
-            <Transition name="expand">
-              <p
-                v-if="openIndex === i * 2 + 1"
-                v-html="card.text"
-                @click="handleHtmlClick"
-                class="text-base leading-[120%] z-50 pl-12"
-              />
-            </Transition>
           </div>
+
+          <Transition name="expand">
+            <p
+              v-if="openIndex === idx"
+              v-html="card.text"
+              @click="handleHtmlClick"
+              class="text-base max-md:text-sm leading-[120%] font-grotesk font-normal z-50 pl-12 max-md:pl-0"
+            />
+          </Transition>
         </div>
       </div>
     </div>

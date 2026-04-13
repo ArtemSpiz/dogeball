@@ -111,7 +111,9 @@
     "q6": "Onko $DOGEBALL-token turvallinen ostaa?",
     "a6": "Kyllä, $DOGEBALL-sopimus on tarkastettu Coinsultin toimesta, joka on yksi suurimmista ja luotettavimmista lohkoketjuhankkeiden tarkastajista, saavuttaen 100% kokonaistarkastuspisteissä. {link} täydelliseen tarkastusraporttiin.",
     "q7": "Miten luon suosituskoodin ja käytän bonuskoodeja?",
-    "a7": "Yksilöllinen suosituskoodisi voidaan luoda klikkaamalla 'Yhdistä lompakko' ja klikkaamalla 'Hallintapaneeli'; jokaiselle käyttäjälle annetaan oma yksilöllinen suosituskoodi ja URL-linkki annettavaksi muille käyttäjille. Suositeltavan käyttäjän tulee syöttää tämä 'Osta'-näytössä 'Osta $DOGEBALL'-painikkeen alla ja klikata 'Käytä'. Suositusbonusmäärät lisätään ostosummaan ja näkyvät 'Hallintapaneelissa' (sekä suosittelijalle että suositellulle käyttäjälle). Rajoitetut bonuskoodit tulee syöttää klikkaamalla 'Bonuskoodi' ('Osta $DOGEBALL'-painikkeen alla lompakon yhdistämisen jälkeen) ja klikkaamalla 'Käytä'."
+    "a7": "Yksilöllinen suosituskoodisi voidaan luoda klikkaamalla 'Yhdistä lompakko' ja klikkaamalla 'Hallintapaneeli'; jokaiselle käyttäjälle annetaan oma yksilöllinen suosituskoodi ja URL-linkki annettavaksi muille käyttäjille. Suositeltavan käyttäjän tulee syöttää tämä 'Osta'-näytössä 'Osta $DOGEBALL'-painikkeen alla ja klikata 'Käytä'. Suositusbonusmäärät lisätään ostosummaan ja näkyvät 'Hallintapaneelissa' (sekä suosittelijalle että suositellulle käyttäjälle). Rajoitetut bonuskoodit tulee syöttää klikkaamalla 'Bonuskoodi' ('Osta $DOGEBALL'-painikkeen alla lompakon yhdistämisen jälkeen) ja klikkaamalla 'Käytä'.",
+    "q13": "Mikä on $DOGEPAY?",
+    "a13": "$DOGEPAY on krypto-fiat-vaihtopalvelu mukautetussa ETH L2 DOGECHAIN-verkossamme. Käyttäjät voivat muuntaa kryptoa fiatiksi ja lähettää mille tahansa pankkitilille maailmassa. Katso lisätietoja ja UKK:t $DOGEPAY-sivulta ({link})."
   },
   "tokenomics": {
     "title": "TOKENOMICS",

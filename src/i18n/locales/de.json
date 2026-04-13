@@ -111,7 +111,9 @@
     "q6": "Ist es sicher, $DOGEBALL-Token zu kaufen?",
     "a6": "Ja, der $DOGEBALL-Vertrag wurde von Coinsult, einem der größten und vertrauenswürdigsten Blockchain-Projektprüfer, geprüft und erreichte 100% in der Gesamtauditpunktzahl. {link} für den vollständigen Auditbericht.",
     "q7": "Wie generiere ich einen Empfehlungscode und verwende Bonus-Codes?",
-    "a7": "Ihr eindeutiger Empfehlungscode kann generiert werden, indem Sie 'Wallet verbinden' klicken und 'Dashboard' klicken; jedem Benutzer wird sein eigener eindeutiger Empfehlungscode und URL-Link bereitgestellt, um ihn anderen Benutzern zu geben. Der empfohlene Benutzer sollte dies auf dem 'Kaufen'-Bildschirm unter der Schaltfläche 'Kaufen $DOGEBALL' eingeben und 'Anwenden' klicken. Empfehlungsbonusbeträge werden zum Kaufbetrag hinzugefügt und sind im 'Dashboard' sichtbar (sowohl für den Empfehler als auch für den empfohlenen Benutzer). Zeitlich begrenzte Bonus-Codes sollten eingegeben werden, indem Sie 'Bonus-Code' klicken (unter der Schaltfläche 'Kaufen $DOGEBALL' nach Wallet-Verbindung) und 'Anwenden' klicken."
+    "a7": "Ihr eindeutiger Empfehlungscode kann generiert werden, indem Sie 'Wallet verbinden' klicken und 'Dashboard' klicken; jedem Benutzer wird sein eigener eindeutiger Empfehlungscode und URL-Link bereitgestellt, um ihn anderen Benutzern zu geben. Der empfohlene Benutzer sollte dies auf dem 'Kaufen'-Bildschirm unter der Schaltfläche 'Kaufen $DOGEBALL' eingeben und 'Anwenden' klicken. Empfehlungsbonusbeträge werden zum Kaufbetrag hinzugefügt und sind im 'Dashboard' sichtbar (sowohl für den Empfehler als auch für den empfohlenen Benutzer). Zeitlich begrenzte Bonus-Codes sollten eingegeben werden, indem Sie 'Bonus-Code' klicken (unter der Schaltfläche 'Kaufen $DOGEBALL' nach Wallet-Verbindung) und 'Anwenden' klicken.",
+    "q13": "Was ist $DOGEPAY?",
+    "a13": "$DOGEPAY ist ein Krypto-zu-Fiat-Tauschdienst auf unserer benutzerdefinierten ETH-L2 DOGECHAIN. Nutzer können Kryptowährungen in Fiat umwandeln und auf jedes Bankkonto weltweit senden. Weitere Details und FAQs finden Sie auf der $DOGEPAY-Seite ({link})."
   },
   "tokenomics": {
     "title": "TOKENOMICS",

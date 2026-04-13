@@ -6,6 +6,7 @@ const { t } = useI18n();
 
 <template>
   <main
+    id="dogepay"
     class="min-h-[60vh] pt-[120px] max-md:pt-[100px] pb-16 px-6 flex flex-col items-center justify-center text-center bg-[#020A2B]"
   >
     <h1

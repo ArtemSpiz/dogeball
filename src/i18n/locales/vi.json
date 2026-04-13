@@ -110,7 +110,9 @@
     "q6": "Token $DOGEBALL có an toàn để mua không?",
     "a6": "Có, hợp đồng $DOGEBALL đã được kiểm toán bởi Coinsult, một trong những kiểm toán viên dự án blockchain lớn nhất và đáng tin cậy, đạt 100% điểm kiểm toán tổng thể. {link} để xem báo cáo kiểm toán đầy đủ.",
     "q7": "Làm thế nào để tạo mã giới thiệu và sử dụng mã thưởng?",
-    "a7": "Mã giới thiệu duy nhất của bạn có thể được tạo bằng cách nhấp 'Kết nối ví' và nhấp 'Bảng điều khiển'; mỗi người dùng sẽ được cung cấp mã giới thiệu duy nhất và liên kết URL của riêng họ để cung cấp cho người dùng khác. Người dùng được giới thiệu nên nhập điều này trên màn hình 'Mua' dưới nút 'Mua $DOGEBALL' và nhấp 'Áp dụng'. Số tiền thưởng giới thiệu sẽ được thêm vào số tiền mua và hiển thị trong 'Bảng điều khiển' (cho cả người giới thiệu và người dùng được giới thiệu). Mã thưởng thời gian giới hạn nên được nhập bằng cách nhấp 'Mã thưởng' (dưới nút 'Mua $DOGEBALL' sau khi kết nối ví) và nhấp 'Áp dụng'."
+    "a7": "Mã giới thiệu duy nhất của bạn có thể được tạo bằng cách nhấp 'Kết nối ví' và nhấp 'Bảng điều khiển'; mỗi người dùng sẽ được cung cấp mã giới thiệu duy nhất và liên kết URL của riêng họ để cung cấp cho người dùng khác. Người dùng được giới thiệu nên nhập điều này trên màn hình 'Mua' dưới nút 'Mua $DOGEBALL' và nhấp 'Áp dụng'. Số tiền thưởng giới thiệu sẽ được thêm vào số tiền mua và hiển thị trong 'Bảng điều khiển' (cho cả người giới thiệu và người dùng được giới thiệu). Mã thưởng thời gian giới hạn nên được nhập bằng cách nhấp 'Mã thưởng' (dưới nút 'Mua $DOGEBALL' sau khi kết nối ví) và nhấp 'Áp dụng'.",
+    "q13": "$DOGEPAY là gì?",
+    "a13": "$DOGEPAY là dịch vụ trao đổi từ tiền mã hóa sang tiền pháp định chạy trên DOGECHAIN ETH L2 tùy chỉnh của chúng tôi. Người dùng có thể chuyển đổi crypto sang fiat và gửi đến bất kỳ tài khoản ngân hàng nào trên thế giới. Xem trang $DOGEPAY ({link}) để biết thêm chi tiết và câu hỏi thường gặp."
   },
   "tokenomics": {
     "title": "TOKENOMICS",

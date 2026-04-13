@@ -111,7 +111,9 @@
     "q6": "$DOGEBALL token'ı satın almak güvenli mi?",
     "a6": "Evet, $DOGEBALL sözleşmesi, en büyük ve güvenilir blockchain proje denetçilerinden biri olan Coinsult tarafından denetlenmiş ve genel denetim puanında %100 başarı elde etmiştir. {link} tam denetim raporu için.",
     "q7": "Referans kodunu nasıl oluştururum ve bonus kodlarını nasıl kullanırım?",
-    "a7": "Benzersiz referans kodunuz 'Cüzdanı Bağla'ya tıklayıp 'Dashboard'a tıklayarak oluşturulabilir; her kullanıcıya diğer kullanıcılara vermek için kendi benzersiz referans kodu ve URL bağlantısı sağlanacaktır. Referans edilen kullanıcı bunu 'Satın Al' ekranında '$DOGEBALL Satın Al' düğmesinin altına girmeli ve 'Uygula'ya tıklamalıdır. Referans bonus tutarları satın alma tutarına eklenecek ve 'Dashboard'da görünecektir (hem referans eden hem de referans edilen kullanıcı için). Sınırlı süreli bonus kodları 'Bonus Kodu'na (cüzdan bağlantısından sonra '$DOGEBALL Satın Al' düğmesinin altında) tıklayıp 'Uygula'ya tıklayarak girilmelidir."
+    "a7": "Benzersiz referans kodunuz 'Cüzdanı Bağla'ya tıklayıp 'Dashboard'a tıklayarak oluşturulabilir; her kullanıcıya diğer kullanıcılara vermek için kendi benzersiz referans kodu ve URL bağlantısı sağlanacaktır. Referans edilen kullanıcı bunu 'Satın Al' ekranında '$DOGEBALL Satın Al' düğmesinin altına girmeli ve 'Uygula'ya tıklamalıdır. Referans bonus tutarları satın alma tutarına eklenecek ve 'Dashboard'da görünecektir (hem referans eden hem de referans edilen kullanıcı için). Sınırlı süreli bonus kodları 'Bonus Kodu'na (cüzdan bağlantısından sonra '$DOGEBALL Satın Al' düğmesinin altında) tıklayıp 'Uygula'ya tıklayarak girilmelidir.",
+    "q13": "$DOGEPAY nedir?",
+    "a13": "$DOGEPAY, özel ETH L2 DOGECHAIN üzerinde çalışan kriptodan itibari paraya dönüşüm hizmetidir. Kullanıcılar kriptoyu itibari paraya çevirip dünyanın herhangi bir banka hesabına gönderebilir. Daha fazla ayrıntı ve SSS için $DOGEPAY sayfasına bakın ({link})."
   },
   "tokenomics": {
     "title": "TOKENOMICS",

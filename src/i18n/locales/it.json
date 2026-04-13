@@ -111,7 +111,9 @@
     "q6": "È sicuro acquistare il token $DOGEBALL?",
     "a6": "Sì, il contratto $DOGEBALL è stato auditato da Coinsult, uno dei più grandi e affidabili auditor di progetti blockchain, raggiungendo il 100% nel punteggio complessivo dell'audit. {link} per il rapporto completo dell'audit.",
     "q7": "Come genero un codice di referral e uso i codici bonus?",
-    "a7": "Il tuo codice di referral unico può essere generato cliccando 'Connetti portafoglio' e cliccando 'Dashboard'; a ogni utente verrà fornito il proprio codice di referral unico e link URL da fornire ad altri utenti. L'utente referenziato dovrebbe inserirlo nella schermata 'Acquista' sotto il pulsante 'Acquista $DOGEBALL' e cliccare 'Applica'. Gli importi del bonus di referral saranno aggiunti all'importo dell'acquisto e visibili nel 'Dashboard' (sia per il referrer che per l'utente referenziato). I codici bonus a tempo limitato dovrebbero essere inseriti cliccando 'Codice Bonus' (sotto il pulsante 'Acquista $DOGEBALL' dopo la connessione del portafoglio) e cliccando 'Applica'."
+    "a7": "Il tuo codice di referral unico può essere generato cliccando 'Connetti portafoglio' e cliccando 'Dashboard'; a ogni utente verrà fornito il proprio codice di referral unico e link URL da fornire ad altri utenti. L'utente referenziato dovrebbe inserirlo nella schermata 'Acquista' sotto il pulsante 'Acquista $DOGEBALL' e cliccare 'Applica'. Gli importi del bonus di referral saranno aggiunti all'importo dell'acquisto e visibili nel 'Dashboard' (sia per il referrer che per l'utente referenziato). I codici bonus a tempo limitato dovrebbero essere inseriti cliccando 'Codice Bonus' (sotto il pulsante 'Acquista $DOGEBALL' dopo la connessione del portafoglio) e cliccando 'Applica'.",
+    "q13": "Cos'è $DOGEPAY?",
+    "a13": "$DOGEPAY è un servizio di cambio da crypto a fiat sulla nostra DOGECHAIN ETH L2 personalizzata. Consente di convertire crypto in fiat e inviare a qualsiasi conto bancario nel mondo. Vedi la pagina $DOGEPAY ({link}) per ulteriori dettagli e FAQ."
   },
   "tokenomics": {
     "title": "TOKENOMICS",
