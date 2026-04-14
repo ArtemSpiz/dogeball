@@ -26,20 +26,20 @@ const scrollToPresale = () => {
       class="absolute inset-0 z-0 h-full w-full object-cover object-top"
     />
 
-    <!-- Illustrations: ball uses section center; hand stays in right column -->
+    <!-- Ball: full-bleed layer so % center = viewport center (fixes ~1440px vs max-w-[1440px] mismatch) -->
+    <img
+      :src="heroBall"
+      alt=""
+      class="dogepay-hero-ball pointer-events-none absolute z-[1] h-auto max-w-none object-contain"
+    />
+
+    <!-- Hand: constrained column; ball is NOT inside this wrapper -->
     <div
       class="pointer-events-none absolute inset-0 z-[2] mx-auto flex max-h-none min-h-0 w-full max-w-[1440px] justify-end px-5 md:px-10 lg:px-14"
     >
-      <!-- Ball: hidden on mobile; from md — shifted left of section center (see .dogepay-hero-ball) -->
-      <img
-        :src="heroBall"
-        alt=""
-        class="dogepay-hero-ball pointer-events-none absolute z-[1] h-auto max-w-none object-contain"
-      />
       <div
         class="relative ml-auto h-full min-h-full w-full max-w-[min(100%,800px)] shrink-0"
       >
-        <!-- Hand: sized via scoped CSS — overrides global img { w-full h-full } -->
         <img
           :src="heroHand"
           alt=""
@@ -48,11 +48,11 @@ const scrollToPresale = () => {
       </div>
     </div>
 
-    <!-- Foliage mask (over ball & hand, under typography) -->
+    <!-- Foliage mask: bottom-aligned; -1px bottom kills subpixel gap; object-bottom keeps art flush -->
     <img
       :src="heroMask"
       alt=""
-      class="pointer-events-none absolute inset-0 z-[3] h-full w-full object-cover object-top"
+      class="dogepay-hero-mask pointer-events-none absolute z-[3] w-full"
     />
 
     <!-- Copy: padded down from the header so it isn’t hugging the top -->
@@ -120,6 +120,19 @@ const scrollToPresale = () => {
   .dogepay-hero-ball {
     bottom: 7%;
   }
+}
+
+/* Bottom foliage mask: extend 1px past hero bottom to remove hairline gap */
+.dogepay-hero-mask {
+  position: absolute;
+  inset: 0 0 -1px 0;
+  z-index: 3;
+  min-height: calc(100% + 1px) !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: bottom center !important;
 }
 
 /*
