@@ -27,7 +27,7 @@ const cards = [
 <template>
   <section
     id="description-1"
-    class="dogepay-description-1 scroll-mt-28 relative overflow-x-hidden overflow-y-visible bg-[#0B0B1E]"
+    class="dogepay-description-1 scrollbar-hide scroll-mt-28 relative overflow-x-hidden overflow-y-visible bg-[#0B0B1E]"
   >
     <img
       :src="description1Bg"
@@ -61,7 +61,7 @@ const cards = [
           </p>
         </div>
 
-        <div class="flex flex-col md:pt-2">
+        <div class="flex w-full flex-col md:max-w-md md:pt-2">
           <p
             class="font-grotesk text-lg font-semibold text-white md:text-xl lg:text-2xl"
           >

@@ -31,7 +31,7 @@ const cards = [
 <template>
   <section
     id="features"
-    class="dogepay-features scroll-mt-28 relative overflow-x-hidden overflow-y-visible px-5 py-24 max-md:py-20 md:px-10 md:py-32 lg:px-14 lg:py-40"
+    class="dogepay-features scrollbar-hide scroll-mt-28 relative overflow-x-hidden overflow-y-visible px-5 py-24 max-md:py-20 md:px-10 md:py-32 lg:px-14 lg:py-40"
   >
     <img
       :src="featuresBg"

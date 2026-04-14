@@ -51,7 +51,7 @@ function toggleOpen(index) {
 <template>
   <div
     id="faqs"
-    class="scroll-mt-28 flex min-h-[960px] max-2xl:!bg-cover bgFill max-md:min-h-0 max-md:h-auto px-5 flex-col relative py-20 max-md:py-12 max-md:pb-0 gap-12 bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Home/FAQBg.png')] overflow-hidden max-md:bg-[url('@/assets/img/Home/FAQBgMob.png')]"
+    class="scrollbar-hide scroll-mt-28 flex min-h-[960px] max-2xl:!bg-cover bgFill max-md:min-h-0 max-md:h-auto px-5 flex-col relative py-20 max-md:py-12 max-md:pb-0 gap-12 bg-[center_bottom] bg-cover bg-no-repeat bg-[url('@/assets/img/Home/FAQBg.png')] overflow-hidden max-md:bg-[url('@/assets/img/Home/FAQBgMob.png')]"
   >
     <div class="title z-20 uppercase max-w-[700px] text-center mx-auto">
       {{ t("faq.title") }}

@@ -7,7 +7,7 @@ import { RouterLink } from "vue-router";
 <template>
   <section
     id="presale"
-    class="relative flex min-h-[520px] scroll-mt-28 items-stretch overflow-hidden bg-[#020A2B] md:min-h-[600px] lg:min-h-[680px]"
+    class="relative flex min-h-[520px] scroll-mt-28 items-stretch overflow-hidden bg-[#020A2B] scrollbar-hide md:min-h-[600px] lg:min-h-[680px]"
   >
     <img
       :src="presaleBg"

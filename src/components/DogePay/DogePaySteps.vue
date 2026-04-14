@@ -24,7 +24,7 @@ const steps = [
 <template>
   <section
     id="steps"
-    class="relative scroll-mt-28 overflow-hidden py-16 max-md:py-12 md:py-20 lg:py-24"
+    class="relative scrollbar-hide scroll-mt-28 overflow-hidden py-16 max-md:py-12 md:py-20 lg:py-24"
   >
     <img
       :src="stepsBg"

@@ -17,7 +17,7 @@ const scrollToPresale = () => {
 <template>
   <section
     id="hero"
-    class="relative h-screen min-h-screen scroll-mt-28 overflow-hidden"
+    class="relative h-screen min-h-screen scroll-mt-28 overflow-hidden scrollbar-hide"
   >
     <!-- Background: no overlays — show asset as exported -->
     <img
