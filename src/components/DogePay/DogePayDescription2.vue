@@ -36,7 +36,7 @@ const features = [
 <template>
   <section
     id="description-2"
-    class="dogepay-description-2 scroll-mt-28 relative overflow-x-hidden bg-[#0a0618]"
+    class="dogepay-description-2 scroll-mt-28 relative overflow-hidden bg-[#0a0618]"
   >
     <img
       :src="description2Bg"
