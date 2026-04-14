@@ -8,31 +8,40 @@ import FAQDogs from "@/assets/img/Home/FAQDogs.png";
 
 const { t } = useI18n();
 
-const LOREM =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.";
-
-const FEES_ANSWER =
-  "There are no FX fees for conversion. As the transaction will be completed using our DOGECHAIN, there are near-zero gas fees per transaction which can be paid in $DOGEBALL only.";
-
-/** Order matches two-column layout: left column top-to-bottom, then right column. */
+/** Order: left column (image 1), then right column (image 2), for two-column grid. */
 const faqItems = [
-  { title: "What is $DOGEPAY?", text: LOREM },
-  { title: "How do I get started?", text: LOREM },
-  { title: "When do I receive my tokens?", text: LOREM },
-  { title: "How do I send money to bank accounts?", text: LOREM },
+  {
+    title: "What is $DOGEPAY?",
+    text: "$DOGEPAY is a payment network, running on our own custom L2 DOGECHAIN, that allows you to send fiat to any bank account in the world using crypto.",
+  },
+  {
+    title: "How do I get started?",
+    text: "All transactions will occur on our $DOGEPAY app (available soon in Apple App Store and Google Pay Store). Once users have downloaded the app, they will be assigned a multi-network (multi-chain) wallet address(s). You can send crypto to the $DOGEPAY wallet using your existing crypto wallets.",
+  },
+  {
+    title: "How do I send money to bank accounts?",
+    text: "Once you have downloaded the $DOGEPAY app and topped up your wallet with cryptocurrency, select the 'Send to Bank' option and the cryptocurrency you wish to use to convert to fiat. Then select the fiat currency to send (e.g. USD, EUR, CNY, GBP etc.) and enter the recipients International Bank Account Number (IBAN) and Bank Address. The conversion rate and fiat to be received will be displayed, along with the $DOGEBALL token fees to pay for the transaction. Click 'Pay' and the transaction is complete, with the recipient receiving the fiat within minutes.",
+  },
   {
     title: "Are there any fees for sending money?",
-    text: FEES_ANSWER,
+    text: "There are no FX fees for conversion. As the transaction will be completed using our DOGECHAIN, there are near-zero gas fees per transaction which can be paid in $DOGEBALL only.",
   },
-  { title: "Is there KYC verification required?", text: LOREM },
   {
-    title: "How will this integrate with the $DOGEBALL game and gaming industry?",
-    text: LOREM,
+    title: "Is there KYC verification required?",
+    text: "No, there is no KYC verification for using $DOGEPAY to send fiat. No personal details will be collected by the app or by the $DOGEBALL team.",
+  },
+  {
+    title: "Is $DOGEPAY secure?",
+    text: "Security is built into the core of DOGEPAY. We keep your funds and personal data locked down tight with bank-level encryption and advanced protections like 2FA, biometrics, and multi-signature wallets.",
+  },
+  {
+    title:
+      "How will this integrate with the $DOGEBALL game and gaming industry?",
+    text: "Users can cashout in-game rewards in the $DOGEBALL game using the $DOGEPAY app. The Gaming Industry remittances are $200+ billion. Gaming companies and users can use $DOGEPAY and DOGECHAIN to reward users with actual fiat. GameFI is exploding. DOGECHAIN owns both – you're buying the future of PayFi + GameFi.",
   },
 ];
 
-/** Index of the fees question — shown expanded in the design reference. */
-const openIndex = ref(4);
+const openIndex = ref(null);
 
 function toggleOpen(index) {
   openIndex.value = openIndex.value === index ? null : index;
@@ -74,10 +83,12 @@ function toggleOpen(index) {
                 rgba(255, 255, 255, 0.1) 40%,
                 rgba(255, 255, 255, 0.6) 100%
               );
-              -webkit-mask: linear-gradient(#fff 0 0) content-box,
+              -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
                 linear-gradient(#fff 0 0);
               -webkit-mask-composite: xor;
-              mask: linear-gradient(#fff 0 0) content-box,
+              mask:
+                linear-gradient(#fff 0 0) content-box,
                 linear-gradient(#fff 0 0);
               mask-composite: exclude;
               padding: 1px;
@@ -94,7 +105,9 @@ function toggleOpen(index) {
               <component :is="openIndex === idx ? Minus : Plus" />
             </div>
 
-            <div class="text-xl max-md:text-base my-auto font-bold leading-[110%]">
+            <div
+              class="text-xl max-md:text-base my-auto font-bold leading-[110%]"
+            >
               {{ card.title }}
             </div>
           </div>
