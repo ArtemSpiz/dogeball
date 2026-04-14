@@ -36,11 +36,10 @@ const steps = [
       class="relative z-[1] mx-auto flex max-w-[1400px] flex-col items-center px-5 md:px-10 lg:px-14"
     >
       <div class="flex max-w-[900px] flex-col items-center gap-4 text-center">
-        <h2 class="title px-2 md:px-0">
-          With the $DOGEPAY app
-        </h2>
+        <h2 class="title px-2 md:px-0">With the <br />$DOGEPAY app</h2>
+
         <p
-          class="font-grotesk text-base font-medium leading-[130%] text-[#FFEEE1]/95 md:text-xl"
+          class="font-grotesk text-sm font-medium leading-[130%] text-[#FFEEE1]/95 md:text-base"
         >
           All transactions are completed using the $DOGEPAY app
         </p>
@@ -48,7 +47,9 @@ const steps = [
 
       <!-- Phones sit behind cards; large negative margin pulls cards up over ~bottom half of phones -->
       <div class="relative z-[1] mt-8 w-full md:mt-10 lg:mt-12">
-        <div class="relative z-[1] mx-auto flex w-full max-w-[min(100%,960px)] justify-center">
+        <div
+          class="relative z-[1] mx-auto flex w-full max-w-[min(100%,960px)] justify-center"
+        >
           <img
             :src="stepsPhones"
             alt=""
