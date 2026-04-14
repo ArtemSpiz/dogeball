@@ -4,6 +4,7 @@ import DogePayFeatures from "@/components/DogePay/DogePayFeatures.vue";
 import DogePayDescription1 from "@/components/DogePay/DogePayDescription1.vue";
 import DogePayDescription2 from "@/components/DogePay/DogePayDescription2.vue";
 import DogePaySteps from "@/components/DogePay/DogePaySteps.vue";
+import DogePayPresale from "@/components/DogePay/DogePayPresale.vue";
 import DogePayFaqs from "@/components/DogePay/DogePayFaqs.vue";
 import DogePayWhitepaper from "@/components/DogePay/DogePayWhitepaper.vue";
 import { onMounted } from "vue";
@@ -31,14 +32,7 @@ onMounted(() => {
     <DogePayDescription1 />
     <DogePaySteps />
     <DogePayDescription2 />
-    <section
-      id="presale"
-      class="scroll-mt-28 bg-[#020A2B] px-6 py-16 max-md:py-12"
-    >
-      <p class="text-center font-grotesk text-base font-medium md:text-xl">
-        TODO: presale section
-      </p>
-    </section>
+    <DogePayPresale />
     <DogePayFaqs />
     <DogePayWhitepaper />
   </main>
