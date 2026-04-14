@@ -1,21 +1,44 @@
 <script setup>
-import { useI18n } from "vue-i18n";
+import DogePayHero from "@/components/DogePay/DogePayHero.vue";
+import DogePayFeatures from "@/components/DogePay/DogePayFeatures.vue";
+import DogePayDescription from "@/components/DogePay/DogePayDescription.vue";
+import DogePaySteps from "@/components/DogePay/DogePaySteps.vue";
+import DogePayFaqs from "@/components/DogePay/DogePayFaqs.vue";
+import DogePayWhitepaper from "@/components/DogePay/DogePayWhitepaper.vue";
+import { onMounted } from "vue";
+import { useRoute } from "vue-router";
 
-const { t } = useI18n();
+const route = useRoute();
+
+onMounted(() => {
+  const section = route.query.scroll;
+  if (section && typeof section === "string") {
+    const el = document.getElementById(section);
+    if (el) {
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: "smooth" });
+      }, 200);
+    }
+  }
+});
 </script>
 
 <template>
-  <main
-    id="dogepay"
-    class="min-h-[60vh] pt-[120px] max-md:pt-[100px] pb-16 px-6 flex flex-col items-center justify-center text-center bg-[#020A2B]"
-  >
-    <h1
-      class="font-grotesk text-[#FFEEE1] text-3xl max-md:text-2xl font-semibold mb-4"
+  <main id="dogepay" class="min-h-screen bg-[#020A2B]">
+    <DogePayHero />
+    <DogePayFeatures />
+    <DogePayDescription variant="1" />
+    <DogePaySteps />
+    <DogePayDescription variant="2" />
+    <section
+      id="presale"
+      class="scroll-mt-28 bg-[#020A2B] px-6 py-16 max-md:py-12"
     >
-      {{ t("dogepay.title") }}
-    </h1>
-    <p class="text-[#FFEEE1]/80 max-w-lg text-base leading-relaxed">
-      {{ t("dogepay.placeholder") }}
-    </p>
+      <p class="text-center font-grotesk text-base font-medium md:text-xl">
+        TODO: presale section
+      </p>
+    </section>
+    <DogePayFaqs />
+    <DogePayWhitepaper />
   </main>
 </template>
