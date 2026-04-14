@@ -1,7 +1,8 @@
 <script setup>
 import DogePayHero from "@/components/DogePay/DogePayHero.vue";
 import DogePayFeatures from "@/components/DogePay/DogePayFeatures.vue";
-import DogePayDescription from "@/components/DogePay/DogePayDescription.vue";
+import DogePayDescription1 from "@/components/DogePay/DogePayDescription1.vue";
+import DogePayDescription2 from "@/components/DogePay/DogePayDescription2.vue";
 import DogePaySteps from "@/components/DogePay/DogePaySteps.vue";
 import DogePayFaqs from "@/components/DogePay/DogePayFaqs.vue";
 import DogePayWhitepaper from "@/components/DogePay/DogePayWhitepaper.vue";
@@ -27,9 +28,9 @@ onMounted(() => {
   <main id="dogepay" class="min-h-screen bg-[#020A2B]">
     <DogePayHero />
     <DogePayFeatures />
-    <DogePayDescription variant="1" />
+    <DogePayDescription1 />
     <DogePaySteps />
-    <DogePayDescription variant="2" />
+    <DogePayDescription2 />
     <section
       id="presale"
       class="scroll-mt-28 bg-[#020A2B] px-6 py-16 max-md:py-12"
