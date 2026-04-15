@@ -22,7 +22,7 @@
   "hero": {
     "title": "DOGEBALL-TOKENIN PRESALE – ETHEREUM L2 KRYPTOPELI JA FIAT-KRYPTO-MUUNNOS",
     "whitelistSignup": "REKISTERÖIDY ENNENMYYNTI-VALKOISEEN LUETTELOON",
-    "subtitle": "DOGEBALL ($DOGEBALL) on Ethereum Layer 2 -kryptoesimyynti, joka tukee play-to-earn väistöpallopeliä ja $DOGEPAY-sovellusta Fiat to Crypto -offrampilla – myy krypto fiatiksi ja lähetä mille tahansa pankkitilille maailmassa. Nopeat siirrot, alhaiset maksut ja miljoonan dollarin kilpailupotti pelissämme.",
+    "subtitle": "DOGEBALL ($DOGEBALL) on Ethereum Layer 2 -kryptoesimyynti, joka tukee play-to-earn väistöpallopeliä ja $DOGEPAY-sovellusta Crypto to Fiat -offrampilla – myy krypto fiatiksi ja lähetä mille tahansa pankkitilille maailmassa. Nopeat siirrot, alhaiset maksut ja miljoonan dollarin kilpailupotti pelissämme.",
     "presaleLaunch": "ENNENMYYNTI KÄYNNISTYY..",
     "whitelistEmail": "Syötä sähköposti lisättäväksi valkoiseen listaan",
     "emailPlaceholder": "sähköpostisi",
@@ -62,7 +62,7 @@
   },
   "about": {
     "title": "TIETOJA",
-    "secSubtitle": "DOGEBALL Token ($DOGEBALL) on Ethereum Layer 2 -kryptoesimyyntiprojekti, joka on rakennettu nopeaan ja edulliseen lohkoketjupelaamiseen sekä siihen, että käyttäjät voivat muuntaa fiatia kryptoksi ja lähettää varoja mille tahansa pankkitilille maailmassa ilman KYC:tä. DOGEBALL-ekosysteemi tukee sekä play-to-earn väistöpallopeliä, jossa pelaajat kilpailevat ketjussa todellisista token-palkkioista ja miljoonan dollarin palkintopotista, että $DOGEPAY-sovellusta. Rakennettu mukautetulle EVM-yhteensopivalle Layer 2 -verkolle DOGEBALL mahdollistaa lähes välittömät tapahtumat, erittäin alhaiset maksut, staking-palkkiot ja skaalautuvan pelattavuuden massiiviseen käyttöönottoon. Kryptosi muuttaminen fiatiksi ei ole koskaan ollut helpompaa tai nopeampaa.",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) on Ethereum Layer 2 -kryptoesimyyntiprojekti, joka on rakennettu nopeaan ja edulliseen lohkoketjupelaamiseen sekä siihen, että käyttäjät voivat muuntaa kryptoa fiatiksi ja lähettää varoja mille tahansa pankkitilille maailmassa. DOGEBALL-ekosysteemi tukee sekä play-to-earn väistöpallopeliä, jossa pelaajat kilpailevat ketjussa todellisista token-palkkioista ja miljoonan dollarin palkintopotista, että $DOGEPAY-sovellusta. Rakennettu mukautetulle EVM-yhteensopivalle Layer 2 -verkolle DOGEBALL mahdollistaa lähes välittömät tapahtumat, erittäin alhaiset maksut, staking-palkkiot ja skaalautuvan pelattavuuden massiiviseen käyttöönottoon. Kryptosi muuttaminen fiatiksi ei ole koskaan ollut helpompaa tai nopeampaa.",
     "subtitle": "Mikä on DOGEBALL Token ($DOGEBALL)?",
     "description": "DOGECHAINin keskuksessa ovat $DOGEBALL-peli ja $DOGEPAY-sovellus. Koukuttava online-dodgeball-peli, jossa pelaajat heittävät DOGEBALLeja, nousevat tasoja, kiipeävät pistetaulukossa ja kilpailevat $1M palkintopotista ($500k parhaalle pelaajalle)! Ja krypto-fiat-offramp-maksusovellus NOLLAN valuutanvaihtomaksuilla ja lähes välittömällä maksun toimituksella.",
     "card1": "$DOGEBALL online-peli, pelaa voittaaksesi osan $1m:sta!",

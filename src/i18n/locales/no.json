@@ -22,7 +22,7 @@
   "hero": {
     "title": "DOGEBALL TOKEN PRESALE – ETHEREUM L2 KRYPTO-SPILL OG FIAT-TIL-KRYPTO-KONVERTERING",
     "whitelistSignup": "MELD DEG PÅ PRESALE WHITELISTEN",
-    "subtitle": "DOGEBALL ($DOGEBALL) er et Ethereum Layer 2 krypto-presale som driver et play-to-earn dodgeball-spill og $DOGEPAY-appen med Fiat to Crypto offramp – selg krypto for fiat og send til hvilken som helst bankkonto i verden. Raske transaksjoner, lave gebyrer og en konkurransepremie på $1 million i spillet vårt.",
+    "subtitle": "DOGEBALL ($DOGEBALL) er et Ethereum Layer 2 krypto-presale som driver et play-to-earn dodgeball-spill og $DOGEPAY-appen med Crypto to Fiat offramp – selg krypto for fiat og send til hvilken som helst bankkonto i verden. Raske transaksjoner, lave gebyrer og en konkurransepremie på $1 million i spillet vårt.",
     "presaleLaunch": "PRESALE STARTER OM..",
     "whitelistEmail": "Skriv inn e-post for å bli lagt til på whitelisten",
     "emailPlaceholder": "din e-post",
@@ -62,7 +62,7 @@
   },
   "about": {
     "title": "OM",
-    "secSubtitle": "DOGEBALL Token ($DOGEBALL) er et Ethereum Layer 2 krypto forsalgsprosjekt bygget for rask, lavpris blockchain-gaming og slik at brukere kan veksle fiat til krypto og sende til hvilken som helst bankkonto i verden uten KYC. DOGEBALL-økosystemet driver både et play-to-earn dodgeball-spill der spillere konkurrerer on-chain om ekte token-belønninger og en premiepott på $1 million, samt $DOGEPAY-appen. Bygget på et tilpasset EVM-kompatibelt Layer 2-nettverk gjør DOGEBALL nesten øyeblikkelige transaksjoner, ultralave gebyrer, staking-belønninger og skalerbar spillopplevelse for masseadopsjon mulig. Å konvertere kryptoen din til fiat har aldri vært enklere eller raskere.",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) er et Ethereum Layer 2 krypto forsalgsprosjekt bygget for rask, lavpris blockchain-gaming og slik at brukere kan veksle krypto til fiat og sende til hvilken som helst bankkonto i verden. DOGEBALL-økosystemet driver både et play-to-earn dodgeball-spill der spillere konkurrerer on-chain om ekte token-belønninger og en premiepott på $1 million, samt $DOGEPAY-appen. Bygget på et tilpasset EVM-kompatibelt Layer 2-nettverk gjør DOGEBALL nesten øyeblikkelige transaksjoner, ultralave gebyrer, staking-belønninger og skalerbar spillopplevelse for masseadopsjon mulig. Å konvertere kryptoen din til fiat har aldri vært enklere eller raskere.",
     "subtitle": "Hva er DOGEBALL Token ($DOGEBALL)?",
     "description": "I sentrum av DOGECHAIN er $DOGEBALL-spillet og $DOGEPAY-appen. Et avhengighetsskapende online dodgeball-spill der spillere kaster DOGEBALLs, går opp i nivå, klatrer på ledertavlen og konkurrerer om en premiepott på $1M ($500k til toppspilleren)! Og en betalingsapp for crypto-til-fiat-offramp med NULL FX-gebyrer og nesten øyeblikkelig betalingslevering.",
     "card1": "$DOGEBALL online-spill, spill for å vinne del av $1m!",

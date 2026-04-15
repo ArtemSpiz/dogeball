@@ -28,7 +28,7 @@ const features = [
   {
     icon: settlementIcon,
     title: "Instant settlement",
-    body: "Transactions confirmed on-chain and settled into recipient's bank account in under 30 seconds.",
+    body: "Transactions confirmed on-chain and settled into recipient's bank account in minutes.",
   },
 ];
 </script>

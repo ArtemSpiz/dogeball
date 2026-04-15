@@ -22,7 +22,7 @@
   "hero": {
     "title": "DOGEBALL 代币预售 – 以太坊 L2 加密游戏及法币与加密货币兑换",
     "whitelistSignup": "注册预售白名单",
-    "subtitle": "DOGEBALL ($DOGEBALL) 是一项以太坊 Layer 2 加密预售，为 play-to-earn 躲避球游戏以及 $DOGEPAY 应用提供支持，可实现 Fiat to Crypto Offramp——将加密资产卖出为法币并汇款至全球任意银行账户。交易快速、费用低廉，我们的游戏设有 100 万美元竞技奖池。",
+    "subtitle": "DOGEBALL ($DOGEBALL) 是一项以太坊 Layer 2 加密预售，为 play-to-earn 躲避球游戏以及 $DOGEPAY 应用提供支持，可实现 Crypto to Fiat Offramp——将加密资产卖出为法币并汇款至全球任意银行账户。交易快速、费用低廉，我们的游戏设有 100 万美元竞技奖池。",
     "presaleLaunch": "预售将在..后启动",
     "whitelistEmail": "输入电子邮件以添加到白名单",
     "emailPlaceholder": "您的电子邮件",
@@ -62,7 +62,7 @@
   },
   "about": {
     "title": "关于",
-    "secSubtitle": "DOGEBALL Token ($DOGEBALL) 是一个以太坊 Layer 2 加密预售项目，面向快速、低成本的区块链游戏，并让用户能够将法币转换为加密货币并在全球任意银行账户收款而无需任何 KYC。DOGEBALL 生态系统同时支持 play-to-earn 躲避球游戏（玩家在链上竞争真实代币奖励和 100 万美元奖池）以及 $DOGEPAY 应用。构建在自定义 EVM 兼容的 Layer 2 网络上，DOGEBALL 实现近乎即时的交易、超低费用、质押奖励以及面向大规模采用的可扩展玩法。将加密资产转为法币从未如此简单快捷。",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) 是一个以太坊 Layer 2 加密预售项目，面向快速、低成本的区块链游戏，并让用户能够将加密货币转换为法币并在全球任意银行账户收款。DOGEBALL 生态系统同时支持 play-to-earn 躲避球游戏（玩家在链上竞争真实代币奖励和 100 万美元奖池）以及 $DOGEPAY 应用。构建在自定义 EVM 兼容的 Layer 2 网络上，DOGEBALL 实现近乎即时的交易、超低费用、质押奖励以及面向大规模采用的可扩展玩法。将加密资产转为法币从未如此简单快捷。",
     "subtitle": "什么是DOGEBALL Token ($DOGEBALL)？",
     "description": "DOGECHAIN 的核心是 $DOGEBALL 游戏和 $DOGEPAY 应用。令人上瘾的在线躲避球游戏，玩家投掷 DOGEBALLs、升级、攀登排行榜并争夺 100 万美元奖池（顶尖玩家 50 万美元）！以及零外汇（FX）手续费、近乎即时到账的加密兑法币离场支付应用。",
     "card1": "$DOGEBALL在线游戏，玩游戏赢得$1m的一部分！",

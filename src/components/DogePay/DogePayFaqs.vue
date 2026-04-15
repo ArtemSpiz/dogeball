@@ -16,7 +16,7 @@ const faqItems = [
   },
   {
     title: "How do I get started?",
-    text: "All transactions will occur on our $DOGEPAY app (available soon in Apple App Store and Google Pay Store). Once users have downloaded the app, they will be assigned a multi-network (multi-chain) wallet address(s). You can send crypto to the $DOGEPAY wallet using your existing crypto wallets.",
+    text: "All transactions will occur on our $DOGEPAY app (available soon in Apple App Store and Google Pay Store). Once users have downloaded the app, they will be assigned a multi-network (multi-chain) wallet address(s). You can send crypto to the $DOGEPAY wallet using your existing crypto wallets. Users must have $DOGEBALL tokens in their wallet - buy in presale by clicking 'Join Presale' button above.",
   },
   {
     title: "How do I send money to bank accounts?",
@@ -27,8 +27,9 @@ const faqItems = [
     text: "There are no FX fees for conversion. As the transaction will be completed using our DOGECHAIN, there are near-zero gas fees per transaction which can be paid in $DOGEBALL only.",
   },
   {
-    title: "Is there KYC verification required?",
-    text: "No, there is no KYC verification for using $DOGEPAY to send fiat. No personal details will be collected by the app or by the $DOGEBALL team.",
+    title:
+      "Is there KYC verification required and is the DOGEPAY app licensed?",
+    text: "KYC may be required by external backpay payment providers through which our app sends payments (dependent on area and legal urisdictions). The app and service have been granted provisional licenses (currently in-process of being finalized).",
   },
   {
     title: "Is $DOGEPAY secure?",

@@ -54,9 +54,7 @@ const aboutCardColClass = (i) => [
         <div class="title">
           {{ t("about.subtitle") }}
         </div>
-        <div
-          class="font-grotesk text-base font-medium md:text-xl max-w-[730px]"
-        >
+        <div class="font-grotesk text-base font-medium md:text-xl max-w-5xl">
           {{ t("about.description") }}
         </div>
       </div>

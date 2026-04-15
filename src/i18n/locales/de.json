@@ -22,7 +22,7 @@
   "hero": {
     "title": "DOGEBALL TOKEN PRESALE – ETHEREUM L2 KRYPTO-SPIEL UND FIAT-ZU-KRYPTO-KONVERSION",
     "whitelistSignup": "MELDEN SIE SICH FÜR DIE PRESALE-WHITELIST AN",
-    "subtitle": "DOGEBALL ($DOGEBALL) ist ein Ethereum Layer 2 Krypto-Presale für ein Play-to-Earn-Dodgeball-Spiel und die $DOGEPAY-App mit Fiat-to-Crypto-Offramp – verkaufen Sie Krypto gegen Fiat und senden Sie auf jedes Bankkonto der Welt. Schnelle Transaktionen, niedrige Gebühren und ein Wettbewerbspreisgeld von 1 Million Dollar in unserem Spiel.",
+    "subtitle": "DOGEBALL ($DOGEBALL) ist ein Ethereum Layer 2 Krypto-Presale für ein Play-to-Earn-Dodgeball-Spiel und die $DOGEPAY-App mit Krypto-zu-Fiat-Offramp – verkaufen Sie Krypto gegen Fiat und senden Sie auf jedes Bankkonto der Welt. Schnelle Transaktionen, niedrige Gebühren und ein Wettbewerbspreisgeld von 1 Million Dollar in unserem Spiel.",
     "presaleLaunch": "PRESALE STARTET IN..",
     "whitelistEmail": "E-Mail eingeben, um zur Whitelist hinzugefügt zu werden",
     "emailPlaceholder": "Ihre E-Mail",
@@ -62,7 +62,7 @@
   },
   "about": {
     "title": "ÜBER UNS",
-    "secSubtitle": "DOGEBALL Token ($DOGEBALL) ist ein Ethereum Layer 2 Crypto-Presale-Projekt für schnelles, kostengünstiges Blockchain-Gaming sowie dafür, dass Nutzer Fiat in Krypto umwandeln und ohne KYC weltweit auf jedes Bankkonto senden können. Das DOGEBALL-Ökosystem umfasst sowohl ein Play-to-Earn-Dodgeball-Spiel, bei dem Spieler On-Chain um echte Token-Belohnungen und einen 1-Millionen-Dollar-Preisgeldpool konkurrieren, als auch die $DOGEPAY-App. Auf einem benutzerdefinierten EVM-kompatiblen Layer 2-Netzwerk aufgebaut, ermöglicht DOGEBALL nahezu sofortige Transaktionen, ultra-niedrige Gebühren, Staking-Belohnungen und skalierbares Gameplay für Massenadoption. Krypto in Fiat umzuwandeln war noch nie einfacher oder schneller.",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) ist ein Ethereum Layer 2 Crypto-Presale-Projekt für schnelles, kostengünstiges Blockchain-Gaming sowie dafür, dass Nutzer Krypto in Fiat umwandeln und weltweit auf jedes Bankkonto senden können. Das DOGEBALL-Ökosystem umfasst sowohl ein Play-to-Earn-Dodgeball-Spiel, bei dem Spieler On-Chain um echte Token-Belohnungen und einen 1-Millionen-Dollar-Preisgeldpool konkurrieren, als auch die $DOGEPAY-App. Auf einem benutzerdefinierten EVM-kompatiblen Layer 2-Netzwerk aufgebaut, ermöglicht DOGEBALL nahezu sofortige Transaktionen, ultra-niedrige Gebühren, Staking-Belohnungen und skalierbares Gameplay für Massenadoption. Krypto in Fiat umzuwandeln war noch nie einfacher oder schneller.",
     "subtitle": "Was ist DOGEBALL Token ($DOGEBALL)?",
     "description": "Im Zentrum von DOGECHAIN stehen das $DOGEBALL-Spiel und die $DOGEPAY-App. Ein süchtig machendes Online-Dodgeball-Spiel, bei dem Spieler DOGEBALLs werfen, aufsteigen, die Bestenliste erklimmen und um einen $1M-Preispool ($500k für den besten Spieler) kämpfen! Und eine Zahlungs-App für Krypto-zu-Fiat-Offramp mit NULL FX-Gebühren und nahezu sofortiger Zahlungsausführung.",
     "card1": "$DOGEBALL Online-Spiel, spielen Sie, um einen Teil von $1m zu gewinnen!",
