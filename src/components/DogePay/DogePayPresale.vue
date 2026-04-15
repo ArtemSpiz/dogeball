@@ -33,7 +33,7 @@ import { RouterLink } from "vue-router";
         get the biggest advantage.
       </p>
       <RouterLink
-        :to="{ path: '/', hash: '#presale' }"
+        :to="{ path: '/', query: { scroll: 'presale' } }"
         class="mt-10 inline-flex h-9 min-w-[240px] items-center justify-center rounded-full bg-[#EB4102] px-12 font-grotesk text-base font-medium leading-none text-white transition-opacity hover:opacity-90 md:mt-12 md:h-10 md:min-w-[300px] md:px-14 md:text-lg"
       >
         Join Presale

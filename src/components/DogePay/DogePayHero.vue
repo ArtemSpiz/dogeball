@@ -4,13 +4,21 @@ import heroBg from "@/assets/img/Dogepay/hero-bg.png";
 import heroBall from "@/assets/img/Dogepay/hero-ball.png";
 import heroHand from "@/assets/img/Dogepay/hero-hand.png";
 import heroMask from "@/assets/img/Dogepay/hero-mask.png";
+import { useRoute, useRouter } from "vue-router";
 
-const scrollToPresale = () => {
-  const el = document.getElementById("presale");
-  if (!el) return;
-  const HEADER = 100;
-  const y = el.getBoundingClientRect().top + window.pageYOffset - HEADER;
-  window.scrollTo({ top: y, behavior: "smooth" });
+const route = useRoute();
+const router = useRouter();
+
+const goToPresale = () => {
+  if (route.name === "Home") {
+    const el = document.getElementById("presale");
+    if (!el) return;
+    const HEADER = 100;
+    const y = el.getBoundingClientRect().top + window.pageYOffset - HEADER;
+    window.scrollTo({ top: y, behavior: "smooth" });
+    return;
+  }
+  router.push({ path: "/", query: { scroll: "presale" } });
 };
 </script>
 
@@ -65,7 +73,7 @@ const scrollToPresale = () => {
             <CustomButton
               title="Join Presale"
               class="w-full md:w-auto min-w-[300px] px-8 py-[8px] !text-[16px]"
-              @click="scrollToPresale"
+              @click="goToPresale"
             />
           </div>
         </div>
