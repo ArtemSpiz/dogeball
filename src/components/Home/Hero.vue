@@ -69,7 +69,7 @@ const submit = async () => {
       >
         <div class="shrink-0 px-6 flex items-center">
           <span class="font-grotesk font-semibold text-xs whitespace-nowrap">
-            USE BONUS CODE DB25 for 25% EXTRA TOKENS.
+            USE BONUS CODE PAY35 for 35% EXTRA TOKENS.
           </span>
         </div>
       </Vue3Marquee>
