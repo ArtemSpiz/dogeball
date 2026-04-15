@@ -17,116 +17,121 @@ const scrollToPresale = () => {
 <template>
   <section
     id="hero"
-    class="relative h-screen min-h-screen scroll-mt-28 overflow-hidden scrollbar-hide"
+    class="relative scroll-mt-28 overflow-hidden scrollbar-hide md:flex md:h-screen md:min-h-screen md:flex-col md:min-h-0"
   >
     <!-- Background: no overlays — show asset as exported -->
     <img
       :src="heroBg"
       alt=""
-      class="absolute inset-0 z-0 h-full w-full object-cover object-top"
+      class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-top"
     />
 
-    <!-- Ball: full-bleed layer so % center = viewport center (fixes ~1440px vs max-w-[1440px] mismatch) -->
+    <!-- Ball: decorative; position/size per breakpoint in scoped CSS -->
     <img
       :src="heroBall"
       alt=""
       class="dogepay-hero-ball pointer-events-none absolute z-[1] h-auto max-w-none object-contain"
     />
 
-    <!-- Hand: constrained column; ball is NOT inside this wrapper -->
+    <!--
+      Flex: col (mobile) / row (md+) — copy then hand. No section pt: padding-top lives on copy only so
+      the hand column can stretch from the top of the hero (avoids empty band beside the illustration).
+      z-index: hand < mask < copy.
+    -->
     <div
-      class="pointer-events-none absolute inset-0 z-[2] mx-auto flex max-h-none min-h-0 w-full max-w-[1440px] justify-end px-5 md:px-10 lg:px-14"
+      class="relative mx-auto flex w-full max-w-[1440px] flex-1 flex-col items-stretch px-5 lg:min-h-0 lg:h-full lg:flex-row lg:items-stretch lg:px-14"
     >
       <div
-        class="relative ml-auto h-full min-h-full w-full max-w-[min(100%,800px)] shrink-0"
+        class="relative z-[10] w-full max-w-md shrink-0 self-start pt-[92px] lg:mx-0 lg:w-auto lg:self-start lg:pt-[128px] lg:text-left lg:max-w-[840px] lg:pt-[140px]"
+      >
+        <div class="mt-3 md:mt-12 lg:mt-14">
+          <div class="title text-left">
+            <span class="block">PAY WITH CRYPTO.</span>
+            <span class="block">RECEIVE IN FIAT.</span>
+            <span class="block">INSTANTLY.</span>
+          </div>
+          <p
+            class="subtitle-text mx-auto mt-4 max-w-[470px] text-left font-grotesk text-base font-normal leading-[120%] max-md:mt-3 max-md:text-sm md:mx-0 md:mt-6"
+          >
+            DOGEPAY is the next-gen payment layer that connects crypto with
+            real-world money — fast, simple, and borderless.
+          </p>
+          <p
+            class="mt-4 text-left font-grotesk text-base font-medium max-md:mt-3 max-md:text-sm md:text-xl"
+          >
+            Welcome to the PayFi revolution!
+          </p>
+          <div class="mt-8 flex justify-center md:justify-start">
+            <CustomButton
+              title="Join Presale"
+              class="w-full md:w-auto min-w-[300px] px-8 py-[8px] !text-[16px]"
+              @click="scrollToPresale"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Hand: in-flow on mobile; right column md+ — below mask (z-[5]) -->
+      <div
+        class="dogepay-hero-hand-cell relative z-[2] w-full min-w-0 max-w-full max-md:max-w-none max-md:shrink-0 md:flex-1 md:self-stretch"
       >
         <img
           :src="heroHand"
           alt=""
-          class="dogepay-hero-hand pointer-events-none absolute bottom-0 z-[2] object-contain object-bottom"
+          class="dogepay-hero-hand pointer-events-none block max-w-full"
         />
       </div>
     </div>
 
-    <!-- Foliage mask: bottom-aligned; -1px bottom kills subpixel gap; object-bottom keeps art flush -->
+    <!-- Foliage mask: above ball + hand (pointer-events-none so CTAs stay clickable) -->
     <img
       :src="heroMask"
       alt=""
-      class="dogepay-hero-mask pointer-events-none absolute z-[3] w-full"
+      class="dogepay-hero-mask pointer-events-none absolute z-[5] w-full"
     />
-
-    <!-- Copy: padded down from the header so it isn’t hugging the top -->
-    <div
-      class="relative z-[4] mx-auto grid h-full min-h-full max-w-[1440px] items-start gap-8 px-5 pb-12 pt-[128px] max-md:pt-[108px] md:grid-cols-[1fr_1.05fr] md:gap-6 md:px-10 md:pb-12 md:pt-[158px] lg:pt-[172px] lg:px-14"
-    >
-      <div
-        class="mx-auto w-full max-w-xl self-start text-center md:mt-4 md:mx-0 md:text-left lg:max-w-[840px]"
-      >
-        <div
-          class="title px-1 md:px-0 !text-3xl !leading-[115%] md:!text-4xl md:!leading-[112%] lg:!text-[46px] lg:!leading-[110%]"
-        >
-          <span class="block">PAY WITH CRYPTO.</span>
-          <span class="block">RECEIVE IN FIAT.</span>
-          <span class="block">INSTANTLY.</span>
-        </div>
-        <p
-          class="subtitle-text mx-auto mt-4 max-w-[470px] font-grotesk text-base font-normal leading-[120%] max-md:mt-3 max-md:text-sm md:mx-0 md:mt-6"
-        >
-          DOGEPAY is the next-gen payment layer that connects crypto with
-          real-world money — fast, simple, and borderless.
-        </p>
-        <p
-          class="mx-auto mt-4 font-grotesk text-base font-medium max-md:mt-3 max-md:text-sm md:mx-0 md:text-xl"
-        >
-          Welcome to the PayFi revolution!
-        </p>
-        <div class="mt-8 flex justify-center md:justify-start">
-          <CustomButton
-            title="Join Presale"
-            class="min-w-[300px] px-8 py-[8px] !text-[16px]"
-            @click="scrollToPresale"
-          />
-        </div>
-      </div>
-
-      <!-- Spacer so grid matches illustration column on desktop -->
-      <div
-        class="hidden min-h-[min(52vh,420px)] md:block md:min-h-[420px]"
-        aria-hidden="true"
-      />
-    </div>
   </section>
 </template>
 
 <style scoped>
-/* Ball: hidden on small screens; from tablet — center shifted further left */
+/* Ball — mobile: visible, inset from left; tablet: smaller + further left; desktop: larger + further left */
 .dogepay-hero-ball {
-  display: none !important;
+  display: block !important;
+  height: auto !important;
+  max-height: none !important;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .dogepay-hero-ball {
-    display: block !important;
-    bottom: 6%;
+    left: 1% !important;
+    right: auto !important;
+    bottom: 12%;
+    transform: none !important;
+    width: clamp(84px, 21vw, 118px) !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dogepay-hero-ball {
+    bottom: 12%;
     left: 50%;
-    transform: translateX(calc(-50% - 100px));
-    width: clamp(108px, 16vw, 176px) !important;
-    height: auto !important;
-    max-height: none !important;
+    transform: translateX(calc(-50% - 148px)) !important;
+    width: clamp(100px, 13vw, 164px) !important;
   }
 }
 
 @media (min-width: 1024px) {
   .dogepay-hero-ball {
     bottom: 7%;
+    left: 50%;
+    transform: translateX(calc(-50% - 168px)) !important;
+    width: clamp(108px, 16vw, 176px) !important;
   }
 }
 
-/* Bottom foliage mask: extend 1px past hero bottom to remove hairline gap */
 .dogepay-hero-mask {
   position: absolute;
   inset: 0 0 -1px 0;
-  z-index: 3;
+  z-index: 5;
   min-height: calc(100% + 1px) !important;
   width: 100% !important;
   height: auto !important;
@@ -136,46 +141,81 @@ const scrollToPresale = () => {
 }
 
 /*
-  Global main.css sets img { width: 100%; height: 100%; } — override explicitly.
-  Mobile: full width. Tablet+: fill column height (width follows aspect ratio).
+  Hand cell + image:
+  — mobile: width 100%, natural height, stacked under copy
+  — tablet (md–lg): width 100%, column flex aligns image to bottom
+  — desktop (lg+): image never exceeds cell — max 100% × 100%, contain, centered
 */
-.dogepay-hero-hand {
-  display: block !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: 100% !important;
-  max-width: none !important;
-  height: auto !important;
-  max-height: none !important;
+.dogepay-hero-hand-cell {
+  display: flex;
+  width: 100%;
+  min-height: 0;
 }
 
-@media (min-width: 768px) {
+/* Mobile — width 100%, stack under copy */
+@media (max-width: 767px) {
+  .dogepay-hero-hand-cell {
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
   .dogepay-hero-hand {
-    left: auto !important;
-    width: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
     max-width: 100% !important;
-    height: 100% !important;
-    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: bottom center !important;
   }
 }
 
-/*
-  Pull past the inner column so the hand lines up with the viewport edge.
-  Outer row uses px-5 / md:px-10 / lg:px-14 — negative right must exceed that inset.
-*/
+/* Tablet — width 100%, anchored to bottom of column */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .dogepay-hero-hand-cell {
+    min-height: min(52vh, 420px);
+    align-items: flex-end;
+    justify-content: center;
+  }
+
   .dogepay-hero-hand {
-    right: -96px !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: min(52vh, 420px) !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    object-position: bottom center !important;
   }
 }
 
+/* Desktop — keep bitmap inside the cell (no “taller than 100%” crop bleed); letterbox if aspect differs */
 @media (min-width: 1024px) {
+  .dogepay-hero-hand-cell {
+    position: relative;
+    align-self: stretch;
+    min-height: 0;
+    flex: 1 1 0%;
+    overflow: hidden;
+    margin-right: -112px;
+    width: calc(100% + 112px);
+    max-width: none;
+  }
+
   .dogepay-hero-hand {
-    right: -112px !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    transform: translate(-50%, -50%) !important;
+    object-fit: contain !important;
+    object-position: center center !important;
   }
 }
 
-/* Match Home hero subtitle readability on photo backgrounds */
 .subtitle-text {
   text-shadow:
     0 2px 8px rgba(0, 0, 0, 0.8),
