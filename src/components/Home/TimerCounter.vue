@@ -16,7 +16,7 @@ let interval;
 
 const updateCountdown = () => {
   const now = new Date().getTime();
-  const targetDate = new Date("2026-01-30T17:00:00Z").getTime();
+  const targetDate = new Date("2026-05-02T17:00:00Z").getTime();
   const difference = targetDate - now;
 
   if (difference > 0) {
@@ -49,76 +49,85 @@ const splitDigits = (value) => value.split("");
 
 <template>
   <div
-    class="mt-8 max-md:mt-6 p-4 max-md:p-3 w-max flex items-center justify-center gap-4 backdrop-blur-[2px] rounded-2xl max-md:rounded-md border-2 border-white/20 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
+    class="mt-8 max-md:mt-6 flex flex-col items-center gap-3 max-md:gap-2 w-max"
   >
-    <div class="flex gap-2">
-      <div class="flex flex-col items-center">
-        <div class="flex gap-1">
-          <DigitCard
-            v-for="(d, i) in splitDigits(days)"
-            :key="i"
-            :digit="d"
-            :left="LeftClock"
-            :right="RightClock"
-          />
+    <div
+      class="font-grotesk font-semibold text-sm max-md:text-xs leading-[120%] tracking-[0.12em] uppercase text-center text-white/95"
+    >
+      {{ t("timer.presaleEndsIn") }}
+    </div>
+    <div
+      class="p-4 max-md:p-3 w-max flex items-center justify-center gap-4 backdrop-blur-[2px] rounded-2xl max-md:rounded-md border-2 border-white/20 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
+    >
+      <div class="flex gap-2">
+        <div class="flex flex-col items-center">
+          <div class="flex gap-1">
+            <DigitCard
+              v-for="(d, i) in splitDigits(days)"
+              :key="i"
+              :digit="d"
+              :left="LeftClock"
+              :right="RightClock"
+            />
+          </div>
+
+          <div
+            class="font-grotesk !leading-[120%] text-base max-md:text-sm mt-1 font-medium"
+          >
+            {{ t("timer.days") }}
+          </div>
         </div>
 
-        <div
-          class="font-grotesk !leading-[120%] text-base max-md:text-sm mt-1 font-medium"
-        >
-          {{ t("timer.days") }}
-        </div>
-      </div>
+        <div class="flex flex-col items-center">
+          <div class="flex gap-1">
+            <DigitCard
+              v-for="(d, i) in splitDigits(hours)"
+              :key="i"
+              :digit="d"
+              :left="LeftClock"
+              :right="RightClock"
+            />
+          </div>
 
-      <div class="flex flex-col items-center">
-        <div class="flex gap-1">
-          <DigitCard
-            v-for="(d, i) in splitDigits(hours)"
-            :key="i"
-            :digit="d"
-            :left="LeftClock"
-            :right="RightClock"
-          />
+          <div
+            class="font-grotesk !leading-[120%] text-base mt-1 max-md:text-sm font-medium"
+          >
+            {{ t("timer.hours") }}
+          </div>
         </div>
 
-        <div
-          class="font-grotesk !leading-[120%] text-base mt-1 max-md:text-sm font-medium"
-        >
-          {{ t("timer.hours") }}
+        <div class="flex flex-col items-center">
+          <div class="flex gap-1">
+            <DigitCard
+              v-for="(d, i) in splitDigits(minutes)"
+              :key="i"
+              :digit="d"
+              :left="LeftClock"
+              :right="RightClock"
+            />
+          </div>
+          <div
+            class="font-grotesk !leading-[120%] text-base mt-1 max-md:text-sm font-medium"
+          >
+            {{ t("timer.minutes") }}
+          </div>
         </div>
-      </div>
 
-      <div class="flex flex-col items-center">
-        <div class="flex gap-1">
-          <DigitCard
-            v-for="(d, i) in splitDigits(minutes)"
-            :key="i"
-            :digit="d"
-            :left="LeftClock"
-            :right="RightClock"
-          />
-        </div>
-        <div
-          class="font-grotesk !leading-[120%] text-base mt-1 max-md:text-sm font-medium"
-        >
-          {{ t("timer.minutes") }}
-        </div>
-      </div>
-
-      <div class="flex flex-col items-center">
-        <div class="flex gap-1">
-          <DigitCard
-            v-for="(d, i) in splitDigits(seconds)"
-            :key="i"
-            :digit="d"
-            :left="LeftClock"
-            :right="RightClock"
-          />
-        </div>
-        <div
-          class="font-grotesk !leading-[120%] text-base mt-1 max-md:text-sm font-medium"
-        >
-          {{ t("timer.seconds") }}
+        <div class="flex flex-col items-center">
+          <div class="flex gap-1">
+            <DigitCard
+              v-for="(d, i) in splitDigits(seconds)"
+              :key="i"
+              :digit="d"
+              :left="LeftClock"
+              :right="RightClock"
+            />
+          </div>
+          <div
+            class="font-grotesk !leading-[120%] text-base mt-1 max-md:text-sm font-medium"
+          >
+            {{ t("timer.seconds") }}
+          </div>
         </div>
       </div>
     </div>
