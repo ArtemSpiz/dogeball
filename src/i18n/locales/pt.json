@@ -28,7 +28,9 @@
     "emailPlaceholder": "seu email",
     "getEarlyAccess": "Obtenha acesso antecipado!",
     "audit": "Auditoria",
-    "whitepaper": "Whitepaper"
+    "whitepaper": "Whitepaper",
+    "marqueePay35": "USE O CÓDIGO BÔNUS PAY35 PARA 35% DE TOKENS EXTRAS!",
+    "marqueeTopBuyer": "O MAIOR COMPRADOR DA SEMANA RECEBE 100% DE TOKENS ADICIONAIS!"
   },
   "roadmap": {
     "welcome": "BEM-VINDO AO JOGO DOGEBALL!",
@@ -265,6 +267,7 @@
     "bonusBanner": {
       "turnRewards": "OFERTA LIMITADA DIA DOS NAMORADOS",
       "dashboardEarn": "Use o código bônus PAY35 para 35% de tokens extras.",
+      "topBuyerWeek": "O maior comprador da semana recebe 100% de tokens adicionais.",
       "turnRewardsSuffix": " para obter 50% extras de tokens #DOGEBALL",
       "presaleLaunchOffer": "Oferta de lançamento de pré-venda",
       "useBonusCode": "Usar código bônus",

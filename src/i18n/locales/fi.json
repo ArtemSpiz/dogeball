@@ -28,7 +28,9 @@
     "emailPlaceholder": "sähköpostisi",
     "getEarlyAccess": "Hanki varhainen pääsy!",
     "audit": "Tarkastus",
-    "whitepaper": "Valkoinen paperi"
+    "whitepaper": "Valkoinen paperi",
+    "marqueePay35": "KÄYTÄ BONUSKOODIA PAY35 – 35 % YLIMÄÄRÄISIÄ TOKENEITA!",
+    "marqueeTopBuyer": "VIIKON SUURIN OSTAJA SAA 100 % LISÄTOKENEITA!"
   },
   "roadmap": {
     "welcome": "TERVETULOA DOGEBALL-PELIIN!",
@@ -265,6 +267,7 @@
     "bonusBanner": {
       "turnRewards": "YSTÄVÄNPÄIVÄN Rajoitettu tarjous",
       "dashboardEarn": "Käytä bonuskoodia PAY35 saadaksesi 35% ylimääräisiä tokeneja.",
+      "topBuyerWeek": "Viikon suurin ostaja saa 100 % ylimääräisiä tokeneja.",
       "turnRewardsSuffix": " saadaksesi 50% ylimääräistä #DOGEBALL-tokeneita",
       "presaleLaunchOffer": "Esimyynnin käynnistystarjous",
       "useBonusCode": "Käytä bonuskoodia",

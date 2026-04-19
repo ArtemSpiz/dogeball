@@ -28,7 +28,9 @@
     "emailPlaceholder": "بريدك الإلكتروني",
     "getEarlyAccess": "احصل على الوصول المبكر!",
     "audit": "التدقيق",
-    "whitepaper": "الورقة البيضاء"
+    "whitepaper": "الورقة البيضاء",
+    "marqueePay35": "استخدم رمز المكافأة PAY35 للحصول على 35% رموز إضافية.",
+    "marqueeTopBuyer": "أعلى مشتري للأسبوع يحصل على 100% رموز إضافية."
   },
   "roadmap": {
     "welcome": "مرحباً بك في لعبة DOGEBALL!",
@@ -265,6 +267,7 @@
     "bonusBanner": {
       "turnRewards": "عرض عيد الحب لفترة محدودة",
       "dashboardEarn": "استخدم رمز المكافأة PAY35 للحصول على 35% من الرموز الإضافية.",
+      "topBuyerWeek": "أكبر مشتري خلال الأسبوع يحصل على 100% من الرموز الإضافية.",
       "turnRewardsSuffix": " للحصول على 50% إضافية من رموز #DOGEBALL",
       "presaleLaunchOffer": "عرض إطلاق البيع المسبق",
       "useBonusCode": "استخدم رمز المكافأة",

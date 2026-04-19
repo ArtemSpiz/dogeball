@@ -69,7 +69,12 @@ const submit = async () => {
       >
         <div class="shrink-0 px-6 flex items-center">
           <span class="font-grotesk font-semibold text-xs whitespace-nowrap">
-            USE BONUS CODE PAY35 for 35% EXTRA TOKENS.
+            {{ t("hero.marqueePay35") }}
+          </span>
+        </div>
+        <div class="shrink-0 px-6 flex items-center">
+          <span class="font-grotesk font-semibold text-xs whitespace-nowrap">
+            {{ t("hero.marqueeTopBuyer") }}
           </span>
         </div>
       </Vue3Marquee>

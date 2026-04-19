@@ -28,7 +28,9 @@
     "emailPlaceholder": "メールアドレス",
     "getEarlyAccess": "早期アクセスを取得！",
     "audit": "監査",
-    "whitepaper": "ホワイトペーパー"
+    "whitepaper": "ホワイトペーパー",
+    "marqueePay35": "ボーナスコード PAY35 で追加トークン 35%！",
+    "marqueeTopBuyer": "週間トップバイヤーは追加トークン100%獲得！"
   },
   "roadmap": {
     "welcome": "DOGEBALLゲームへようこそ！",
@@ -265,6 +267,7 @@
     "bonusBanner": {
       "turnRewards": "バレンタインデー限定",
       "dashboardEarn": "ボーナスコード PAY35 を使用して 35% の追加トークンを獲得。",
+      "topBuyerWeek": "週間の購入額トップには追加トークンが100%付与されます。",
       "turnRewardsSuffix": " を使用して50%追加の#DOGEBALLトークンを獲得",
       "presaleLaunchOffer": "プレセールローンチオファー",
       "useBonusCode": "ボーナスコードを使用",

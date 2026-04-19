@@ -28,7 +28,9 @@
     "emailPlaceholder": "la tua email",
     "getEarlyAccess": "Ottieni accesso anticipato!",
     "audit": "Audit",
-    "whitepaper": "Whitepaper"
+    "whitepaper": "Whitepaper",
+    "marqueePay35": "USA IL CODICE BONUS PAY35 PER IL 35% DI TOKEN IN PIÙ!",
+    "marqueeTopBuyer": "IL MAGGIOR ACQUIRENTE DELLA SETTIMANA RICEVE IL 100% DI TOKEN AGGIUNTIVI!"
   },
   "roadmap": {
     "welcome": "BENVENUTO NEL GIOCO DOGEBALL!",
@@ -265,6 +267,7 @@
     "bonusBanner": {
       "turnRewards": "OFFERTA LIMITATA SAN VALENTINO",
       "dashboardEarn": "Usa il codice bonus PAY35 per il 35% di token in più.",
+      "topBuyerWeek": "Il maggior acquirente della settimana riceve il 100% di token aggiuntivi.",
       "turnRewardsSuffix": " per ottenere il 50% in più di token #DOGEBALL",
       "presaleLaunchOffer": "Offerta di lancio presale",
       "useBonusCode": "Usa codice bonus",

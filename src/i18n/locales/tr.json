@@ -28,7 +28,9 @@
     "emailPlaceholder": "e-posta adresiniz",
     "getEarlyAccess": "Erken erişim alın!",
     "audit": "Denetim",
-    "whitepaper": "Beyaz Kitap"
+    "whitepaper": "Beyaz Kitap",
+    "marqueePay35": "PAY35 BONUS KODU İLE %35 EKSTRA TOKEN!",
+    "marqueeTopBuyer": "HAFTANIN EN ÇOK ALICISI %100 EKSTRA TOKEN KAZANIR!"
   },
   "roadmap": {
     "welcome": "DOGEBALL OYUNUNA HOŞ GELDİNİZ!",
@@ -265,6 +267,7 @@
     "bonusBanner": {
       "turnRewards": "SEVGİLİLER GÜNÜ Sınırlı Süre",
       "dashboardEarn": "35% ekstra token için bonus kodu PAY35 kullanın.",
+      "topBuyerWeek": "Haftanın en çok alıcısı %100 ekstra token kazanır.",
       "turnRewardsSuffix": " %50 ekstra #DOGEBALL token almak için",
       "presaleLaunchOffer": "Ön Satış Lansman Teklifi",
       "useBonusCode": "Bonus Kodu Kullan",

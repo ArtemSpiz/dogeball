@@ -28,7 +28,9 @@
     "emailPlaceholder": "您的电子邮件",
     "getEarlyAccess": "获得早期访问！",
     "audit": "审计",
-    "whitepaper": "白皮书"
+    "whitepaper": "白皮书",
+    "marqueePay35": "使用优惠码 PAY35，额外多得 35% 代币！",
+    "marqueeTopBuyer": "本周购买量最高可再得 100% 代币！"
   },
   "roadmap": {
     "welcome": "欢迎来到DOGEBALL游戏！",
@@ -265,6 +267,7 @@
     "bonusBanner": {
       "turnRewards": "情人节限时优惠",
       "dashboardEarn": "使用优惠码 PAY35 可获得 35% 额外代币。",
+      "topBuyerWeek": "本周购买量最高的用户可额外获得 100% 代币。",
       "turnRewardsSuffix": " 获得50%额外的#DOGEBALL代币",
       "presaleLaunchOffer": "预售启动优惠",
       "useBonusCode": "使用奖金代码",
