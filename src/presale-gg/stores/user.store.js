@@ -50,7 +50,10 @@ if (typeof window !== "undefined") {
       onChange: (account) => {
         const address = account.address;
         if (!address) return $userState.set({ ...defaultUserState });
-        pushWalletConnectOnce();
+        pushWalletConnectOnce({
+          wallet_address: address,
+          chainId: account.chainId ?? null,
+        });
         api.getUser(address).then((res) => $userState.setKey("user", res.data));
         api
           .getUserStakeData(address)
@@ -84,7 +87,7 @@ export const getUserToken = async (options) => {
   }).catch((err) => {
     addToast(
       api.getApiErrorMessage(err, "Error signing message"),
-      ToastType.ERROR
+      ToastType.ERROR,
     );
     throw new Error("Error confirming user");
   });
@@ -94,7 +97,7 @@ export const getUserToken = async (options) => {
   const validRes = await api.verifySiweMessage(
     address,
     messageRes.data.message,
-    signedMessage
+    signedMessage,
   );
   const token = validRes.data.access;
   $userState.setKey("token", token);
