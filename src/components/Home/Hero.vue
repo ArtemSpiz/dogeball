@@ -103,7 +103,7 @@ const submit = async () => {
       </div>
 
       <div
-        class="max-w-[2000px] w-full flex justify-center items-center mx-auto relative max-md:static"
+        class="max-w-[2000px] w-full flex flex-col justify-center items-center mx-auto relative max-md:static"
       >
         <!-- <div
           class="flex absolute bottom-0 left-[120px] max-xl:left-[20px] max-lg:hidden w-full max-w-[325px] max-xl:max-w-[300px] flex-col p-4 gap-4 border border-[#8B94F5] rounded-2xl bg-[rgba(53,19,147,0.52)] backdrop-blur-[5px] shadow-[0_0_154px_0_#263166]"
@@ -149,6 +149,18 @@ const submit = async () => {
               class="py-[18px] !text-[22px] !w-[160px]"
           /></a>
         </div>
+
+        <p class="mt-2 max-w-sm text-center">
+          Join our Telegram group for the latest updates, bonus codes and
+          offers:
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://t.me/dogeballtoken"
+            class="underline"
+            >@dogeballtoken</a
+          >
+        </p>
       </div>
     </div>
   </div>
