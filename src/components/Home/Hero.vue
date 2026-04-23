@@ -150,7 +150,7 @@ const submit = async () => {
           /></a>
         </div>
 
-        <p class="mt-2 max-w-sm text-center">
+        <p class="description mt-2 max-w-sm text-center">
           Join our Telegram group for the latest updates, bonus codes and
           offers:
           <a
