@@ -2,13 +2,13 @@
 import { useI18n } from "vue-i18n";
 import CustomButton from "@/ui/CustomButton.vue";
 import TimerCounter from "./TimerCounter.vue";
-import Circle from "@/assets/img/Home/CircleText.png";
+// import Circle from "@/assets/img/Home/CircleText.png";
 import { Vue3Marquee } from "vue3-marquee";
 
 const { t } = useI18n();
 import { useAccount, useToast } from "@/composables";
 import { ref, computed, onMounted, onUnmounted } from "vue";
-import Spinner from "../PresaleWidget/ui/Spinner.vue";
+// import Spinner from "../PresaleWidget/ui/Spinner.vue";
 import { presaleApi } from "@/api";
 
 const accountData = useAccount();
@@ -158,7 +158,7 @@ const submit = async () => {
             rel="noopener noreferrer"
             href="https://t.me/dogeballtoken"
             class="underline"
-            >@dogeballtoken</a
+            >https://t.me/dogeballtoken</a
           >
         </p>
       </div>
