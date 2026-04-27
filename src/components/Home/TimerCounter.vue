@@ -21,16 +21,16 @@ const updateCountdown = () => {
 
   if (difference > 0) {
     days.value = String(
-      Math.floor(difference / (1000 * 60 * 60 * 24))
+      Math.floor(difference / (1000 * 60 * 60 * 24)),
     ).padStart(2, "0");
     hours.value = String(
-      Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+      Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
     ).padStart(2, "0");
     minutes.value = String(
-      Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+      Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
     ).padStart(2, "0");
     seconds.value = String(
-      Math.floor((difference % (1000 * 60)) / 1000)
+      Math.floor((difference % (1000 * 60)) / 1000),
     ).padStart(2, "0");
   }
 };
@@ -49,7 +49,7 @@ const splitDigits = (value) => value.split("");
 
 <template>
   <div
-    class="mt-8 max-md:mt-6 flex flex-col items-center gap-3 max-md:gap-2 w-max"
+    class="mt-6 max-md:mt-5 flex flex-col items-center gap-3 max-md:gap-2 w-max mb-5 max-md:mb-2"
   >
     <div
       class="font-grotesk font-semibold text-sm max-md:text-xs leading-[120%] tracking-[0.12em] uppercase text-center text-white/95"
