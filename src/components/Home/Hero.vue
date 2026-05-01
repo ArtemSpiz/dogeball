@@ -80,9 +80,11 @@ const submit = async () => {
       </Vue3Marquee>
     </div>
     <div
-      class="h-screen 2xl:max-h-[1400px] 2xl:bg-bottom max-md:h-auto max-md:min-h-[440px] relative min-h-[600px] px-5 pt-[100px] max-md:pt-[80px] flex flex-col items-center justify-between pb-[56px] max-md:pb-[30px] bg-[url('@/assets/img/Home/HeroBg.png')] max-xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat mobile-bg-crop"
+      class="max-md:h-auto md:min-h-screen 2xl:max-h-[1400px] 2xl:bg-bottom max-md:min-h-[440px] relative min-h-[600px] px-5 pt-[100px] max-md:pt-[80px] flex flex-col items-center justify-between pb-[56px] max-md:pb-[30px] bg-[url('@/assets/img/Home/HeroBg.png')] max-xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat mobile-bg-crop"
     >
-      <div class="text-center flex flex-col items-center justify-center w-full">
+      <div
+        class="text-center flex flex-col items-center justify-center w-full shrink-0"
+      >
         <div class="title max-w-[800px] px-3">
           {{ t("hero.title") }}
         </div>
