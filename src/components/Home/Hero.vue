@@ -1,7 +1,7 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import CustomButton from "@/ui/CustomButton.vue";
-import TimerCounter from "./TimerCounter.vue";
+// import TimerCounter from "./TimerCounter.vue";
 // import Circle from "@/assets/img/Home/CircleText.png";
 import { Vue3Marquee } from "vue3-marquee";
 
@@ -101,7 +101,7 @@ const submit = async () => {
         >
           {{ t("hero.presaleLaunch") }}
         </div> -->
-        <TimerCounter />
+        <!-- <TimerCounter /> -->
       </div>
 
       <div
