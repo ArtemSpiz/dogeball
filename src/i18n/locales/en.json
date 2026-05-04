@@ -29,8 +29,8 @@
     "getEarlyAccess": "Get early access!",
     "audit": "Audit",
     "whitepaper": "Whitepaper",
-    "marqueePay35": "USE BONUS CODE PAY35 for 35% EXTRA TOKENS.",
-    "marqueeTopBuyer": "TOP BUYER FOR WEEK GETS 100% ADDITIONAL TOKENS."
+    "marqueePay50": "USE BONUS CODE PAY50 for 50% EXTRA TOKENS.",
+    "marqueeTopBuyer": "TOP BUYER FOR WEEK GETS 50% ADDITIONAL TOKENS."
   },
   "roadmap": {
     "welcome": "WELCOME TO THE DOGEBALL GAME!",
@@ -292,8 +292,8 @@
     },
     "bonusBanner": {
       "turnRewards": "",
-      "dashboardEarn": "Use bonus code PAY35 for 35% extra tokens.",
-      "topBuyerWeek": "Top buyer for the week gets 100% additional tokens.",
+      "dashboardEarn": "Use bonus code PAY50 for 50% extra tokens.",
+      "topBuyerWeek": "Top buyer for the week gets 50% additional tokens.",
       "turnRewardsSuffix": " to get 50% extra #DOGEBALL tokens",
       "presaleLaunchOffer": "Presale Launch Offer",
       "useBonusCode": "Use Bonus Code",

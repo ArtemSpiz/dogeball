@@ -69,7 +69,7 @@ const submit = async () => {
       >
         <div class="shrink-0 px-6 flex items-center">
           <span class="font-grotesk font-semibold text-xs whitespace-nowrap">
-            {{ t("hero.marqueePay35") }}
+            {{ t("hero.marqueePay50") }}
           </span>
         </div>
         <div class="shrink-0 px-6 flex items-center">

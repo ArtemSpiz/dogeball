@@ -29,8 +29,8 @@
     "getEarlyAccess": "Krijg vroege toegang!",
     "audit": "Audit",
     "whitepaper": "Whitepaper",
-    "marqueePay35": "GEBRUIK BONUSCODE PAY35 VOOR 35% EXTRA TOKENS!",
-    "marqueeTopBuyer": "TOPKOPER VAN DE WEEK KRIJGT 100% EXTRA TOKENS!"
+    "marqueePay50": "GEBRUIK BONUSCODE PAY50 VOOR 50% EXTRA TOKENS!",
+    "marqueeTopBuyer": "TOPKOPER VAN DE WEEK KRIJGT 50% EXTRA TOKENS!"
   },
   "roadmap": {
     "welcome": "WELKOM BIJ HET DOGEBALL-SPEL!",
@@ -266,8 +266,8 @@
     },
     "bonusBanner": {
       "turnRewards": "VALENTIJNSDAG BEPERKT AANBOD",
-      "dashboardEarn": "Gebruik bonuscode PAY35 voor 35% extra tokens.",
-      "topBuyerWeek": "De topkoper van de week krijgt 100% extra tokens.",
+      "dashboardEarn": "Gebruik bonuscode PAY50 voor 50% extra tokens.",
+      "topBuyerWeek": "De topkoper van de week krijgt 50% extra tokens.",
       "turnRewardsSuffix": " om 50% extra #DOGEBALL tokens te krijgen",
       "presaleLaunchOffer": "Voorverkoop Lancering Aanbieding",
       "useBonusCode": "Gebruik Bonuscode",

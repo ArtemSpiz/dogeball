@@ -29,8 +29,8 @@
     "getEarlyAccess": "Få tidlig adgang!",
     "audit": "Revision",
     "whitepaper": "Whitepaper",
-    "marqueePay35": "BRUG BONUSKODE PAY35 FOR 35% EKSTRA TOKENS.",
-    "marqueeTopBuyer": "UGENS STØRSTE KØBER FÅR 100% EKSTRA TOKENS."
+    "marqueePay50": "BRUG BONUSKODE PAY50 FOR 50% EKSTRA TOKENS.",
+    "marqueeTopBuyer": "UGENS STØRSTE KØBER FÅR 50% EKSTRA TOKENS."
   },
   "roadmap": {
     "welcome": "VELKOMMEN TIL DOGEBALL-SPILLET!",
@@ -265,8 +265,8 @@
     },
     "bonusBanner": {
       "turnRewards": "VALENTINSDAG BEGRÆNSET TILBUD",
-      "dashboardEarn": "Brug bonuskode PAY35 for 35% ekstra tokens.",
-      "topBuyerWeek": "Ugentlig topkøber får 100% ekstra tokens.",
+      "dashboardEarn": "Brug bonuskode PAY50 for 50% ekstra tokens.",
+      "topBuyerWeek": "Ugentlig topkøber får 50% ekstra tokens.",
       "turnRewardsSuffix": " for at få 50% ekstra #DOGEBALL tokens",
       "presaleLaunchOffer": "Forsalgs lancerings tilbud",
       "useBonusCode": "Brug bonuskode",

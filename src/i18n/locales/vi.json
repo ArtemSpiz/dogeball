@@ -29,8 +29,8 @@
     "getEarlyAccess": "Nhận quyền truy cập sớm!",
     "audit": "Kiểm toán",
     "whitepaper": "Sách trắng",
-    "marqueePay35": "DÙNG MÃ THƯỞNG PAY35 ĐỂ NHẬN THÊM 35% TOKEN!",
-    "marqueeTopBuyer": "NGƯỜI MUA NHIỀU NHẤT TRONG TUẦN NHẬN THÊM 100% TOKEN!"
+    "marqueePay50": "DÙNG MÃ THƯỞNG PAY50 ĐỂ NHẬN THÊM 50% TOKEN!",
+    "marqueeTopBuyer": "NGƯỜI MUA NHIỀU NHẤT TRONG TUẦN NHẬN THÊM 50% TOKEN!"
   },
   "roadmap": {
     "welcome": "CHÀO MỪNG ĐẾN VỚI TRÒ CHƠI DOGEBALL!",
@@ -265,8 +265,8 @@
     },
     "bonusBanner": {
       "turnRewards": "ƯU ĐÃI GIỚI HẠN NGÀY LỄ TÌNH NHÂN",
-      "dashboardEarn": "Sử dụng mã thưởng PAY35 để nhận thêm 35% token.",
-      "topBuyerWeek": "Người mua nhiều nhất trong tuần nhận thêm 100% token.",
+      "dashboardEarn": "Sử dụng mã thưởng PAY50 để nhận thêm 50% token.",
+      "topBuyerWeek": "Người mua nhiều nhất trong tuần nhận thêm 50% token.",
       "turnRewardsSuffix": " để nhận thêm 50% token #DOGEBALL",
       "presaleLaunchOffer": "Ưu đãi ra mắt bán trước",
       "useBonusCode": "Sử dụng mã thưởng",
