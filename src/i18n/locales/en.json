@@ -5,6 +5,7 @@
     "howToBuy": "How to Buy",
     "playDogeball": "Play $DOGEBALL",
     "tokenomics": "Tokenomics",
+    "dogepay": "$DOGEPAY",
     "ethL2": "ETH L2",
     "blog": "Blog",
     "faqs": "FAQs",
@@ -21,18 +22,20 @@
   "hero": {
     "title": "DOGEBALL TOKEN PRESALE – ETHEREUM L2 CRYPTO GAME AND FIAT-TO-CRYPTO CONVERSION",
     "whitelistSignup": "SIGN UP FOR THE PRESALE WHITELIST",
-    "subtitle": "DOGEBALL ($DOGEBALL) is an Ethereum Layer 2 crypto presale powering a play-to-earn dodgeball game and the $DOGEPAY app allowing Fiat to Crypto Offramp – sell crypto for fiat and send to any bank account in the world. Fast transactions, low fees, and a $1 million competitive prize pool in our game.",
+    "subtitle": "DOGEBALL ($DOGEBALL) is an Ethereum Layer 2 crypto presale powering a play-to-earn dodgeball game and the $DOGEPAY app allowing Crypto to Fiat Offramp – sell crypto for fiat and send to any bank account in the world. Fast transactions, low fees, and a $1 million competitive prize pool in our game.",
     "presaleLaunch": "PRESALE LAUNCHES IN....",
     "whitelistEmail": "Enter email to be added to the Whitelist",
     "emailPlaceholder": "your email",
     "getEarlyAccess": "Get early access!",
     "audit": "Audit",
-    "whitepaper": "Whitepaper"
+    "whitepaper": "Whitepaper",
+    "marqueePay50": "USE BONUS CODE PAY50 for 50% EXTRA TOKENS.",
+    "marqueeTopBuyer": "TOP BUYER FOR WEEK GETS 50% ADDITIONAL TOKENS."
   },
   "roadmap": {
     "welcome": "WELCOME TO THE DOGEBALL GAME!",
     "title": "DOGEBALL Token Roadmap and Development Plan",
-    "subtitle": "The DOGEBALL roadmap outlines the full development path from token creation and presale launch to global exchange listings and game expansion. Each phase focuses on delivering real infrastructure, growing the DOGEBALL community, and expanding the Ethereum Layer 2 gaming ecosystem.",
+    "subtitle": "The DOGEBALL roadmap outlines the full development path from token creation and presale launch to global exchange listings, $DOGEPAY app release and game expansion. Each phase focuses on delivering real infrastructure, growing the DOGEBALL community, and expanding the Ethereum Layer 2 gaming ecosystem and the $DOGEPAY payments app.",
     "phase1": "Phase 1 – DOGEBALL Token Creation and Smart Contract Audit",
     "phase2": "Phase 2 – Ethereum Layer 2 Deployment and Presale Launch",
     "phase3": "Phase 3 – DOGEBALL Exchange Listings and Global Marketing",
@@ -54,20 +57,23 @@
     "phase3Sub3": "$DOGEBALL listed on global exchanges",
     "phase3Sub4": "$DOGEBALL becomes viral",
     "phase4Sub1": "$DOGEBALL V2 game development",
-    "phase4Sub2": "Continued CEX listings",
-    "phase4Sub3": "L2 Blockchain global release",
-    "phase4Sub4": "Future evolution tokens created"
+    "phase4Sub2": "$DOGEPAY app release in Apple App and Google Play Stores",
+    "phase4Sub3": "Continued CEX listings",
+    "phase4Sub4": "L2 Blockchain global release",
+    "phase4Sub5": "Future evolution tokens created"
   },
   "about": {
     "title": "ABOUT",
-    "secSubtitle": "DOGEBALL Token ($DOGEBALL) is an Ethereum Layer 2 crypto presale project built for fast, low-cost blockchain gaming. The DOGEBALL ecosystem powers a play-to-earn basketball game where players compete on-chain for real token rewards and a $1 million prize pool. Built on a custom EVM-compatible Layer 2 network, DOGEBALL enables near-instant transactions, ultra-low fees, staking rewards, and scalable gameplay designed for mass adoption.",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) is an Ethereum Layer 2 crypto presale project built for fast, low-cost blockchain gaming and for users to convert Crypto to Fiat and send to any bank account in the world. The DOGEBALL ecosystem powers both a play-to-earn dodgeball game, where players compete on-chain for real token rewards and a $1 million prize pool, as well as the $DOGEPAY app. Built on a custom EVM-compatible Layer 2 network, DOGEBALL enables near-instant transactions, ultra-low fees, staking rewards, and scalable gameplay designed for mass adoption. Converting your crypto to fiat has never been easier or quicker.",
     "subtitle": "What Is DOGEBALL Token ($DOGEBALL)?",
-    "description": "At the centre of DOGECHAIN is the $DOGEBALL game — an addictive online dodgeball game where players throw DOGEBALLs, level up, climb the leaderboard and compete for a $1M prize pool ($500k to the top player)!",
+    "description": "At the centre of DOGECHAIN are the $DOGEBALL game and $DOGEPAY app. An addictive online dodgeball game where players throw DOGEBALLs, level up, climb the leaderboard and compete for a $1M prize pool ($500k to the top player)! And a crypto to fiat offramp payments app with ZERO FX fees and near-instant payment delivery.",
     "card1": "Play-to-Earn DOGEBALL Crypto Game With a $1M Prize Pool",
     "card2": "Custom Ethereum Layer 2 Blockchain With Ultra-Low Fees",
     "card3": "Fast On-Chain Transactions Optimized for Crypto Gaming",
     "card4": "Stake DOGEBALL Token and Earn Up to 80% APY",
-    "card5": "Competitive Crypto Gameplay With Real Token Rewards",
+    "card5": "Competitive Crypto Gameplay With Real Token Rewards; convert rewards to fiat using $DOGEPAY",
+    "card6": "Use $DOGEPAY for Crypto to Fiat offramp – convert your crypto into fiat and send to any bank account in the world",
+    "card7": "The Gaming Industry remittances are $200+ billion. GameFI is exploding. DOGECHAIN owns both – you're buying the future of PayFi + GameFi",
     "testDescription": "Unlike other meme-coins L2s, you can test our custom built DOGECHAIN and experience yourself the king of all L2s!",
     "clickHere": "Click Here",
     "partnerships": "Partnerships with the world's largest gaming organisations are in progress"
@@ -132,7 +138,9 @@
     "q11": "Will DOGEBALL ($DOGEBALL) be listed on exchanges after the presale?",
     "a11": "DOGEBALL ($DOGEBALL) exchange listings are planned after the presale concludes and roadmap milestones are completed. Listing updates will be announced via official DOGEBALL ($DOGEBALL) channels.",
     "q12": "Is DOGEBALL ($DOGEBALL) a good crypto to buy in 2026?",
-    "a12": "DOGEBALL ($DOGEBALL)targets the growing crypto gaming and Ethereum Layer 2 sectors, combining early presale access, staking rewards, and on-chain gameplay, which may appeal to investors researching crypto opportunities in 2026."
+    "a12": "DOGEBALL ($DOGEBALL) targets the growing crypto gaming and Ethereum Layer 2 sectors, combining early presale access, staking rewards, and on-chain gameplay, which may appeal to investors researching crypto opportunities in 2026.",
+    "q13": "What is $DOGEPAY?",
+    "a13": "$DOGEPAY is a crypto-to-fiat exchange service running on our custom ETH L2 DOGECHAIN. It allows users to convert crypto into fiat and send to any bank account in the world. See the $DOGEPAY page ({link}) for more details and FAQs."
   },
   "tokenomics": {
     "title": "TOKENOMICS",
@@ -195,6 +203,7 @@
     "howToBuy": "Buy DOGEBALL Token"
   },
   "timer": {
+    "presaleEndsIn": "PRESALE ENDS IN",
     "days": "Days",
     "hours": "Hours",
     "minutes": "Minutes",
@@ -283,7 +292,8 @@
     },
     "bonusBanner": {
       "turnRewards": "",
-      "dashboardEarn": "Use bonus code DB25 for 25% extra tokens.",
+      "dashboardEarn": "Use bonus code PAY50 for 50% extra tokens.",
+      "topBuyerWeek": "Top buyer for the week gets 50% additional tokens.",
       "turnRewardsSuffix": " to get 50% extra #DOGEBALL tokens",
       "presaleLaunchOffer": "Presale Launch Offer",
       "useBonusCode": "Use Bonus Code",

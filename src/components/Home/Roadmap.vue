@@ -51,6 +51,7 @@ const RoadmapCards = computed(() => [
       { subtitle: t("roadmap.phase4Sub2") },
       { subtitle: t("roadmap.phase4Sub3") },
       { subtitle: t("roadmap.phase4Sub4") },
+      { subtitle: t("roadmap.phase4Sub5") },
     ],
     image: RoadmapImage4,
   },

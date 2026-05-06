@@ -1,14 +1,14 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import CustomButton from "@/ui/CustomButton.vue";
-import TimerCounter from "./TimerCounter.vue";
-import Circle from "@/assets/img/Home/CircleText.png";
+// import TimerCounter from "./TimerCounter.vue";
+// import Circle from "@/assets/img/Home/CircleText.png";
 import { Vue3Marquee } from "vue3-marquee";
 
 const { t } = useI18n();
 import { useAccount, useToast } from "@/composables";
 import { ref, computed, onMounted, onUnmounted } from "vue";
-import Spinner from "../PresaleWidget/ui/Spinner.vue";
+// import Spinner from "../PresaleWidget/ui/Spinner.vue";
 import { presaleApi } from "@/api";
 
 const accountData = useAccount();
@@ -69,15 +69,22 @@ const submit = async () => {
       >
         <div class="shrink-0 px-6 flex items-center">
           <span class="font-grotesk font-semibold text-xs whitespace-nowrap">
-            USE BONUS CODE DB25 for 25% EXTRA TOKENS.
+            {{ t("hero.marqueePay50") }}
+          </span>
+        </div>
+        <div class="shrink-0 px-6 flex items-center">
+          <span class="font-grotesk font-semibold text-xs whitespace-nowrap">
+            {{ t("hero.marqueeTopBuyer") }}
           </span>
         </div>
       </Vue3Marquee>
     </div>
     <div
-      class="h-screen 2xl:max-h-[1400px] 2xl:bg-bottom max-md:h-auto max-md:min-h-[440px] relative min-h-[600px] px-5 pt-[100px] max-md:pt-[80px] flex flex-col items-center justify-between pb-[56px] max-md:pb-[30px] bg-[url('@/assets/img/Home/HeroBg.png')] max-xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat mobile-bg-crop"
+      class="max-md:h-auto md:min-h-screen 2xl:max-h-[1400px] 2xl:bg-bottom max-md:min-h-[440px] relative min-h-[600px] px-5 pt-[100px] max-md:pt-[80px] flex flex-col items-center justify-between pb-[56px] max-md:pb-[30px] bg-[url('@/assets/img/Home/HeroBg.png')] max-xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat mobile-bg-crop"
     >
-      <div class="text-center flex flex-col items-center justify-center w-full">
+      <div
+        class="text-center flex flex-col items-center justify-center w-full shrink-0"
+      >
         <div class="title max-w-[800px] px-3">
           {{ t("hero.title") }}
         </div>
@@ -98,7 +105,7 @@ const submit = async () => {
       </div>
 
       <div
-        class="max-w-[2000px] w-full flex justify-center items-center mx-auto relative max-md:static"
+        class="max-w-[2000px] w-full flex flex-col justify-center items-center mx-auto relative max-md:static mt-6 max-md:mt-5 shrink-0"
       >
         <!-- <div
           class="flex absolute bottom-0 left-[120px] max-xl:left-[20px] max-lg:hidden w-full max-w-[325px] max-xl:max-w-[300px] flex-col p-4 gap-4 border border-[#8B94F5] rounded-2xl bg-[rgba(53,19,147,0.52)] backdrop-blur-[5px] shadow-[0_0_154px_0_#263166]"
@@ -144,6 +151,18 @@ const submit = async () => {
               class="py-[18px] !text-[22px] !w-[160px]"
           /></a>
         </div>
+
+        <p class="description mt-2 max-w-sm text-center">
+          Join our Telegram group for the latest updates, bonus codes and
+          offers:
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://t.me/dogeballtoken"
+            class="underline"
+            >https://t.me/dogeballtoken</a
+          >
+        </p>
       </div>
     </div>
   </div>

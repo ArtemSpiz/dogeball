@@ -13,27 +13,31 @@ import AboutCardBg2 from "@/assets/img/Home/AboutCardBg2.png";
 const { t } = useI18n();
 
 const AboutCards = computed(() => [
-  {
-    icon: AboutIcon1,
-    title: t("about.card1"),
-  },
-  {
-    icon: AboutIcon2,
-    title: t("about.card2"),
-  },
-  {
-    icon: AboutIcon3,
-    title: t("about.card3"),
-  },
-  {
-    icon: AboutIcon4,
-    title: t("about.card4"),
-  },
-  {
-    icon: AboutIcon5,
-    title: t("about.card5"),
-  },
+  { icon: AboutIcon1, title: t("about.card1") },
+  { icon: AboutIcon4, title: t("about.card6") },
+  { icon: AboutIcon2, title: t("about.card2") },
+  { icon: AboutIcon3, title: t("about.card3") },
+  { icon: AboutIcon4, title: t("about.card4") },
+  { icon: AboutIcon5, title: t("about.card5") },
+  { icon: AboutIcon1, title: t("about.card7") },
 ]);
+
+/** Mobile: 2+2+2+1 | Tablet (md): 3+2+2 | Desktop (lg): 4+3 — row1 full 12 cols; row2 three cards centered (cols 2–10, margins 1 + 2). */
+const ABOUT_CARD_LG_PLACEMENT = [
+  "lg:col-span-3 lg:row-start-1 lg:col-start-1",
+  "lg:col-span-3 lg:row-start-1 lg:col-start-4",
+  "lg:col-span-3 lg:row-start-1 lg:col-start-7",
+  "lg:col-span-3 lg:row-start-1 lg:col-start-10",
+  "lg:col-span-3 lg:row-start-2 lg:col-start-2",
+  "lg:col-span-3 lg:row-start-2 lg:col-start-5",
+  "lg:col-span-3 lg:row-start-2 lg:col-start-8",
+];
+
+const aboutCardColClass = (i) => [
+  i === 6 ? "col-span-2" : "col-span-1",
+  i < 3 ? "md:col-span-2" : "md:col-span-3",
+  ABOUT_CARD_LG_PLACEMENT[i],
+];
 </script>
 
 <template>
@@ -50,33 +54,20 @@ const AboutCards = computed(() => [
         <div class="title">
           {{ t("about.subtitle") }}
         </div>
-        <div
-          class="font-grotesk text-base font-medium md:text-xl max-w-[730px]"
-        >
+        <div class="font-grotesk text-base font-medium md:text-xl max-w-5xl">
           {{ t("about.description") }}
         </div>
       </div>
     </div>
     <div
-      class="grid grid-cols-6 gap-4 max-w-[1400px] max-md:gap-2 max-md:grid-cols-2 max-md:grid-rows-3 max-md:w-full"
+      class="grid w-full max-w-[1400px] mx-auto self-center grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4 max-md:gap-2"
     >
       <div
         v-for="(card, i) in AboutCards"
         :key="i"
         :class="[
-          'px-8 max-md:px-2 py-4 relative max-md:w-full max-md:min-w-0 h-[120px] gap-4 flex flex-col items-center justify-between bg-[rgba(53,19,147,0.52)] rounded-2xl backdrop-blur-[5px]',
-          {
-            'max-md:order-1': i === 0, // 1
-            'max-md:order-2': i === 1, // 2
-            'max-md:order-3': i === 3, // 4
-            'max-md:order-4': i === 4, // 5
-            'max-md:order-5 max-md:col-span-2': i === 2, // Mobile: last card spans full width
-            // Desktop grid layout: 3-2 (top row: 3 cards, bottom row: 2 cards centered, same width as top)
-            'max-md:col-span-1': i !== 2, // Mobile: all cards except last one span 1 column
-            'md:col-span-2': i === 0 || i === 1 || i === 2, // Desktop top row: Cards 1, 2, 3 each span 2 columns
-            'md:col-span-2 md:col-start-2': i === 3, // Desktop bottom row: Card 4 spans 2 columns starting at column 2 (centered)
-            'md:col-span-2 md:col-start-4': i === 4, // Desktop bottom row: Card 5 spans 2 columns starting at column 4 (centered)
-          },
+          'px-8 max-md:px-2 py-4 relative max-md:w-full max-md:min-w-0 min-h-[120px] h-auto gap-4 flex flex-col items-center justify-start bg-[rgba(53,19,147,0.52)] rounded-2xl backdrop-blur-[5px]',
+          aboutCardColClass(i),
         ]"
       >
         <div
@@ -89,7 +80,8 @@ const AboutCards = computed(() => [
               rgba(255, 255, 255, 0.1) 90%,
               rgba(255, 255, 255, 0) 100%
             );
-            -webkit-mask: linear-gradient(#fff 0 0) content-box,
+            -webkit-mask:
+              linear-gradient(#fff 0 0) content-box,
               linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
@@ -115,13 +107,7 @@ const AboutCards = computed(() => [
         </div>
 
         <div
-          class="font-grotesk z-10 leading-[110%] text-xs max-md:leading-[125%] md:text-base font-medium text-center max-md:max-w-full"
-          :class="[
-            { 'md:max-w-[300px]': i !== 3 && i !== 4 && i !== 2 }, // Desktop top row cards keep max-width
-            { 'max-md:max-w-[120px] md:max-w-[250px]': i === 3 }, // Mobile & Desktop first bottom card: narrower to allow 2 lines
-            { 'max-md:max-w-[150px]': i === 2 }, // Mobile last card: reduced max-width
-            { 'md:max-w-full': i === 4 }, // Desktop second bottom card uses full width
-          ]"
+          class="font-grotesk z-10 leading-[110%] text-xs max-md:leading-[125%] md:text-base font-medium text-center max-md:max-w-full md:max-w-[320px]"
         >
           {{ card.title }}
         </div>

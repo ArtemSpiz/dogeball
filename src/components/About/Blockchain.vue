@@ -19,14 +19,14 @@ const getTextWithButton = (key, buttonKey, buttonClass) => {
   return text.replace(`{${keyName}}`, buttonHtml);
 };
 
-const EXPLORER_URL = "http://78.141.225.190:3001/";
+const EXPLORER_URL = "http://45.76.250.9/";
 
 // Replaces `{here}` in the translation with a real link to the explorer.
 // Uses the locale text for `ethL2.here` as the visible label.
 const getTextWithExplorerLink = (
   key,
   placeholderKey = "here",
-  linkTextKey = "ethL2.here"
+  linkTextKey = "ethL2.here",
 ) => {
   // vue-i18n treats `{here}` as an interpolation placeholder; if not provided it becomes empty.
   // Use a sentinel token and replace it with the real anchor HTML.
@@ -45,10 +45,10 @@ const BlockchainCards = computed(() => [
       { name: t("ethL2.blockchainName"), data: "DOGECHAIN" },
       {
         name: t("ethL2.rpcUrl"),
-        data: "http://78.141.225.190:10002",
+        data: "http://45.76.250.9:10002",
         copy: true,
       },
-      { name: t("ethL2.chainId"), data: "9010" },
+      { name: t("ethL2.chainId"), data: "51001" },
       { name: t("ethL2.symbol"), data: "DOGEBALL" },
     ],
   },
@@ -57,7 +57,7 @@ const BlockchainCards = computed(() => [
     text: getTextWithButton(
       "ethL2.card2Text",
       "ethL2.connectWallet",
-      "bg-[#EB4102] h-[17px] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px] items-center align-middle"
+      "bg-[#EB4102] h-[17px] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px] items-center align-middle",
     ),
   },
   {
@@ -69,7 +69,7 @@ const BlockchainCards = computed(() => [
     text: getTextWithButton(
       "ethL2.card4Text",
       "ethL2.send",
-      "bg-[#EB4102] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px] items-center align-middle"
+      "bg-[#EB4102] px-2 py-1 text-[9px] text-[#FFEEE1] rounded-[80px] items-center align-middle",
     ),
   },
   {

@@ -7,7 +7,9 @@
     <!-- Background overlay for better widget visibility -->
     <div class="absolute inset-0 bg-black/20 -z-10"></div>
 
-    <h2 class="title max-w-[650px] max-md:max-w-[300px] text-center">
+    <h2
+      class="title !text-xl lg:!text-4xl max-w-[650px] max-md:max-w-[300px] text-center"
+    >
       DOGEBALL Crypto Presale 2026
     </h2>
     <div

@@ -43,6 +43,10 @@ const LinksHeader = computed(() => [
     link: "#tokenomics",
   },
   {
+    title: t("header.dogepay"),
+    link: "/dogepay",
+  },
+  {
     title: t("header.blog"),
     link: "#blog",
   },

@@ -169,7 +169,9 @@ body {
 @layer utilities {
   /* Font feature settings utility */
   .font-feature-off {
-    font-feature-settings: "liga" off, "clig" off;
+    font-feature-settings:
+      "liga" off,
+      "clig" off;
   }
 
   /* Line clamp utilities */
