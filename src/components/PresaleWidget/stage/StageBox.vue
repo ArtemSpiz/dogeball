@@ -25,53 +25,26 @@
         "
       >
         {{ formattedRaised }}
-
-        <span
-          class="text-white font-grotesk text-xs font-normal leading-none absolute bottom-0 translate-x-2"
-          >raised</span
-        >
       </p>
 
-      <!-- Labels -->
-      <div class="flex items-center justify-between w-full">
-        <span class="text-white font-grotesk text-xs font-normal leading-none">
-          {{ progressPercent }}% {{ t("presale.stageBox.untilPriceRise") }}
-        </span>
-        <span class="text-white font-grotesk text-xs font-normal leading-none">
-          {{ t("presale.stageBox.of") }} {{ formattedTarget }}
-        </span>
-      </div>
-
       <Countdown v-if="stageEndDate" :end-date="stageEndDate" @on-end="refetchStage" />
-      <span class="text-white font-grotesk text-xs font-normal leading-none">
-        UNTIL PRICE INCREASE
+      <span class="text-white font-grotesk text-xs font-normal leading-none my-1">
+        {{ t("presale.stageBox.untilPriceRise") }}
       </span>
       <!-- Progress Bar -->
       <ProgressBar :progress="stageFrac * 100" variant="striped" size="md" />
-      <div class="self-stretch flex flex-col">
-        <p class="text-white font-grotesk text-xs font-normal leading-none ml-auto w-20 text-right">
-          of {{ formattedTarget }}
-        </p>
-
-      <!-- Participants -->
-      <p
-        class="text-white text-center w-full font-grotesk text-xs font-normal leading-none"
-      >
-        {{ formattedParticipants }} {{ t("presale.stageBox.participants") }}
-      </p>
         <!-- Participants -->
         <p
           class="text-white text-center w-full font-grotesk text-md font-normal leading-none flex-1"
         >
-          {{ formattedParticipants }} Participants
+          {{ formattedParticipants }} {{ t("presale.stageBox.participants") }}
         </p>
-      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { computed, watch, watchEffect } from "vue";
 import { useI18n } from "vue-i18n";
 import { ProgressBar, Skeleton } from "../ui";
 import { usePresale } from "@/composables/usePresale";
