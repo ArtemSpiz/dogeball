@@ -69,12 +69,12 @@ const submit = async () => {
       >
         <div class="shrink-0 px-6 flex items-center">
           <span class="font-grotesk font-semibold text-xs whitespace-nowrap">
-            {{ t("hero.marqueePay50") }}
+            {{ t("hero.marqueeTicker") }}
           </span>
         </div>
         <div class="shrink-0 px-6 flex items-center">
           <span class="font-grotesk font-semibold text-xs whitespace-nowrap">
-            {{ t("hero.marqueeTopBuyer") }}
+            {{ t("hero.marqueeTicker") }}
           </span>
         </div>
       </Vue3Marquee>

@@ -16,7 +16,7 @@
       class="relative z-10 flex flex-col gap-2.5 items-center w-full max-w-[519px] lg:max-w-[570px] p-2.5"
     >
       <Widget class="max-w-[487px] lg:max-w-[538px] w-full" />
-      <BonusBanner />
+      <!-- <BonusBanner /> -->
     </div>
 
     <!-- Toast notifications -->
