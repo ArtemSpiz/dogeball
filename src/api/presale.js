@@ -9,6 +9,11 @@ const BASE_URL = "https://api.presale.gg/v1";
 const PROJECT = "dball";
 
 /**
+ * @typedef {import("./api.types").API.Stage} Stage
+ * @typedef {import("./api.types").API.HybridStage} HybridStage
+ */
+
+/**
  * Base API fetch function
  * @param {string} url
  * @param {AxiosRequestConfig} [data={}]
@@ -67,7 +72,7 @@ export const postLeads = async ({ email, name, wallet_address, mobile }) => {
 
 /**
  * Get current active stage
- * @returns {Promise<AxiosResponse<import("./api.types.d.ts").API.Stage | null>>}
+ * @returns {Promise<AxiosResponse<Stage | HybridStage | null>>}
  */
 export const getActiveStage = () => {
   return apiFetch(`/projects/${PROJECT}/stages/current`);

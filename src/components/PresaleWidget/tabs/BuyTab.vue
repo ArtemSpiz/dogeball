@@ -3,14 +3,6 @@
     <!-- Stage Box (only if presale active) -->
     <template v-if="!presale.presaleEnded.value">
       <StageBox />
-      <p
-        class="text-center self-center text-white font-grotesk text-sm font-semibold leading-none"
-      >
-        1 $DOGEBALL =
-        {{
-          formatDollar(parseNum(presale.stage.value?.token_price), true, 0, 6)
-        }}
-      </p>
     </template>
 
     <!-- Payment Methods -->
@@ -149,8 +141,6 @@ const { t } = useI18n();
 
 const presale = usePresale();
 const toast = useToast();
-
-watchEffect(() => console.log(presale.isConnected.value));
 
 // Local state
 const selectedToken = ref(null);

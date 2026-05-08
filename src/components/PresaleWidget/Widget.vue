@@ -87,6 +87,8 @@ const tabs = computed(() => [
   },
 ]);
 
+const hasCountdown = computed(() => presale.stage.value && presale.stage.value.stage_end)
+
 const selectedTabKey = ref("buy");
 const selectedTab = computed(() =>
   tabs.value.find((tab) => tab.key === selectedTabKey.value)

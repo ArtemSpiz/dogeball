@@ -3,14 +3,15 @@ import api from "@/api/presale";
 import { useStore } from "@nanostores/vue";
 
 /**
- * @typedef {import("../api/api.types").API} API
- * @typedef {import("../api/api.types").API.Stage} Stage
- * @typedef {import("../api/api.types").API.Info} Info
- * @typedef {import("../api/api.types").API.LeaderboardEntry} LeaderboardEntry
- * @typedef {import("../api/api.types").API.PaymentToken} PaymentToken
+ * @typedef {import("../../api/api.types").API} API
+ * @typedef {import("../../api/api.types").API.Stage} Stage
+ * @typedef {import("../../api/api.types").API.HybridStage} HybridStage
+ * @typedef {import("../../api/api.types").API.Info} Info
+ * @typedef {import("../../api/api.types").API.LeaderboardEntry} LeaderboardEntry
+ * @typedef {import("../../api/api.types").API.PaymentToken} PaymentToken
  *
  * @typedef {object} ApiStateValue
- * @property {Stage | null} ApiStateValue.stage
+ * @property {Stage | HybridStage | null} ApiStateValue.stage
  * @property {boolean} ApiStateValue.stageLoading
  * @property {PaymentToken[] | null} ApiStateValue.paymentTokens
  * @property {boolean} ApiStateValue.paymentTokensLoading
@@ -63,6 +64,16 @@ export const setPaymentTokens = (paymentTokens) => {
 export const setApiInfo = (info) => {
   $apiState.setKey("info", info);
 };
+
+export const refetchStage = () => {
+  api
+    .getActiveStage()
+    .then((res) => {
+      if (res.data === null) setPresaleEnded(true);
+      setStage(res.data);
+    })
+    .catch(() => {});
+}
 
 api
   .getActiveStage()

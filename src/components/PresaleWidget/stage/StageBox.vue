@@ -42,8 +42,16 @@
         </span>
       </div>
 
+      <Countdown v-if="stageEndDate" :end-date="stageEndDate" @on-end="refetchStage" />
+      <span class="text-white font-grotesk text-xs font-normal leading-none">
+        UNTIL PRICE INCREASE
+      </span>
       <!-- Progress Bar -->
       <ProgressBar :progress="stageFrac * 100" variant="striped" size="md" />
+      <div class="self-stretch flex flex-col">
+        <p class="text-white font-grotesk text-xs font-normal leading-none ml-auto w-20 text-right">
+          of {{ formattedTarget }}
+        </p>
 
       <!-- Participants -->
       <p
@@ -51,6 +59,13 @@
       >
         {{ formattedParticipants }} {{ t("presale.stageBox.participants") }}
       </p>
+        <!-- Participants -->
+        <p
+          class="text-white text-center w-full font-grotesk text-md font-normal leading-none flex-1"
+        >
+          {{ formattedParticipants }} Participants
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -62,6 +77,8 @@ import { ProgressBar, Skeleton } from "../ui";
 import { usePresale } from "@/composables/usePresale";
 import { formatDollar, formatNumber, parseNum } from "@/utils/format";
 import { DEFAULT_STAGE_NAME } from "@/config/presale";
+import Countdown from "../ui/Countdown.vue";
+import { refetchStage } from "@/presale-gg/stores/api.store";
 
 const { t } = useI18n();
 const presale = usePresale();
@@ -72,10 +89,32 @@ const stageName = computed(() => {
   return presale.stage.value?.stage_name || DEFAULT_STAGE_NAME;
 });
 
+const stageEndDate = computed(() => presale.stage.value?.stage_end ? new Date(presale.stage.value.stage_end) : undefined)
+
+const minMax = (num, min, max) => {
+  if (num < min) return min
+  if (num > max) return max
+  return num
+}
+
 const stageFrac = computed(() => {
-  const raised = parseNum(presale.stage.value?.cumulative_usd_raised);
-  const target = parseNum(presale.stage.value?.next_stage_target_usd) || 1;
-  return Math.min(raised / target, 1);
+  if (presale.presaleEnded.value) return 1
+  const stage = presale.stage.value
+  if (!stage) return 0
+  const tokenProgress = minMax(
+    parseNum(stage.cumulative_tokens_sold) / parseNum(stage.next_stage_target_tokens),
+    0,
+    1
+  )
+  if (!stage.stage_end) return tokenProgress;
+  const stageStartTimestamp = new Date(stage.stage_start ?? Date.now()).getTime()
+  const stageEndTimestamp = new Date(stage.stage_end ?? Date.now()).getTime()
+  const countdownProgress = minMax(
+    (Date.now() - stageStartTimestamp) / (stageEndTimestamp - stageStartTimestamp),
+    0,
+    1
+  )
+  return Math.max(countdownProgress, tokenProgress)
 });
 
 const progressPercent = computed(() => {
@@ -87,7 +126,7 @@ const progressPercent = computed(() => {
 const formattedRaised = computed(() => {
   return formatDollar(
     parseNum(presale.stage.value?.cumulative_usd_raised),
-    true,
+    false,
     0,
     2
   );
@@ -96,9 +135,9 @@ const formattedRaised = computed(() => {
 const formattedTarget = computed(() => {
   return formatDollar(
     parseNum(presale.stage.value?.next_stage_target_usd),
-    true,
+    false,
     0,
-    0
+    2
   );
 });
 
