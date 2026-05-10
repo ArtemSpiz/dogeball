@@ -13,12 +13,14 @@ export namespace API {
     next_stage_target_usd: string | null;
     next_stage_target_tokens: string | null;
     next_stage_price: string | null;
-    overflow_duration_seconds: number;
-    overflow_started: string | null;
-    overflow_tokens_sold: string;
-    overflow_end: string | null;
-    in_overflow_phase: boolean;
+    stage_start: undefined;
+    stage_end: undefined;
   }
+
+  export type HybridStage = Omit<Stage, "stage_start" | "stage_end"> & {
+    stage_start: string;
+    stage_end: string;
+  };
 
   export interface Info {
     holders: string;

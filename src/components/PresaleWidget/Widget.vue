@@ -2,7 +2,7 @@
   <Loader :loading="isLoading">
     <div
       class="flex flex-col w-full rounded-3xl text-white overflow-hidden font-normal relative p-6 items-center gap-2.5 border border-white/20 bg-[rgba(23,138,184,0.40)] shadow-[0_0_14px_0_#5464D8] backdrop-blur-[5px] transition-[height] duration-200 ease-out"
-      :style="{ height: '52.5rem' }"
+      :style="{ height: hasCountdown ? '55.5rem' :'52rem' }"
     >
       <div
         ref="innerRef"
@@ -86,6 +86,8 @@ const tabs = computed(() => [
     component: LeaderboardTab,
   },
 ]);
+
+const hasCountdown = computed(() => presale.stage.value && presale.stage.value.stage_end)
 
 const selectedTabKey = ref("buy");
 const selectedTab = computed(() =>
