@@ -8,9 +8,9 @@
       <span class="font-semibold">{{
         t("presale.bonusBanner.dashboardEarn")
       }}</span>
-      <span class="font-semibold">{{
+      <!-- <span class="font-semibold">{{
         t("presale.bonusBanner.topBuyerWeek")
-      }}</span>
+      }}</span> -->
     </p>
   </div>
 </template>
