@@ -18,7 +18,7 @@
         {{ t("presale.buyTab.presalePrice") }}
         <span class="text-[#59A6FD]">
           {{
-            formatDollar(parseNum(presale.stage.value?.token_price), true, 0, 4)
+            formatDollar(parseNum(presale.stage.value?.token_price), true, 0, 5)
           }}
         </span>
         <span> | </span>
