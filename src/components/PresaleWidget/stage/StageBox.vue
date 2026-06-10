@@ -17,14 +17,22 @@
       </template>
       <p
         v-else
-        class="text-center relative text-white text-4xl font-extrabold"
-        style="
-          /* font-weight: 400; */
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-        "
+        class="flex items-baseline justify-center gap-1 text-white"
       >
-        {{ formattedRaised }}
+        <span
+          class="text-4xl font-extrabold"
+          style="
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          "
+        >
+          {{ formattedRaised }}
+        </span>
+        <span
+          class="text-white font-grotesk text-xs font-normal leading-none"
+        >
+          {{ t("presale.stageBox.raised") }}
+        </span>
       </p>
 
       <Countdown

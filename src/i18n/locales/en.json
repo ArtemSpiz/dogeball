@@ -283,6 +283,7 @@
     },
     "stageBox": {
       "untilPriceRise": "UNTIL PRICE INCREASE",
+      "raised": "raised",
       "of": "of",
       "participants": "Participants"
     },
