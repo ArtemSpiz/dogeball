@@ -33,7 +33,7 @@
   "roadmap": {
     "welcome": "DOGEBALLゲームへようこそ！",
     "title": "ロードマップ",
-    "subtitle": "DOGEBALLロードマップは、トークン作成とプレセール開始からグローバル取引所への上場、$DOGEPAYアプリのリリース、ゲーム拡大までの開発の全体像を示します。各フェーズは実インフラ、DOGEBALLコミュニティ、Ethereum Layer 2ゲームエコシステム、および$DOGEPAY決済アプリの拡大に焦点を当てます。",
+    "subtitle": "DOGEBALLロードマップは、トークンの作成とプレセールの開始からグローバル取引所への上場、ゲームの拡張までの完全な開発パスを概説しています。各フェーズは、実際のインフラストラクチャの提供、DOGEBALLコミュニティの成長、Ethereum Layer 2ゲーミングエコシステムの拡大に焦点を当てています。",
     "phase1": "フェーズ1",
     "phase2": "フェーズ2",
     "phase3": "フェーズ3",
@@ -55,10 +55,9 @@
     "phase3Sub3": "$DOGEBALLがグローバル取引所に上場",
     "phase3Sub4": "$DOGEBALLがバイラル化",
     "phase4Sub1": "$DOGEBALL V2ゲーム開発",
-    "phase4Sub2": "$DOGEPAYアプリをApple App StoreとGoogle Playでリリース",
-    "phase4Sub3": "CEX上場継続",
-    "phase4Sub4": "L2ブロックチェーングローバルリリース",
-    "phase4Sub5": "将来の進化トークン作成"
+    "phase4Sub2": "CEX上場継続",
+    "phase4Sub3": "L2ブロックチェーングローバルリリース",
+    "phase4Sub4": "将来の進化トークン作成"
   },
   "about": {
     "title": "概要",

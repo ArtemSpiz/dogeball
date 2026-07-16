@@ -33,7 +33,7 @@
   "roadmap": {
     "welcome": "BEM-VINDO AO JOGO DOGEBALL!",
     "title": "Roteiro",
-    "subtitle": "O roteiro DOGEBALL descreve o percurso completo desde a criação do token e o lançamento da pré-venda até listagens em exchanges globais, lançamento da app $DOGEPAY e expansão do jogo. Cada fase foca infraestrutura real, a comunidade DOGEBALL e o ecossistema de jogos Ethereum Layer 2 e a app de pagamentos $DOGEPAY.",
+    "subtitle": "O roteiro DOGEBALL descreve o caminho completo de desenvolvimento desde a criação do token e o lançamento da pré-venda até as listagens em exchanges globais e a expansão do jogo. Cada fase se concentra em fornecer infraestrutura real, fazer crescer a comunidade DOGEBALL e expandir o ecossistema de jogos Ethereum Layer 2.",
     "phase1": "Fase 1",
     "phase2": "Fase 2",
     "phase3": "Fase 3",
@@ -55,10 +55,9 @@
     "phase3Sub3": "$DOGEBALL listado em exchanges globais",
     "phase3Sub4": "$DOGEBALL se torna viral",
     "phase4Sub1": "Desenvolvimento do jogo $DOGEBALL V2",
-    "phase4Sub2": "Lançamento da app $DOGEPAY na App Store da Apple e na Google Play Store",
-    "phase4Sub3": "Listagens CEX continuadas",
-    "phase4Sub4": "Lançamento global da blockchain L2",
-    "phase4Sub5": "Tokens de evolução futura criados"
+    "phase4Sub2": "Listagens CEX continuadas",
+    "phase4Sub3": "Lançamento global da blockchain L2",
+    "phase4Sub4": "Tokens de evolução futura criados"
   },
   "about": {
     "title": "SOBRE",

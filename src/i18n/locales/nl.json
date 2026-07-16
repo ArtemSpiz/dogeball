@@ -33,7 +33,7 @@
   "roadmap": {
     "welcome": "WELKOM BIJ HET DOGEBALL-SPEL!",
     "title": "Roadmap",
-    "subtitle": "De DOGEBALL-roadmap beschrijft het volledige traject van tokencreatie en presale-lancering tot wereldwijde exchange-noteringen, de release van de $DOGEPAY-app en game-uitbreiding. Elke fase richt zich op echte infrastructuur, de DOGEBALL-gemeenschap en het Ethereum Layer 2 gaming-ecosysteem en de $DOGEPAY-betaalapp.",
+    "subtitle": "De DOGEBALL-roadmap schetst het volledige ontwikkelingspad van tokencreatie en presale-lancering tot wereldwijde beursnoteringen en game-uitbreiding. Elke fase richt zich op het leveren van echte infrastructuur, het laten groeien van de DOGEBALL-gemeenschap en het uitbreiden van het Ethereum Layer 2 gaming-ecosysteem.",
     "phase1": "Fase 1",
     "phase2": "Fase 2",
     "phase3": "Fase 3",
@@ -55,10 +55,9 @@
     "phase3Sub3": "$DOGEBALL genoteerd op wereldwijde beurzen",
     "phase3Sub4": "$DOGEBALL wordt viraal",
     "phase4Sub1": "$DOGEBALL V2 spelontwikkeling",
-    "phase4Sub2": "$DOGEPAY-apprelease in Apple App Store en Google Play Store",
-    "phase4Sub3": "Voortgezette CEX-noteringen",
-    "phase4Sub4": "L2 Blockchain wereldwijde release",
-    "phase4Sub5": "Toekomstige evolutie-tokens gemaakt"
+    "phase4Sub2": "Voortgezette CEX-noteringen",
+    "phase4Sub3": "L2 Blockchain wereldwijde release",
+    "phase4Sub4": "Toekomstige evolutie-tokens gemaakt"
   },
   "about": {
     "title": "OVER ONS",

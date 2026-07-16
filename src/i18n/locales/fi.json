@@ -33,7 +33,7 @@
   "roadmap": {
     "welcome": "TERVETULOA DOGEBALL-PELIIN!",
     "title": "Tiekartta",
-    "subtitle": "DOGEBALL-tiekartta kuvaa koko kehityspolun tokenin luomisesta ja esimyynnin käynnistyksestä globaaleihin pörssilistauksiin, $DOGEPAY-sovelluksen julkaisuun ja pelin laajentamiseen. Jokainen vaihe keskittyy todelliseen infrastruktuuriin, DOGEBALL-yhteisöön ja Ethereum Layer 2 -peliekosysteemiin sekä $DOGEPAY-maksusovellukseen.",
+    "subtitle": "DOGEBALL-tiekartta hahmottelee täyden kehityspolun tokenin luomisesta ja esimyynnin käynnistyksestä globaaleihin pörssilistauksiin ja pelin laajentamiseen. Jokainen vaihe keskittyy todellisen infrastruktuurin toimittamiseen, DOGEBALL-yhteisön kasvattamiseen ja Ethereum Layer 2 -peliekosysteemin laajentamiseen.",
     "phase1": "Vaihe 1",
     "phase2": "Vaihe 2",
     "phase3": "Vaihe 3",
@@ -55,10 +55,9 @@
     "phase3Sub3": "$DOGEBALL listattu globaaleihin pörsseihin",
     "phase3Sub4": "$DOGEBALL muuttuu viraaliksi",
     "phase4Sub1": "$DOGEBALL V2 -pelin kehitys",
-    "phase4Sub2": "$DOGEPAY-sovelluksen julkaisu Apple App Storessa ja Google Playssa",
-    "phase4Sub3": "CEX-listaukset jatkuvat",
-    "phase4Sub4": "L2 Lohkoketjun globaali julkaisu",
-    "phase4Sub5": "Tulevaisuuden evoluutiotokenit luotu"
+    "phase4Sub2": "CEX-listaukset jatkuvat",
+    "phase4Sub3": "L2 Lohkoketjun globaali julkaisu",
+    "phase4Sub4": "Tulevaisuuden evoluutiotokenit luotu"
   },
   "about": {
     "title": "TIETOJA",

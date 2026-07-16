@@ -33,7 +33,7 @@
   "roadmap": {
     "welcome": "DOGEBALL OYUNUNA HOŞ GELDİNİZ!",
     "title": "Yol Haritası",
-    "subtitle": "DOGEBALL yol haritası, token oluşturma ve ön satış lansmanından küresel borsa listelerine, $DOGEPAY uygulama yayınına ve oyun genişlemesine kadar tam geliştirme yolunu özetler. Her aşama gerçek altyapı, DOGEBALL topluluğu ve Ethereum Layer 2 oyun ekosistemi ile $DOGEPAY ödeme uygulamasının genişletilmesine odaklanır.",
+    "subtitle": "DOGEBALL yol haritası, token oluşturma ve ön satış lansmanından küresel borsa listelerine ve oyun genişlemesine kadar tam geliştirme yolunu özetler. Her aşama, gerçek altyapı sağlamaya, DOGEBALL topluluğunu büyütmeye ve Ethereum Layer 2 oyun ekosistemini genişletmeye odaklanır.",
     "phase1": "Faz 1",
     "phase2": "Faz 2",
     "phase3": "Faz 3",
@@ -55,10 +55,9 @@
     "phase3Sub3": "$DOGEBALL küresel borsalarda listelendi",
     "phase3Sub4": "$DOGEBALL viral oluyor",
     "phase4Sub1": "$DOGEBALL V2 oyun geliştirmesi",
-    "phase4Sub2": "$DOGEPAY uygulamasının Apple App Store ve Google Play'de yayınlanması",
-    "phase4Sub3": "CEX listeleri devam ediyor",
-    "phase4Sub4": "L2 Blockchain küresel yayın",
-    "phase4Sub5": "Gelecek evrim tokenları oluşturuldu"
+    "phase4Sub2": "CEX listeleri devam ediyor",
+    "phase4Sub3": "L2 Blockchain küresel yayın",
+    "phase4Sub4": "Gelecek evrim tokenları oluşturuldu"
   },
   "about": {
     "title": "HAKKINDA",

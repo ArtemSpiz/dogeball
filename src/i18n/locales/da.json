@@ -33,7 +33,7 @@
   "roadmap": {
     "welcome": "VELKOMMEN TIL DOGEBALL-SPILLET!",
     "title": "Ruteplan",
-    "subtitle": "DOGEBALL-ruteplanen skitserer den fulde udviklingsvej fra tokenoprettelse og forsalgslancering til globale børsnoteringer, udgivelse af $DOGEPAY-appen og spilekspansion. Hver fase fokuserer på reel infrastruktur, DOGEBALL-fællesskabet og Ethereum Layer 2 gaming-økosystemet og $DOGEPAY-betalingsappen.",
+    "subtitle": "DOGEBALL-ruteplanen skitserer den fulde udviklingsvej fra tokenoprettelse og forsalgslancering til globale børsnoteringer og spilekspansion. Hver fase fokuserer på at levere reel infrastruktur, vokse DOGEBALL-fællesskabet og udvide Ethereum Layer 2 gaming-økosystemet.",
     "phase1": "Fase 1",
     "phase2": "Fase 2",
     "phase3": "Fase 3",
@@ -55,10 +55,9 @@
     "phase3Sub3": "$DOGEBALL noteret på globale børser",
     "phase3Sub4": "$DOGEBALL bliver viralt",
     "phase4Sub1": "$DOGEBALL V2 spiludvikling",
-    "phase4Sub2": "$DOGEPAY-appudgivelse i Apple App Store og Google Play Store",
-    "phase4Sub3": "Fortsatte CEX-noteringer",
-    "phase4Sub4": "L2 Blockchain global udgivelse",
-    "phase4Sub5": "Fremtidige evolutionstokens oprettet"
+    "phase4Sub2": "Fortsatte CEX-noteringer",
+    "phase4Sub3": "L2 Blockchain global udgivelse",
+    "phase4Sub4": "Fremtidige evolutionstokens oprettet"
   },
   "about": {
     "title": "OM",

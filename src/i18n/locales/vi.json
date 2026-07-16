@@ -33,7 +33,7 @@
   "roadmap": {
     "welcome": "CHÀO MỪNG ĐẾN VỚI TRÒ CHƠI DOGEBALL!",
     "title": "Lộ trình",
-    "subtitle": "Lộ trình DOGEBALL phác thảo toàn bộ hành trình từ tạo token và ra mắt presale đến niêm yết sàn toàn cầu, phát hành ứng dụng $DOGEPAY và mở rộng trò chơi. Mỗi giai đoạn tập trung vào hạ tầng thực, cộng đồng DOGEBALL và hệ sinh thái game Ethereum Layer 2 cùng ứng dụng thanh toán $DOGEPAY.",
+    "subtitle": "Lộ trình DOGEBALL phác thảo con đường phát triển đầy đủ từ việc tạo token và ra mắt presale đến niêm yết trên các sàn giao dịch toàn cầu và mở rộng trò chơi. Mỗi giai đoạn tập trung vào việc cung cấp cơ sở hạ tầng thực tế, phát triển cộng đồng DOGEBALL và mở rộng hệ sinh thái game Ethereum Layer 2.",
     "phase1": "Giai đoạn 1",
     "phase2": "Giai đoạn 2",
     "phase3": "Giai đoạn 3",
@@ -55,10 +55,9 @@
     "phase3Sub3": "$DOGEBALL được niêm yết trên các sàn giao dịch toàn cầu",
     "phase3Sub4": "$DOGEBALL trở nên lan truyền",
     "phase4Sub1": "Phát triển trò chơi $DOGEBALL V2",
-    "phase4Sub2": "Phát hành ứng dụng $DOGEPAY trên Apple App Store và Google Play",
-    "phase4Sub3": "Tiếp tục niêm yết CEX",
-    "phase4Sub4": "Phát hành blockchain L2 toàn cầu",
-    "phase4Sub5": "Token tiến hóa tương lai được tạo"
+    "phase4Sub2": "Tiếp tục niêm yết CEX",
+    "phase4Sub3": "Phát hành blockchain L2 toàn cầu",
+    "phase4Sub4": "Token tiến hóa tương lai được tạo"
   },
   "about": {
     "title": "GIỚI THIỆU",
