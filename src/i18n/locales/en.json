@@ -21,7 +21,7 @@
   "hero": {
     "title": "DOGEBALL TOKEN PRESALE – Ethereum L2 Crypto Game With $1M Prize Pool",
     "whitelistSignup": "SIGN UP FOR THE PRESALE WHITELIST",
-    "subtitle": "DOGEBALL ($DOGEBALL) is an Ethereum Layer 2 crypto presale powering a play-to-earn dodgeball game with fast transactions, low fees, and a $1 million competitive prize pool.",
+    "subtitle": "DOGEBALL ($DOGEBALL) is an Ethereum Layer 2 crypto presale powering a play-to-earn dogeball game with fast transactions, low fees, and a $1 million competitive prize pool.",
     "presaleLaunch": "PRESALE LAUNCHES IN....",
     "whitelistEmail": "Enter email to be added to the Whitelist",
     "emailPlaceholder": "your email",
@@ -62,16 +62,14 @@
   },
   "about": {
     "title": "ABOUT",
-    "secSubtitle": "DOGEBALL Token ($DOGEBALL) is an Ethereum Layer 2 crypto presale project built for fast, low-cost blockchain gaming and for users to convert Crypto to Fiat and send to any bank account in the world. The DOGEBALL ecosystem powers both a play-to-earn dodgeball game, where players compete on-chain for real token rewards and a $1 million prize pool, as well as the $DOGEPAY app. Built on a custom EVM-compatible Layer 2 network, DOGEBALL enables near-instant transactions, ultra-low fees, staking rewards, and scalable gameplay designed for mass adoption. Converting your crypto to fiat has never been easier or quicker.",
+    "secSubtitle": "DOGEBALL Token ($DOGEBALL) is an Ethereum Layer 2 crypto presale project built for fast, low-cost blockchain gaming. The DOGEBALL ecosystem powers a play-to-earn dogeball game where players compete on-chain for real token rewards and a $1 million prize pool. Built on a custom EVM-compatible Layer 2 network, DOGEBALL enables near-instant transactions, ultra-low fees, staking rewards, and scalable gameplay designed for mass adoption.",
     "subtitle": "What Is DOGEBALL Token ($DOGEBALL)?",
-    "description": "At the centre of DOGECHAIN are the $DOGEBALL game and $DOGEPAY app. An addictive online dodgeball game where players throw DOGEBALLs, level up, climb the leaderboard and compete for a $1M prize pool ($500k to the top player)! And a crypto to fiat offramp payments app with ZERO FX fees and near-instant payment delivery.",
+    "description": "At the centre of DOGECHAIN is the $DOGEBALL game — an addictive online dogeball game where players throw DOGEBALLs, level up, climb the leaderboard and compete for a $1M prize pool ($500k to the top player)!",
     "card1": "Play-to-Earn DOGEBALL Crypto Game With a $1M Prize Pool",
     "card2": "Custom Ethereum Layer 2 Blockchain With Ultra-Low Fees",
     "card3": "Fast On-Chain Transactions Optimized for Crypto Gaming",
     "card4": "Stake DOGEBALL Token and Earn Up to 80% APY",
-    "card5": "Competitive Crypto Gameplay With Real Token Rewards; convert rewards to fiat using $DOGEPAY",
-    "card6": "Use $DOGEPAY for Crypto to Fiat offramp – convert your crypto into fiat and send to any bank account in the world",
-    "card7": "The Gaming Industry remittances are $200+ billion. GameFI is exploding. DOGECHAIN owns both – you're buying the future of PayFi + GameFi",
+    "card5": "Competitive Crypto Gameplay With Real Token Rewards",
     "testDescription": "Unlike other meme-coins L2s, you can test our custom built DOGECHAIN and experience yourself the king of all L2s!",
     "clickHere": "Click Here",
     "partnerships": "Partnerships with the world's largest gaming organisations are in progress"

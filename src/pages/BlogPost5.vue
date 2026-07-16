@@ -89,7 +89,7 @@ const { t } = useI18n();
                 >DOGEBALL crypto</RouterLink
               >
               ($DOGEBALL) Arena was built with this in mind. It's a game of
-              skill, timing, and strategy. Whether you are dodgeball-ing on your
+              skill, timing, and strategy. Whether you are dogeball-ing on your
               phone during a commute or competing in a high-stakes tournament on
               your PC, the focus is on the thrill of the win. The rewards are
               simply the cherry on top, making $DOGEBALL a strong contender for
