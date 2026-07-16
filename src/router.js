@@ -1,5 +1,4 @@
 import Home from "@/pages/Home.vue";
-import DogePay from "./pages/DogePay.vue";
 import About from "./pages/About.vue";
 import Roadmap from "./pages/Roadmap.vue";
 import Game from "./pages/Game.vue";
@@ -23,21 +22,6 @@ export const routes = [
         "Join $DOGEBALL – the ultimate meme coin presale on Ethereum L2. Play, earn rewards, and be part of the future of decentralized gaming.",
       ogImage: "https://www.dogeballtoken.com/logo.png",
       canonical: "https://www.dogeballtoken.com/",
-    },
-  },
-  {
-    path: "/dogepay",
-    name: "DogePay",
-    component: DogePay,
-    meta: {
-      title: "$DOGEPAY – $DOGEBALL",
-      description:
-        "$DOGEPAY: fiat-to-crypto and payment features for the $DOGEBALL ecosystem. More details coming soon.",
-      ogTitle: "$DOGEPAY – $DOGEBALL",
-      ogDescription:
-        "$DOGEPAY: fiat-to-crypto and payment features for the $DOGEBALL ecosystem.",
-      ogImage: "https://www.dogeballtoken.com/logo.png",
-      canonical: "https://www.dogeballtoken.com/dogepay",
     },
   },
   {

@@ -6,13 +6,13 @@ import Cross from "@/assets/icons/Cross.vue";
 import Telegram from "@/assets/icons/Telegram.vue";
 import X from "@/assets/icons/X.vue";
 import Logo from "@/assets/img/Logo.png";
-import { ref, watch, onMounted, onUnmounted } from "vue";
+import { ref, watch } from "vue";
 import LanguageSelector from "@/components/LanguageSelector.vue";
 
-import bgHeader from "@/assets/img/bgHeader.png";
+// import bgHeader from "@/assets/img/bgHeader.png";
 import { useRoute, useRouter } from "vue-router";
 import { useWallet } from "@/composables";
-import { truncateString } from "@/utils/format";
+// import { truncateString } from "@/utils/format";
 
 const { t, locale } = useI18n();
 
@@ -43,10 +43,6 @@ const LinksHeader = computed(() => [
     link: "#tokenomics",
   },
   {
-    title: t("header.dogepay"),
-    link: "/dogepay",
-  },
-  {
     title: t("header.blog"),
     link: "#blog",
   },
@@ -71,7 +67,7 @@ watch(
   () => route.fullPath,
   () => {
     isOpen.value = false;
-  }
+  },
 );
 
 const router = useRouter();
@@ -158,7 +154,9 @@ const onWalletClick = () => {
           class="h-[2.75rem] leading-[1.3] px-4 bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
           @click="onWalletClick"
         >
-          {{ address ? t('header.disconnectWallet') : t("header.connectWallet") }}
+          {{
+            address ? t("header.disconnectWallet") : t("header.connectWallet")
+          }}
         </button>
       </div>
 
@@ -167,7 +165,10 @@ const onWalletClick = () => {
       </div>
     </div>
 
-    <div v-if="isOpen" class="mt-12 w-full items-center flex flex-col gap-6 overflow-y-auto pb-4 max-h-[calc(100vh-9rem)]">
+    <div
+      v-if="isOpen"
+      class="mt-12 w-full items-center flex flex-col gap-6 overflow-y-auto pb-4 max-h-[calc(100vh-9rem)]"
+    >
       <div class="flex flex-col items-center gap-6">
         <template v-for="link in LinksHeader" :key="link.link">
           <button
@@ -197,7 +198,9 @@ const onWalletClick = () => {
           class="py-3 max-md:max-h-[40px] max-md:flex max-md:items-center max-md:justify-center px-4 max-w-[360px] w-full bg-[#EB4102] rounded-[80px] text-[#FFEEE1] font-grotesk text-sm font-medium"
           @click="onWalletClick"
         >
-          {{ address ? t('header.disconnectWallet') : t("header.connectWallet") }}
+          {{
+            address ? t("header.disconnectWallet") : t("header.connectWallet")
+          }}
         </button>
 
         <div class="flex gap-3 items-center">
