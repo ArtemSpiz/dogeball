@@ -9,7 +9,6 @@ import HowToBuy from "@/components/Home/HowToBuy.vue";
 import FAQ from "@/components/Home/FAQ.vue";
 import Tokenomics from "@/components/Home/Tokenomics.vue";
 import Blog from "@/components/Home/Blog.vue";
-import DogepayHero from "@/components/DogePay/DogePayHero.vue";
 // import EmailInput from "@/components/Home/EmailInput.vue";
 import CustomButton from "@/ui/CustomButton.vue";
 import { useI18n } from "vue-i18n";
@@ -62,7 +61,6 @@ onMounted(() => {
   <About />
   <HowToBuy />
   <Roadmap />
-  <DogepayHero />
   <Tokenomics />
   <Blog />
   <FAQ />
