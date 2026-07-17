@@ -80,7 +80,7 @@ const submit = async () => {
       </Vue3Marquee>
     </div>
     <div
-      class="max-md:h-auto md:min-h-screen 2xl:max-h-[1400px] 2xl:bg-bottom max-md:min-h-[440px] relative min-h-[600px] px-5 pt-[100px] max-md:pt-[80px] flex flex-col items-center justify-between pb-[56px] max-md:pb-[30px] bg-[url('@/assets/img/Home/HeroBg.png')] max-xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat mobile-bg-crop"
+      class="max-md:h-auto md:min-h-screen 2xl:max-h-[1400px] 2xl:bg-bottom max-md:min-h-[440px] relative min-h-[600px] px-5 pt-[100px] max-md:pt-[80px] flex flex-col items-center justify-between pb-[56px] md:pb-4 max-md:pb-[30px] bg-[url('@/assets/img/Home/HeroBg.png')] max-xl:!bg-cover bgFill bg-[center_bottom] bg-no-repeat mobile-bg-crop"
     >
       <div
         class="text-center flex flex-col items-center justify-center w-full shrink-0"
@@ -105,7 +105,7 @@ const submit = async () => {
       </div>
 
       <div
-        class="max-w-[2000px] w-full flex flex-col justify-center items-center mx-auto relative max-md:static mt-6 max-md:mt-5 shrink-0"
+        class="max-w-[2000px] w-full flex flex-col justify-end items-center mx-auto mt-auto shrink-0 md:absolute md:bottom-4 md:left-0 md:right-0 md:mt-0 max-md:mt-5 max-md:static"
       >
         <!-- <div
           class="flex absolute bottom-0 left-[120px] max-xl:left-[20px] max-lg:hidden w-full max-w-[325px] max-xl:max-w-[300px] flex-col p-4 gap-4 border border-[#8B94F5] rounded-2xl bg-[rgba(53,19,147,0.52)] backdrop-blur-[5px] shadow-[0_0_154px_0_#263166]"
@@ -129,7 +129,7 @@ const submit = async () => {
           </CustomButton>
         </div> -->
 
-        <div class="flex gap-4 items-center max-md:hidden">
+        <div class="flex gap-4 items-center max-md:gap-3">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -137,7 +137,7 @@ const submit = async () => {
           >
             <CustomButton
               :title="t('hero.audit')"
-              class="py-[18px] !text-[22px] !w-[160px]"
+              class="py-[18px] !text-[22px] !w-[160px] max-md:py-3 max-md:!text-base max-md:!w-[130px] max-md:h-[50px]"
           /></a>
 
           <a
@@ -148,7 +148,7 @@ const submit = async () => {
             <CustomButton
               :title="t('hero.whitepaper')"
               white-bg="true"
-              class="py-[18px] !text-[22px] !w-[160px]"
+              class="py-[18px] !text-[22px] !w-[160px] max-md:py-3 max-md:!text-base max-md:!w-[130px] max-md:h-[50px]"
           /></a>
         </div>
 
