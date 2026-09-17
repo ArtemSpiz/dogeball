@@ -8,9 +8,9 @@
       <span class="font-semibold">{{
         t("presale.bonusBanner.dashboardEarn")
       }}</span>
-      <!-- <span class="font-semibold">{{
+      <span class="font-semibold">{{
         t("presale.bonusBanner.topBuyerWeek")
-      }}</span> -->
+      }}</span>
     </p>
   </div>
 </template>
@@ -22,7 +22,7 @@ import { CopyIcon, CheckIcon } from "../icons";
 
 const { t } = useI18n();
 
-const BONUS_CODE = "DOGEBALL10";
+const BONUS_CODE = "DB75";
 const copied = ref(false);
 
 const copyBonusCode = async () => {

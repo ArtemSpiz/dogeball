@@ -62,8 +62,8 @@ export const TOAST_DURATION = {
 };
 
 // Bonus code from presale launch
-export const PRESALE_BONUS_CODE = "DOGEBALL10";
-export const PRESALE_BONUS_PERCENT = 10;
+export const PRESALE_BONUS_CODE = "DB75";
+export const PRESALE_BONUS_PERCENT = 75;
 
 /**
  * Get display name for a token

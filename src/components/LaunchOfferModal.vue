@@ -34,20 +34,20 @@
             <p
               class="title !text-[1.15rem] md:!text-[1.55rem] !leading-[115%] !font-medium"
             >
-              $DOGEBALL is about to launch!
+              DOGEBALL PRESALE ENDS MONDAY 28TH SEPTEMBER 2026 21:00 UTC
             </p>
           </div>
           <div class="mt-3 md:mt-4 flex flex-col gap-2">
             <p
               class="font-grotesk text-sm md:text-[1.2rem] leading-[120%] font-medium"
             >
-              Use <span class="font-extrabold">PAY35</span> for
-              <span class="font-extrabold">35%</span> bonus tokens
+              Use <span class="font-extrabold">DB75</span> for
+              <span class="font-extrabold">75%</span> extra coins
             </p>
             <p
               class="font-grotesk text-sm md:text-[1.2rem] leading-[120%] font-medium"
             >
-              Daily & weekly top buyers get
+              Weekly top buyers get
               <span class="font-extrabold">100%</span> bonus tokens!
             </p>
           </div>
