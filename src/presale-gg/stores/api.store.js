@@ -65,24 +65,38 @@ export const setApiInfo = (info) => {
   $apiState.setKey("info", info);
 };
 
+const applyStageResult = (stage) => {
+  if (stage == null) setPresaleEnded(true);
+  setStage(stage);
+};
+
+const handleStageError = (err) => {
+  // No current stage once the presale has finished.
+  if (err?.response?.status === 404) {
+    setPresaleEnded(true);
+    setStage(null);
+    return;
+  }
+  $apiState.setKey("stageLoading", false);
+};
+
 export const refetchStage = () => {
   api
     .getActiveStage()
-    .then((res) => {
-      if (res.data === null) setPresaleEnded(true);
-      setStage(res.data);
-    })
-    .catch(() => {});
-}
+    .then((res) => applyStageResult(res.data))
+    .catch(handleStageError);
+};
 
 api
   .getActiveStage()
-  .then((res) => {
-    if (res.data === null) setPresaleEnded(true);
-    setStage(res.data);
-  })
-  .catch(() => {});
-api.getPrices().then((res) => setPaymentTokens(res.data));
+  .then((res) => applyStageResult(res.data))
+  .catch(handleStageError);
+api
+  .getPrices()
+  .then((res) => setPaymentTokens(res.data))
+  .catch(() => {
+    $apiState.setKey("paymentTokensLoading", false);
+  });
 api
   .getLeaderboard()
   .then((res) => setLeaderboard(res.data))

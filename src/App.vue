@@ -2,7 +2,6 @@
   <Header v-if="!shouldHideHeader" />
   <router-view />
   <Footer v-if="!shouldHideHeader" />
-  <LaunchOfferModal />
   <ConnectWalletModal />
 </template>
 
@@ -12,7 +11,6 @@ import { useRoute } from "vue-router";
 import Header from "./layout/Header.vue";
 import Footer from "./layout/Footer.vue";
 import ConnectWalletModal from "./components/PresaleWidget/modals/ConnectWalletModal.vue";
-import LaunchOfferModal from "./components/LaunchOfferModal.vue";
 
 const route = useRoute();
 const isGamePage = computed(() => route.name === "Game");

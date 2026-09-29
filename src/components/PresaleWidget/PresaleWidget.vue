@@ -16,7 +16,6 @@
       class="relative z-10 flex flex-col gap-2.5 items-center w-full max-w-[519px] lg:max-w-[570px] p-2.5"
     >
       <Widget class="max-w-[487px] lg:max-w-[538px] w-full" />
-      <BonusBanner />
     </div>
 
     <!-- Toast notifications -->
@@ -26,8 +25,6 @@
 
 <script setup>
 import Widget from "./Widget.vue";
-import WalletTransferModal from "./modals/WalletTransferModal.vue";
-import BonusBanner from "./shared/BonusBanner.vue";
 import { Toast } from "./ui";
 import bgImage from "@/assets/img/bg-presale.png";
 </script>
