@@ -1,17 +1,15 @@
 <template>
-  <div class="flex flex-col gap-4 w-full min-w-0 max-w-full">
-    <!-- Stage Box (only if presale active) -->
-    <template v-if="!presale.presaleEnded.value">
-      <StageBox />
-      <p
-        class="text-center self-center text-white font-grotesk text-sm font-semibold leading-none"
-      >
-        1 $DOGEBALL =
-        {{
-          formatDollar(parseNum(presale.stage.value?.token_price), true, 0, 6)
-        }}
-      </p>
-    </template>
+  <div class="flex flex-col gap-4 w-full min-w-0 max-w-full flex-1 justify-between">
+    <StageBox />
+    <p
+      v-if="!presale.presaleEnded.value"
+      class="text-center self-center text-white font-grotesk text-sm font-semibold leading-none"
+    >
+      1 $DOGEBALL =
+      {{
+        formatDollar(parseNum(presale.stage.value?.token_price), true, 0, 6)
+      }}
+    </p>
 
     <!-- Payment Methods -->
     <TokenSelectGrid :value="selectedToken" @update:value="setSelectedToken" />
@@ -23,13 +21,15 @@
       <span
         class="gap-1 max-md:gap-0.5 text-white text-sm max-md:text-xs font-semibold leading-5 font-grotesk whitespace-nowrap overflow-hidden text-ellipsis h-full flex items-center font-feature-off"
       >
-        {{ t("presale.buyTab.presalePrice") }}
-        <span class="text-[#59A6FD]">
-          {{
-            formatDollar(parseNum(presale.stage.value?.token_price), true, 0, 4)
-          }}
-        </span>
-        <span> | </span>
+        <template v-if="!presale.presaleEnded">
+          {{ t("presale.buyTab.presalePrice") }}
+          <span class="text-[#59A6FD]">
+            {{
+              formatDollar(parseNum(presale.stage.value?.token_price), true, 0, 4)
+            }}
+          </span>
+          <span> | </span>
+        </template>
         <span>{{ t("presale.buyTab.launchPrice") }}</span>
         <span class="text-[#59A6FD]">
           {{ formatDollar(LAUNCH_PRICE, true, 0, 4) }}

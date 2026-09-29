@@ -1,6 +1,7 @@
 import { map } from "nanostores";
 import api from "@/api/presale";
 import { useStore } from "@nanostores/vue";
+import { AxiosError } from "axios";
 
 /**
  * @typedef {import("../api/api.types").API} API
@@ -70,7 +71,16 @@ api
     if (res.data === null) setPresaleEnded(true);
     setStage(res.data);
   })
-  .catch(() => {});
+  .catch((err) => {
+    if (
+      err instanceof AxiosError &&
+      err.status === 404 &&
+      err.response.data?.message.toLowerCase()?.includes("not found")
+    ) {
+      setStage(null);
+      setPresaleEnded(true);
+    }
+  });
 api.getPrices().then((res) => setPaymentTokens(res.data));
 api
   .getLeaderboard()

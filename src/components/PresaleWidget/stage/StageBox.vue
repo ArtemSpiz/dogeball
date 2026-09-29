@@ -10,6 +10,7 @@
     <!-- Current Price Card -->
     <div
       class="flex flex-col items-center self-stretch p-4 gap-2 rounded-2xl border border-white/20 bg-[rgba(8,12,35,0.48)]"
+      v-if="!presale.presaleEnded"
     >
       <!-- Amount Raised -->
       <template v-if="isLoading">
@@ -69,7 +70,7 @@ const presale = usePresale();
 const isLoading = computed(() => presale.apiData.stageLoading.value);
 
 const stageName = computed(() => {
-  return presale.stage.value?.stage_name || DEFAULT_STAGE_NAME;
+  return presale.presaleEnded.value ? t("presale.buyTab.presaleEnded") : presale.stage.value?.stage_name || DEFAULT_STAGE_NAME;
 });
 
 const stageFrac = computed(() => {
