@@ -1,7 +1,6 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import { computed } from "vue";
-import Telegram from "@/assets/icons/Telegram.vue";
 import X from "@/assets/icons/X.vue";
 import Logo from "@/assets/img/Logo.png";
 import Moscot from "@/assets/img/Moscot.png";
@@ -46,13 +45,6 @@ const LinksFooter = computed(() => [
           </a>
         </div>
         <div class="flex items-center gap-4 mt-4">
-          <a
-            href="https://t.me/dogeballtoken"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Telegram />
-          </a>
           <a
             href="https://x.com/dogeballtoken"
             rel="noopener noreferrer"

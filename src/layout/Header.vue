@@ -3,7 +3,6 @@ import { useI18n } from "vue-i18n";
 import { computed } from "vue";
 import Burger from "@/assets/icons/Burger.vue";
 import Cross from "@/assets/icons/Cross.vue";
-import Telegram from "@/assets/icons/Telegram.vue";
 import X from "@/assets/icons/X.vue";
 import Logo from "@/assets/img/Logo.png";
 import { ref, watch } from "vue";
@@ -135,14 +134,6 @@ const onWalletClick = () => {
       <div class="flex items-center max-lg:hidden gap-3">
         <LanguageSelector @change="changeLanguage" />
         <a
-          class="bg-[rgba(255,238,225,0.10)] cursor-pointer p-2 rounded-full"
-          href="https://t.me/dogeballtoken"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Telegram />
-        </a>
-        <a
           target="_blank"
           href="https://x.com/dogeballtoken"
           rel="noopener noreferrer"
@@ -204,14 +195,6 @@ const onWalletClick = () => {
         </button>
 
         <div class="flex gap-3 items-center">
-          <a
-            href="https://t.me/dogeballtoken"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-[rgba(255,238,225,0.10)] cursor-pointer p-2 rounded-full"
-          >
-            <Telegram />
-          </a>
           <a
             href="https://x.com/dogeballtoken"
             target="_blank"

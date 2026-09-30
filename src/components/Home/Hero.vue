@@ -151,18 +151,6 @@ const submit = async () => {
               class="py-[18px] !text-[22px] !w-[160px] max-md:py-3 max-md:!text-base max-md:!w-[130px] max-md:h-[50px]"
           /></a>
         </div>
-
-        <p class="description mt-2 max-w-sm text-center">
-          Join our Telegram group for the latest updates, bonus codes and
-          offers:
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://t.me/dogeballtoken"
-            class="underline"
-            >https://t.me/dogeballtoken</a
-          >
-        </p>
       </div>
     </div>
   </div>
