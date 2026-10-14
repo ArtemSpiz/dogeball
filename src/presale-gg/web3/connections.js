@@ -52,7 +52,7 @@ if (typeof localStorage !== "undefined") localStorage.removeItem("wagmi.store");
 
 export const wagmiAdapter = new WagmiAdapter({
   transports: {
-    [mainnet.id]: http(),
+    [mainnet.id]: http(rpcMap["1"]),
     [bsc.id]: http(),
     [base.id]: http(rpcMap["8453"]),
   },
