@@ -1,5 +1,6 @@
 {
   "header": {
+    "claim": "Claim",
     "about": "About",
     "roadmap": "Roadmap",
     "howToBuy": "How to Buy",
@@ -28,7 +29,7 @@
     "getEarlyAccess": "Get early access!",
     "audit": "Audit",
     "whitepaper": "Whitepaper",
-    "marqueeTicker": "PRESALE HAS NOW FINISHED"
+    "marqueeTicker": "CLAIM IS NOW LIVE"
   },
   "roadmap": {
     "welcome": "WELCOME TO THE DOGEBALL GAME!",
@@ -88,7 +89,7 @@
     "buyToken": "Buy Token and Approve Transaction",
     "buyTokenDesc": "Complete your purchase by approving the transaction in your connected wallet. Once confirmed, your purchase and token amount will be securely recorded on-chain and visible under 'Dashboard' in the presale widget above.",
     "claimToken": "Claim $DOGEBALL Token",
-    "claimTokenDesc": "After the presale ends, you can claim your $DOGEBALL tokens with the same wallet used for your purchase. Details on claiming will be released on social media channels once the presale concludes.",
+    "claimTokenDesc": "Claiming is now live. Connect the wallet you used for your purchase in the claim box at the top of the page and click 'Claim $DOGEBALL'. You'll need a little ETH in that wallet for gas.",
     "staking": "Stake DOGEBALL Token and Earn Up to 80% APY",
     "stakingDesc": "Lock your presale purchase tokens in our secure and audited smart-contract staking pool; earn $DOGEBALL rewards with a high 80% APY and maximize your $DOGEBALL token return.",
     "clickHere": "Buy DOGEBALL Token"
@@ -341,6 +342,51 @@
     "tokenSelect": {
       "more": "More",
       "otherCryptos": "+ Other Cryptos"
+    }
+  },
+  "claim": {
+    "sectionTitle": "Claim Your $DOGEBALL",
+    "disconnected": {
+      "title": "Check your $DOGEBALL allocation",
+      "text": "Connect the wallet you used in the presale to see how many $DOGEBALL you can claim.",
+      "button": "Connect Wallet"
+    },
+    "checking": {
+      "title": "Checking eligibility",
+      "text": "Looking up this wallet on the claim list.",
+      "button": "Checking..."
+    },
+    "eligible": {
+      "title": "You have $DOGEBALL to claim",
+      "text": "Your presale allocation is ready. Claim it to send the tokens to this wallet.",
+      "button": "Claim $DOGEBALL"
+    },
+    "claimed": {
+      "title": "$DOGEBALL claimed",
+      "text": "This wallet has received its $DOGEBALL.",
+      "button": "Tokens Already Claimed"
+    },
+    "notEligible": {
+      "title": "No $DOGEBALL to claim",
+      "text": "This wallet isn't on the claim list. Make sure you're connected with the wallet you used in the presale.",
+      "button": "Not Eligible"
+    },
+    "error": {
+      "title": "Couldn't check this wallet",
+      "text": "We couldn't reach the network to check your claim. Please try again.",
+      "button": "Try Again"
+    },
+    "claimableAmount": "Claimable amount",
+    "claimedAmount": "Claimed amount",
+    "gasNote": "Claiming happens on Ethereum, so this wallet needs a little ETH for gas.",
+    "toast": {
+      "success": "$DOGEBALL claimed! The tokens are now in your wallet.",
+      "cancelled": "Transaction cancelled in your wallet.",
+      "switchNetwork": "Switch your wallet to Ethereum to claim.",
+      "alreadyClaimed": "This wallet has already claimed its $DOGEBALL.",
+      "pending": "Your claim is still confirming. Check your wallet, then reconnect to see the update.",
+      "unavailable": "This claim can't go through right now. Please try again later.",
+      "failed": "Claim failed. Please try again."
     }
   }
 }

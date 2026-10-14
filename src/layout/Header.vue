@@ -22,6 +22,11 @@ const changeLanguage = (lang) => {
 
 const LinksHeader = computed(() => [
   {
+    title: t("header.claim"),
+    link: "#claim",
+    highlight: true,
+  },
+  {
     title: t("header.about"),
     link: "#about",
   },
@@ -32,6 +37,8 @@ const LinksHeader = computed(() => [
   {
     title: t("header.howToBuy"),
     link: "#howToBuy",
+    // The desktop nav has no room for both; Claim takes its place there
+    mobileOnly: true,
   },
   {
     title: t("header.playDogeball"),
@@ -54,6 +61,10 @@ const LinksHeader = computed(() => [
     link: "#faq",
   },
 ]);
+
+const DesktopLinksHeader = computed(() =>
+  LinksHeader.value.filter((link) => !link.mobileOnly),
+);
 
 const isOpen = ref(false);
 const route = useRoute();
@@ -112,11 +123,14 @@ const onWalletClick = () => {
       <div
         class="absolute left-1/2 -translate-x-1/2 bg-[rgba(255,238,225,0.10)] max-xl:gap-3 max-lg:hidden rounded-[20px] flex items-center gap-5 p-3"
       >
-        <template v-for="link in LinksHeader" :key="link.link">
+        <template v-for="link in DesktopLinksHeader" :key="link.link">
           <button
             v-if="link.link.startsWith('#')"
             @click="scrollToSection(link.link)"
             class="text-[#FFEEE1] cursor-pointer text-sm font-medium"
+            :class="{
+              'bg-[#EB4102] rounded-full px-3 py-1 -my-1': link.highlight,
+            }"
           >
             {{ link.title }}
           </button>
@@ -169,6 +183,7 @@ const onWalletClick = () => {
               toggleMenu();
             "
             class="text-[#FFEEE1] cursor-pointer text-sm font-medium"
+            :class="{ 'bg-[#EB4102] rounded-full px-4 py-2': link.highlight }"
           >
             {{ link.title }}
           </button>
